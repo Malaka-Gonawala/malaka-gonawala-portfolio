@@ -1,29 +1,37 @@
 @import url(melodrama.css);
 @import url(nunito.css);
 :root {
-  --primary-color: #1a140f;
-  --secondary-color: #33271e;
-  --accent-color: #8e6f3e;
-  --highlight-color: #d3c09c;
-  --text-color: #ffffff;
+    --primary-color: #1a140f;
+    --secondary-color: #33271e;
+    --accent-color: #8e6f3e;
+    --highlight-color: #d3c09c;
+    --text-color: #ffffff;
 }
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
 }
 
 /*---------------------------Body---------------------------*/
 
 body {
-  font-family: "Nunito-Variable", sans-serif;
-  background-color: var(--primary-color);
-  margin: 0;
-  padding: 0;
+    font-family: "Nunito-Variable", sans-serif;
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -32,89 +40,173 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Melodrama-Variable", sans-serif;
-  font-weight: 700;
+    font-family: "Melodrama-Variable", sans-serif;
+    font-weight: 700;
 }
 /*---------------------------Header H1---------------------------*/
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 3rem;
-  box-shadow: 0 5px 10px var(--accent-color);
+    z-index: 1000;
+    background-color: var(--primary-color);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    box-shadow: 0 5px 10px var(--secondary-color);
 }
 header h1 {
-  color: var(--accent-color);
-  font-size: 3rem;
+    color: var(--accent-color);
+    font-size: 3rem;
 }
 header h1 a {
-  text-decoration: none;
-  color: var(--accent-color);
+    text-decoration: none;
+    color: var(--accent-color);
 }
 
 /*--------------------------Navigation---------------------------*/
 header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  font-size: 1.3rem;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 /*-----------------------Navigation Links------------------------*/
 header nav ul li a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-family: "Nunito-Variable", sans-serif;
-  font-weight: 500;
-  transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "Nunito-Variable", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 header nav ul li a:hover {
-  color: var(--highlight-color);
+    color: var(--highlight-color);
+}
+.selected-nav-link {
+    color: var(--highlight-color);
 }
 
 /*-----------------------Underline Effect------------------------*/
 .underline {
-  width: 0;
-  height: 2px;
-  background-color: var(--highlight-color);
-  transition: width 0.3s ease;
+    width: 0;
+    height: 2px;
+    background-color: var(--highlight-color);
+    transition: width 0.3s ease;
 }
 header nav ul li:hover .underline {
-  width: 100%;
+    width: 100%;
+}
+
+.selected-underline {
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight-color);
 }
 
 /*-------------------------Main Section--------------------------*/
 main {
-  padding: 4rem 3rem;
-  color: var(--text-color);
-  gap: 2rem;
-  height: fit-content;
+    position: relative;
+    top: 161px;
+    padding: 4rem 3rem;
+    color: var(--text-color);
+    gap: 2rem;
+    height: fit-content;
 }
 
 /*-------------------------Home Section--------------------------*/
 main .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 161px);
 }
 
 main .home .home-content {
-  text-align: center;
-  max-width: 800px;
+    text-align: center;
+    max-width: 800px;
 }
 
 main .home h2 {
-  font-size: 3rem;
+    font-size: 3rem;
+}
+main .home h2 span {
+    color: var(--accent-color);
+    font-size: 3.5rem;
 }
 main .home h3 {
-  font-size: 2rem;
+    font-size: 2rem;
+}
+main .home h3 span {
+    color: var(--highlight-color);
+    text-shadow: 0 0 5px var(--highlight-color);
+    font-size: 2.5rem;
+}
+main .home p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    line-height: 3rem;
+}
+
+/*-------------------------Hero Buttons--------------------------*/
+.home .home-content .hero-btns .btn-container {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .home-content .hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+/*--------------------Animated Button Effect--------------------*/
+.home .home-content .hero-btns a {
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
+}
+.home .home-content .hero-btns a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        90deg,
+        var(--highlight-color) 50%,
+        transparent 50%
+    );
+    background-size: 205%;
+    background-position: 100% 0%;
+    z-index: -1;
+    transition: background-position 0.3s ease;
+}
+.home .home-content .hero-btns a:hover {
+    color: var(--primary-color);
+}
+.home .home-content .hero-btns a:hover::before {
+    background-position: 0% 0%;
+}
+
+/*--------------------Animated Arrow Effect--------------------*/
+.hero-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease 0.1s;
+}
+.home .home-content .hero-btns a:hover .hero-arrow {
+    transform: translateX(5px);
 }
