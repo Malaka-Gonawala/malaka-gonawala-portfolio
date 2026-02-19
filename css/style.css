@@ -1,0 +1,120 @@
+@import url(melodrama.css);
+@import url(nunito.css);
+:root {
+  --primary-color: #1a140f;
+  --secondary-color: #33271e;
+  --accent-color: #8e6f3e;
+  --highlight-color: #d3c09c;
+  --text-color: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------Body---------------------------*/
+
+body {
+  font-family: "Nunito-Variable", sans-serif;
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Melodrama-Variable", sans-serif;
+  font-weight: 700;
+}
+/*---------------------------Header H1---------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  box-shadow: 0 5px 10px var(--accent-color);
+}
+header h1 {
+  color: var(--accent-color);
+  font-size: 3rem;
+}
+header h1 a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+/*--------------------------Navigation---------------------------*/
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+/*-----------------------Navigation Links------------------------*/
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Nunito-Variable", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+header nav ul li a:hover {
+  color: var(--highlight-color);
+}
+
+/*-----------------------Underline Effect------------------------*/
+.underline {
+  width: 0;
+  height: 2px;
+  background-color: var(--highlight-color);
+  transition: width 0.3s ease;
+}
+header nav ul li:hover .underline {
+  width: 100%;
+}
+
+/*-------------------------Main Section--------------------------*/
+main {
+  padding: 4rem 3rem;
+  color: var(--text-color);
+  gap: 2rem;
+  height: fit-content;
+}
+
+/*-------------------------Home Section--------------------------*/
+main .home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 5px);
+}
+
+main .home .home-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+main .home h2 {
+  font-size: 3rem;
+}
+main .home h3 {
+  font-size: 2rem;
+}
