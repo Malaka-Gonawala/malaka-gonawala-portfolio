@@ -9,3 +9,13 @@ I am
 
 .selected-nav-Link
 .selected-underline
+
+
+
+skill type:
+novice 20
+beginner 40
+skillfull 60
+experienced 80
+expert 100
+
