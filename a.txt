@@ -11,11 +11,7 @@ I am
 .selected-underline
 
 
-
-skill type:
-novice 20
-beginner 40
-skillfull 60
-experienced 80
-expert 100
-
+projects to include
+main
+secondary- cavalleria su due ruote
+concept exploration-antigravity
