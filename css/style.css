@@ -237,6 +237,13 @@ main .about .about-me-story strong {
   font-size: 1.5rem;
   text-shadow: 0 0 2px var(--accent-color);
 }
+main .about .about-me-story strong #Hugo-linkedin {
+  color: var(--accent-color);
+}
+main .about .about-me-story strong #Hugo-linkedin:hover {
+  color: var(--highlight-color);
+  text-shadow: 0 0 5px var(--highlight-color);
+}
 
 main .about .about-me-image {
   width: 300px;
