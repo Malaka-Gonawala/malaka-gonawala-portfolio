@@ -176,7 +176,7 @@ main .home p {
 
 .home .home-content .hero-btns {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
 }
@@ -199,7 +199,7 @@ main .home p {
     var(--highlight-color) 50%,
     transparent 50%
   );
-  background-size: 205%;
+  background-size: 200%;
   background-position: 100% 0%;
   z-index: -1;
   transition: background-position 0.3s ease;
