@@ -1,3 +1,24 @@
+// Navigation menu toggle
+const NavLinks = document.querySelectorAll(".nav-link");
+const NavUnderlines = document.querySelectorAll(".underline");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function updateActiveLink() {
+  navLinks.forEach((link, index) => {
+    if (window.location.hash === link.getAttribute("href")) {
+      link.classList.add("selected-nav-link");
+      NavUnderlines[index].classList.add("selected-underline");
+    } else {
+      NavUnderlines[index].classList.remove("selected-underline");
+      link.classList.remove("selected-nav-link");
+    }
+  });
+}
+
+window.addEventListener("hashchange", updateActiveLink);
+window.addEventListener("load", updateActiveLink);
+
+// Hero section typewriter effect
 const arr = [
   "A Front-End Developer.",
   "A Java Programmer.",
