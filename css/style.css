@@ -292,15 +292,15 @@ main .skills #Info {
   top: 2rem;
   left: 5.8rem;
   cursor: pointer;
-  animation: Info-pulse 2.5s infinite;
+  animation: Info-pulse 2.5s 7;
   transition: all 0.3s ease;
 }
 main .skills #Info:hover {
+  animation-play-state: paused;
   color: var(--highlight-color);
   text-shadow: 0 0 5px var(--highlight-color);
-  animation-play-state: paused;
 }
-/* 
+
 @keyframes Info-pulse {
   0% {
     color: var(--accent-color);
@@ -309,10 +309,7 @@ main .skills #Info:hover {
     color: var(--highlight-color);
     text-shadow: 0 0 5px var(--highlight-color);
   }
-  100% {
-    color: var(--accent-color);
-  }
-} */
+}
 
 /*--------------------Skill Info Tooltip--------------------*/
 main .skills .skills-header #Skill-info {
