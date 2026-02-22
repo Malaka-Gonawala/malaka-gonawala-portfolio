@@ -11,7 +11,27 @@ I am
 .selected-underline
 
 
-projects to include
-main
-secondary- cavalleria su due ruote
-concept exploration-antigravity
+Featured
+ForTheRoot
+
+Luxury Portfolio Website
+
+Web Design
+Cavalleria su Due Ruote
+
+Anti‑Gravity Bike Web
+
+Programming
+Russian Roulette (Java)
+
+Experiments
+LeetSpeak
+
+Manuale
+
+Random Message Generator
+
+Random Color Generator
+
+About Me
+Pretty Sri Lanka (origin story)

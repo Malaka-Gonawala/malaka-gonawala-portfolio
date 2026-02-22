@@ -184,7 +184,7 @@ main .home p {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  color: var(--text-color);
+  color: var(--highlight-color);
   font-size: 1.2rem;
   transition: all 0.3s ease;
   padding: 0.75rem 1.5rem;
@@ -246,10 +246,10 @@ main .about .about-me-story strong {
   font-size: 1.5rem;
   text-shadow: 0 0 2px var(--accent-color);
 }
-main .about .about-me-story strong #Hugo-linkedin {
+main .about .about-me-story strong #About-me-link {
   color: var(--accent-color);
 }
-main .about .about-me-story strong #Hugo-linkedin:hover {
+main .about .about-me-story strong #About-me-link:hover {
   color: var(--highlight-color);
   text-shadow: 0 0 5px var(--highlight-color);
 }
@@ -292,7 +292,7 @@ main .skills #Info {
   top: 2rem;
   left: 5.8rem;
   cursor: pointer;
-  animation: Info-pulse 2.5s 7;
+  animation: Info-pulse 2.5s 10 ease-in-out 0.8s;
   transition: all 0.3s ease;
 }
 main .skills #Info:hover {
@@ -304,10 +304,12 @@ main .skills #Info:hover {
 @keyframes Info-pulse {
   0% {
     color: var(--accent-color);
+    opacity: 1;
   }
   50% {
     color: var(--highlight-color);
     text-shadow: 0 0 5px var(--highlight-color);
+    opacity: 0.8;
   }
 }
 
