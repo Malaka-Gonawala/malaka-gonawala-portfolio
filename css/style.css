@@ -10,25 +10,25 @@
 * {
   box-sizing: border-box;
 }
+
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding: 160px;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
 }
 
 /*---------------------------Body---------------------------*/
 
 body {
+  width: 100%;
   font-family: "Nunito-Variable", sans-serif;
   line-height: 1.7;
   background-color: var(--primary-color);
@@ -118,25 +118,26 @@ header nav ul li:hover .underline {
 
 /*-------------------------Main Section--------------------------*/
 main {
+  width: 100%;
   position: relative;
   top: 95px;
-  padding: 4rem 3rem;
   color: var(--text-color);
   gap: 2rem;
-  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: conical-gradient(
-    from 180deg at 50% 50%,
-    var(--primary-color),
-    var(--secondary-color)
+
+  background-image: radial-gradient(
+    var(--secondary-color),
+    var(--primary-color)
   );
 }
 
 /*-------------------------Home Section--------------------------*/
 main .home {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,21 +195,22 @@ main .home main .home p {
 }
 
 /*-------------------------Hero Buttons--------------------------*/
-.home .home-content .hero-btns .btn-container {
+main .home .home-content .hero-btns .btn-container {
   width: fit-content;
   height: fit-content;
   position: relative;
   display: flex;
 }
 
-.home .home-content .hero-btns {
+main .home .home-content .hero-btns {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   margin-top: 2rem;
 }
-/*--------------------Animated Button Effect--------------------*/
-.home .home-content .hero-btns a {
+
+/* Animated Button Effect */
+main .home .home-content .hero-btns a {
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -216,14 +218,15 @@ main .home main .home p {
   font-size: 1.2rem;
   transition: all 0.3s ease;
   padding: 0.75rem 1.5rem;
+  display: inline-block;
 }
 
-.home .home-content .hero-btns .separator {
+main .home .home-content .hero-btns .separator {
   width: 1px;
   height: 0;
 }
 
-.home .home-content .hero-btns a::before {
+main .home .home-content .hero-btns a::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -237,10 +240,13 @@ main .home main .home p {
   z-index: -1;
   transition: background-position 0.3s ease;
 }
-.home .home-content .hero-btns a:hover {
+
+main .home .home-content .hero-btns a:hover {
   color: var(--primary-color);
+  transform: translateX(0);
 }
-.home .home-content .hero-btns a:hover::before {
+
+main .home .home-content .hero-btns a:hover::before {
   background-position: 0% 0%;
 }
 
@@ -250,14 +256,15 @@ main .home main .home p {
   transition: transform 0.3s ease 0.1s;
 }
 .home .home-content .hero-btns a:hover .hero-arrow {
-  transform: translateX(5px);
+  transform: translateX(8px);
 }
 
 /*-------------------------About Section-------------------------*/
 main .about {
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap-reverse;
 }
@@ -294,7 +301,7 @@ main .about .about-me-image {
 /*--------------------------Skills Section-----------------------*/
 main .skills {
   position: relative;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -432,6 +439,8 @@ main .skills .skills-container {
   padding: 2rem 3rem;
   background-color: var(--secondary-color);
 }
+/* make containers a positioning context for per-category lightboxes */
+/* (positioning is applied in the main skills-container block above) */
 
 main .skills .skills-container .skill {
   position: relative;
@@ -439,19 +448,22 @@ main .skills .skills-container .skill {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0s,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1rem; /* smaller skill boxes */
 }
 
 main .skills .skills-container .skill h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   background-color: var(--primary-color);
   text-align: center;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   margin: 0;
   border-radius: 5px;
-  min-width: 70px;
+  min-width: 60px;
 }
 
 main .skills .skills-container .skill-proficiency-bar {
@@ -465,104 +477,213 @@ main .skills .skills-container .skill .skill-proficiency-bar .progress {
   width: 0;
   height: 100%;
   background-color: var(--primary-color);
-  transition: width 0.3s ease 0.5s;
+  transition: width 0.4s ease;
 }
 
 /*---------Hover Effects for Skills and Proficiency Bar----------*/
 
-main .skills .skills-container .skill:hover {
-  background-color: var(--accent-color);
-  border-radius: 7px;
+main .skills .skills-container .skill .skill-proficiency-bar {
+  opacity: 0;
+  width: 0;
+  border: 2px solid var(--primary-color);
+  height: 10px;
+  transition: all 0.3s ease;
 }
 
-main .skills .skills-container .skill:hover .skill-proficiency-bar {
+/* keep hover only as an instant background color (no bar reveal) */
+main .skills .skills-container .skill:hover {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  transition: background-color 0s;
+}
+
+/* Hover-triggered proficiency widths removed; use .active state instead */
+
+/*------------------Lightbox / Active Skill Styles------------------*/
+/* Overlay that darkens the skills-container when a skill is active (per category) */
+main .skills .skills-container .container-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: 1500;
+  transition: background 0.25s ease;
+}
+main .skills .skills-container .container-overlay.visible {
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: auto;
+}
+
+/* When a skill becomes active it is removed from flow and centered */
+main .skills .skills-container .skill.active {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.06);
+  z-index: 2000;
+  padding: 1.6rem;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  background-color: var(--accent-color);
+  transition:
+    transform 0.32s ease,
+    box-shadow 0.32s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Show the proficiency bar after the center transition completes */
+main .skills .skills-container .skill.active .skill-proficiency-bar {
   opacity: 1;
   width: 150px;
   margin-left: 0.6rem;
-  transition: all 0.3s ease 0.3s;
+  transition: all 0.32s ease 0.35s;
+}
+main .skills .skills-container .skill.bars-visible .skill-proficiency-bar {
+  opacity: 1;
+  width: 150px;
+  margin-left: 0.6rem;
+  transition: all 0.28s ease;
 }
 
-/*--------------Individual Skill Proficiency Widths--------------*/
-/*-------------Language Proficiency Bars-------------*/
-/* HTML Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Html-skill {
-  width: 80%;
+/* Close button inside active skill */
+.skills .skill .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--highlight-color);
+  font-size: 1.1rem;
+  line-height: 1;
+  border-radius: 6px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2200;
+}
+.skills .skill .close-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.skills .skill.active .close-btn {
+  display: flex;
 }
 
-/* CSS Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Css-skill {
-  width: 80%;
-}
-
-/* JavaScript Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Js-skill {
-  width: 80%;
-}
-
-/* Java Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Java-skill {
-  width: 60%;
-}
-
-/* C Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #C-skill {
-  width: 40%;
-}
-
-/* C++ Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Cpp-skill {
-  width: 40%;
-}
-
-/*-------------Framework Proficiency Bars-------------*/
-/* Bootstrap Skill Proficiency */
+/* progress widths appear after the bar container is visible */
 main
   .skills
   .skills-container
-  .skill:hover
+  .skill.progress-visible
+  .skill-proficiency-bar
+  .progress {
+  transition: width 0.45s ease;
+}
+
+/* Keep the same progress-width mappings for active state as hover */
+/* progress widths applied when .progress-visible is set on the skill */
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Html-skill {
+  width: 80%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Css-skill {
+  width: 80%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Js-skill {
+  width: 80%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Java-skill {
+  width: 60%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #C-skill {
+  width: 40%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Cpp-skill {
+  width: 40%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
   .skill-proficiency-bar
   #Bootstrap-skill {
   width: 80%;
 }
-
-/* Git/GitHub Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #Git-skill {
-  width: 60%;
-}
-
-/*------------development skills proficiency bars------------- */
-/* frontend development skill proficiency */
 main
   .skills
   .skills-container
-  .skill:hover
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Git-skill {
+  width: 60%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
   .skill-proficiency-bar
   #Frontend-skill {
   width: 60%;
 }
-
-/* OOP Skill Proficiency */
-main .skills .skills-container .skill:hover .skill-proficiency-bar #OOP-skill {
-  width: 60%;
-}
-
-/*-------------Soft Skills Proficiency Bars------------- */
-/* Problem-Solving Skill Proficiency */
 main
   .skills
   .skills-container
-  .skill:hover
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #OOP-skill {
+  width: 60%;
+}
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
   .skill-proficiency-bar
   #Problem-solving-skill {
   width: 80%;
 }
-
-/* Teamwork Skill Proficiency */
 main
   .skills
   .skills-container
-  .skill:hover
+  .skill.progress-visible
   .skill-proficiency-bar
   #Teamwork-skill {
   width: 80%;
+}
+
+/* Ensure hover still shows instant background-color change */
+main .skills .skills-container .skill:hover {
+  background-color: var(--accent-color);
+  transition: background-color 0s;
 }
