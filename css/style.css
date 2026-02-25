@@ -34,9 +34,164 @@ body {
   width: 100%;
   font-family: "Nunito-Variable", sans-serif;
   line-height: 1.7;
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    45deg,
+    #1a140f 0%,
+    #33271e 25%,
+    #1a140f 50%,
+    #33271e 75%,
+    #1a140f 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease-in-out infinite;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated Gradient Orbs */
+.orb-container {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(70px);
+  mix-blend-mode: screen;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 30% 30%, #d3c09c, #8e6f3e);
+  top: -50px;
+  left: -50px;
+  animation:
+    floatOrb1 8s ease-in-out infinite,
+    pulseOrb1 6s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes floatOrb1 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes pulseOrb1 {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 40% 40%, #d3c09c, #8e6f3e);
+  top: 50%;
+  left: 50%;
+  animation:
+    floatOrb2 10s ease-in-out infinite,
+    pulseOrb2 7s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes floatOrb2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  25% {
+    transform: translate(-45%, -40px) scale(1.05);
+  }
+  50% {
+    transform: translate(-50%, -30px) scale(1.1);
+  }
+  75% {
+    transform: translate(-55%, -40px) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes pulseOrb2 {
+  0%,
+  100% {
+    opacity: 0.25;
+    filter: blur(70px);
+  }
+  50% {
+    opacity: 0.35;
+    filter: blur(65px);
+  }
+}
+
+.orb-3 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at 35% 35%, #8e6f3e, #d3c09c);
+  bottom: -70px;
+  right: -50px;
+  animation:
+    floatOrb3 9s ease-in-out infinite,
+    pulseOrb3 8s ease-in-out infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes floatOrb3 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(-15px);
+  }
+  50% {
+    transform: translateY(-35px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(15px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes pulseOrb3 {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
 h1,
@@ -52,7 +207,7 @@ h6 {
 
 /*---------------------------Header H1---------------------------*/
 header {
-  z-index: 1000;
+  z-index: 1002;
   background-color: var(--primary-color);
   width: 100%;
   position: fixed;
@@ -136,14 +291,23 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 section {
   width: 100% !important;
   padding: 2rem 3rem;
-  background-image: radial-gradient(
-    var(--secondary-color),
-    var(--primary-color)
-  );
+  animation: fadeInUp 0.8s ease-out;
 }
 
 /*-------------------------Home Section--------------------------*/
