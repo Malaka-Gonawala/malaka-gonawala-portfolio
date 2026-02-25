@@ -64,9 +64,15 @@ const arr = [
 
 const rotate = document.querySelector(".rotate");
 
-let arrindex = 0;
+let arrIndex = 0;
 
 function typeWriter(text, i, callback) {
+  if (arrIndex === arr.length - 1) {
+    rotate.style.textShadow = ` 0 0 30px #d3c09c, 0 0 40px #d3c09c, 0 0 55px #d3c09c, 0 0 100px #d3c09c`
+  }else{
+    rotate.style.textShadow = ` 0 0 5px #d3c09c`
+
+  }
   if (i < text.length) {
     rotate.innerHTML =
       text.substring(0, i + 1) + '<span class="cursor"></span>';
@@ -81,18 +87,21 @@ function typeWriter(text, i, callback) {
         }, j * 30);
       }
     }, 2000);
-    setTimeout(callback, 3000);
+    setTimeout(callback, 3500);
   }
+
+
 }
 
 function startTextAnimation() {
-  if (arrindex < arr.length) {
-    typeWriter(arr[arrindex], 0, () => {
-      arrindex++;
+
+  if (arrIndex < arr.length) {
+    typeWriter(arr[arrIndex], 0, () => {
+      arrIndex++;
       startTextAnimation();
     });
   } else {
-    arrindex = 0;
+    arrIndex = 0;
     startTextAnimation();
   }
 }
