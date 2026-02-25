@@ -68,10 +68,9 @@ let arrIndex = 0;
 
 function typeWriter(text, i, callback) {
   if (arrIndex === arr.length - 1) {
-    rotate.style.textShadow = ` 0 0 30px #d3c09c, 0 0 40px #d3c09c, 0 0 55px #d3c09c, 0 0 100px #d3c09c`
-  }else{
-    rotate.style.textShadow = ` 0 0 5px #d3c09c`
-
+    rotate.style.textShadow = ` 0 0 30px #d3c09c, 0 0 40px #d3c09c, 0 0 55px #d3c09c, 0 0 100px #d3c09c`;
+  } else {
+    rotate.style.textShadow = ` 0 0 5px #d3c09c`;
   }
   if (i < text.length) {
     rotate.innerHTML =
@@ -89,12 +88,9 @@ function typeWriter(text, i, callback) {
     }, 2000);
     setTimeout(callback, 3500);
   }
-
-
 }
 
 function startTextAnimation() {
-
   if (arrIndex < arr.length) {
     typeWriter(arr[arrIndex], 0, () => {
       arrIndex++;
@@ -251,4 +247,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && active) closeActive();
   });
+});
+
+// Header size shrinking on scroll
+const header = document.querySelector("header");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    header.style.height = "110px";
+  } else {
+    header.style.height = "160px";
+  }
 });

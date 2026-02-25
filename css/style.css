@@ -16,7 +16,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding: 160px;
+  scroll-padding: 150px;
 }
 
 ::-webkit-scrollbar {
@@ -61,6 +61,7 @@ header {
   align-items: center;
   padding: 0 3rem;
   box-shadow: 0 5px 10px var(--secondary-color);
+  transition: height 0.3s ease-in-out;
 }
 
 header h1 {
@@ -131,14 +132,18 @@ main {
   position: relative;
   top: 95px;
   color: var(--text-color);
-  gap: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: radial-gradient(var(--secondary-color),
-      var(--primary-color));
+}
+section {
+  width: 100% !important;
+  padding: 2rem 3rem;
+  background-image: radial-gradient(
+    var(--secondary-color),
+    var(--primary-color)
+  );
 }
 
 /*-------------------------Home Section--------------------------*/
@@ -149,7 +154,7 @@ main .home {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 130px);
 }
 
 main .home .home-content {
@@ -243,9 +248,11 @@ main .home .home-content .hero-btns a::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(90deg,
-      var(--highlight-color) 50%,
-      transparent 50%);
+  background-image: linear-gradient(
+    90deg,
+    var(--highlight-color) 50%,
+    transparent 50%
+  );
   background-size: 205%;
   background-position: 100% 100%;
   z-index: -1;
@@ -273,25 +280,28 @@ main .home .home-content .hero-btns a:hover::before {
 
 /*-------------------------About Section-------------------------*/
 main .about {
-  padding: 0 3rem;
+  position: relative;
+  padding: 0.5rem;
   width: 90%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: start;
+  justify-content: space-around;
   gap: 2rem;
   flex-wrap: wrap;
 }
 
 main .about h2 {
+  margin: 2rem 3rem;
   text-align: end;
   width: 100%;
   font-size: 2.5rem;
 }
 
 main .about p {
+  text-align: start;
   font-size: 1.2rem;
   line-height: 2.5rem;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 main .about .about-me-story strong {
@@ -310,13 +320,15 @@ main .about .about-me-story strong #About-me-link:hover {
 }
 
 main .about .about-me-image {
-  margin-right: 10rem;
-  width: 350px;
-  height: 350px;
+  position: sticky;
+  top: 175px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   background-image: url("../public/img/me.jpg");
   background-size: cover;
   background-position: center;
+  margin-bottom: 3rem;
 }
 
 /*--------------------------Skills Section-----------------------*/
@@ -426,7 +438,7 @@ main .skills .skills-header #Skill-info .info-proficiency-bar .info-progress {
 }
 
 /*--------------------Show Tooltip on Hover--------------------*/
-main .skills .skills-header #Info:hover~#Skill-info {
+main .skills .skills-header #Info:hover ~ #Skill-info {
   opacity: 1;
   pointer-events: auto;
   transition: opacity 1ms ease 0.2s;
@@ -434,27 +446,27 @@ main .skills .skills-header #Info:hover~#Skill-info {
 
 /*-----------------Animate Proficiency Bars on Hover-----------------*/
 /* Novice Proficiency Bar */
-main .skills .skills-header #Info:hover~#Skill-info #Novice-bar {
+main .skills .skills-header #Info:hover ~ #Skill-info #Novice-bar {
   width: 20%;
 }
 
 /* Beginner Proficiency Bar */
-main .skills .skills-header #Info:hover~#Skill-info #Beginner-bar {
+main .skills .skills-header #Info:hover ~ #Skill-info #Beginner-bar {
   width: 40%;
 }
 
 /* Skillful Proficiency Bar */
-main .skills .skills-header #Info:hover~#Skill-info #Skillful-bar {
+main .skills .skills-header #Info:hover ~ #Skill-info #Skillful-bar {
   width: 60%;
 }
 
 /* Experienced Proficiency Bar */
-main .skills .skills-header #Info:hover~#Skill-info #Experienced-bar {
+main .skills .skills-header #Info:hover ~ #Skill-info #Experienced-bar {
   width: 80%;
 }
 
 /* Expert Proficiency Bar */
-main .skills .skills-header #Info:hover~#Skill-info #Expert-bar {
+main .skills .skills-header #Info:hover ~ #Skill-info #Expert-bar {
   width: 100%;
 }
 
@@ -611,57 +623,122 @@ main .skills .skills-container .skill.bars-visible .skill-proficiency-bar {
 }
 
 /* progress widths appear after the bar container is visible */
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar .progress {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  .progress {
   transition: width 0.45s ease;
 }
 
 /* Keep the same progress-width mappings for active state as hover */
 /* progress widths applied when .progress-visible is set on the skill */
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Html-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Html-skill {
   width: 80%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Css-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Css-skill {
   width: 80%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Js-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Js-skill {
   width: 80%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Java-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Java-skill {
   width: 60%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #C-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #C-skill {
   width: 40%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Cpp-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Cpp-skill {
   width: 40%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Bootstrap-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Bootstrap-skill {
   width: 80%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Git-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Git-skill {
   width: 60%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Frontend-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Frontend-skill {
   width: 60%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #OOP-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #OOP-skill {
   width: 60%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Problem-solving-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Problem-solving-skill {
   width: 80%;
 }
 
-main .skills .skills-container .skill.progress-visible .skill-proficiency-bar #Teamwork-skill {
+main
+  .skills
+  .skills-container
+  .skill.progress-visible
+  .skill-proficiency-bar
+  #Teamwork-skill {
   width: 80%;
 }
 
@@ -676,7 +753,12 @@ main .projects {
   min-height: 50vh;
   width: 90%;
   overflow-x: scroll;
+  overflow-y: hidden;
   height: fit-content;
+}
+
+main .projects.projects.projects.projects::-webkit-scrollbar {
+  height: 8px;
 }
 
 main .projects .project-container {
@@ -684,49 +766,8 @@ main .projects .project-container {
   gap: 4rem;
 }
 
-main .projects::-webkit-scrollbar {
-  display: none;
-}
-
 main .projects .project-container .project-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #d3c09c;
   width: fit-content;
-  padding: 2rem;
-}
-
-main .projects .project-container .project-card .project-content {
-  height: 0;
-  width: 0;
-  pointer-events: none;
-  opacity: 0;
-  transform: scale(0);
-  transition:
-    opacity 1ms,
-    width 0.3s ease,
-    height 0.3s ease,
-    margin-left 0.3s ease;
-}
-
-main .projects .project-container .project-card img {
-  width: 300px;
-}
-
-main .projects .project-container .project-card .project-title {
-  font-size: 1.7rem;
-}
-
-main .projects .project-container .project-card:hover .project-content {
-  margin-left: 2rem;
-  width: 500px;
-  height: 250px;
-  pointer-events: auto;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s ease 0.6s,
-    width 0.3s ease 0.4s,
-    height 0.3s ease 0.1s,
-    margin-left 0.3s ease 0.3s;
+  height: fit-content;
+  background-color: var(--accent-color);
 }
