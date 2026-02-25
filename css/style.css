@@ -16,7 +16,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding: 150px;
+  scroll-padding: 90px;
 }
 
 ::-webkit-scrollbar {
@@ -41,12 +41,15 @@ body {
     #1a140f 50%,
     #33271e 75%,
     #1a140f 100%
-  );
+  ) !important;
   background-size: 400% 400%;
+  background-position: 0% 50%;
+  background-attachment: fixed;
   animation: gradientShift 15s ease-in-out infinite;
   margin: 0;
   padding: 0;
   position: relative;
+  min-height: 100vh;
 }
 
 @keyframes gradientShift {
@@ -404,7 +407,7 @@ main .home .home-content .hero-btns a {
 }
 
 main .home .home-content .hero-btns .separator {
-  width: 1px;
+  width: 10px;
   height: 0;
 }
 
@@ -413,19 +416,19 @@ main .home .home-content .hero-btns a::before {
   position: absolute;
   inset: 0;
   background-image: linear-gradient(
-    90deg,
+    to right,
     var(--highlight-color) 50%,
-    transparent 50%
+    var(--primary-color) 50%
   );
+
   background-size: 205%;
-  background-position: 100% 100%;
+  background-position: 100% 0%;
   z-index: -1;
   transition: background-position 0.3s ease;
 }
 
 main .home .home-content .hero-btns a:hover {
   color: var(--primary-color);
-  transform: translateX(0);
 }
 
 main .home .home-content .hero-btns a:hover::before {
@@ -518,10 +521,11 @@ main .skills h2 {
 
 /*--------------------Info Icon and Tooltip--------------------*/
 main .skills #Info {
+  anchor-name: --Info;
   font-size: 1.2rem;
   position: absolute;
   color: var(--accent-color);
-  top: 2rem;
+  top: 0;
   left: 5.8rem;
   cursor: pointer;
   animation: Info-pulse 2.5s 10 ease-in-out 3s;
@@ -553,8 +557,9 @@ main .skills .skills-header #Skill-info {
   z-index: 100;
   font-size: 10px;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   left: 7rem;
+  position-anchor: --Info;
   background-color: var(--secondary-color);
   width: fit-content;
   height: fit-content;

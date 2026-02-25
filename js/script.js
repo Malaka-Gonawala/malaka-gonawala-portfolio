@@ -1,3 +1,49 @@
+// Removing Preloader with smooth fade and minimum visible time
+const __preloaderShownAt = Date.now();
+window.addEventListener("load", () => {
+  const pre =
+    document.getElementById("preloader") || document.querySelector(".preload");
+  if (!pre) {
+    document.body.style.overflow = "auto";
+    return;
+  }
+
+  // Allow body scrolling immediately
+  document.body.style.overflow = "auto";
+
+  // Ensure preloader is visible for at least `minVisible` ms
+  const minVisible = 1600; // ms
+  const elapsed = Date.now() - __preloaderShownAt;
+  const wait = Math.max(0, minVisible - elapsed);
+
+  setTimeout(() => {
+    pre.classList.add("hidden");
+    setTimeout(() => {
+      if (pre.parentNode) pre.parentNode.removeChild(pre);
+    }, 420);
+  }, wait);
+});
+
+// Split brand text into per-letter spans for staggered animation
+document.addEventListener("DOMContentLoaded", () => {
+  const brand = document.querySelector(".brand-text");
+  if (!brand) return;
+  const text = brand.textContent.trim();
+  brand.textContent = "";
+  // create span for each character and stagger via inline delay
+  [...text].forEach((ch, i) => {
+    const span = document.createElement("span");
+    span.className = "char";
+    span.textContent = ch === " " ? "\u00A0" : ch;
+    span.style.animationDelay = `${i * 80}ms`;
+    brand.appendChild(span);
+  });
+  // mark preloader as waiting so chars don't loop unexpectedly
+  const pre =
+    document.getElementById("preloader") || document.querySelector(".preload");
+  if (pre) pre.classList.add("waiting");
+});
+
 // Navigation menu toggle
 const NavUnderlines = document.querySelectorAll(".underline");
 const navLinks = document.querySelectorAll(".nav-link");
