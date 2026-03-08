@@ -222,14 +222,14 @@ header {
   transition: height 0.3s ease-in-out;
 }
 
-header h1 {
-  color: var(--accent-color);
-  font-size: 3rem;
+.logo {
+  position: relative; /* normal layout */
   font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--accent-color);
   letter-spacing: -1px;
 }
 
-header h1 a {
+.logo a {
   text-decoration: none;
   color: var(--accent-color);
 }
@@ -520,19 +520,35 @@ main .skills h2 {
 }
 
 /*--------------------Info Icon and Tooltip--------------------*/
+main .skills .skills-header #Skill-info-block {
+  top: 2rem;
+  left: 5.5rem;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .skills .skills-header #Skill-info-block:hover {
+  width: 3rem;
+  height: 3rem;
+}
+
 main .skills #Info {
-  anchor-name: --Info;
   font-size: 1.2rem;
   position: absolute;
+  top: -5px;
+  left: 0;
   color: var(--accent-color);
-  top: 0;
-  left: 5.8rem;
   cursor: pointer;
   animation: Info-pulse 2.5s 10 ease-in-out 3s;
   transition: all 0.3s ease;
 }
 
-main .skills #Info:hover {
+main .skills #Skill-info-block:hover #Info {
   animation-play-state: paused;
   color: var(--highlight-color);
   text-shadow: 0 0 5px var(--highlight-color);
@@ -557,9 +573,8 @@ main .skills .skills-header #Skill-info {
   z-index: 100;
   font-size: 10px;
   position: absolute;
-  top: 2rem;
-  left: 7rem;
-  position-anchor: --Info;
+  top: 1.5rem;
+  left: 1.5rem;
   background-color: var(--secondary-color);
   width: fit-content;
   height: fit-content;
@@ -607,7 +622,7 @@ main .skills .skills-header #Skill-info .info-proficiency-bar .info-progress {
 }
 
 /*--------------------Show Tooltip on Hover--------------------*/
-main .skills .skills-header #Info:hover ~ #Skill-info {
+main .skills .skills-header #Skill-info-block:hover #Skill-info {
   opacity: 1;
   pointer-events: auto;
   transition: opacity 1ms ease 0.2s;
@@ -615,27 +630,32 @@ main .skills .skills-header #Info:hover ~ #Skill-info {
 
 /*-----------------Animate Proficiency Bars on Hover-----------------*/
 /* Novice Proficiency Bar */
-main .skills .skills-header #Info:hover ~ #Skill-info #Novice-bar {
+main .skills .skills-header #Skill-info-block:hover #Skill-info #Novice-bar {
   width: 20%;
 }
 
 /* Beginner Proficiency Bar */
-main .skills .skills-header #Info:hover ~ #Skill-info #Beginner-bar {
+main .skills .skills-header #Skill-info-block:hover #Skill-info #Beginner-bar {
   width: 40%;
 }
 
 /* Skillful Proficiency Bar */
-main .skills .skills-header #Info:hover ~ #Skill-info #Skillful-bar {
+main .skills .skills-header #Skill-info-block:hover #Skill-info #Skillful-bar {
   width: 60%;
 }
 
 /* Experienced Proficiency Bar */
-main .skills .skills-header #Info:hover ~ #Skill-info #Experienced-bar {
+main
+  .skills
+  .skills-header
+  #Skill-info-block:hover
+  #Skill-info
+  #Experienced-bar {
   width: 80%;
 }
 
 /* Expert Proficiency Bar */
-main .skills .skills-header #Info:hover ~ #Skill-info #Expert-bar {
+main .skills .skills-header #Skill-info-block:hover #Skill-info #Expert-bar {
   width: 100%;
 }
 
@@ -919,11 +939,15 @@ main .skills .skills-container .skill:hover {
 
 /*--------------------------------------Projects section---------------------------------------*/
 main .projects {
-  min-height: 50vh;
+  min-height: 100vh;
   width: 90%;
   overflow-x: scroll;
-  overflow-y: hidden;
   height: fit-content;
+}
+
+main .projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 main .projects.projects.projects.projects::-webkit-scrollbar {
@@ -931,12 +955,102 @@ main .projects.projects.projects.projects::-webkit-scrollbar {
 }
 
 main .projects .project-container {
+  background-color: var(--secondary-color);
+  height: fit-content;
+  padding: 2rem;
   display: flex;
+  overflow-x: scroll;
   gap: 4rem;
 }
 
-main .projects .project-container .project-card {
-  width: fit-content;
+.card {
+  position: relative;
+  min-width: 500px;
   height: fit-content;
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--primary-color);
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--highlight-color);
+  font-weight: 700;
+}
+
+.card:hover .card__image {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  line-height: 1.4;
+}
+
+.card__button {
+  min-width: 100px;
+  padding: 12px 18px;
+  border-radius: 7px;
+  background: var(--highlight-color);
+  border: none;
+  color: var(--primary-color);
+  margin-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background: transparent;
+  color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--highlight-color);
+  border: 1px solid var(--highlight-color);
+}
+
+.secondary:hover {
+  background: var(--highlight-color);
+  border: none;
+  color: var(--primary-color);
 }

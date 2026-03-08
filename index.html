@@ -14,10 +14,16 @@
   </head>
 
   <body>
-    <div class="preload" id="preloader">
-      <div class="preload-inner">
-        <div class="brand" aria-hidden="true">
-          <span class="brand-text">Malaka Gonawala</span>
+    <div class="preload" id="Preloader">
+      <div class="brand" aria-hidden="true">
+        <div class="brand-name brand-name-m">
+          M
+          <div class="brand-name-rest">alaka</div>
+        </div>
+
+        <div class="brand-name brand-name-g">
+          G
+          <div class="brand-name-rest">onawala</div>
         </div>
       </div>
     </div>
@@ -28,7 +34,13 @@
 
     <!-- Header Section -->
     <header>
-      <h1 class="logo"><a href="#Home">Malaka Gonawala</a></h1>
+      <h1 class="logo">
+        <a href="#Home"
+          >M<span class="title-rest">alaka</span> G<span class="title-rest"
+            >onawala</span
+          ></a
+        >
+      </h1>
       <!-- Nav Bar -->
       <nav>
         <ul>
@@ -148,42 +160,44 @@
       <section class="skills" id="Skills">
         <div class="skills-header">
           <h2>Skills</h2>
-          <span id="Info">&#9432;</span>
+          <div id="Skill-info-block">
+            <span id="Info">&#9432;</span>
 
-          <!-- Skill Info Tooltip -->
-          <div id="Skill-info">
-            <div class="skill-info-container">
-              <p>Novice</p>
-              <div class="info-proficiency-bar">
-                <div class="info-progress" id="Novice-bar"></div>
+            <!-- Skill Info Tooltip -->
+            <div id="Skill-info">
+              <div class="skill-info-container">
+                <p>Novice</p>
+                <div class="info-proficiency-bar">
+                  <div class="info-progress" id="Novice-bar"></div>
+                </div>
               </div>
-            </div>
 
-            <div class="skill-info-container">
-              <p>Beginner</p>
-              <div class="info-proficiency-bar">
-                <div class="info-progress" id="Beginner-bar"></div>
+              <div class="skill-info-container">
+                <p>Beginner</p>
+                <div class="info-proficiency-bar">
+                  <div class="info-progress" id="Beginner-bar"></div>
+                </div>
               </div>
-            </div>
 
-            <div class="skill-info-container">
-              <p>Skillful</p>
-              <div class="info-proficiency-bar">
-                <div class="info-progress" id="Skillful-bar"></div>
+              <div class="skill-info-container">
+                <p>Skillful</p>
+                <div class="info-proficiency-bar">
+                  <div class="info-progress" id="Skillful-bar"></div>
+                </div>
               </div>
-            </div>
 
-            <div class="skill-info-container">
-              <p>Experienced</p>
-              <div class="info-proficiency-bar">
-                <div class="info-progress" id="Experienced-bar"></div>
+              <div class="skill-info-container">
+                <p>Experienced</p>
+                <div class="info-proficiency-bar">
+                  <div class="info-progress" id="Experienced-bar"></div>
+                </div>
               </div>
-            </div>
 
-            <div class="skill-info-container">
-              <p>Expert</p>
-              <div class="info-proficiency-bar">
-                <div class="info-progress" id="Expert-bar"></div>
+              <div class="skill-info-container">
+                <p>Expert</p>
+                <div class="info-proficiency-bar">
+                  <div class="info-progress" id="Expert-bar"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -295,31 +309,83 @@
       <section class="projects" id="Projects">
         <h2>My Projects</h2>
         <div class="project-container">
-          <div class="project-card">
-            <img src="public/img/project/fortheroot.png" alt="" />
-            <div class="project-content">
-              <h3 class="project-title">Lorem ipsum dolor sit.</h3>
-              <p class="project-tags">
-                Tags <span class="tags">Lorem, ipsum, dolor, sit</span>
+          <div class="project-card card">
+            <img
+              src="public/img/project/fortheroot.png"
+              alt=""
+              class="card__image"
+            />
+            <div class="card__content">
+              <p class="card__title">Lorem ipsum dolor sit.</p>
+              <p class="card__description">
+                Tags: Lorem, ipsum, dolor, sit<br />Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quibusdam quisquam consectetur
+                officiis reprehenderit necessitatibus sequi, fugiat aut laborum
+                recusandae voluptatibus?
               </p>
-              <p class="project-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam quisquam consectetur officiis reprehenderit
-                necessitatibus sequi, fugiat aut laborum recusandae
-                voluptatibus?
+              <a href="" class="card__button primary">Live</a>
+              <a href="" class="card__button secondary">Github repo</a>
+            </div>
+          </div>
+          <div class="project-card card">
+            <img
+              src="public/img/project/fortheroot.png"
+              alt=""
+              class="card__image"
+            />
+            <div class="card__content">
+              <p class="card__title">Lorem ipsum dolor sit.</p>
+              <p class="card__description">
+                Tags: Lorem, ipsum, dolor, sit<br />Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quibusdam quisquam consectetur
+                officiis reprehenderit necessitatibus sequi, fugiat aut laborum
+                recusandae voluptatibus?
               </p>
-
-              <div class="project-btn-container">
-                <a href="" class="project-btn project-github">Github repo</a>
-                <a href="" class="project-btn project-live">Live</a>
-              </div>
+              <a href="" class="card__button primary">Live</a>
+              <a href="" class="card__button secondary">Github repo</a>
+            </div>
+          </div>
+          <div class="project-card card">
+            <img
+              src="public/img/project/fortheroot.png"
+              alt=""
+              class="card__image"
+            />
+            <div class="card__content">
+              <p class="card__title">Lorem ipsum dolor sit.</p>
+              <p class="card__description">
+                Tags: Lorem, ipsum, dolor, sit<br />Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quibusdam quisquam consectetur
+                officiis reprehenderit necessitatibus sequi, fugiat aut laborum
+                recusandae voluptatibus?
+              </p>
+              <a href="" class="card__button primary">Live</a>
+              <a href="" class="card__button secondary">Github repo</a>
+            </div>
+          </div>
+          <div class="project-card card">
+            <img
+              src="public/img/project/fortheroot.png"
+              alt=""
+              class="card__image"
+            />
+            <div class="card__content">
+              <p class="card__title">Lorem ipsum dolor sit.</p>
+              <p class="card__description">
+                Tags: Lorem, ipsum, dolor, sit<br />Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quibusdam quisquam consectetur
+                officiis reprehenderit necessitatibus sequi, fugiat aut laborum
+                recusandae voluptatibus?
+              </p>
+              <a href="" class="card__button primary">Live</a>
+              <a href="" class="card__button secondary">Github repo</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer Section -->
-    <footer></footer>
+    <!-- <footer></footer> -->
 
     <!-- Script -->
     <script src="js/script.js" defer></script>
