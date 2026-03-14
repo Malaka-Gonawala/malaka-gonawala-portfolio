@@ -1,3 +1,17 @@
+// Smooth scroll
+const lenis = new Lenis({
+  smooth: true,
+  duration: 1.2,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// Preloader animation
 document.addEventListener("DOMContentLoaded", () => {
   preloadScroll();
   document.body.style.overflow = "hidden";
@@ -18,61 +32,6 @@ function preloadScroll() {
     behavior: "smooth",
   });
 }
-
-// Navigation menu toggle
-const NavUnderlines = document.querySelectorAll(".underline");
-const navLinks = document.querySelectorAll(".nav-link");
-
-function updateActiveLink() {
-  navLinks.forEach((link, index) => {
-    if (window.location.hash === link.getAttribute("href")) {
-      link.classList.add("selected-nav-link");
-      NavUnderlines[index].classList.add("selected-underline");
-    } else {
-      NavUnderlines[index].classList.remove("selected-underline");
-      link.classList.remove("selected-nav-link");
-    }
-  });
-}
-
-window.addEventListener("hashchange", updateActiveLink);
-window.addEventListener("load", updateActiveLink);
-
-// Scroll-spy: make nav link active based on visible section while scrolling
-function initScrollSpy() {
-  const sections = Array.from(navLinks)
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
-
-  if (!sections.length) return;
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // clear previous
-          navLinks.forEach((link, i) => {
-            link.classList.remove("selected-nav-link");
-            NavUnderlines[i].classList.remove("selected-underline");
-          });
-
-          const id = `#${entry.target.id}`;
-          navLinks.forEach((link, i) => {
-            if (link.getAttribute("href") === id) {
-              link.classList.add("selected-nav-link");
-              NavUnderlines[i].classList.add("selected-underline");
-            }
-          });
-        }
-      });
-    },
-    { root: null, rootMargin: "-35% 0px -35% 0px", threshold: 0.01 },
-  );
-
-  sections.forEach((s) => observer.observe(s));
-}
-
-window.addEventListener("load", initScrollSpy);
 
 // Hero section typewriter effect
 const arr = [
