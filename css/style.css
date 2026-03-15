@@ -38,11 +38,11 @@ body {
   line-height: 1.7;
   background: linear-gradient(
     45deg,
-    #1a140f 0%,
-    #33271e 25%,
-    #1a140f 50%,
-    #33271e 75%,
-    #1a140f 100%
+    var(--primary-color) 0%,
+    var(--secondary-color) 25%,
+    var(--primary-color) 50%,
+    var(--secondary-color) 75%,
+    var(--primary-color) 100%
   ) !important;
   background-size: 400% 400%;
   background-position: 0% 50%;
@@ -80,7 +80,11 @@ body {
 .orb-1 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle at 30% 30%, #d3c09c, #8e6f3e);
+  background: radial-gradient(
+    circle at 30% 30%,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
   top: -50px;
   left: -50px;
   animation:
@@ -120,7 +124,11 @@ body {
 .orb-2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle at 40% 40%, #d3c09c, #8e6f3e);
+  background: radial-gradient(
+    circle at 40% 40%,
+    var(--highlight-color),
+    var(--secondary-color)
+  );
   top: 50%;
   left: 50%;
   animation:
@@ -162,7 +170,11 @@ body {
 .orb-3 {
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle at 35% 35%, #8e6f3e, #d3c09c);
+  background: radial-gradient(
+    circle at 35% 35%,
+    var(--secondary-color),
+    var(--highlight-color)
+  );
   bottom: -70px;
   right: -50px;
   animation:
