@@ -11,85 +11,117 @@
   padding: 0;
   box-sizing: border-box;
 }
-.preload {
-  opacity: 1;
-  overflow: hidden;
-  animation: zindex-change 1.6s linear forwards 2s;
-  z-index: 9999;
-  width: 100vw;
+
+/*---------------------------Header H1---------------------------*/
+header {
+  z-index: 1002;
+  background-color: var(--primary-color);
+  width: 100%;
+  max-width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: var(--primary-color);
-  transition: opacity 0.3s ease-in;
-}
-
-.brand {
-  position: fixed; /* stays relative to viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(2); /* start centered */
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  letter-spacing: -1px;
-  width: clamp(220px, 36.5vw, 2000px);
-  height: fit-content;
   display: flex;
-  flex-wrap: wrap;
-  color: var(--accent-color);
-  transition: all 1s ease-in-out;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  box-shadow: 0 5px 10px var(--secondary-color);
+  transition: height 0.4s ease;
 }
-
-.brand.loaded {
-  top: var(--navbar-top);
-  left: var(--navbar-left);
-  transform: translate(0, 40.5px) scale(1);
-  z-index: 1002;
+.header-intro {
+  height: 160px;
 }
-
-.brand-name-m {
-  max-width: 196px;
+.header-onscroll {
+  height: 110px;
 }
-.brand-name-g {
-  max-width: 300px;
-}
-.brand-name {
-  color: var(--accent-color);
-  width: 40px;
-  animation: expand 2s linear forwards 0.5s;
-  display: flex;
-}
-.brand-name-rest,
-.brand-name {
-  font-family: "Melodrama-Variable", sans-serif;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.brand-name-rest {
-  width: 100%;
-  overflow: hidden;
-}
-@keyframes expand {
-  from {
-    width: 40px;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes height-change {
+@keyframes shrink {
   from {
     height: 100vh;
   }
   to {
-    height: 161px;
+    height: 160px;
   }
 }
 
-@keyframes zindex-change {
+.logo {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  transform: scale(1.5);
+  transform-origin: left;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  transition: transform 1s ease;
+}
+.logo.resize {
+  transform: scale(1);
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--accent-color);
+  display: flex;
+}
+
+.title-rest {
+  width: 0;
+  max-width: fit-content;
+  overflow: hidden;
+  transition: width 2.5s ease-out;
+  animation: expand 2s cubic-bezier(0.25, -0.49, 0.32, 0.62) forwards;
+}
+@keyframes expand {
   from {
-    z-index: 9999;
+    width: 0;
   }
   to {
-    z-index: 1001;
+    width: 50%;
   }
+}
+
+/*--------------------------Navigation---------------------------*/
+header nav ul {
+  scroll-target-group: auto;
+  list-style: none;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  gap: 2rem;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.5s ease 1s;
+}
+.ul-appear {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+header nav ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+/*-----------------------Navigation Links------------------------*/
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: "Nunito-Variable", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover,
+a:target-current {
+  color: var(--highlight-color);
+}
+
+/*-----------------------Underline Effect------------------------*/
+.underline {
+  width: 0;
+  height: 2px;
+  background-color: var(--highlight-color);
+  transition: width 0.3s ease;
+}
+
+header nav ul li:hover .underline,
+a:target-current + .underline {
+  width: 100%;
 }

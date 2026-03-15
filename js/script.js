@@ -12,18 +12,29 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // Preloader animation
+const header = document.querySelector("header");
+const titleRest = document.querySelector(".title-rest");
+const logo = document.querySelector(".logo");
+const nav = document.querySelector(".nav-ul");
+
 document.addEventListener("DOMContentLoaded", () => {
   preloadScroll();
-  document.body.style.overflow = "hidden";
-
-  const preload = document.querySelector("#Preloader");
   setTimeout(() => {
-    preload.style.opacity = 0;
-    document.body.style.overflow = "auto";
+    logo.classList.add("resize");
+    nav.classList.add("ul-appear");
+    header.style.animation = "shrink 1s ease-out forwards";
     setTimeout(() => {
-      preload.style.display = "none";
+      header.style.animation = "none";
     }, 1000);
-  }, 3000);
+
+    setTimeout(() => {
+      header.classList.add("header-intro");
+    }, 1000);
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("header-onscroll", window.scrollY > 50);
+    });
+  }, 2500);
 });
 
 function preloadScroll() {
@@ -83,7 +94,7 @@ function startTextAnimation() {
 }
 setTimeout(() => {
   startTextAnimation();
-}, 4500);
+}, 2800);
 
 /* Skills lightbox behavior: center clicked skill and reveal transitions */
 document.addEventListener("DOMContentLoaded", () => {
@@ -228,42 +239,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && active) closeActive();
   });
-});
-
-// Header size shrinking on scroll
-const header = document.querySelector("header");
-document.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.height = "110px";
-  } else {
-    header.style.height = "160px";
-  }
-});
-
-const preloaderBrand = document.querySelector(".brand");
-const navbarLogo = document.querySelector(".logo");
-
-window.addEventListener("load", () => {
-  // Get navbar position
-  const rect = navbarLogo.getBoundingClientRect();
-
-  const offsetY = rect.height / 2 - preloaderBrand.offsetHeight / 2;
-
-  preloaderBrand.style.setProperty(
-    "--navbar-top",
-    rect.top + window.scrollY + offsetY + "px",
-  );
-  preloaderBrand.style.setProperty(
-    "--navbar-left",
-    rect.left + window.scrollX + "px",
-  );
-  // Trigger animation
-  setTimeout(() => {
-    preloaderBrand.classList.add("loaded");
-  }, 1500);
-
-  // Fade out preloader after animation
-  setTimeout(() => {
-    document.getElementById("Preloader").style.opacity = 0;
-  }, 2500);
 });
