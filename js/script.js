@@ -1,7 +1,12 @@
+// Disable right click
+document.addEventListener('contextmenu',(e)=>{
+  e.preventDefault();
+})
+
 // Smooth scroll
 const lenis = new Lenis({
   smooth: true,
-  duration: 1.2,
+  duration: 2,
 });
 
 function raf(time) {
