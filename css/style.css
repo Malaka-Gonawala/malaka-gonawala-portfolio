@@ -2,11 +2,11 @@
 @import url(nunito.css);
 
 :root {
-  --primary-color: #1a140f;
-  --secondary-color: #33271e;
-  --accent-color: #8e6f3e;
-  --highlight-color: #d3c09c;
-  --text-color: #ffffff;
+  --primary-color: #1c1510;
+  --secondary-color: #2e2218;
+  --accent-color: #c4922a;
+  --highlight-color: #e8d4a8;
+  --text-color: #fdf8f0;
 }
 
 * {
@@ -508,8 +508,8 @@ main .skills #Skill-info-block:hover #Info {
 /*--------------------Skill Info Tooltip--------------------*/
 main .skills .skills-header #Skill-info {
   border: 3px solid var(--primary-color);
-  z-index: 100;
-  font-size: 10px;
+  z-index: 99999;
+  font-size: 12px;
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -877,9 +877,8 @@ main .skills .skills-container .skill:hover {
 
 /*--------------------------------------Projects section---------------------------------------*/
 main .projects {
-  min-height: 100vh;
-  width: 90%;
-  overflow-x: scroll;
+  min-height: 80vh;
+  width: 100%;
   height: fit-content;
 }
 
@@ -888,22 +887,21 @@ main .projects h2 {
   margin-bottom: 1.5rem;
 }
 
-main .projects::-webkit-scrollbar {
-  height: 8px;
-}
-
 main .projects .project-container {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   height: fit-content;
   padding: 2rem;
   display: flex;
   overflow-x: scroll;
   gap: 4rem;
 }
+main .project-container::-webkit-scrollbar {
+  display: none;
+}
 
 .card {
   position: relative;
-  min-width: 500px;
+  min-width: 800px;
   height: fit-content;
   background-color: var(--primary-color);
   border-radius: 7px;

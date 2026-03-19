@@ -1,7 +1,7 @@
 // Disable right click
-document.addEventListener('contextmenu',(e)=>{
-  e.preventDefault();
-})
+// document.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+// });
 
 // Smooth scroll
 const lenis = new Lenis({
@@ -64,9 +64,9 @@ let arrIndex = 0;
 
 function typeWriter(text, i, callback) {
   if (arrIndex === arr.length - 1) {
-    rotate.style.textShadow = ` 0 0 30px #d3c09c, 0 0 40px #d3c09c, 0 0 55px #d3c09c, 0 0 100px #d3c09c`;
+    rotate.style.textShadow = ` 0 0 30px #e8d4a8, 0 0 40px #e8d4a8, 0 0 55px #e8d4a8, 0 0 100px #e8d4a8`;
   } else {
-    rotate.style.textShadow = ` 0 0 5px #d3c09c`;
+    rotate.style.textShadow = ` 0 0 5px #e8d4a8`;
   }
   if (i < text.length) {
     rotate.innerHTML =
