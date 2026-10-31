@@ -1,4 +1,4 @@
-# Design skills
+# Design and React skills
 
 Project skills for Claude Code. Any session that clones this repo (including cloud sessions) picks them up automatically.
 
@@ -8,6 +8,7 @@ Project skills for Claude Code. Any session that clones this repo (including clo
 | `ui-ux-pro-max` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) `.claude/skills/ui-ux-pro-max` | 28b3b8d | MIT |
 | `apple-design` | [nutshellengineering/apple-design-skill](https://github.com/nutshellengineering/apple-design-skill) `skills/apple-design-skill` | 119b6ac | Apache-2.0 |
 | `gsap-*` (8 skills) | [greensock/gsap-skills](https://github.com/greensock/gsap-skills) `skills/` | aed9cfd | MIT |
+| `shadcn` | [shadcn-ui/ui](https://github.com/shadcn-ui/ui) `skills/shadcn` | main, 2026-10-31 | MIT |
 
 Local changes from upstream:
 - `ui-ux-pro-max/SKILL.md`: script paths changed from `${CLAUDE_PLUGIN_ROOT}/.claude/skills/...` to `.claude/skills/...`, since this is a project skill, not a plugin.
