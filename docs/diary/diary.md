@@ -26,30 +26,44 @@ Malaka Gonawala (GitHub: Malaka-Gonawala)
 | Area | Choice | Status |
 |---|---|---|
 | Framework | React with Vite, prerendered for SEO | Decided |
-| UI components | shadcn, 21st.dev Magic, React Bits | Set up |
-| Animation | GSAP | Skills installed |
+| Styling | Tailwind | Open (Phase 3) |
+| UI components | shadcn, plus 21st.dev Magic and React Bits as sources | shadcn open (Phase 3) |
+| Animation | GSAP | Open (Phase 3) |
+| Contact | Custom letter-style form plus a visible email (malaka@malakagonawala.dev, forwarded to Gmail) | Decided |
 | Hosting | Static site on GitHub Pages via GitHub Actions, no backend | Decided |
 | Fonts | Melodrama (headings), Nunito (body), self-hosted woff2 | Archived |
 | Palette | Dark brown and gold (temporary, to be replaced) | Needs a new palette |
 
 ## Site sections (planned)
 
-Hero, About, Skills, Projects (ForTheRoot, Cavalleria, Russian Roulette), Resume, Contact.
+Hero, About, Skills, Projects (ForTheRoot, Cavalleria su Due Ruote, Russian Roulette in Java), Lab, Resume, Contact, Footer. Separate pages: Resume, Privacy, Accessibility statement. The final site map is set in Phase 3.
+
+## Project phases
+
+1. Tools (done 31 October)
+2. Grill (done 31 October, brief approved)
+3. Planning
+4. Design and prototype
+5. Content
+6. Build in React
+7. Polish
+8. Launch
+9. Maintain
 
 ## Tools
 
 - **Connected apps:** Figma, Google Drive, Gmail, Google Calendar, Claude Docs, GitHub
-- **Design skills (in the repo):** Impeccable, ui-ux-pro-max, apple-design, GSAP (8 skills), Graphify, Matt Pocock's skills
-- **MCP servers (in the repo):** shadcn, 21st.dev Magic
-- **Cloud environment:** `TWENTY_FIRST_API_KEY` set; `21st.dev` and `reactbits.dev` in Allowed domains
+- **Skills (in the repo):** Impeccable, ui-ux-pro-max, apple-design, GSAP (8 skills), Graphify, Matt Pocock's skills, React skills (shadcn, react-best-practices, composition-patterns, web-design-guidelines, webapp-testing), project-conventions
+- **Plugins and agents:** frontend-design, typescript-lsp, ui-reviewer subagent
+- **Hooks and automation:** Prettier auto-format, deploy-file protection, GitHub Action that rebuilds the diary PDF
+- **MCP servers (in the repo):** shadcn, 21st.dev Magic, context7
+- **Cloud environment:** `TWENTY_FIRST_API_KEY` and `CONTEXT7_API_KEY` set; 21st.dev, reactbits.dev, ui.shadcn.com and context7.com in Allowed domains; setup script installs graphify and typescript-language-server
 
 ## Workflow rules
 
-- All work happens through GitHub from the cloud, not the local PC folder. Pull locally to stay in sync.
-- No site code is written until Malaka says go.
-- Any new skill, plugin or MCP server is committed into the repo (`.claude/` or `.mcp.json`). API keys never go in the repo.
-- When coding starts, a planner session talks to Malaka and an executor session writes the code, reporting in 1 to 2 lines.
-- Saying **"update diary"** adds or refreshes that day's entry in this diary.
+The full rules, approved by Malaka on 31 October 2026, are in `plan/rules.md` in the project files and in `docs/rules/` in the repo. They are grouped as Strict (only Malaka changes them), Necessary (broken only with a written reason) and Other.
+
+Key strict rules: no site code until Malaka says go, never commit secrets, only Malaka merges pull requests, nothing leaves the project or gets deleted without Malaka's OK, preview every task before building it, and every choice comes with a recommendation.
 
 # Daily Entries {.front}
 
@@ -74,3 +88,21 @@ Hero, About, Skills, Projects (ForTheRoot, Cavalleria, Russian Roulette), Resume
 - **Wrote docs:** Claude Code automation recommendations, this project diary (repo copy opened as PR #6)
 
 **Open items:** choose a new colour palette, re-export the resume PDF (it renders blank), choose which automation recommendations to add, add `uv tool install graphifyy` to the cloud setup script, give project details and links.
+
+## Saturday, 31 October 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Tooling and planning day. Phase 1 (Tools) was finished and verified, Malaka was grilled on goals, audience, sections and reference sites, and the one-page brief was approved. The 9-phase plan, the shared checklist and the project rules were set up. No site code yet.
+
+- **Installed tools:** React skills (shadcn, react-best-practices, composition-patterns, web-design-guidelines, webapp-testing), frontend-design plugin, typescript-lsp plugin, context7 MCP, Prettier auto-format and deploy-file protection hooks, project-conventions skill, ui-reviewer subagent, GitHub Action that rebuilds the diary PDF
+- **Configured the cloud:** setup script installs graphify and typescript-language-server, allowed domains ui.shadcn.com and context7.com, context7 API key, full environment check (17 skills, 3 plugins, 3 MCP servers)
+- **Fixed:** browser testing points at the built-in Playwright, CLAUDE.md fallback for sessions where repo skills don't load
+- **Cleaned up:** removed stray `a.txt` and `desktop.ini`, created the GitHub triage labels, archived the full v1 site to the project archive
+- **Grilled Malaka:** 50 questions on goals, audience and sections, 55 reference sites collected, one-page brief approved
+- **Decided:** no backend (static site on GitHub Pages), Vite instead of Next.js with prerendering, contact as a custom letter-style form plus a visible email, malaka@malakagonawala.dev forwarded to Gmail, old About Me copy scrapped, new Lab, Resume, Privacy and Accessibility statement pages, apple-design skill confirmed, nothing else to install
+- **Planned:** 9-phase plan approved, shared project checklist, project rules approved (strict, necessary, other) and copied into the repo
+- **Updated the diary:** corrected the 30 October entry, front pages now say React + Vite with no backend
+- **Merged pull requests:** #7 React skills, #8 typescript-lsp, #9 context7, #10 Playwright note, #11 diary fix, #12, #13, #15, #16, #22 and #23 project rules, #14 triage labels, #17 stray files, #18 hooks, #19 conventions skill and reviewer, #20 diary PDF action, #21 CLAUDE.md fallback
+
+**Open items:** Phase 3 planning (site map, first-version scope, milestones), Tailwind, shadcn and GSAP yes/no, pick an email-forwarding service, new colour palette, re-export the resume PDF, project details and links.
