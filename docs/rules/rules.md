@@ -41,6 +41,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **S21. Preview before every task.** Before starting a task, show Malaka a preview of today's version next to the expected outcome, and wait for the pick before building. For visual work, use a labelled comparison grid like `plan/examples/preview-grid-example.png` (repo copy: `docs/rules/preview-grid-example.png`): a "TODAY" column, then numbered options (L1, L2, ...) each with a one-line label, one marked [REC]; rows for phone 390 dark, phone 390 light and desktop 1280; a title line saying what changes and what stays untouched. For non-visual tasks (config, tooling, content files), a short before/after summary instead. (2026-10-31)
 - **S22. Every decision comes with a recommendation.** Whenever a session asks Malaka to choose (a question, a decision card, a preview grid), it includes one recommended option, clearly marked (e.g. [REC]), with a one-line reason. (2026-10-31)
 - **S23. The checklist thread only keeps the checklist.** When Malaka pastes a checklist task into "Plan the portfolio project phases", that thread asks the coordinator for a new thread to do it. Several tasks pasted together go to one new thread, which does them one by one. The worker thread reports back to the checklist thread (N4). (2026-10-31)
+- **S24. Checklist link with every output.** Any reply that delivers an output or result to Malaka also attaches `/mnt/project-files/plan/checklist.md` as an output, so the checklist is one tap away. (2026-10-31)
 
 ## Necessary
 
@@ -80,6 +81,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-10-31: S24 (checklist link with every output) added by Malaka.
 - 2026-10-31: S9 and O2 reworded after Malaka scrapped the old About Me copy (rule intent unchanged).
 - 2026-10-31: N3 adds fixed checklist ids (phase.item, e.g. 1.3), from Malaka.
 - 2026-10-31: O6 updated to the approved 9-phase plan.
