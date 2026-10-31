@@ -22,7 +22,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **S6. Malaka's decisions stand until Malaka changes them.** Current ones: React + Vite with prerendering, no backend, static on GitHub Pages, new site built on a fresh branch of the old repo and swapped in as main later, domain malakagonawala.dev. A session may suggest a change but never act on it alone. (2026-10-30/31)
 - **S7. Never replace or force-push main, delete branches, or create repos without Malaka's OK.** The live site must keep running until the swap. (2026-10-30)
 - **S8. Checklist items are never deleted or reordered without Malaka's OK.** (2026-10-31)
-- **S9. Never invent content or proof.** Malaka's own copy (About Me etc.) is carried over word for word. No made-up testimonials, stats, clients, emails or project details; any placeholder is clearly marked and flagged to Malaka before launch. (2026-10-30)
+- **S9. Never invent content or proof.** Any copy Malaka writes or approves is used word for word. No made-up testimonials, stats, clients, emails or project details; any placeholder is clearly marked and flagged to Malaka before launch. (The old About Me copy was scrapped by Malaka on 2026-10-31; new About copy is written from the Phase 2 answers.) (2026-10-30, reworded 2026-10-31)
 - **S10. Report honestly.** Say plainly when a check fails, a step was skipped, or something didn't connect. (2026-10-30)
 - **S11. Nothing leaves the project without Malaka's OK.** No emails, calendar invites, Drive shares, or GitHub comments on other repos. (2026-10-31)
 - **S12. Never delete files without Malaka's OK,** in project files or the repo. Moving something to an archive is fine. (2026-10-31)
@@ -64,7 +64,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 ## Other
 
 - **O1.** Fonts stay Melodrama + Nunito unless Malaka changes them; ship only woff2 in the weights used.
-- **O2.** Reuse pieces from `/mnt/project-files/portfolio-archive/` rather than re-extracting from the old repo.
+- **O2.** Reuse pieces from `/mnt/project-files/portfolio-archive/` rather than re-extracting from the old repo, except the old About Me copy, which is scrapped.
 - **O3.** React Bits lives in the temporary `components.js/` folder; merge it into the real `components.json` and delete the folder when shadcn is set up (with Malaka's OK, S12).
 - **O4.** Browser testing uses the preinstalled Node Playwright + Chromium; don't install another Playwright.
 - **O5.** New files in `/mnt/project-files/` go in a subfolder; re-read shared files just before changing them. Draft code doesn't go there unless Malaka asks.
@@ -80,6 +80,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-10-31: S9 and O2 reworded after Malaka scrapped the old About Me copy (rule intent unchanged).
 - 2026-10-31: N3 adds fixed checklist ids (phase.item, e.g. 1.3), from Malaka.
 - 2026-10-31: O6 updated to the approved 9-phase plan.
 - 2026-10-31: S23 (checklist thread only upkeeps the checklist; pasted tasks go to new threads) added by Malaka.
