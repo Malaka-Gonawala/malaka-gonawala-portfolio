@@ -4,6 +4,8 @@ description: Toolkit for interacting with and testing local web applications usi
 license: Complete terms in LICENSE.txt
 ---
 
+> **This repo:** use the browser that's already installed instead of the Python scripts below. In cloud sessions, Node's `require('playwright')` works from any folder, and `chromium.launch()` needs no options or extra installs. Write the same steps (start the server, open the page, screenshot, read console logs) as a short Node script. Don't `pip install playwright` or run `playwright install`.
+
 # Web Application Testing
 
 To test local web applications, write native Python Playwright scripts.
