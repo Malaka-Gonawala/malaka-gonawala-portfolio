@@ -12,6 +12,7 @@ Project skills for Claude Code. Any session that clones this repo (including clo
 | `vercel-react-best-practices` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) `skills/react-best-practices` | main, 2026-10-31 | MIT |
 | `vercel-composition-patterns` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) `skills/composition-patterns` | main, 2026-10-31 | MIT |
 | `web-design-guidelines` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) `skills/web-design-guidelines` | main, 2026-10-31 | MIT |
+| `project-conventions` | Written for this project (checklist 1.23) | n/a | n/a |
 | `webapp-testing` | [anthropics/skills](https://github.com/anthropics/skills) `skills/webapp-testing` | main, 2026-10-31 | Apache-2.0 |
 
 Plugins enabled in `.claude/settings.json` (from the `claude-plugins-official` marketplace): `mattpocock-skills`, `frontend-design`, `typescript-lsp`. `typescript-lsp` needs the language server on each machine: `npm install -g typescript-language-server typescript`.
@@ -28,3 +29,5 @@ To update a skill, re-copy its folder from upstream and update the commit above.
 - `shadcn`: needs no key.
 - `context7`: current library docs. Works without a key but the shared free quota runs out fast; set `CONTEXT7_API_KEY` (free at https://context7.com/dashboard) as an environment variable.
 - `magic` (21st.dev): reads its key from the `TWENTY_FIRST_API_KEY` environment variable. Never put the key in this repo. For cloud sessions, add it as an environment variable in the cloud environment settings.
+
+Subagents live in `.claude/agents/`. `ui-reviewer` (checklist 1.23) is a read-only reviewer for accessibility, mobile layout and motion.
