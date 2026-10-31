@@ -1,0 +1,24 @@
+# One-off: creates the triage labels listed in docs/agents/triage-labels.md.
+# Run it from the Actions tab (or workflow_dispatch). Safe to re-run: --force updates existing labels.
+name: Create triage labels
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Create labels
+        run: |
+          gh label create needs-triage    --color FBCA04 --description "Maintainer needs to evaluate this issue" --force
+          gh label create needs-info      --color D4C5F9 --description "Waiting on reporter for more information" --force
+          gh label create ready-for-agent --color 0E8A16 --description "Fully specified, ready for an AFK agent" --force
+          gh label create ready-for-human --color 1D76DB --description "Requires human implementation" --force
+          gh label create wontfix         --color FFFFFF --description "Will not be actioned" --force
