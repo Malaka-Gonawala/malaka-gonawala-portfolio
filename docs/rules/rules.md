@@ -68,7 +68,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **O3.** React Bits lives in the temporary `components.js/` folder; merge it into the real `components.json` and delete the folder when shadcn is set up (with Malaka's OK, S12).
 - **O4.** Browser testing uses the preinstalled Node Playwright + Chromium; don't install another Playwright.
 - **O5.** New files in `/mnt/project-files/` go in a subfolder; re-read shared files just before changing them. Draft code doesn't go there unless Malaka asks.
-- **O6.** The 8-phase plan (Tools, Grill, Design + tech direction, Content, Build, Polish, Launch, Maintain) is proposed, not yet confirmed. Tailwind, shadcn and GSAP are still open.
+- **O6.** The 9-phase plan is approved (2026-10-31): 1 Tools, 2 Grill, 3 Planning (site map, scope, stack incl. Tailwind/shadcn/GSAP/contact method), 4 Design and prototype (palette, fonts, references, clickable Figma prototype), 5 Content, 6 Build, 7 Polish, 8 Launch, 9 Maintain.
 - **O7.** No skill proficiency bars in the new design (checklist note).
 - **O8.** One task per branch and PR, kept small, with clear commit messages.
 
@@ -80,6 +80,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-10-31: O6 updated to the approved 9-phase plan.
 - 2026-10-31: S23 (checklist thread only upkeeps the checklist; pasted tasks go to new threads) added by Malaka.
 - 2026-10-31: S22 (every decision includes a marked recommended option) added by Malaka.
 - 2026-10-31: N4 extended to live checklist reporting (Malaka asked for the checklist to be updated live).
