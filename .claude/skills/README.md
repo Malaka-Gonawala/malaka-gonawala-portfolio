@@ -19,6 +19,7 @@ Plugins enabled in `.claude/settings.json` (from the `claude-plugins-official` m
 Local changes from upstream:
 - `ui-ux-pro-max/SKILL.md`: script paths changed from `${CLAUDE_PLUGIN_ROOT}/.claude/skills/...` to `.claude/skills/...`, since this is a project skill, not a plugin.
 - `apple-design/SKILL.md`: `name` changed from `apple-design-skill` to `apple-design` to match the folder.
+- `webapp-testing/SKILL.md`: added a note to use the preinstalled Node Playwright + Chromium instead of the Python scripts.
 
 To update a skill, re-copy its folder from upstream and update the commit above.
 
