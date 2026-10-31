@@ -2,6 +2,14 @@
 
 Read and follow `docs/rules/rules.md` before any work. Strict rules (S) are never broken; Necessary rules (N) only with a written reason. Pass the relevant rules into every subagent prompt.
 
+## If repo skills or hooks don't load
+
+Some cloud project-thread sessions start before the repo is checked out, so nothing in `.claude/` loads: no repo skills ("Unknown skill"), no hooks, no plugins. Only this file is read. In that case:
+- Read `.claude/skills/<name>/SKILL.md` directly and follow it instead of calling the Skill tool. Skills live in `.claude/skills/` (list them with `ls`).
+- Before any work on the site, its components, copy or assets, read `.claude/skills/project-conventions/SKILL.md`.
+- Never edit `CNAME` or `package-lock.json` by hand (the guard hook may not be running). Ask Malaka first; the lockfile changes only through npm.
+- Run Prettier on edited files yourself if `node_modules` exists (the format hook may not be running).
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
