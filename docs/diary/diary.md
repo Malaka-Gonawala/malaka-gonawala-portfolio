@@ -94,7 +94,7 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 
 **Project:** My Portfolio Website
 
-**Summary:** Tooling and planning day. Phase 1 (Tools) was finished and verified, Malaka was grilled on goals, audience, sections and reference sites, and the one-page brief was approved. The 9-phase plan, the shared checklist and the project rules were set up. No site code yet.
+**Summary:** Tooling and planning day. Phase 1 (Tools) was finished and verified, Malaka was grilled on goals, audience, sections and reference sites, and the one-page brief was approved. The project plan (now 10 phases), the shared checklist and the project rules were set up. No site code yet.
 
 - **Installed tools:** React skills (shadcn, react-best-practices, composition-patterns, web-design-guidelines, webapp-testing), frontend-design plugin, typescript-lsp plugin, context7 MCP, Prettier auto-format and deploy-file protection hooks, project-conventions skill, ui-reviewer subagent, GitHub Action that rebuilds the diary PDF
 - **Configured the cloud:** setup script installs graphify and typescript-language-server, allowed domains ui.shadcn.com and context7.com, context7 API key, full environment check (17 skills, 3 plugins, 3 MCP servers)
