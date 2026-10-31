@@ -1,3 +1,7 @@
+## Project rules
+
+Read and follow `docs/rules/rules.md` before any work. Strict rules (S) are never broken; Necessary rules (N) only with a written reason. Pass the relevant rules into every subagent prompt.
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
