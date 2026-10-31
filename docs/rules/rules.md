@@ -46,7 +46,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 
 - **N1. Ask before pushing or opening a PR** for anything not covered by S3 or by a task Malaka asked for in that thread. (2026-10-30)
 - **N2. The checklist thread owns `/mnt/project-files/plan/checklist.md`.** Other threads report done/undone work to "Plan the portfolio project phases" instead of editing the file. Small self-ticks are OK only if that thread is gone. Don't resolve the checklist thread. (2026-10-31)
-- **N3. Checklist edit format.** Flip `[ ]`/`[x]` on that line only, add the date (and PR number if any), re-read the file right before editing. Items Malaka hasn't asked for are marked *(optional)*. A phase is finished only when its "Done when" line is met. (2026-10-31)
+- **N3. Checklist edit format.** Flip `[ ]`/`[x]` on that line only, add the date (and PR number if any), re-read the file right before editing. Items Malaka hasn't asked for are marked *(optional)*. A phase is finished only when its "Done when" line is met. Every item has a fixed id `phase.item` (e.g. 1.3); ids never change, and new items always go at the end of their phase. When Malaka says "fix 1.3", it means that checklist item. (2026-10-31)
 - **N4. Report checklist changes live.** As soon as a thread finishes or undoes anything checklist-relevant (a merged PR, a decision by Malaka, a finished task), it sends one line to the checklist thread right away, not only at the end. Before a thread resolves, it also sends what it did and what's left. (2026-10-31)
 - **N5. The diary thread owns the diary.** On "update diary", it first asks the checklist thread for that day's ticks and decisions, then writes the entry (date with correct weekday, Project, Summary, one bullet per category with comma-separated items, Open items), rebuilds `diary.pdf`, attaches it, and syncs `docs/diary/` via a PR. It tells the checklist thread anything it marks done. (2026-10-30/31)
 - **N6. Diary only on request, one day per entry.** Update only when Malaka says "update diary"; an entry lists only work done on that date. Front pages (goal, stack, repo, tools, rules) are refreshed when those change. (2026-10-31)
@@ -80,6 +80,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-10-31: N3 adds fixed checklist ids (phase.item, e.g. 1.3), from Malaka.
 - 2026-10-31: O6 updated to the approved 9-phase plan.
 - 2026-10-31: S23 (checklist thread only upkeeps the checklist; pasted tasks go to new threads) added by Malaka.
 - 2026-10-31: S22 (every decision includes a marked recommended option) added by Malaka.
