@@ -25,4 +25,5 @@ To update a skill, re-copy its folder from upstream and update the commit above.
 ## MCP servers (`/.mcp.json`)
 
 - `shadcn`: needs no key.
+- `context7`: current library docs. Works without a key but the shared free quota runs out fast; set `CONTEXT7_API_KEY` (free at https://context7.com/dashboard) as an environment variable.
 - `magic` (21st.dev): reads its key from the `TWENTY_FIRST_API_KEY` environment variable. Never put the key in this repo. For cloud sessions, add it as an environment variable in the cloud environment settings.

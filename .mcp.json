@@ -4,6 +4,14 @@
       "command": "npx",
       "args": ["-y", "shadcn@latest", "mcp"]
     },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY:-}",
+        "NODE_USE_ENV_PROXY": "1"
+      }
+    },
     "magic": {
       "command": "npx",
       "args": ["-y", "@21st-dev/magic@latest"],
