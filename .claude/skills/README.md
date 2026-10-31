@@ -14,6 +14,8 @@ Project skills for Claude Code. Any session that clones this repo (including clo
 | `web-design-guidelines` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) `skills/web-design-guidelines` | main, 2026-10-31 | MIT |
 | `webapp-testing` | [anthropics/skills](https://github.com/anthropics/skills) `skills/webapp-testing` | main, 2026-10-31 | Apache-2.0 |
 
+Plugins enabled in `.claude/settings.json` (from the `claude-plugins-official` marketplace): `mattpocock-skills`, `frontend-design`.
+
 Local changes from upstream:
 - `ui-ux-pro-max/SKILL.md`: script paths changed from `${CLAUDE_PLUGIN_ROOT}/.claude/skills/...` to `.claude/skills/...`, since this is a project skill, not a plugin.
 - `apple-design/SKILL.md`: `name` changed from `apple-design-skill` to `apple-design` to match the folder.
