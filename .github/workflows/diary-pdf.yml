@@ -1,0 +1,56 @@
+# Rebuilds docs/diary/diary.pdf when a pull request changes docs/diary/diary.md,
+# then commits the PDF to that PR's branch. Never pushes to main (rule S7).
+name: Rebuild diary PDF
+
+on:
+  pull_request:
+    paths:
+      - docs/diary/diary.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: diary-pdf-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Only branches in this repo (forks can't be pushed to), and never main.
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.head_ref != 'main'
+    runs-on: ubuntu-latest
+    env:
+      PANDOC_VERSION: 3.1.11.1
+      PLAYWRIGHT_VERSION: 1.49.1
+      HEAD_REF: ${{ github.head_ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      # build-pdf.sh uses pandoc --embed-resources (needs 2.19+); Ubuntu's apt pandoc can be older.
+      - name: Install pandoc
+        run: |
+          wget -q "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb" -O "$RUNNER_TEMP/pandoc.deb"
+          sudo apt-get install -y "$RUNNER_TEMP/pandoc.deb"
+          pandoc --version | head -1
+
+      # Installed outside the repo so package.json and the lockfile don't change.
+      - name: Install Playwright + Chromium
+        run: |
+          npm install --no-audit --no-fund --prefix "$RUNNER_TEMP/pw" "playwright@${PLAYWRIGHT_VERSION}"
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+
+      - name: Build diary.pdf
+        run: NODE_PATH="$RUNNER_TEMP/pw/node_modules" bash docs/diary/build-pdf.sh
+
+      - name: Commit diary.pdf to the PR branch
+        run: |
+          if git diff --quiet -- docs/diary/diary.pdf; then
+            echo "diary.pdf unchanged"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/diary/diary.pdf
+          git commit -m "Rebuild diary.pdf from diary.md"
+          git push origin "HEAD:${HEAD_REF}"
