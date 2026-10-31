@@ -100,9 +100,9 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Fixed:** browser testing points at the built-in Playwright, CLAUDE.md fallback for sessions where repo skills don't load
 - **Cleaned up:** removed stray `a.txt` and `desktop.ini`, created the GitHub triage labels, archived the full v1 site to the project archive
 - **Grilled Malaka:** 50 questions on goals, audience and sections, 55 reference sites collected, one-page brief approved
-- **Decided:** no backend (static site on GitHub Pages), Vite instead of Next.js with prerendering, contact as a custom letter-style form plus a visible email, malaka@malakagonawala.dev forwarded to Gmail, old About Me copy scrapped, new Lab, Resume, Privacy and Accessibility statement pages, apple-design skill confirmed, nothing else to install
+- **Decided:** no backend (static site on GitHub Pages), Vite instead of Next.js with prerendering, contact as a custom letter-style form plus a visible email, malaka@malakagonawala.dev forwarded to Gmail, old About Me copy scrapped, new Lab, Resume, Privacy and Accessibility statement pages, apple-design skill confirmed, nothing else to install, a cookieless visitor counter showing visitors right now and total visitors, with a private stats view for Malaka
 - **Planned:** 9-phase plan approved, shared project checklist, project rules approved (strict, necessary, other) and copied into the repo
 - **Updated the diary:** corrected the 30 October entry, front pages now say React + Vite with no backend
 - **Merged pull requests:** #7 React skills, #8 typescript-lsp, #9 context7, #10 Playwright note, #11 diary fix, #12, #13, #15, #16, #22 and #23 project rules, #14 triage labels, #17 stray files, #18 hooks, #19 conventions skill and reviewer, #20 diary PDF action, #21 CLAUDE.md fallback
 
-**Open items:** Phase 3 planning (site map, first-version scope, milestones), Tailwind, shadcn and GSAP yes/no, pick an email-forwarding service, new colour palette, re-export the resume PDF, project details and links.
+**Open items:** Phase 3 planning (site map, first-version scope, milestones), Tailwind, shadcn and GSAP yes/no, pick an email-forwarding service, pick a cookieless visitor-counter service, new colour palette, re-export the resume PDF, project details and links.
