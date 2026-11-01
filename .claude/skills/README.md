@@ -14,12 +14,14 @@ Project skills for Claude Code. Any session that clones this repo (including clo
 | `web-design-guidelines` | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) `skills/web-design-guidelines` | main, 2026-10-31 | MIT |
 | `project-conventions` | Written for this project (checklist 1.23) | n/a | n/a |
 | `webapp-testing` | [anthropics/skills](https://github.com/anthropics/skills) `skills/webapp-testing` | main, 2026-10-31 | Apache-2.0 |
+| `motion-framer` | [freshtechbro/claudedesignskills](https://github.com/freshtechbro/claudedesignskills) `.claude/skills/motion-framer.zip` (unzipped) | main, 2026-11-01 | MIT |
 
 Plugins enabled in `.claude/settings.json` (from the `claude-plugins-official` marketplace): `mattpocock-skills`, `frontend-design`, `typescript-lsp`. `typescript-lsp` needs the language server on each machine: `npm install -g typescript-language-server typescript`.
 
 Local changes from upstream:
 - `ui-ux-pro-max/SKILL.md`: script paths changed from `${CLAUDE_PLUGIN_ROOT}/.claude/skills/...` to `.claude/skills/...`, since this is a project skill, not a plugin.
 - `apple-design/SKILL.md`: `name` changed from `apple-design-skill` to `apple-design` to match the folder.
+- `motion-framer`: examples import from `framer-motion`; the site uses Motion, so import from `motion/react` (React) or `motion` (vanilla) instead.
 - `webapp-testing/SKILL.md`: added a note to use the preinstalled Node Playwright + Chromium instead of the Python scripts.
 
 To update a skill, re-copy its folder from upstream and update the commit above.
