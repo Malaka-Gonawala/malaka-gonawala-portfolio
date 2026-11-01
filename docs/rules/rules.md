@@ -65,7 +65,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 
 ## Other
 
-- **O1.** Fonts stay Melodrama + Nunito unless Malaka changes them; ship only woff2 in the weights used.
+- **O1.** Fonts: Melodrama (headings), Satoshi (body, Fontshare) and JetBrains Mono (underside, OFL); Nunito dropped (Malaka, 2026-11-01). Ship only woff2 in the weights used. Details: `/mnt/project-files/plan/phase4/fonts/fonts.md`.
 - **O2.** Reuse pieces from `/mnt/project-files/portfolio-archive/` rather than re-extracting from the old repo, except the old About Me copy, which is scrapped.
 - **O3.** React Bits lives in the temporary `components.js/` folder; merge it into the real `components.json` and delete the folder when shadcn is set up (with Malaka's OK, S12).
 - **O4.** Browser testing uses the preinstalled Node Playwright + Chromium; don't install another Playwright.
@@ -82,6 +82,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-11-01: O1 fonts updated (Melodrama + Satoshi + JetBrains Mono, Nunito dropped).
 - 2026-11-01: S6 adds the approved palette (charcoal + stone, gold, forest green, brick; brown dropped); N9 now points to the palette tokens.
 - 2026-11-01: S25 (no more code than necessary) added by Malaka.
 - 2026-11-01: S6 adds Phase 3 confirmations: Cloudflare Workers free plan, 5 EUR/month AI cap, Web3Forms, GoatCounter, Namecheap email forwarding (Malaka).
