@@ -69,7 +69,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **O3.** React Bits lives in the temporary `components.js/` folder; merge it into the real `components.json` and delete the folder when shadcn is set up (with Malaka's OK, S12).
 - **O4.** Browser testing uses the preinstalled Node Playwright + Chromium; don't install another Playwright.
 - **O5.** New files in `/mnt/project-files/` go in a subfolder; re-read shared files just before changing them. Draft code doesn't go there unless Malaka asks.
-- **O6.** The 10-phase plan is approved (2026-10-31): 1 Tools, 2 Grill, 3 Planning (site map, scope, stack incl. Tailwind/shadcn/contact method; animation = Motion), 4 Design and prototype (palette, fonts, references, clickable Figma prototype), 5 Content, 6 Build, 7 Polish, 8 Launch, 9 Maintain, 10 Launch video (Motion + HyperFrames, for LinkedIn and Instagram).
+- **O6.** The 11-phase plan is approved (2026-10-31, Phase 11 added 2026-11-01): 1 Tools, 2 Grill, 3 Planning (site map, scope, stack incl. Tailwind/shadcn/contact method; animation = Motion), 4 Design and prototype (palette, fonts, references, clickable Figma prototype), 5 Content, 6 Build, 7 Polish, 8 Launch, 9 Maintain, 10 Launch video (Motion + HyperFrames, for LinkedIn and Instagram), 11 Release 2 (serverless backend, AI site assistant, visitor counter, admin page; Phase 3 picks the AI provider, spending cap and backend platform).
 - **O7.** No skill proficiency bars in the new design (checklist note).
 - **O8.** One task per branch and PR, kept small, with clear commit messages.
 
@@ -81,6 +81,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-11-01: O6 updated to 11 phases (Phase 11 Release 2).
 - 2026-11-01: S6 timing: launch stays static with no backend; backend, AI and admin ship in Release 2 after security and testing (Malaka).
 - 2026-11-01: S6 changed by Malaka: small serverless backend with AI site assistant, first-party visitor count and admin page (replaces "no backend").
 - 2026-11-01: S6 adds Malaka's decisions: Motion for every effect (GSAP fallback only for the pinned "two sides" moment) and full prerendered EN + IT HTML on every page.
