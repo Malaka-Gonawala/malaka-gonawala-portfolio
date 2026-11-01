@@ -42,6 +42,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **S22. Every decision comes with a recommendation.** Whenever a session asks Malaka to choose (a question, a decision card, a preview grid), it includes one recommended option, clearly marked (e.g. [REC]), with a one-line reason. (2026-10-31)
 - **S23. The checklist thread only keeps the checklist.** When Malaka pastes a checklist task into "Plan the portfolio project phases", that thread asks the coordinator for a new thread to do it. Several tasks pasted together go to one new thread, which does them one by one. The worker thread reports back to the checklist thread (N4). (2026-10-31)
 - **S24. Checklist and rules links with every output.** Any reply that delivers an output or result to Malaka also attaches `/mnt/project-files/plan/checklist.md` and `/mnt/project-files/plan/rules.md` as outputs, so both are one tap away. (2026-10-31)
+- **S25. No more code than necessary.** When two solutions do the same job equally well, always pick the shorter one (e.g. 50 lines over 200). No unused code, speculative features or needless abstractions. Shorter never means dropping correctness, accessibility (N14) or readability. (2026-11-01)
 
 ## Necessary
 
@@ -81,6 +82,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-11-01: S25 (no more code than necessary) added by Malaka.
 - 2026-11-01: S6 adds Phase 3 confirmations: Cloudflare Workers free plan, 5 EUR/month AI cap, Web3Forms, GoatCounter, Namecheap email forwarding (Malaka).
 - 2026-11-01: S6 adds shadcn/ui as toolbox only and Claude Haiku 5.5 as the Release 2 AI provider (Malaka). Repo sync batched.
 - 2026-11-01: S6 adds Tailwind CSS v4 with tokens as CSS variables (Malaka). Repo sync batched.
