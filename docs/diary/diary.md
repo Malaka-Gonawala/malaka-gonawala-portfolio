@@ -107,3 +107,18 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #7 React skills, #8 typescript-lsp, #9 context7, #10 Playwright note, #11 diary fix, #12, #13, #15, #16, #22 and #23 project rules, #14 triage labels, #17 stray files, #18 hooks, #19 conventions skill and reviewer, #20 diary PDF action, #21 CLAUDE.md fallback
 
 **Open items:** Phase 3 planning (site map, first-version scope, milestones), Tailwind, shadcn and GSAP yes/no, pick an email-forwarding service, pick a cookieless visitor-counter service, new colour palette, re-export the resume PDF, project details and links.
+
+## Sunday, 1 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Planning and design day. Phase 3 (Planning) was finished and the plan was approved. Phase 4 (Design and prototype) chose the palette, fonts, layout, navigation and lead projects. A clickable HTML prototype went from version 1 to version 13. No site code yet.
+
+- **Planned:** site map, first-version scope and milestones approved (preview around 17 November, launch Saturday 28 November, Release 2 by 19 December), Phase 3 plan approved, a new Phase 11 "Release 2" added (small serverless backend for an AI site assistant, a first-party visitor count and a login admin page)
+- **Decided:** Tailwind CSS v4, shadcn as a toolbox only, Web3Forms for the contact form at launch, GoatCounter as the launch visitor counter, Namecheap email forwarding, Claude Haiku 5.5 for the Release 2 assistant with a 5 EUR/month cap, Cloudflare Workers free plan for the Release 2 backend, GSAP (with cubic-bezier eases everywhere) for animation, replacing the earlier Motion pick
+- **Designed:** palette (charcoal and stone front with gold buttons and forest links, a dark-forest underside), fonts (Melodrama headings, Satoshi body, JetBrains Mono for the underside; Nunito dropped), layout (the name fills the first screen, then splits as the projects pass through, no pinning on phone), navigation (Flip to the underside plus the name with a "/ section" line, 60px on desktop and 20px on phone), lead projects (forvalue and ForTheRoot, or bendata-theme and forvalue if the client allows)
+- **Built the prototype:** clickable HTML prototype, versions 1 to 13: the name is slashed in two and the first project pops up between the halves with a bounce, an x-ray lens shows the code underneath, the intro and the flip menu reveal the underside tile by tile, the Underneath section opens and closes with a growing circle, live screenshots inside browser and phone frames, Windows PowerShell lines on the underside
+- **Installed skills:** motion-framer (later replaced by GSAP for animation)
+- **Merged pull requests:** #24 diary, #25, #26 and #27 project rules, #28 motion-framer skill
+
+**Open items:** approve the prototype (4.5), try flipping the whole site horizontally for the Underneath section, find a transition that works better than square tiles on tall or wide screens, set up Namecheap email forwarding (around 24 November), ask the bendata client for permission, real screenshots for holoservice and Shitos Barber, re-export the resume PDF.
