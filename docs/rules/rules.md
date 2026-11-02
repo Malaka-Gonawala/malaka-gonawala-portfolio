@@ -43,11 +43,12 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **S23. The checklist thread only keeps the checklist.** When Malaka pastes a checklist task into "Plan the portfolio project phases", that thread asks the coordinator for a new thread to do it. Several tasks pasted together go to one new thread, which does them one by one. The worker thread reports back to the checklist thread (N4). (2026-10-31)
 - **S24. Checklist and rules links with every output.** Any reply that delivers an output or result to Malaka also attaches `/mnt/project-files/plan/checklist.md` and `/mnt/project-files/plan/rules.md` as outputs, so both are one tap away. (2026-10-31)
 - **S25. No more code than necessary.** When two solutions do the same job equally well, always pick the shorter one (e.g. 50 lines over 200). No unused code, speculative features or needless abstractions. Shorter never means dropping correctness, accessibility (N14) or readability. (2026-11-01)
+- **S26. Only the owner thread edits its file.** Only the diary thread updates the diary, only the checklist thread updates the checklist, and only the rules thread updates the rules. This holds even when Malaka asks another thread directly: that thread must pass the request to the owner thread instead of editing the file itself. (2026-11-02)
 
 ## Necessary
 
 - **N1. Ask before pushing or opening a PR** for anything not covered by S3 or by a task Malaka asked for in that thread. (2026-10-30)
-- **N2. The checklist thread owns `/mnt/project-files/plan/checklist.md`.** Other threads report done/undone work to "Plan the portfolio project phases" instead of editing the file. Small self-ticks are OK only if that thread is gone. Don't resolve the checklist thread. (2026-10-31)
+- **N2. The checklist thread owns `/mnt/project-files/plan/checklist.md`.** Other threads report done/undone work to "Plan the portfolio project phases" instead of editing the file. No self-ticks (S26). Don't resolve the checklist thread. (2026-10-31)
 - **N3. Checklist edit format.** Flip `[ ]`/`[x]` on that line only, add the date (and PR number if any), re-read the file right before editing. Items Malaka hasn't asked for are marked *(optional)*. A phase is finished only when its "Done when" line is met. Every item has a fixed id `phase.item` (e.g. 1.3); ids never change, and new items always go at the end of their phase. When Malaka says "fix 1.3", it means that checklist item. (2026-10-31)
 - **N4. Report checklist changes live.** As soon as a thread finishes or undoes anything checklist-relevant (a merged PR, a decision by Malaka, a finished task), it sends one line to the checklist thread right away, not only at the end. Before a thread resolves, it also sends what it did and what's left. (2026-10-31)
 - **N5. The diary thread owns the diary.** On "update diary", it first asks the checklist thread for that day's ticks and decisions, then writes the entry (date with correct weekday, Project, Summary, one bullet per category with comma-separated items, Open items), rebuilds `diary.pdf`, attaches it, and syncs `docs/diary/` via a PR. It tells the checklist thread anything it marks done. (2026-10-30/31)
@@ -82,6 +83,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-11-02: S26 (only the owner thread edits the diary, checklist or rules, even when Malaka asks elsewhere) added by Malaka; N2 self-tick exception removed.
 - 2026-11-01: S6 animation switched from Motion to GSAP with cubic-bezier eases (Malaka); launch video keeps Motion + HyperFrames.
 - 2026-11-01: O1 fonts updated (Melodrama + Satoshi + JetBrains Mono, Nunito dropped).
 - 2026-11-01: S6 adds the approved palette (charcoal + stone, gold, forest green, brick; brown dropped); N9 now points to the palette tokens.
