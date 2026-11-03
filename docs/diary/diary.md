@@ -132,3 +132,19 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #24 diary, #25, #26 and #27 project rules, #28 motion-framer skill
 
 **Open items:** approve the prototype (4.5), try flipping the whole site horizontally for the Underneath section, find a transition that works better than square tiles on tall or wide screens, set up Namecheap email forwarding (around 24 November), ask the bendata client for permission, real screenshots for holoservice and Shitos Barber, re-export the resume PDF.
+
+## Monday, 2 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Prototype and transition day. Prototype B was dropped and prototype A was revised up to version 20. After two rounds of transition ideas didn't land, 151 portfolio sites were researched and three transition pairs were built and reviewed. Malaka likes the address bar and hex dump pair; the final pick is still open. No site code yet.
+
+- **Dropped:** prototype B (the blackjack dealer), back to prototype A
+- **Revised the prototype:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) versions 17 to 20, smaller project card that grows with scroll, name to /Work transition, x-ray lens fix, site flip for the Underneath section, deck and index list for projects, Work with me redesigned as rows
+- **Researched:** two rounds of transition options (round 1 felt like PowerPoint, round 2 felt boring), 151 portfolio sites studied, a critic reviewed every idea
+- **Built transition pairs:** [Build + Collapse](https://claude.ai/artifact/JBkpFiAueQAc8JURm7Rn96) (Malaka loved it, archived), [Address bar + Hex dump](https://claude.ai/artifact/MXwfAYFPbhNkUaRzVdpTv4) (browser window stays pinned and retypes the address for each project with a load bar and blur-in), [Alt text + Accessibility tree](https://claude.ai/artifact/EFeoX6eAm9PFBFDApzUhWk), rejected tries archived (3D Skyline, Redacted/Firewall, Focus)
+- **Decided:** prototype B scrapped, Malaka likes the hex dump Underneath and the address-bar flow for every project, rule S26 (only the owner thread edits the diary, the checklist or the rules)
+- **Updated the diary:** front pages show the decided stack, site map, milestones and 11 phases, new web page version of the diary
+- **Merged pull requests:** #30 rules sync (GSAP for site animation, S26), #31 diary sync
+
+**Open items:** Malaka's final transition pick, then add it to prototype A, prototype approval (4.5), horizontal flip and tile transition ideas (4.8, 4.9), Namecheap email forwarding (around 24 November).
