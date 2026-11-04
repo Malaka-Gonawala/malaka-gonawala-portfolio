@@ -33,7 +33,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
   - *Medium, Sonnet 5.5, medium effort:* styling or layout inside one section, responsive fixes, a new static component from an existing pattern, adding a React Bits component, tests for existing code.
   - *Heavy, Opus 5.5, high effort:* new features and logic, state, interactions and UX flows, GSAP animation, build and deploy setup, changes across many files, bugs with an unknown cause, accessibility and performance passes.
   - Planning, design decisions and reviewing executor work stay on Opus 5.5 (the planner steps up per S16). The hardest part of a task sets its tier; when unsure, go one tier up. If a model fails once, move the task up a tier instead of retrying on the same model. Batch small light tasks into one Haiku run. Max effort only when Malaka asks. (2026-10-31)
-- **S16. Model for talking to Malaka scales with the task.** Any session that talks to Malaka runs Sonnet 5.5 at medium effort by default (replies, status reports, relaying, small file and rule edits). It moves up to Opus 5.5 at medium effort for complex work (research, planning, design decisions, reviewing executor work, tricky debugging), then back down when done. Opus 5.5 medium is the ceiling for conversation; executor models follow S15. (2026-10-31, changed by Malaka 2026-11-04)
+- **S16. Model for talking to Malaka scales with the task.** Any session that talks to Malaka runs Sonnet 5.5 at medium effort by default (replies, status reports, relaying, small file and rule edits). It moves up to Opus 5.5 at medium effort for complex work (research, planning, design decisions, reviewing executor work, tricky debugging), then back down when done. Opus 5.5 medium is the ceiling for conversation; executor models follow S15. Exception: the coordinator (project chat) may use Opus 5.5; S16 binds every thread. (2026-10-31, changed by Malaka 2026-11-04)
 - **S17. Be as token-efficient as possible.** Read only what the task needs (graphify query, line ranges, not whole files or folders); don't re-read what is already known; no subagents unless needed; short replies and short thread-to-thread messages; batch small tasks; reuse earlier results instead of repeating searches or lookups. Never at the cost of correctness or S10 (honest reports). (2026-10-31)
 - **S18. No trackers or third-party scripts** (analytics, chat widgets, ads) without Malaka's OK. (2026-10-31)
 - **S19. Malaka's personal details stay private.** Phone, address, personal email and other private details never go on the site without Malaka's OK. (2026-10-31)
@@ -83,7 +83,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
-- 2026-11-04: S16 changed by Malaka: Sonnet 5.5 medium by default when talking to Malaka, up to Opus 5.5 medium for complex work.
+- 2026-11-04: S16 changed by Malaka: Sonnet 5.5 medium by default when talking to Malaka, up to Opus 5.5 medium for complex work. Clarified same day: the coordinator chat may use Opus 5.5; threads follow S16.
 - 2026-11-02: S26 (only the owner thread edits the diary, checklist or rules, even when Malaka asks elsewhere) added by Malaka; N2 self-tick exception removed.
 - 2026-11-01: S6 animation switched from Motion to GSAP with cubic-bezier eases (Malaka); launch video keeps Motion + HyperFrames.
 - 2026-11-01: O1 fonts updated (Melodrama + Satoshi + JetBrains Mono, Nunito dropped).
