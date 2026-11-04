@@ -158,6 +158,6 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Decided:** only forvalue and ForTheRoot get the full address-bar treatment (the URL types, Enter, the page blur-loads), then the bar types /work/other-projects and the rest load as one list (holoservice, Shitos Barber, Antigravity bike, Pretty Sri Lanka "where it all started", Experiments with 7 builds), project descriptions are placeholders for now
 - **Revised the prototype:** [Address bar + Hex dump](https://claude.ai/artifact/MXwfAYFPbhNkUaRzVdpTv4) transition demo to version 3
 - **Changed rules:** S16, threads talk to Malaka on Sonnet 5.5 medium by default and step up to Opus 5.5 medium for research, planning and design, the coordinator stays on Opus 5.5
-- **Merged pull requests:** #32 diary sync (3 November), #33 rules sync for S16
+- **Opened pull requests:** #33 rules sync for S16 (waiting for merge)
 
 **Open items:** Malaka's final transition pick, then add it to [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) (version 20), prototype approval (4.5), horizontal flip idea (4.8), project descriptions, Namecheap email forwarding (around 24 November).
