@@ -148,3 +148,28 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #30 rules sync (GSAP for site animation, S26), #31 diary sync
 
 **Open items:** Malaka's final transition pick, then add it to prototype A, prototype approval (4.5), horizontal flip and tile transition ideas (4.8, 4.9), Namecheap email forwarding (around 24 November).
+
+## Wednesday, 4 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Short design and rules day. The address-bar transition demo was reworked so only the two featured projects get the full treatment, and the rule for which model talks to Malaka changed. No site code yet.
+
+- **Decided:** only forvalue and ForTheRoot get the full address-bar treatment (the URL types, Enter, the page blur-loads), then the bar types /work/other-projects and the rest load as one list (holoservice, Shitos Barber, Antigravity bike, Pretty Sri Lanka "where it all started", Experiments with 7 builds), project descriptions are placeholders for now
+- **Revised the prototype:** [Address bar + Hex dump](https://claude.ai/artifact/MXwfAYFPbhNkUaRzVdpTv4) transition demo to version 3
+- **Changed rules:** S16, threads talk to Malaka on Sonnet 5.5 medium by default and step up to Opus 5.5 medium for research, planning and design, the coordinator stays on Opus 5.5
+- **Opened pull requests:** #33 rules sync for S16 (waiting for merge)
+
+**Open items:** Malaka's final transition pick, then add it to [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) (version 20), prototype approval (4.5), horizontal flip idea (4.8), project descriptions, Namecheap email forwarding (around 24 November).
+
+## Thursday, 5 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Transition labs day. Labs were built for the menus, the offers section and the footer, each checked by a critic, and Malaka picked one option for each. Prototype A went to version 22 with all of them built in, and now waits for Malaka's review. No site code yet.
+
+- **Built transition labs:** Lab A (browser style) and Lab B (terminal style) for menus, offers and footers, offers lab C in a separate thread, a critic reviewed each option
+- **Decided:** tab-overview menu on wide screens (over 700px), PowerShell split-flap menu on phones, odometer for the offers section (after waterfall, git diff, screen reader and contrast check were rejected), [hex decode footer](https://claude.ai/artifact/6Ts5CgZjrMMwP5awP5TZbj) built from the real footer's pixels like the Underneath section (the first UTF-8 version was rejected and redone)
+- **Revised the prototype:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) versions 21 and 22, with the new menus, odometer offers and hex decode footer built in
+
+**Open items:** Malaka's review of prototype A version 22, prototype approval (4.5), tablet widths not tested yet, horizontal flip idea (4.8), merge PR #33 (rules) and PR #34 (diary), Namecheap email forwarding (around 24 November).
