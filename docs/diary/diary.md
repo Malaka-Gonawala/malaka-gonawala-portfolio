@@ -184,7 +184,6 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Decided:** address-bar loader L5 (the address bar types the path, Enter, a gold line, the word flies back to the header, the page blur-loads), desktop tab-bar menu D2, phone line-feed menu M2 (cd site and cd .. commands, the visitor's local date and time), split pane E1 for the other projects (list on the left, fixed preview on the right, 250 ms hover rest, name colour changes instantly, hidden on phones), circle transitions dropped as off-style, cursor-following preview rejected as overstimulating
 - **Revised the prototype:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) version 23 (split pane built in) and version 24 (loader and both menus built in), tested on desktop and phone
 - **Changed rules:** S16 enforced in every thread (Sonnet 5.5 medium by default, Opus 5.5 medium for complex work), S24 now only a one-line link to the checklist and rules, S27 read only the current checklist phase, S28 one-line plain compliance reports
-- **Merged pull requests:** #34 diary (4 and 5 November)
-- **Opened pull requests:** #33 and #35 rules sync (waiting for merge)
+- **Merged pull requests:** #34 diary (4 and 5 November), #33 and #35 rules sync
 
 **Open items:** prototype approval (4.5), tablet widths and reduced motion not tested yet, horizontal flip idea (4.8), project descriptions, Namecheap email forwarding (around 24 November).
