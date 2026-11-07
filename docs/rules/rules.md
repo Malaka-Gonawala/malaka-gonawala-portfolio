@@ -46,6 +46,7 @@ A copy lives in the repo at `docs/rules/rules.md` (CLAUDE.md points to it); the 
 - **S26. Only the owner thread edits its file.** Only the diary thread updates the diary, only the checklist thread updates the checklist, and only the rules thread updates the rules. This holds even when Malaka asks another thread directly: that thread must pass the request to the owner thread instead of editing the file itself. (2026-11-02)
 - **S27. Read and attach the minimum of the tracking files.** Never read, attach or output Change log or Breaks log entries older than 7 days unless Malaka asks. For the checklist, read only the current active phase and its active dependencies; completed phases older than 7 days count as a one-line summary and are not pulled. This limits what is read and shown, it does not delete or reorder items (S8). A thread that reads or attaches either file with full old logs or inactive phases is flagged as breaking S17. (2026-11-06)
 - **S28. Compliance reports are one plain line.** The judge rejects multi-line reports and emoji. Failures use exactly: `- **FAIL [id]:** Thread `[Name]` broke `[Rule_ID]` on `[YYYY-MM-DD]`. Reason: `[Short context]`. Action: `[Re-roll / Strip text]`.` Warnings and Breaks log entries use one line too: `- **LOG ENTRY:** `[date], Thread: [Name], Rule: [ID], Reason: [short]`.` (2026-11-06)
+- **S29. Fix work is checked by an independent tester.** Fixes are done by fixer threads and tested by a separate tester thread that never wrote the fix. The tester tests all fixes together, sends failures back to the owning fixer, repeats until all pass, then sends one combined patch to the owning planner thread. One fixer thread per fix only when fixes are large or independent; small fixes may share one fixer thread (S17). First used 2026-11-07 for the 4 reduced-motion fixes on Prototype A. (2026-11-07)
 
 ## Necessary
 
@@ -85,6 +86,7 @@ Necessary-rule breaks, newest first: date, thread, rule, reason.
 
 ## Change log
 
+- 2026-11-07: S29 (independent tester for fix work) added by Malaka.
 - 2026-11-06: S24 changed to single-line links, no attachments; S27 (minimum reads of tracking files) and S28 (one-line compliance reports) added by Malaka.
 - 2026-11-04: S16 changed by Malaka: Sonnet 5.5 medium by default when talking to Malaka, up to Opus 5.5 medium for complex work. Clarified same day: the coordinator chat may use Opus 5.5; threads follow S16.
 - 2026-11-02: S26 (only the owner thread edits the diary, checklist or rules, even when Malaka asks elsewhere) added by Malaka; N2 self-tick exception removed.
