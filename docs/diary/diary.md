@@ -187,3 +187,20 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #34 diary (4 and 5 November), #33 and #35 rules sync
 
 **Open items:** prototype approval (4.5), tablet widths and reduced motion not tested yet, horizontal flip idea (4.8), project descriptions, Namecheap email forwarding (around 24 November).
+
+## Saturday, 7 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Prototype A was approved at version 27, which completes Phase 4, and Phase 5 (content) started with the hero approved. Two new rules were added. No site code yet.
+
+- **Approved:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) version 27 (4.5), scroll speed S3 (60%), Phase 4 complete (17 of 17 items)
+- **Revised the prototype:** versions 25 to 27 (scroll speed, X-ray alignment, /top bug, loader offset, hero without load animation, menu colour, menu-to-loader harmony, reduced-motion fixes)
+- **Tested:** tablet widths 768 to 1024px (no breakage, no tablet-specific design), reduced motion (4 problems found: Underneath background, intro colliding with the Flip, only forvalue reachable, address-bar typing)
+- **Fixed:** the first batch of problems by 7 task threads, the reduced-motion batch by 4 fixer threads and approved by 1 independent tester
+- **Dropped:** horizontal flip idea (4.8) and tile transition idea (4.9), About and Lab pages deferred to Phase 6
+- **Started Phase 5 (content):** hero 5.1 approved in English ("Websites for restaurants, barbers and small shops, built sleek, modern and accessible to anyone."), Italian draft waits for Malaka's check, forvalue write-up 5.3 in progress (problem, solution and role approved, traceability claim researched), new items 5.11 (case study "How I built this with AI" for recruiters) and 8.5 (LinkedIn post of it)
+- **Changed rules:** S29 (fixes are tested by a separate tester thread), S30 (prototype only the risky parts, stopping rule, two preview rounds at most)
+- **Merged pull requests:** #36 diary (6 November), #39 and #40 rules sync
+
+**Open items:** forvalue write-up (accessibility note, Figma ownership, stack), then the other projects' descriptions, Italian hero check, Namecheap email forwarding (around 24 November).
