@@ -173,3 +173,17 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Revised the prototype:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) versions 21 and 22, with the new menus, odometer offers and hex decode footer built in
 
 **Open items:** Malaka's review of prototype A version 22, prototype approval (4.5), tablet widths not tested yet, horizontal flip idea (4.8), merge PR #33 (rules) and PR #34 (diary), Namecheap email forwarding (around 24 November).
+
+## Friday, 6 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Loader, menu and projects day. Two more labs were built and you picked the loader, the menus and the other-projects layout, then all of them were built into prototype A, now at version 24. It waits for your approval. No site code yet.
+
+- **Built labs:** [Lab D](https://claude.ai/artifact/BciPdcEQpmXLtqrz7Z6p5r) for the loader and menus, [Lab E](https://claude.ai/artifact/AdVQQdfLgXSE79UvDUTGae) for the other projects
+- **Decided:** address-bar loader L5 (the address bar types the path, Enter, a gold line, the word flies back to the header, the page blur-loads), desktop tab-bar menu D2, phone line-feed menu M2 (cd site and cd .. commands, the visitor's local date and time), split pane E1 for the other projects (list on the left, fixed preview on the right, 250 ms hover rest, name colour changes instantly, hidden on phones), circle transitions dropped as off-style, cursor-following preview rejected as overstimulating
+- **Revised the prototype:** [prototype A](https://claude.ai/artifact/R4MynH6CFo4pMYwAaZPUMd) version 23 (split pane built in) and version 24 (loader and both menus built in), tested on desktop and phone
+- **Changed rules:** S16 enforced in every thread (Sonnet 5.5 medium by default, Opus 5.5 medium for complex work), S24 now only a one-line link to the checklist and rules, S27 read only the current checklist phase, S28 one-line plain compliance reports
+- **Merged pull requests:** #34 diary (4 and 5 November), #33 and #35 rules sync
+
+**Open items:** prototype approval (4.5), tablet widths and reduced motion not tested yet, horizontal flip idea (4.8), project descriptions, Namecheap email forwarding (around 24 November).
