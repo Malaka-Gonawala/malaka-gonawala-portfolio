@@ -204,3 +204,16 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #36 diary (6 November), #39 and #40 rules sync
 
 **Open items:** forvalue write-up (accessibility note, Figma ownership, stack), then the other projects' descriptions, Italian hero check, Namecheap email forwarding (around 24 November).
+
+## Sunday, 8 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Phase 5 (content) day. All five project pages and all eight Lab entries were written and approved in English and Italian, and the About copy was started. No site code yet.
+
+- **Approved copy:** project pages for forvalue, ForTheRoot, holoservice, Shitos Barber and Antigravity Bikes (5.3), Lab entries for Cavalleria, Russian Roulette, LeetSpeak, Manuale HTML, Random Color, Random Message, Morse and v1, all in English and Italian
+- **Decided:** no code links on client work, no client prices or contact details, teammates never named, group work never shown as solo, ForValue and ForTheRoot dated to fourth and fifth year of high school, role lines say what AI did, timber paperwork claim worded as "mostly paper and split across regions" with no "most" and no percentages (after a research thread fact-checked it), Malaka confirmed the clients of holoservice and Shitos Barber are fine with being shown
+- **Rule exception:** S20 (licensed assets only) allowed for the bike-page screenshots only (web photos, with a note, removable), logged with the rules thread
+- **Started:** About copy (5.2)
+
+**Open items:** About copy (5.2, in progress, Pretty Sri Lanka question waiting), Italian hero check, remaining Phase 5 items (5.4 to 5.7, 5.8, 5.9, 5.10, 5.11), Cavalleria README leftovers (cosmetic), Namecheap email forwarding (around 24 November).
