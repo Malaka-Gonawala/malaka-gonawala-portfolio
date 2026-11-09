@@ -217,3 +217,17 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Started:** About copy (5.2)
 
 **Open items:** About copy (5.2, in progress, Pretty Sri Lanka question waiting), Italian hero check, remaining Phase 5 items (5.4 to 5.7, 5.8, 5.9, 5.10, 5.11), Cavalleria README leftovers (cosmetic), Namecheap email forwarding (around 24 November).
+
+## Monday, 9 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Phase 5 (content) day. The About and AI case study copy, the resume content, the portrait and 31 project screenshots were approved, and the Italian pass is well under way. No site code yet.
+
+- **Approved copy:** About in English and Italian (5.2), "How I built this with AI" case study in English and Italian (5.11), links (5.5), resume content in English and Italian (5.6 stays open until the PDF renders)
+- **Prepared images:** new portrait in web sizes with alt text (5.7), 31 project screenshots checked by a separate tester (5.4), a third-party sign blurred, demo email kept, Shitos Barber hero shot and the hero shot left out for privacy
+- **Decided:** gallery layout with fixed-ratio frames and a card of phone over desktop, Security+ and bendata left out of About until Malaka commits and the client agrees, ForTheRoot level counts removed because they conflicted with the live site, second S20 exception (Pretty Sri Lanka photos on About) logged with the rules thread, AI section "For code" line to re-check at launch
+- **Italian pass (5.9):** hero, ForValue, ForTheRoot, Holoservice, Shitos Barber, Antigravity Bikes and the Lab entries approved
+- **Added checklist items:** 6.25 (build the resume page and PDF), 9.26 and 9.27 (diary 8 November and its PR #43)
+
+**Open items:** Italian for About, AI section and resume, then a native-speaker proofread before launch, email setup (5.8) and bendata permission (5.10) waiting on Malaka, resume page and PDF (6.25), merge PR #43 (diary 8 November), Namecheap email forwarding (around 24 November).
