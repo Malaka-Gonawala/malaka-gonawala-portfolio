@@ -231,3 +231,15 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Added checklist items:** 6.25 (build the resume page and PDF), 9.26 and 9.27 (diary 8 November and its PR #43)
 
 **Open items:** Italian for About, AI section and resume, then a native-speaker proofread before launch, email setup (5.8) and bendata permission (5.10) waiting on Malaka, resume page and PDF (6.25), merge PR #43 (diary 8 November), Namecheap email forwarding (around 24 November).
+
+## Tuesday, 10 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** The Italian pass finished, so the copy for Phase 5 (content) is done except the contact email and the bendata permission, which Malaka saved for last. No site code yet.
+
+- **Approved copy:** every Italian text checked and approved (5.9), including About, the AI section and the resume
+- **Decided:** no native-speaker proofread of the Italian copy (added as 8.6 and dropped the same day), contact email (5.8) and bendata permission (5.10) saved for last
+- **Waiting on Malaka:** whether to start Phase 6 (build in React) now or after those two items
+
+**Open items:** contact email setup (5.8), bendata permission (5.10), resume PDF (5.6, closes with 6.25 in Phase 6), start of Phase 6, merge PR #43 (diary 8 and 9 November), Namecheap email forwarding (around 24 November).
