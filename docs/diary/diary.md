@@ -243,3 +243,18 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Waiting on Malaka:** whether to start Phase 6 (build in React) now or after those two items
 
 **Open items:** contact email setup (5.8), bendata permission (5.10), resume PDF (5.6, closes with 6.25 in Phase 6), start of Phase 6, merge PR #43 (diary 8 and 9 November), Namecheap email forwarding (around 24 November).
+
+## Wednesday, 11 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Phase 6 (build in React) started. The rebuild branch and a draft pull request were set up, the first code challenge passed, and the hero and the header with the Flip menu were built and are visible on a live preview.
+
+- **Started Phase 6:** Malaka said go (6.1), rebuild branch with Vite, React 19, Tailwind v4 palette tokens, GSAP and self-hosted Melodrama, Satoshi and JetBrains Mono (6.2), planner thread with subagent executors by S15 tier (6.3 and 6.4), shadcn and the React Bits registry in the real components.json with the temporary components folder deleted (6.5), graphify graph committed (6.17)
+- **Code challenges:** editor artifact built with Malaka (6.26), SocialLinks skipped, NavLabel (challenge 1) passed and Malaka's code used word for word, a skip does not use up a slot
+- **Built:** hero (6.10) with the two-sided button "Open the projects | cd \work" (replacing the too-generic "See the work"), header with the Flip menu showing the name and section on one line on desktop, both on a [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH)
+- **Previews:** new standing rule that previews are made by a separate thread, previews made for the hero, button, nav, projects (P1 and P2, then tighter S1 to S3), hero background (B1 to B5) and signature placements (B5a to B5c), Malaka sent a guide signature for the hero background (drawn on first load, partly hidden behind a device screen)
+- **Changed workflow:** one rebuild branch with one draft pull request kept open as the launch swap, the old checklist thread retired and a new one took over
+- **Opened pull requests:** #45 draft for the Phase 6 build (stays draft until launch). **Merged:** #43 diary (8 to 10 November)
+
+**Open items:** Malaka's pick for the projects lead slide layout (S2 recommended), hero signature placement (B5b recommended) and the final site signature, Projects build (6.13), hero background build, then the other sections (6.11 About onward), code challenges (1 passed, 1 skipped, 20 to go), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
