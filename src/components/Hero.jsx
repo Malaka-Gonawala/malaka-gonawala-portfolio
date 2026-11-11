@@ -67,7 +67,7 @@ function HeroButton() {
 
 export default function Hero() {
   return (
-    <section className="relative h-svh min-h-[30rem] leading-[1.55]">
+    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] leading-[1.55]">
       <h1 className="absolute inset-x-0 top-1/2 -translate-y-[110%] text-center font-heading text-[clamp(40px,12.5vw,220px)] leading-none font-medium tracking-[-0.02em]">
         {name}
       </h1>

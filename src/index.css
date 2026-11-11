@@ -40,6 +40,8 @@
   --color-signal: #e07a5f;
   --color-alert: #a3402c;
 
+  --breakpoint-wide: 43.8125rem; /* 701px: tab menu and one-line header */
+
   --font-heading: "Melodrama", serif;
   --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -79,4 +81,38 @@
     background: var(--color-bg);
     color: var(--color-fg);
   }
+  /* Fixed header height; the page starts below it. */
+  :root {
+    --hh: calc(
+      min(7vw, 10vh) * 0.9 + clamp(20px, 4.7vw, 60px) * 1.1 + 38px +
+        env(safe-area-inset-top, 0px)
+    );
+  }
+  @media (width >= 43.8125rem) {
+    :root {
+      --hh: calc(min(3.75vw, 7vh) * 1.1 + 32px + env(safe-area-inset-top, 0px));
+    }
+  }
+}
+
+/* The Flip menu tweens --hb (background) and --ht (text) from 0 to 1 to turn the header into the underside. */
+.hd {
+  --mix: calc(var(--ht, 0) * 100%);
+  background: color-mix(
+    in srgb,
+    var(--color-underside) calc(var(--hb, 0) * 100%),
+    var(--color-bg)
+  );
+  color: color-mix(
+    in srgb,
+    var(--color-underside-fg) var(--mix),
+    var(--color-fg)
+  );
+}
+.hd p + p {
+  color: color-mix(
+    in srgb,
+    var(--color-underside-fg) var(--mix),
+    var(--color-forest)
+  );
 }
