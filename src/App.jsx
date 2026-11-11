@@ -1,8 +1,9 @@
-// Scaffold placeholder (task 6.2): replaced by the real pages in Phase 6.
+import Hero from "@/components/Hero";
+
 export default function App() {
   return (
     <main>
-      <h1 className="font-heading">Malaka Gonawala</h1>
+      <Hero />
     </main>
   );
 }

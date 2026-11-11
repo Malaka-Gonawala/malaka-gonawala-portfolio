@@ -1,0 +1,80 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+import { en } from "@/content/en";
+
+gsap.registerPlugin(CustomEase);
+const ease = CustomEase.create("ui", ".22,1,.36,1");
+const { name, line, cta, cmd } = en.hero;
+
+// O2 two-sided button: on hover/focus the gold half takes the underside colours.
+function HeroButton() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      const a = ref.current;
+      const gold = a.firstChild;
+      // Read the tokens at event time so a theme change is picked up.
+      const to = (bg, fg, clearProps) => () => {
+        const css = getComputedStyle(gold);
+        gsap.to(gold, {
+          backgroundColor: css.getPropertyValue(bg),
+          color: css.getPropertyValue(fg),
+          duration: 0.3,
+          ease,
+          overwrite: true,
+          clearProps,
+        });
+      };
+      const on = to("--color-underside", "--color-underside-fg");
+      const off = to(
+        "--color-gold",
+        "--color-on-gold",
+        "backgroundColor,color",
+      );
+      const events = [
+        ["mouseenter", on],
+        ["focus", on],
+        ["mouseleave", off],
+        ["blur", off],
+      ];
+      events.forEach(([e, f]) => a.addEventListener(e, f));
+      return () => events.forEach(([e, f]) => a.removeEventListener(e, f));
+    });
+    return () => mm.revert();
+  }, []);
+
+  return (
+    <a
+      ref={ref}
+      href="#work"
+      className="group inline-flex w-full overflow-hidden rounded-md text-[17px] whitespace-nowrap focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-fg sm:w-auto"
+    >
+      <span className="flex-1 bg-gold px-5 py-[15px] font-bold text-on-gold motion-reduce:group-hover:bg-underside motion-reduce:group-hover:text-underside-fg motion-reduce:group-focus:bg-underside motion-reduce:group-focus:text-underside-fg">
+        {cta}
+      </span>
+      <span
+        aria-hidden="true"
+        className="flex items-center bg-underside px-4 font-mono text-[15px] font-bold text-signal"
+      >
+        {cmd}
+      </span>
+    </a>
+  );
+}
+
+export default function Hero() {
+  return (
+    <section className="relative h-svh min-h-[30rem] leading-[1.55]">
+      <h1 className="absolute inset-x-0 top-1/2 -translate-y-[110%] text-center font-heading text-[clamp(40px,12.5vw,220px)] leading-none font-medium tracking-[-0.02em]">
+        {name}
+      </h1>
+      <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 px-[max(16px,4vw)] pb-8">
+        <p className="max-w-[32ch] text-[clamp(16px,1.8vw,22px)]">{line}</p>
+        <HeroButton />
+      </div>
+    </section>
+  );
+}
