@@ -1,5 +1,27 @@
 {
+  "name": "malaka-gonawala-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
   "devDependencies": {
-    "prettier": "3.8.1"
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^6.3.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "prettier": "3.8.1",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "gsap": "^3.15.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5"
   }
 }

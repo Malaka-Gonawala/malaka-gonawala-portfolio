@@ -1,0 +1,82 @@
+@import "tailwindcss" source(".");
+
+/* Fonts: Melodrama + Satoshi (Fontshare, ITF Free Font License), JetBrains Mono (SIL OFL 1.1). */
+@font-face {
+  font-family: "Melodrama";
+  src: url("/fonts/melodrama/Melodrama-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/jetbrains-mono/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Palette tokens: plan/phase4/palette/palette.md (light here, dark below). */
+@theme {
+  --color-bg: #f2f0eb;
+  --color-fg: #1a1d1b;
+  --color-muted: #4b504c;
+  --color-surface: #e0ddd6;
+  --color-gold: #c9a24a;
+  --color-on-gold: #1a1d1b;
+  --color-forest: #23502f;
+  --color-underside: #12291e;
+  --color-underside-fg: #f4f1ea;
+  --color-signal: #e07a5f;
+  --color-alert: #a3402c;
+
+  --font-heading: "Melodrama", serif;
+  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-mono--font-feature-settings: "liga" 0, "calt" 0;
+}
+
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --color-bg: #161514;
+      --color-fg: #f4f1ea;
+      --color-muted: #b5b9b3;
+      --color-surface: #24221f;
+      --color-gold: #d9b45a;
+      --color-on-gold: #0d0c0b;
+      --color-forest: #7dbf8e;
+      --color-underside: #23502f;
+      --color-signal: #f2c14e;
+      --color-alert: #e07a5f;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --color-bg: #161514;
+    --color-fg: #f4f1ea;
+    --color-muted: #b5b9b3;
+    --color-surface: #24221f;
+    --color-gold: #d9b45a;
+    --color-on-gold: #0d0c0b;
+    --color-forest: #7dbf8e;
+    --color-underside: #23502f;
+    --color-signal: #f2c14e;
+    --color-alert: #e07a5f;
+    color-scheme: dark;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+}
