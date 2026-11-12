@@ -70,7 +70,7 @@ export default function Hero() {
   return (
     <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] overflow-hidden leading-[1.55]">
       {/* B5b background: signature drawn behind a ForValue device; DOM order keeps the text on top. */}
-      <Signature className="absolute top-[40%] left-[-25%] w-[210%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[-10%] sm:w-[135%]" />
+      <Signature className="absolute top-[42%] left-[-29%] w-[150%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[-10%] sm:w-[135%]" />
       <div
         aria-hidden="true"
         className="absolute top-[56%] left-[46%] h-[135px] w-[62%] overflow-hidden rounded-[10px] border border-fg/25 bg-bg shadow-2xl sm:top-[44%] sm:left-[52%] sm:h-[250px] sm:w-[40%]"
