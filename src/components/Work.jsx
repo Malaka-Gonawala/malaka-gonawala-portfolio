@@ -176,9 +176,17 @@ export default function Work({ onSection }) {
         gsap.set([b, c], { opacity: 0, pointerEvents: "none" });
         gsap.set(rows, { opacity: 0, y: 10 });
         const hold = { duration: 0.6 };
+        // Before the first type tween starts the bar shows slide 1; a refresh renders the later tweens' from-state.
+        const sync = () => {
+          if (tl.time() < hold.duration) {
+            url.current.textContent = first;
+            cnt.current.textContent = "1 / 2";
+          }
+        };
         const tl = gsap
           .timeline({
             defaults: { ease: ui },
+            onUpdate: sync,
             scrollTrigger: {
               trigger: stage.current,
               start: () =>
@@ -186,6 +194,7 @@ export default function Work({ onSection }) {
               end: "+=250%",
               pin: true,
               scrub: 0.6,
+              onRefresh: () => gsap.delayedCall(0, sync),
             },
           })
           .to({}, hold)
