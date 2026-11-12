@@ -31,3 +31,44 @@ export const en = {
     domain: "malakagonawala.dev/",
   },
 };
+
+// Pitches: Phase 5 approved copy (plan/phase5/*-page.md), word for word.
+export const work = {
+  open: "Open project →",
+  leads: [
+    {
+      slug: "forvalue",
+      name: "ForValue",
+      pitch:
+        "A working demo of a wood supply chain, from forest to buyer, where every batch carries a QR code with its full history.",
+      alt: "ForValue dashboard on a laptop and on a phone",
+    },
+    {
+      slug: "fortheroot",
+      name: "ForTheRoot",
+      pitch:
+        "A website that teaches the basics of cybersecurity through three playable mini-games.",
+      alt: "ForTheRoot home page on a laptop and on a phone",
+    },
+  ],
+  others: [
+    {
+      slug: "holoservice",
+      name: "Holo Service",
+      pitch:
+        "A one-page website for a Milan cleaning and reception company, with a quote form that sends requests straight to the owner's email.",
+    },
+    {
+      slug: "shitosbarber",
+      name: "Shitos Barber",
+      pitch:
+        "A one-page website for a barber shop in Milan, with a price list, a photo gallery and a map of both shops.",
+    },
+    {
+      slug: "antigravity",
+      name: "Antigravity Bikes",
+      pitch:
+        "A motorbike dealership demo website with a model catalog, test-drive booking, a simulated job portal and a user profile.",
+    },
+  ],
+};
