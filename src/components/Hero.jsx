@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
 import { en } from "@/content/en";
+import Signature from "@/components/Signature";
 
 gsap.registerPlugin(CustomEase);
 const ease = CustomEase.create("ui", ".22,1,.36,1");
@@ -67,7 +68,22 @@ function HeroButton() {
 
 export default function Hero() {
   return (
-    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] leading-[1.55]">
+    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] overflow-hidden leading-[1.55]">
+      {/* B5b background: signature drawn behind a ForValue device; DOM order keeps the text on top. */}
+      <Signature className="absolute top-[40%] left-[-25%] w-[210%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[-10%] sm:w-[135%]" />
+      <div
+        aria-hidden="true"
+        className="absolute top-[56%] left-[46%] h-[135px] w-[62%] overflow-hidden rounded-[10px] border border-fg/25 bg-bg shadow-2xl sm:top-[44%] sm:left-[52%] sm:h-[250px] sm:w-[40%]"
+      >
+        <div className="h-3.5 bg-fg/12" />
+        <img
+          src="/img/projects/forvalue-hero.webp"
+          alt=""
+          width="1024"
+          height="640"
+          className="w-full"
+        />
+      </div>
       <h1 className="absolute inset-x-0 top-1/2 -translate-y-[110%] text-center font-heading text-[clamp(40px,12.5vw,220px)] leading-none font-medium tracking-[-0.02em]">
         {name}
       </h1>
