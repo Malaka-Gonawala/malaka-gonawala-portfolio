@@ -101,13 +101,22 @@
   background: color-mix(
     in srgb,
     var(--color-underside) calc(var(--hb, 0) * 100%),
-    var(--color-bg)
+    var(--hbase, var(--color-bg))
   );
   color: color-mix(
     in srgb,
     var(--color-underside-fg) var(--mix),
-    var(--color-fg)
+    var(--hfg, var(--color-fg))
   );
+}
+/* Split hero at the top of Home: the header floats over the stone/forest halves (the Flip sits on the forest panel on wide screens). */
+html.on-hero {
+  --hbase: transparent;
+}
+@media (min-width: 701px) {
+  html.on-hero {
+    --hfg: var(--color-underside-fg);
+  }
 }
 .hd p + p {
   color: color-mix(

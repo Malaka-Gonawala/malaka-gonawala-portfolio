@@ -114,25 +114,42 @@ export default function Hero() {
     return () => mm.revert();
   }, []);
 
+  useEffect(() => {
+    const hero = document.getElementById("hero");
+    const root = document.documentElement;
+    const flag = (self) =>
+      root.classList.toggle("on-hero", self.scroll() < hero.offsetTop);
+    const st = ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      onUpdate: flag,
+      onRefresh: flag,
+    });
+    return () => {
+      st.kill();
+      root.classList.remove("on-hero");
+    };
+  }, []);
+
   const nameCls =
-    "font-heading text-[clamp(64px,23vw,100px)] leading-[.95] font-medium tracking-[-0.02em] wide:text-[clamp(40px,9.4vw,190px)] wide:leading-none";
+    "font-heading text-[clamp(56px,20.5vw,100px)] leading-[.95] font-medium tracking-[-0.02em] wide:text-[clamp(40px,12.9vw,260px)] wide:leading-none";
   return (
     <section
       id="hero"
-      className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] overflow-hidden leading-[1.55]"
+      className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] [clip-path:inset(calc(-1*var(--hh))_0_0_0)] leading-[1.55]"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 right-0 hidden w-[40%] bg-underside wide:block"
+        className="absolute -top-(--hh) right-0 bottom-0 hidden w-[34%] bg-underside wide:block"
       />
-      <div className="absolute inset-x-0 top-[34%] wide:top-[28%]">
+      <div className="absolute inset-x-0 top-[25%] wide:top-[24%]">
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-[.95em] -z-0 h-[100svh] bg-underside text-[clamp(64px,23vw,100px)] wide:hidden"
+          className="absolute inset-x-0 top-[.95em] h-[100svh] bg-underside text-[clamp(56px,20.5vw,100px)] wide:hidden"
         />
         <h1
           id="hero-name"
-          className={`relative px-[max(16px,4vw)] wide:[clip-path:inset(0_40%_0_0)] ${nameCls}`}
+          className={`relative px-[max(16px,4vw)] wide:px-[6vw] wide:[clip-path:inset(0_34%_0_0)] ${nameCls}`}
         >
           <span className="block wide:inline">Malaka</span>{" "}
           <span className="block text-underside-fg wide:inline wide:text-fg">
@@ -141,15 +158,15 @@ export default function Hero() {
         </h1>
         <p
           aria-hidden="true"
-          className={`absolute inset-0 hidden px-[max(16px,4vw)] text-underside-fg wide:block [clip-path:inset(0_0_0_60%)] ${nameCls}`}
+          className={`absolute inset-0 hidden px-[6vw] text-underside-fg wide:block [clip-path:inset(0_0_0_66%)] ${nameCls}`}
         >
           {name}
         </p>
       </div>
-      <p className="absolute top-4 left-[max(16px,4vw)] max-w-[32ch] text-[clamp(16px,1.8vw,22px)] wide:top-auto wide:bottom-8 wide:max-w-[28ch]">
+      <p className="absolute top-[11%] left-[max(16px,4vw)] wide:left-[6vw] max-w-[32ch] text-[clamp(16px,1.5vw,22px)] wide:top-[59%] wide:max-w-[47%]">
         {line}
       </p>
-      <div className="absolute inset-x-0 bottom-0 px-[max(16px,4vw)] pb-8 wide:inset-x-auto wide:left-[calc(60%-11.6rem)] wide:px-0">
+      <div className="absolute inset-x-0 bottom-0 px-[max(16px,4vw)] pb-6 wide:inset-x-auto wide:top-[78%] wide:bottom-auto wide:left-[calc(66%-11.4rem)] wide:px-0 wide:pb-0">
         <HeroButton />
       </div>
     </section>
