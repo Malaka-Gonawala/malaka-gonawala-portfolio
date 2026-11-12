@@ -258,3 +258,16 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Opened pull requests:** #45 draft for the Phase 6 build (stays draft until launch). **Merged:** #43 diary (8 to 10 November)
 
 **Open items:** Malaka's pick for the projects lead slide layout (S2 recommended), hero signature placement (B5b recommended) and the final site signature, Projects build (6.13), hero background build, then the other sections (6.11 About onward), code challenges (1 passed, 1 skipped, 20 to go), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Thursday, 12 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Build day with a hard correction. The Projects section was built and the scroll animations ported, then audits showed the build was far from the approved prototype and Malaka called it "a disaster". A design audit found 9 problems and Malaka picked a split "two sides" hero, which is built and now matches its mock. All work is on draft pull request #45.
+
+- **Built:** hero signature background (Malaka's final signature path and animation, placement B5b variant A), Projects on Home with the S2-A lead slides, the E1 list and the real Phase 5 copy (6.13 done), the Pretty Sri Lanka and Experiments rows in Other projects, scroll animations ported (pinned work scene on wide screens with the typed address bar, blur transitions, header "/ Work", phone and reduced motion stay stacked)
+- **Decided:** Other projects rows read "Where it all started: my first website." and "Experiments and early work →" (the Italian versions are Claude translations, not yet proofread), the split "two sides" hero (P1-1) replaces the B5b signature background, the name folds into the header, the hero device is back to ForValue
+- **Audited:** a fidelity audit found Home at about 45% of the prototype and the whole site at about 20%, the fixes passed an independent tester (S29), a design audit found 9 problems
+- **Changed rules:** new S32, threads look at their own work in Playwright before reporting (PR #47, waiting for merge), lesson that previews are static mocks so the real render must be compared with them
+
+**Open items:** project slides fix, underside panel copy from Malaka, low-priority audit items, prerender (6.24), About, Skills, the scroll-detail card, the S31 code challenges, project pages, contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
