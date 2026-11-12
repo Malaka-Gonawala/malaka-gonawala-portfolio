@@ -18,7 +18,7 @@ function HeroButton() {
       const a = ref.current;
       const gold = a.firstChild;
       // Read the tokens at event time so a theme change is picked up.
-      const to = (bg, fg, clearProps) => () => {
+      const to = (bg, fg, reset) => () => {
         const css = getComputedStyle(gold);
         gsap.to(gold, {
           backgroundColor: css.getPropertyValue(bg),
@@ -26,15 +26,11 @@ function HeroButton() {
           duration: 0.3,
           ease,
           overwrite: true,
-          clearProps,
+          onComplete: () => reset && gold.removeAttribute("style"),
         });
       };
       const on = to("--color-underside", "--color-underside-fg");
-      const off = to(
-        "--color-gold",
-        "--color-on-gold",
-        "backgroundColor,color",
-      );
+      const off = to("--color-gold", "--color-on-gold", true);
       const events = [
         ["mouseenter", on],
         ["focus", on],
@@ -68,16 +64,16 @@ function HeroButton() {
 
 export default function Hero() {
   return (
-    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] overflow-hidden leading-[1.55]">
-      {/* B5b background: signature drawn behind a ForValue device; DOM order keeps the text on top. */}
-      <Signature className="absolute top-[42%] left-[-29%] w-[150%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[-10%] sm:w-[135%]" />
+    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] max-sm:max-h-[42rem] overflow-hidden leading-[1.55]">
+      {/* B5b background: signature drawn behind a Holo Service device (ForValue is the first slide below); DOM order keeps the text on top. */}
+      <Signature className="absolute top-[36%] left-[-4%] w-[140%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[12%] sm:w-[125%]" />
       <div
         aria-hidden="true"
-        className="absolute top-[56%] left-[46%] h-[135px] w-[62%] overflow-hidden rounded-[10px] border border-fg/25 bg-bg shadow-2xl sm:top-[44%] sm:left-[52%] sm:h-[250px] sm:w-[40%]"
+        className="absolute top-[54%] left-[46%] h-[100px] w-[62%] overflow-hidden rounded-[10px] border border-fg/25 bg-bg shadow-2xl sm:top-[54%] sm:left-[52%] sm:h-[200px] sm:w-[40%]"
       >
         <div className="h-3.5 bg-fg/12" />
         <img
-          src="/img/projects/forvalue-hero.webp"
+          src="/img/projects/holoservice-d.webp"
           alt=""
           width="1024"
           height="640"

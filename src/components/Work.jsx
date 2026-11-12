@@ -17,7 +17,7 @@ function Lead({ slug, name, pitch, alt }) {
   return (
     <section
       aria-label={name}
-      className={`flex min-h-[calc(100svh-var(--hh))] flex-col justify-center gap-8 overflow-hidden py-10 wide:flex-row wide:items-center wide:gap-[4vw] ${stacked}`}
+      className={`flex flex-col justify-center gap-8 overflow-hidden py-10 wide:min-h-[calc(100svh-var(--hh))] wide:flex-row wide:items-center wide:gap-[4vw] ${stacked}`}
     >
       <div className="relative w-full wide:order-2 wide:w-[62%]">
         <img
@@ -77,10 +77,10 @@ function Others() {
   return (
     <section
       aria-label="More projects"
-      className={`grid min-h-[calc(100svh-var(--hh))] content-center gap-8 px-[max(16px,4vw)] py-10 wide:grid-cols-[1fr_1.3fr] wide:items-center wide:gap-[4vw] ${stacked}`}
+      className={`grid gap-8 px-[max(16px,4vw)] py-10 wide:min-h-[calc(100svh-var(--hh))] wide:grid-cols-[1fr_1.3fr] wide:content-start wide:items-start wide:gap-[4vw] wide:pt-14 ${stacked}`}
     >
       <div>
-        <h2 className="mb-4 font-mono text-[13px] text-muted">
+        <h2 className="mb-4 font-heading text-[clamp(32px,min(4vw,7vh),64px)] leading-none">
           {work.othersTitle}
         </h2>
         <ul>
@@ -90,10 +90,10 @@ function Others() {
                 href={p.href ?? `/work/${p.slug}/`}
                 onMouseEnter={() => pick(i)}
                 onFocus={() => pick(i)}
-                className="block py-4 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fg"
+                className="block py-[clamp(6px,1.6vh,16px)] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fg"
               >
                 <span
-                  className={`font-heading text-[clamp(28px,3.4vw,52px)] leading-tight transition-colors ${i === active ? "text-forest" : ""}`}
+                  className={`font-heading text-[clamp(28px,min(3.4vw,5.5vh),52px)] leading-tight transition-colors ${i === active ? "text-forest" : ""}`}
                 >
                   {p.name}
                 </span>
@@ -158,21 +158,23 @@ export default function Work({ onSection }) {
         const [a, b, c] = panels;
         const rows = c.querySelectorAll("li");
         const txt = { n: 0 };
-        const type = (from, to) => ({
+        const type = (from, to, count) => ({
           n: 1,
           duration: 0.5,
+          immediateRender: false,
           ease: "none",
           onUpdate: () => {
             // n 0..1: delete `from`, then type `to` (steps of one character)
             const n = txt.n;
+            cnt.current.textContent = count[+(n >= 0.5)];
             url.current.textContent =
               n < 0.5
                 ? from.slice(0, Math.round(from.length * (1 - n * 2)))
                 : to.slice(0, Math.round(to.length * (n - 0.5) * 2));
           },
         });
-        gsap.set([b, c], { autoAlpha: 0 });
-        gsap.set(rows, { autoAlpha: 0, y: 10 });
+        gsap.set([b, c], { opacity: 0, pointerEvents: "none" });
+        gsap.set(rows, { opacity: 0, y: 10 });
         const hold = { duration: 0.6 };
         const tl = gsap
           .timeline({
@@ -187,7 +189,7 @@ export default function Work({ onSection }) {
             },
           })
           .to({}, hold)
-          .fromTo(txt, { n: 0 }, type(first, second), "<")
+          .fromTo(txt, { n: 0 }, type(first, second, ["1 / 2", "2 / 2"]), ">")
           .to(
             a,
             { filter: "blur(16px)", autoAlpha: 0, duration: 0.4 },
@@ -203,31 +205,58 @@ export default function Work({ onSection }) {
           .fromTo(
             b,
             { filter: "blur(16px)" },
-            { filter: "blur(0px)", autoAlpha: 1, duration: 0.4 },
+            {
+              filter: "blur(0px)",
+              opacity: 1,
+              duration: 0.4,
+            },
             "<-0.4",
           )
-          .call(() => (cnt.current.textContent = "2 / 2"), null, "<")
+          .set(b, { pointerEvents: "auto" }, "<")
+          .addLabel("b")
           .to({}, hold)
-          .fromTo(txt, { n: 0 }, type(second, "other-projects"), ">")
+          .fromTo(
+            txt,
+            { n: 0 },
+            type(second, "other-projects", ["2 / 2", "2 / 2"]),
+            ">",
+          )
           .to(
             b,
-            { filter: "blur(16px)", autoAlpha: 0, duration: 0.4 },
+            {
+              filter: "blur(16px)",
+              opacity: 0,
+              duration: 0.4,
+            },
             ">-0.15",
           )
-          .to(c, { autoAlpha: 1, duration: 0.3 }, "<")
-          .to(
-            rows,
-            { autoAlpha: 1, y: 0, stagger: 0.12, duration: 0.3 },
-            ">-0.1",
-          )
+          .set(b, { pointerEvents: "none" }, "<")
+          .set(c, { pointerEvents: "auto" }, "<")
+          .to(c, { opacity: 1, duration: 0.3 }, "<")
+          .to(rows, { opacity: 1, y: 0, stagger: 0.12, duration: 0.3 }, ">-0.1")
+          .addLabel("c")
           .to({}, hold);
+        // Tab into a panel that is still hidden: scroll the pin to it, so focus is never on an invisible panel.
+        const reveal = (e) => {
+          const label =
+            e.target.closest("section") === b
+              ? "b"
+              : e.target.closest("section") === c
+                ? "c"
+                : null;
+          if (!label) return;
+          const st = tl.scrollTrigger;
+          window.scrollTo(
+            0,
+            st.start + ((st.end - st.start) * tl.labels[label]) / tl.duration(),
+          );
+        };
+        stage.current.addEventListener("focusin", reveal);
         url.current.textContent = first;
         return () => {
+          stage.current?.removeEventListener("focusin", reveal);
           tl.scrollTrigger?.kill();
           tl.kill();
-          gsap.set([...panels, ...rows, load.current], {
-            clearProps: "all",
-          });
         };
       },
     );
