@@ -55,65 +55,79 @@ function Lead({ slug, name, pitch, alt }) {
 // E1 list (P2): pitch only on the active row; the preview window follows the active row (desktop only).
 function Others() {
   const [active, setActive] = useState(0);
+  const [shot, setShot] = useState(0); // preview keeps the last row that has a screenshot
+  const pick = (i) => {
+    setActive(i);
+    if (work.others[i].shot) setShot(i);
+  };
   const shots = useRef([]);
 
   useEffect(() => {
     const mm = gsap.matchMedia();
     const to = (duration) => () =>
-      gsap.to(shots.current, {
-        opacity: (i) => (i === active ? 1 : 0),
+      gsap.to(shots.current.filter(Boolean), {
+        opacity: (i, el) => (+el.dataset.i === shot ? 1 : 0),
         duration,
       });
     mm.add("(prefers-reduced-motion: no-preference)", to(0.4));
     mm.add("(prefers-reduced-motion: reduce)", to(0));
     return () => mm.revert();
-  }, [active]);
+  }, [shot]);
 
   return (
     <section
       aria-label="More projects"
       className={`grid min-h-[calc(100svh-var(--hh))] content-center gap-8 px-[max(16px,4vw)] py-10 wide:grid-cols-[1fr_1.3fr] wide:items-center wide:gap-[4vw] ${stacked}`}
     >
-      <ul>
-        {work.others.map((p, i) => (
-          <li key={p.slug} className="border-t border-fg/20 last:border-b">
-            <a
-              href={`/work/${p.slug}/`}
-              onMouseEnter={() => setActive(i)}
-              onFocus={() => setActive(i)}
-              className="block py-4 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fg"
-            >
-              <span
-                className={`font-heading text-[clamp(28px,3.4vw,52px)] leading-tight transition-colors ${i === active ? "text-forest" : ""}`}
+      <div>
+        <h2 className="mb-4 font-mono text-[13px] text-muted">
+          {work.othersTitle}
+        </h2>
+        <ul>
+          {work.others.map((p, i) => (
+            <li key={p.slug} className="border-t border-fg/20 last:border-b">
+              <a
+                href={p.href ?? `/work/${p.slug}/`}
+                onMouseEnter={() => pick(i)}
+                onFocus={() => pick(i)}
+                className="block py-4 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fg"
               >
-                {p.name}
-              </span>
-              <span
-                className={`mt-2 max-w-[44ch] text-[16px] ${i === active ? "block" : "hidden"}`}
-              >
-                {p.pitch}
-              </span>
-            </a>
-          </li>
-        ))}
-      </ul>
+                <span
+                  className={`font-heading text-[clamp(28px,3.4vw,52px)] leading-tight transition-colors ${i === active ? "text-forest" : ""}`}
+                >
+                  {p.name}
+                </span>
+                <span
+                  className={`mt-2 max-w-[44ch] text-[16px] ${p.pitch && i === active ? "block" : "hidden"}`}
+                >
+                  {p.pitch}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div
         aria-hidden="true"
         className="relative hidden aspect-[16/10] overflow-hidden rounded-lg border border-fg/20 wide:block"
       >
-        {work.others.map((p, i) => (
-          <img
-            key={p.slug}
-            ref={(el) => (shots.current[i] = el)}
-            src={`/img/projects/${p.slug}-d.webp`}
-            alt=""
-            width="1000"
-            height="625"
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover object-top"
-            style={{ opacity: i === 0 ? 1 : 0 }}
-          />
-        ))}
+        {work.others.map(
+          (p, i) =>
+            p.shot && (
+              <img
+                key={p.slug}
+                data-i={i}
+                ref={(el) => (shots.current[i] = el)}
+                src={`/img/projects/${p.slug}-d.webp`}
+                alt=""
+                width="1000"
+                height="625"
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover object-top"
+                style={{ opacity: i === 0 ? 1 : 0 }}
+              />
+            ),
+        )}
       </div>
     </section>
   );
@@ -194,7 +208,7 @@ export default function Work({ onSection }) {
           )
           .call(() => (cnt.current.textContent = "2 / 2"), null, "<")
           .to({}, hold)
-          .fromTo(txt, { n: 0 }, type(second, ""), ">")
+          .fromTo(txt, { n: 0 }, type(second, "other-projects"), ">")
           .to(
             b,
             { filter: "blur(16px)", autoAlpha: 0, duration: 0.4 },

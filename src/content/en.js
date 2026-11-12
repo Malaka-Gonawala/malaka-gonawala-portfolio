@@ -35,6 +35,7 @@ export const en = {
 // Pitches: Phase 5 approved copy (plan/phase5/*-page.md), word for word.
 export const work = {
   open: "Open project →",
+  othersTitle: "Other projects",
   leads: [
     {
       slug: "forvalue",
@@ -54,21 +55,32 @@ export const work = {
   others: [
     {
       slug: "holoservice",
+      shot: true,
       name: "Holo Service",
       pitch:
         "A one-page website for a Milan cleaning and reception company, with a quote form that sends requests straight to the owner's email.",
     },
     {
       slug: "shitosbarber",
+      shot: true,
       name: "Shitos Barber",
       pitch:
         "A one-page website for a barber shop in Milan, with a price list, a photo gallery and a map of both shops.",
     },
     {
       slug: "antigravity",
+      shot: true,
       name: "Antigravity Bikes",
       pitch:
         "A motorbike dealership demo website with a model catalog, test-drive booking, a simulated job portal and a user profile.",
     },
+    {
+      slug: "prettysrilanka",
+      name: "Pretty Sri Lanka",
+      pitch: "My first website. Where it all started.",
+      href: "/about/",
+      shot: true,
+    },
+    { slug: "experiments", name: "Experiments →", href: "/lab/" },
   ],
 };
