@@ -79,7 +79,6 @@ export const work = {
       name: "Pretty Sri Lanka",
       pitch: "Where it all started: my first website.",
       href: "/about/",
-      shot: true,
     },
     {
       slug: "experiments",
