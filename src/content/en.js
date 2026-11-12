@@ -77,10 +77,14 @@ export const work = {
     {
       slug: "prettysrilanka",
       name: "Pretty Sri Lanka",
-      pitch: "My first website. Where it all started.",
+      pitch: "Where it all started: my first website.",
       href: "/about/",
       shot: true,
     },
-    { slug: "experiments", name: "Experiments →", href: "/lab/" },
+    {
+      slug: "experiments",
+      name: "Experiments and early work →",
+      href: "/lab/",
+    },
   ],
 };
