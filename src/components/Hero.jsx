@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { en } from "@/content/en";
-import Signature from "@/components/Signature";
 
-gsap.registerPlugin(CustomEase);
+gsap.registerPlugin(CustomEase, ScrollTrigger);
 const ease = CustomEase.create("ui", ".22,1,.36,1");
 const { name, line, cta, cmd } = en.hero;
 
@@ -62,29 +62,94 @@ function HeroButton() {
   );
 }
 
+// P1-1 split hero: stone front on the left ~60%, forest underside on the right ~40% (phone: below the seam between the two name lines).
+// The name crosses the seam: a second copy in the underside ink is clipped to the panel. The panel carries no text (S9, copy pending).
 export default function Hero() {
+  // P7-1: the header wordmark stays hidden on Home; as the hero scrolls out the big name folds into it.
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      const nav = document.getElementById("nav-name");
+      const big = document.getElementById("hero-name");
+      const hero = big.closest("section");
+      const from = () => {
+        gsap.set(nav, { clearProps: "transform" });
+        const a = big.getBoundingClientRect();
+        const b = nav.getBoundingClientRect();
+        const k =
+          parseFloat(getComputedStyle(big).fontSize) /
+          parseFloat(getComputedStyle(nav).fontSize);
+        return { x: a.left - b.left, y: a.top - b.top, scale: k };
+      };
+      const tween = gsap.fromTo(
+        nav,
+        {
+          x: () => from().x,
+          y: () => from().y,
+          scale: () => from().scale,
+          opacity: 0,
+          transformOrigin: "0 0",
+        },
+        {
+          x: 0,
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: hero,
+            start: () => `top ${hero.offsetTop}`,
+            end: () => `bottom ${hero.offsetTop}`,
+            scrub: true,
+            invalidateOnRefresh: true,
+          },
+        },
+      );
+      return () => {
+        tween.scrollTrigger.kill();
+        tween.kill();
+        gsap.set(nav, { clearProps: "all" });
+      };
+    });
+    return () => mm.revert();
+  }, []);
+
+  const nameCls =
+    "font-heading text-[clamp(64px,23vw,100px)] leading-[.95] font-medium tracking-[-0.02em] wide:text-[clamp(40px,9.4vw,190px)] wide:leading-none";
   return (
-    <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] max-sm:max-h-[42rem] overflow-hidden leading-[1.55]">
-      {/* B5b background: signature drawn behind a ForValue device; DOM order keeps the text on top. */}
-      <Signature className="absolute top-[22%] left-[-4%] w-[140%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[12%] sm:w-[125%]" />
+    <section
+      id="hero"
+      className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] overflow-hidden leading-[1.55]"
+    >
       <div
         aria-hidden="true"
-        className="absolute top-[54%] left-[46%] h-[100px] w-[62%] overflow-hidden rounded-[10px] border border-fg/25 bg-bg shadow-2xl sm:top-[54%] sm:left-[52%] sm:h-[200px] sm:w-[40%]"
-      >
-        <div className="h-3.5 bg-fg/12" />
-        <img
-          src="/img/projects/forvalue-hero.webp"
-          alt=""
-          width="1024"
-          height="640"
-          className="w-full"
+        className="absolute inset-y-0 right-0 hidden w-[40%] bg-underside wide:block"
+      />
+      <div className="absolute inset-x-0 top-[34%] wide:top-[28%]">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[.95em] -z-0 h-[100svh] bg-underside text-[clamp(64px,23vw,100px)] wide:hidden"
         />
+        <h1
+          id="hero-name"
+          className={`relative px-[max(16px,4vw)] wide:[clip-path:inset(0_40%_0_0)] ${nameCls}`}
+        >
+          <span className="block wide:inline">Malaka</span>{" "}
+          <span className="block text-underside-fg wide:inline wide:text-fg">
+            Gonawala
+          </span>
+        </h1>
+        <p
+          aria-hidden="true"
+          className={`absolute inset-0 hidden px-[max(16px,4vw)] text-underside-fg wide:block [clip-path:inset(0_0_0_60%)] ${nameCls}`}
+        >
+          {name}
+        </p>
       </div>
-      <h1 className="absolute inset-x-0 top-1/2 -translate-y-[110%] text-center font-heading text-[clamp(40px,12.5vw,220px)] leading-none font-medium tracking-[-0.02em]">
-        {name}
-      </h1>
-      <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-4 px-[max(16px,4vw)] pb-8">
-        <p className="max-w-[32ch] text-[clamp(16px,1.8vw,22px)]">{line}</p>
+      <p className="absolute top-4 left-[max(16px,4vw)] max-w-[32ch] text-[clamp(16px,1.8vw,22px)] wide:top-auto wide:bottom-8 wide:max-w-[28ch]">
+        {line}
+      </p>
+      <div className="absolute inset-x-0 bottom-0 px-[max(16px,4vw)] pb-8 wide:inset-x-auto wide:left-[calc(60%-11.6rem)] wide:px-0">
         <HeroButton />
       </div>
     </section>

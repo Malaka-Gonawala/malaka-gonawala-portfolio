@@ -146,7 +146,7 @@ export default function Work({ onSection }) {
   useEffect(() => {
     const st = ScrollTrigger.create({
       trigger: stage.current,
-      start: "top 60%",
+      start: "top 15%",
       onEnter: () => onSection("Work"),
       onLeaveBack: () => onSection("Home"),
     });
