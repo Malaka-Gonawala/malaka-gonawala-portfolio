@@ -38,18 +38,18 @@ export const work = {
   othersTitle: "Other projects",
   leads: [
     {
-      slug: "forvalue",
-      name: "ForValue",
-      pitch:
-        "A working demo of a wood supply chain, from forest to buyer, where every batch carries a QR code with its full history.",
-      alt: "ForValue dashboard on a laptop and on a phone",
-    },
-    {
       slug: "fortheroot",
       name: "ForTheRoot",
       pitch:
         "A website that teaches the basics of cybersecurity through three playable mini-games.",
       alt: "ForTheRoot home page on a laptop and on a phone",
+    },
+    {
+      slug: "forvalue",
+      name: "ForValue",
+      pitch:
+        "A working demo of a wood supply chain, from forest to buyer, where every batch carries a QR code with its full history.",
+      alt: "ForValue dashboard on a laptop and on a phone",
     },
   ],
   others: [

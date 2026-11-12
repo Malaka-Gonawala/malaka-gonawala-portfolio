@@ -65,7 +65,7 @@ function HeroButton() {
 export default function Hero() {
   return (
     <section className="relative h-[calc(100svh-var(--hh))] min-h-[30rem] max-sm:max-h-[42rem] overflow-hidden leading-[1.55]">
-      {/* B5b background: signature drawn behind a Holo Service device (ForValue is the first slide below); DOM order keeps the text on top. */}
+      {/* B5b background: signature drawn behind a ForValue device; DOM order keeps the text on top. */}
       <Signature className="absolute top-[36%] left-[-4%] w-[140%] max-w-none text-forest opacity-45 sm:top-[10%] sm:left-[12%] sm:w-[125%]" />
       <div
         aria-hidden="true"
@@ -73,7 +73,7 @@ export default function Hero() {
       >
         <div className="h-3.5 bg-fg/12" />
         <img
-          src="/img/projects/holoservice-d.webp"
+          src="/img/projects/forvalue-hero.webp"
           alt=""
           width="1024"
           height="640"
