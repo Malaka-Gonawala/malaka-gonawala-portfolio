@@ -5,6 +5,8 @@ export const en = {
     cta: "Open the projects",
     cmd: "cd \\work ↓",
   },
+  // About page "Now" (Phase 5, approved 2026-11-09), shown as now.txt in the underside.
+  now: 'Today I\'m in my fifth year at Istituto Tecnico e Liceo "Enrico Mattei", studying computer science.',
   // Copy from the prototype's Flip menu (plan/phase4/prototype), word for word.
   nav: {
     flip: "Flip",

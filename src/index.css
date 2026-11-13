@@ -1,4 +1,7 @@
-@import "tailwindcss" source(".");
+/* No preflight: the ported prototype CSS relies on browser defaults. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(".");
 
 /* Fonts: Melodrama + Satoshi (Fontshare, ITF Free Font License), JetBrains Mono (SIL OFL 1.1). */
 @font-face {
@@ -77,51 +80,4 @@
     --color-alert: #e07a5f;
     color-scheme: dark;
   }
-  body {
-    background: var(--color-bg);
-    color: var(--color-fg);
-  }
-  /* Fixed header height; the page starts below it. */
-  :root {
-    --hh: calc(
-      min(7vw, 10vh) * 0.9 + clamp(20px, 4.7vw, 60px) * 1.1 + 38px +
-        env(safe-area-inset-top, 0px)
-    );
-  }
-  @media (width >= 43.8125rem) {
-    :root {
-      --hh: calc(min(3.75vw, 7vh) * 1.1 + 32px + env(safe-area-inset-top, 0px));
-    }
-  }
-}
-
-/* The Flip menu tweens --hb (background) and --ht (text) from 0 to 1 to turn the header into the underside. */
-.hd {
-  --mix: calc(var(--ht, 0) * 100%);
-  background: color-mix(
-    in srgb,
-    var(--color-underside) calc(var(--hb, 0) * 100%),
-    var(--hbase, var(--color-bg))
-  );
-  color: color-mix(
-    in srgb,
-    var(--color-underside-fg) var(--mix),
-    var(--hfg, var(--color-fg))
-  );
-}
-/* Split hero at the top of Home: the header floats over the stone/forest halves (the Flip sits on the forest panel on wide screens). */
-html.on-hero {
-  --hbase: transparent;
-}
-@media (min-width: 701px) {
-  html.on-hero {
-    --hfg: var(--color-underside-fg);
-  }
-}
-.hd p + p {
-  color: color-mix(
-    in srgb,
-    var(--color-underside-fg) var(--mix),
-    var(--color-forest)
-  );
 }
