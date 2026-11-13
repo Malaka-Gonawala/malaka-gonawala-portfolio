@@ -1,2611 +1,2683 @@
 {
   ".claude/hooks/prettier-format.sh": {
-    "mtime": 1793888053.866699,
-    "seen": 1794411003.2241733,
+    "mtime": 1794496815.2614455,
+    "seen": 1794566586.1154222,
     "ast_hash": "2062bbcea7e5eb423b271494aac07c4f",
     "semantic_hash": ""
   },
   ".claude/hooks/protect-deploy-files.sh": {
-    "mtime": 1793888053.8668156,
-    "seen": 1794411003.2241812,
+    "mtime": 1794496815.26152,
+    "seen": 1794566586.1154342,
     "ast_hash": "55fc3ff8ce0374e6a582ec549b9bf762",
     "semantic_hash": ""
   },
   ".claude/settings.json": {
-    "mtime": 1793888053.8668156,
-    "seen": 1794411003.2241838,
+    "mtime": 1794496815.26152,
+    "seen": 1794566586.1154404,
     "ast_hash": "a1a8b013910e018f9cd4844537274c43",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/command-metadata.json": {
-    "mtime": 1793888053.8939629,
-    "seen": 1794411003.224185,
+    "mtime": 1794496815.2816937,
+    "seen": 1794566586.115444,
     "ast_hash": "748b025ad91e8665d2d39f5918d1992a",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/data/font-index-failures.json": {
-    "mtime": 1793888053.8939629,
-    "seen": 1794411003.2241867,
+    "mtime": 1794496815.2816937,
+    "seen": 1794566586.1154468,
     "ast_hash": "c14048ea4e2b4a062933664822bc0399",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/impeccable": {
-    "mtime": 1793888053.89982,
-    "seen": 1794411003.2241883,
+    "mtime": 1794496815.283917,
+    "seen": 1794566586.1154494,
     "ast_hash": "4c7725458384d3d88ee233d4a6903918",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/live-browser-dom.js": {
-    "mtime": 1793888053.89982,
-    "seen": 1794411003.2241905,
+    "mtime": 1794496815.283917,
+    "seen": 1794566586.1154516,
     "ast_hash": "5727f418039223d9113c0d88cf1be10d",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/live-browser-ignores.js": {
-    "mtime": 1793888053.89982,
-    "seen": 1794411003.2241914,
+    "mtime": 1794496815.283917,
+    "seen": 1794566586.1154542,
     "ast_hash": "eb8a3d924d40aaebff40b68fffec5ecb",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/live-browser-session.js": {
-    "mtime": 1793888053.89982,
-    "seen": 1794411003.2241933,
+    "mtime": 1794496815.283917,
+    "seen": 1794566586.1154568,
     "ast_hash": "2ebb35b3612e9af6f483b95c5d42141a",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/live-browser.js": {
-    "mtime": 1793888053.90382,
-    "seen": 1794411003.2241943,
+    "mtime": 1794496815.287917,
+    "seen": 1794566586.1154594,
     "ast_hash": "f6576b113cf471a8a604c4074b284293",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/modern-screenshot.umd.js": {
-    "mtime": 1793888053.9078202,
-    "seen": 1794411003.224196,
+    "mtime": 1794496815.287917,
+    "seen": 1794566586.1154616,
     "ast_hash": "4fe5f9e490ab4f107afc707d7eafc819",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/package.json": {
-    "mtime": 1793888053.9110944,
-    "seen": 1794411003.2241976,
+    "mtime": 1794496815.292396,
+    "seen": 1794566586.1154642,
     "ast_hash": "872704a0c0807a31c403decde5d65208",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/src/App.jsx": {
-    "mtime": 1793888053.9112318,
-    "seen": 1794411003.2241983,
+    "mtime": 1794496815.2924664,
+    "seen": 1794566586.1154664,
     "ast_hash": "8e3445016c50aba214298e94afacc2e5",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/src/components/DraggableBox.jsx": {
-    "mtime": 1793888053.9112318,
-    "seen": 1794411003.2241995,
+    "mtime": 1794496815.2924664,
+    "seen": 1794566586.1154685,
     "ast_hash": "7ce60f4e2bec6760203d752d1b8330a0",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/src/components/HoverCard.jsx": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2242005,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.1154706,
     "ast_hash": "81bfa060bc518a5916c07cf576952c52",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/src/components/StaggerList.jsx": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2242012,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.1154735,
     "ast_hash": "fd8f2a47801a4e77db375ff7c537f645",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/src/main.jsx": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2242026,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.115476,
     "ast_hash": "782970e72e6372a389421d455825626a",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/vite.config.js": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2242038,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.1154785,
     "ast_hash": "04f2809d0fd099e217d2f1986103f805",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/scripts/animation_generator.py": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2242048,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.115481,
     "ast_hash": "ba699595ab8f79ea2019d81bb09f65a0",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/scripts/variant_builder.py": {
-    "mtime": 1793888053.9118104,
-    "seen": 1794411003.2242053,
+    "mtime": 1794496815.2928061,
+    "seen": 1794566586.1154833,
     "ast_hash": "56bdc7674ca9e0358497208e0281fe0f",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/assets/showcase/color-pair.tsx": {
-    "mtime": 1793888053.912304,
-    "seen": 1794411003.224206,
+    "mtime": 1794496815.2930577,
+    "seen": 1794566586.1154857,
     "ast_hash": "7cdab32a8c2154d90ced30de76d1ed03",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/assets/showcase/state-matrix.tsx": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.224207,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1154883,
     "ast_hash": "029021826d0a662d84a2d9e35c36395b",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/data/catalog-summary.json": {
-    "mtime": 1793888053.9143147,
-    "seen": 1794411003.2242086,
+    "mtime": 1794496815.2941515,
+    "seen": 1794566586.1154907,
     "ast_hash": "6185a0fc8447d487988074b7f4eb4219",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/data/data-provenance.json": {
-    "mtime": 1793888053.9143147,
-    "seen": 1794411003.2242095,
+    "mtime": 1794496815.2941515,
+    "seen": 1794566586.1154928,
     "ast_hash": "4f0fbe5f16c919f87170d6f493fad5e3",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/data/google-font-licenses.json": {
-    "mtime": 1793888053.9158201,
-    "seen": 1794411003.2242107,
+    "mtime": 1794496815.2941515,
+    "seen": 1794566586.1154952,
     "ast_hash": "c6f70c775c4b6ac26441cf1b0022ad71",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json": {
-    "mtime": 1793888053.9278202,
-    "seen": 1794411003.2242117,
+    "mtime": 1794496815.2959168,
+    "seen": 1794566586.115498,
     "ast_hash": "933217ce321daf2458d12c41e5f19cb1",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/core.py": {
-    "mtime": 1793888053.9430473,
-    "seen": 1794411003.2242124,
+    "mtime": 1794496815.3041508,
+    "seen": 1794566586.1155002,
     "ast_hash": "8d5f69189c422df0515f5d5989c2bdf6",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/design_system.py": {
-    "mtime": 1793888053.9439726,
-    "seen": 1794411003.2242136,
+    "mtime": 1794496815.3045156,
+    "seen": 1794566586.1155028,
     "ast_hash": "a93a39562922b44b2dc8963daa606678",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py": {
-    "mtime": 1793888053.9439726,
-    "seen": 1794411003.2242143,
+    "mtime": 1794496815.3045156,
+    "seen": 1794566586.1155052,
     "ast_hash": "e03944fe11a921f4c13687774c97b09a",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/search.py": {
-    "mtime": 1793888053.9439726,
-    "seen": 1794411003.2242153,
+    "mtime": 1794496815.3045156,
+    "seen": 1794566586.1155076,
     "ast_hash": "c2ffc3e122e88c4855b857c118fe362d",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json": {
-    "mtime": 1793888053.9448678,
-    "seen": 1794411003.2242165,
+    "mtime": 1794496815.3049264,
+    "seen": 1794566586.1155105,
     "ast_hash": "a7237266e58d0d350d1b671a6c8cd5d3",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242177,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155136,
     "ast_hash": "02d80499488d2a6081061bc8e29c469e",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242188,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155167,
     "ast_hash": "10afdf3d0fe26e932bbb7ce6fe65a766",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242196,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155195,
     "ast_hash": "b690ec6f034bddc7902730d4cdeae73f",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242208,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.115522,
     "ast_hash": "75b4d81152b32684a434ffd102341583",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242217,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155243,
     "ast_hash": "afc32a816bf0fa9b8c28b52a93becff0",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242224,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.115527,
     "ast_hash": "ef522a435f50260b089f0212f84ae35a",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242234,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155293,
     "ast_hash": "5e4623083f8c525cbedd1f63b3352f8d",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242243,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155317,
     "ast_hash": "d73f2d115e89e3d8492591aad13b747d",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.224225,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155345,
     "ast_hash": "4df077e7335abb225f9674b8986515cf",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242258,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155381,
     "ast_hash": "24a94a9c58c08a6ff5cfb3abe6f4db2d",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242267,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.115541,
     "ast_hash": "1068a876d6c669a8e8d3ac427c6d0dd0",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_summary_line_endings.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242277,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155436,
     "ast_hash": "4fabfd8065d8c8bdf1b844c94c2b00c4",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_core.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242322,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155465,
     "ast_hash": "2d94f15b1c12cf0b0e4993cacdb4f0ba",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242332,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155484,
     "ast_hash": "dd075aae5ec7d65b41d4e1fc730117ba",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242339,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155505,
     "ast_hash": "d5d35046faca80fe1a48776ad385338d",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.224235,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155522,
     "ast_hash": "c46fcbf50a023cbf994842482bee34b6",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242358,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155548,
     "ast_hash": "b6d5b4fb29fcfd9ac8006dd9222c3dee",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242367,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155572,
     "ast_hash": "6669e8b92bc089b774b8c19ef6f489a6",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242377,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.11556,
     "ast_hash": "10a92a919a7780ebb6aada75eb7d0ed5",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242386,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.115562,
     "ast_hash": "1d360d5f0e17d3feb9f79f5e48d10abc",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242393,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155643,
     "ast_hash": "32c02df463685f41869a7bb9b8396574",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242403,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155667,
     "ast_hash": "d9ce97bf10c398e3ce0304334ba98bc2",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py": {
-    "mtime": 1793888053.9450293,
-    "seen": 1794411003.2242415,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155686,
     "ast_hash": "42ea926a8c25bbbcab5fa25e9c10175e",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/scripts/validate_data.py": {
-    "mtime": 1793888053.9478202,
-    "seen": 1794411003.2242427,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1155705,
     "ast_hash": "0c5a3a29c6dc39190be1a0f2baca2a1c",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/metadata.json": {
-    "mtime": 1793888053.9505851,
-    "seen": 1794411003.2242439,
+    "mtime": 1794496815.3067338,
+    "seen": 1794566586.1155727,
     "ast_hash": "e6f6bf659ca1d8af9bcc607597e304c6",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/metadata.json": {
-    "mtime": 1793888053.952443,
-    "seen": 1794411003.224245,
+    "mtime": 1794496815.3076253,
+    "seen": 1794566586.1155746,
     "ast_hash": "5cd9ae4fc688353236c3b92e8f06dfcc",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/examples/console_logging.py": {
-    "mtime": 1793888053.9583006,
-    "seen": 1794411003.2242458,
+    "mtime": 1794496815.3098347,
+    "seen": 1794566586.1155765,
     "ast_hash": "eeccdae76b3d57954c562d6116bf0dea",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/examples/element_discovery.py": {
-    "mtime": 1793888053.9585257,
-    "seen": 1794411003.2242467,
+    "mtime": 1794496815.3099167,
+    "seen": 1794566586.1155782,
     "ast_hash": "ab18cb3570c77564a08cc73269d7b97d",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/examples/static_html_automation.py": {
-    "mtime": 1793888053.9585257,
-    "seen": 1794411003.2242475,
+    "mtime": 1794496815.3099167,
+    "seen": 1794566586.11558,
     "ast_hash": "b631a23dc044d41fae4614be9353527d",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/scripts/with_server.py": {
-    "mtime": 1793888053.9585257,
-    "seen": 1794411003.2242484,
+    "mtime": 1794496815.3099167,
+    "seen": 1794566586.115582,
     "ast_hash": "5182121f66c1b4279a5b3013378e6ea9",
     "semantic_hash": ""
   },
   ".github/workflows/create-triage-labels.yml": {
-    "mtime": 1793888053.9587774,
-    "seen": 1794411003.2242494,
+    "mtime": 1794496815.3100114,
+    "seen": 1794566586.1155846,
     "ast_hash": "544182bc5824279605c105aad2dd528b",
     "semantic_hash": ""
   },
   ".github/workflows/diary-pdf.yml": {
-    "mtime": 1793888053.9588428,
-    "seen": 1794411003.22425,
+    "mtime": 1794496815.3100374,
+    "seen": 1794566586.115586,
     "ast_hash": "a9f4d8151b18d89549e023ac7d178003",
     "semantic_hash": ""
   },
   ".mcp.json": {
-    "mtime": 1793888053.9588428,
-    "seen": 1794411003.224251,
+    "mtime": 1794496815.3100374,
+    "seen": 1794566586.1155882,
     "ast_hash": "f36cf7aea69df2ae8cce55519be80d0a",
     "semantic_hash": ""
   },
   "components.json": {
-    "mtime": 1794409100.4936914,
-    "seen": 1794411003.224252,
+    "mtime": 1794565929.1303012,
+    "seen": 1794566586.1155899,
     "ast_hash": "5026ea5833a8f74aa02bff65b7413b3c",
     "semantic_hash": ""
   },
   "docs/diary/build-pdf.sh": {
-    "mtime": 1793888054.0367393,
-    "seen": 1794411003.224253,
+    "mtime": 1794496815.3524904,
+    "seen": 1794566586.1155918,
     "ast_hash": "33e8c1b48ade7c54923f264109a1086f",
     "semantic_hash": ""
   },
   "docs/diary/build-web.py": {
-    "mtime": 1793888054.0367393,
-    "seen": 1794411003.224254,
+    "mtime": 1794496815.3524904,
+    "seen": 1794566586.1155932,
     "ast_hash": "2bde553e8655daf8eb15b360636b5f43",
     "semantic_hash": ""
   },
   "eslint.config.js": {
-    "mtime": 1794409101.4545736,
-    "seen": 1794411003.2242546,
+    "mtime": 1794565929.1383011,
+    "seen": 1794566586.115595,
     "ast_hash": "2539dc339431835304aba89523813da8",
     "semantic_hash": ""
   },
   "jsconfig.json": {
-    "mtime": 1794409100.4924235,
-    "seen": 1794411003.2242556,
+    "mtime": 1794565929.1503012,
+    "seen": 1794566586.1155968,
     "ast_hash": "d16bbc2111fb6a3a243ad37ec1b426fb",
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1794409101.167575,
-    "seen": 1794411003.2242565,
+    "mtime": 1794565929.1503012,
+    "seen": 1794566586.115599,
     "ast_hash": "3a3eca406436dad0b4d45f458e7f1f21",
     "semantic_hash": ""
   },
   "src/App.jsx": {
-    "mtime": 1794412096.3960836,
-    "seen": 1794412217.9317567,
-    "ast_hash": "f87964db09f85b853401f033f6ee526a",
-    "semantic_hash": ""
-  },
-  "src/components/Hero.jsx": {
-    "mtime": 1794412096.3915772,
-    "seen": 1794412217.931759,
-    "ast_hash": "006da6ba7c063841199a64a65ae3f18c",
+    "mtime": 1794566100.4063113,
+    "seen": 1794566586.115601,
+    "ast_hash": "c32a2b129d1252057a717bbc2c04face",
     "semantic_hash": ""
   },
   "src/components/NavLabel.jsx": {
-    "mtime": 1794412027.9955964,
-    "seen": 1794412217.9317627,
-    "ast_hash": "9f18ae10c0e5a193a912d870d5b11d3e",
+    "mtime": 1794565929.15496,
+    "seen": 1794566586.115611,
+    "ast_hash": "8a3adcebdab2dc7387ed14e82cd291f5",
     "semantic_hash": ""
   },
   "src/content/en.js": {
-    "mtime": 1794412019.6869464,
-    "seen": 1794412217.9317644,
-    "ast_hash": "4e1ae23f6ad7c0c44fd8300b1019ee6b",
+    "mtime": 1794566100.4206777,
+    "seen": 1794566586.115613,
+    "ast_hash": "04b1a65206dbac315df5b80ca803ae58",
     "semantic_hash": ""
   },
   "src/lib/utils.js": {
-    "mtime": 1794409100.498032,
-    "seen": 1794411003.2242606,
+    "mtime": 1794565929.15496,
+    "seen": 1794566586.1156175,
     "ast_hash": "d1c4afdedf414ae731f58a28173db977",
     "semantic_hash": ""
   },
   "src/main.jsx": {
-    "mtime": 1794400248.934767,
-    "seen": 1794411003.2242613,
-    "ast_hash": "833ff5ffc07ec7afeb5eeec893be7897",
+    "mtime": 1794566059.3087955,
+    "seen": 1794566586.1156197,
+    "ast_hash": "ccc9eac42f43ac28025b06ce07c5bb45",
     "semantic_hash": ""
   },
   "vite.config.js": {
-    "mtime": 1794409100.4951944,
-    "seen": 1794411003.2242622,
+    "mtime": 1794565929.15496,
+    "seen": 1794566586.1156228,
     "ast_hash": "3105e79d53a6a322c4a81189eb6fb6bf",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
-    "mtime": 1793888053.86382,
-    "seen": 1794411003.2242627,
+    "mtime": 1794496815.2559168,
+    "seen": 1794566586.1156254,
     "ast_hash": "9b31786b637be3c13978bec4c2330752",
     "semantic_hash": ""
   },
   ".claude/agents/ui-reviewer.md": {
-    "mtime": 1793888053.866699,
-    "seen": 1794411003.2242637,
+    "mtime": 1794496815.2614455,
+    "seen": 1794566586.1156278,
     "ast_hash": "c53eb4959523d4b095dc1d55d671d4b1",
     "semantic_hash": ""
   },
   ".claude/skills/README.md": {
-    "mtime": 1793888053.8668156,
-    "seen": 1794411003.2242641,
+    "mtime": 1794496815.26152,
+    "seen": 1794566586.11563,
     "ast_hash": "7d13623a3250468da57ca1f4ab68dc8a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/LICENSE.md": {
-    "mtime": 1793888053.8671408,
-    "seen": 1794411003.2242649,
+    "mtime": 1794496815.261614,
+    "seen": 1794566586.115632,
     "ast_hash": "f5faa51ae78f024d34bf5af2c6d9ce80",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/SKILL.md": {
-    "mtime": 1793888053.867287,
-    "seen": 1794411003.224266,
+    "mtime": 1794496815.261704,
+    "seen": 1794566586.1156344,
     "ast_hash": "d0a070dacd097c4cb57e4d749d4be189",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/content/charts.md": {
-    "mtime": 1793888053.867427,
-    "seen": 1794411003.2242668,
+    "mtime": 1794496815.2617924,
+    "seen": 1794566586.1156366,
     "ast_hash": "f7c70d334eb9d2a450aa937911e4af76",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/content/image-views.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.2242677,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156383,
     "ast_hash": "42eb9bf1cee4e63c338eea86aa2419b1",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/content/index.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.2242684,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156404,
     "ast_hash": "6ef579a027cd795b9167a78245ed3f20",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/content/text-views.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.2242694,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156428,
     "ast_hash": "5ac332266005fea4069cbdec639257e2",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/content/web-views.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.224271,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156447,
     "ast_hash": "60d46c5041fe0ce642065c6525b5c5f6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/index.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.2242718,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156464,
     "ast_hash": "374b70a8d0e6e52433d0fc6d3d79d0b4",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/boxes.md": {
-    "mtime": 1793888053.8679616,
-    "seen": 1794411003.2242727,
+    "mtime": 1794496815.2619689,
+    "seen": 1794566586.1156495,
     "ast_hash": "e5c293c5d799d2f830a2b2983b740f1c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/collections.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242732,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156518,
     "ast_hash": "b23a4ec40f2662fda262281c16e284cf",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/column-views.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242742,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156542,
     "ast_hash": "8814f5d464ce4e83d28fcb837a84605d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/disclosure-controls.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242749,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156566,
     "ast_hash": "efac964c6cb2704da4d6c2a71092a26f",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/index.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242758,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156588,
     "ast_hash": "e3c9c06c364fc24fe3451d794ebcc10c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/labels.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242765,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.115661,
     "ast_hash": "abd0d295189afc2ffe56fa344069a945",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/lists-and-tables.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242775,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156626,
     "ast_hash": "49dca8d85e54743a0b08da4fe13c5680",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/lockups.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242782,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156645,
     "ast_hash": "ac1fc70c533e7e22d21af607ebb3058a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/outline-views.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.224279,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156664,
     "ast_hash": "ead54113bf910849772412a1b4a45265",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/split-views.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242799,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156685,
     "ast_hash": "e65e822d591d437efc9a3bd2bf9d9b0f",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/layout-and-organization/tab-views.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.2242806,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156704,
     "ast_hash": "d16b79bb80b61a97eb68aec0ca143882",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/activity-views.md": {
-    "mtime": 1793888053.8682199,
-    "seen": 1794411003.224281,
+    "mtime": 1794496815.262194,
+    "seen": 1794566586.1156723,
     "ast_hash": "270bd014c52bd5945c208a84793016d3",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/buttons.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242818,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156743,
     "ast_hash": "35e4f615930f8fb3cb9bea68f3841654",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/context-menus.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242827,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156762,
     "ast_hash": "4d21a138da8aa65d80d2148b3bcfa891",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/dock-menus.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242835,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156778,
     "ast_hash": "11ce060d9a685b178dcc0167d4bcd591",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/edit-menus.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242842,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.11568,
     "ast_hash": "12415718e2d95126eb88340760720100",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/home-screen-quick-actions.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.224285,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.115682,
     "ast_hash": "4db5f424d23fec2b43c4510ff2e71676",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/index.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242856,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156833,
     "ast_hash": "20846891f5640fa96442a71c6aa2bbd8",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/menus.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242863,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156857,
     "ast_hash": "3e51fb3b1c3e078120b3604e846a757f",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/ornaments.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242873,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156876,
     "ast_hash": "571467f3928429d98d34ee4e34923ddf",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/pop-up-buttons.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242877,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156895,
     "ast_hash": "c68eeaa4cee149a3a332ce9a69372ce0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/pull-down-buttons.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242885,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.115691,
     "ast_hash": "174396a5d06b3e632b6dd08c44a4c1af",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/the-menu-bar.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242892,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156929,
     "ast_hash": "31503a0066762689c8224adf35eeca0a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/menus-and-actions/toolbars.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242901,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156945,
     "ast_hash": "d1c5ac01bc43e9ed49989d6f02b54392",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/index.md": {
-    "mtime": 1793888053.8688817,
-    "seen": 1794411003.2242906,
+    "mtime": 1794496815.2628388,
+    "seen": 1794566586.1156967,
     "ast_hash": "be499add460721004b8ce6c4db09c2a1",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/path-controls.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.2242913,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.115699,
     "ast_hash": "a3d49454ac0e89ad62e709f746e78d6f",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/search-fields.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.224292,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.1157007,
     "ast_hash": "d23609cf505f56dcb50c418c5c0af183",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/sidebars.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.2242928,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.1157024,
     "ast_hash": "cd88bde1fec7bf46aa23306ca3f50d24",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/tab-bars.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.2242937,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.1157043,
     "ast_hash": "7be6150ccd05be4b371267f93427746d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/navigation-and-search/token-fields.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.2242944,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.1157067,
     "ast_hash": "3083f033e784f561af24578373e4935b",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/action-sheets.md": {
-    "mtime": 1793888053.8702595,
-    "seen": 1794411003.224295,
+    "mtime": 1794496815.263885,
+    "seen": 1794566586.1157084,
     "ast_hash": "17ec9f41e9affe77b8bfdf3c8f996378",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/alerts.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2242956,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157112,
     "ast_hash": "4388ee2dc7e416b5a758fa59c56b0a42",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/index.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2242963,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157134,
     "ast_hash": "dd240b099d0cd341ad58ee85564177cc",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/page-controls.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2242973,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157155,
     "ast_hash": "3dc34cf52c17692424c3ecbc0088f536",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/panels.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.224298,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157174,
     "ast_hash": "92f434339f92a644afeabd11300a7331",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/popovers.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2242987,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157198,
     "ast_hash": "5c1005d2b6807b57ef72d92fd1cf1d25",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/scroll-views.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2242994,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157215,
     "ast_hash": "481f5684ec14c3e3cb1bf9093ed1c146",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/sheets.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2243004,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157238,
     "ast_hash": "87fb6ddd3604ed38ddf6f16580a6fef0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/presentation/windows.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2243013,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157253,
     "ast_hash": "cd96aa790fdc78ddfbef679aff9e3954",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/color-wells.md": {
-    "mtime": 1793888053.8707714,
-    "seen": 1794411003.2243018,
+    "mtime": 1794496815.2642999,
+    "seen": 1794566586.1157272,
     "ast_hash": "5a4d100d97d6860557dedb48ef2f4c19",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/combo-boxes.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243025,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157289,
     "ast_hash": "9518f996626d816c8fd593c2bfd4554e",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/digit-entry-views.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243032,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157305,
     "ast_hash": "02072159d63bef9dd2cb12f3f6aea209",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/image-wells.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243042,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157322,
     "ast_hash": "02e3cc4788e0a7e1e29c9a43abb85fff",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/index.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.224305,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157343,
     "ast_hash": "ca2b018a6161c4de7401281e73732c09",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/pickers.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243056,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157365,
     "ast_hash": "303e366b880ad720b76b491957d09070",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/segmented-controls.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243063,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157386,
     "ast_hash": "90af12e3b4626c0848b604a91fc82958",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/sliders.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243073,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157403,
     "ast_hash": "84d241d8065365bfc5692361552b1557",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/steppers.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.224308,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157422,
     "ast_hash": "b4338568c38ee85873cc488a40c7f588",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/text-fields.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243087,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.115744,
     "ast_hash": "7b0158d6085dbc08f1c62db3f5dd96e6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/toggles.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.2243094,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.115746,
     "ast_hash": "1a124387bc6d781c8dc2a2747a9602c4",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/selection-and-input/virtual-keyboards.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.22431,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.115748,
     "ast_hash": "abc54bdedf0fc8cab3613e26f9d391e6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/status/activity-rings.md": {
-    "mtime": 1793888053.8714166,
-    "seen": 1794411003.224311,
+    "mtime": 1794496815.264905,
+    "seen": 1794566586.1157496,
     "ast_hash": "7ec92bd5653a333fc935ddf335d2dac8",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/status/gauges.md": {
-    "mtime": 1793888053.872343,
-    "seen": 1794411003.2243118,
+    "mtime": 1794496815.2655413,
+    "seen": 1794566586.1157515,
     "ast_hash": "41f5aefd341216560043a8b47480f980",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/status/index.md": {
-    "mtime": 1793888053.872343,
-    "seen": 1794411003.2243128,
+    "mtime": 1794496815.2655413,
+    "seen": 1794566586.1157534,
     "ast_hash": "03a516f076b00173e8b8c84fa9c44ebb",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/status/progress-indicators.md": {
-    "mtime": 1793888053.872343,
-    "seen": 1794411003.2243133,
+    "mtime": 1794496815.2655413,
+    "seen": 1794566586.1157558,
     "ast_hash": "5f5a6f267a56006e39b68c787e0a6bf8",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/status/rating-indicators.md": {
-    "mtime": 1793888053.872343,
-    "seen": 1794411003.2243145,
+    "mtime": 1794496815.2655413,
+    "seen": 1794566586.1157582,
     "ast_hash": "6704f32eb6229ede0409c0e010613b6e",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/app-shortcuts.md": {
-    "mtime": 1793888053.872343,
-    "seen": 1794411003.2243154,
+    "mtime": 1794496815.2655413,
+    "seen": 1794566586.11576,
     "ast_hash": "cd85e696cdfe0496feaaf07fd96063cc",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/complications.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243161,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157622,
     "ast_hash": "8ac5868e9870a34255838d7b61f62394",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/controls.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243168,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157641,
     "ast_hash": "3aa996ee8eddd68fac3cfcceb60729a5",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/index.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243178,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157665,
     "ast_hash": "0ac16959e174509edba009e3e7ef8018",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/live-activities.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243185,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157687,
     "ast_hash": "ed726d76ef9e0c2eea5d351dcb48b245",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/notifications.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243192,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157706,
     "ast_hash": "a2fc803a20dacf44bd35ff52eb07cb4d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/snippets.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.22432,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157725,
     "ast_hash": "89bc8ee9e7def9037e88d3db8e608ced",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/status-bars.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243207,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157742,
     "ast_hash": "c691a0a06371c871f852d594b8a8474a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/top-shelf.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243216,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157765,
     "ast_hash": "7d0b66bbe22d21e890ce012553e6bf86",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/watch-faces.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243223,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157784,
     "ast_hash": "f5f27ecadf58771c5a31c67cfc14cf92",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/components/system-experiences/widgets.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243228,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157806,
     "ast_hash": "f51fc8a37c33b8ab51214eb999dd5538",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/accessibility.md": {
-    "mtime": 1793888053.872698,
-    "seen": 1794411003.2243235,
+    "mtime": 1794496815.2658222,
+    "seen": 1794566586.1157825,
     "ast_hash": "8f06717658fec45e5e13dbed76f109a9",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/app-icons.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243245,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115784,
     "ast_hash": "9e85e60fc4496ebfacdb5e6dac5e8b40",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/branding.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243295,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115786,
     "ast_hash": "b41b7a28e29977904d98de7446c2e068",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/color.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243302,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115788,
     "ast_hash": "5511d243eb4656fbd76439cdea005a4c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/dark-mode.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.224331,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.11579,
     "ast_hash": "36dd02834c95a3a5536e739fbd855363",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/icons.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243319,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115792,
     "ast_hash": "35c1a9c13274357d2a888bdd6023de99",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/images.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243326,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1157942,
     "ast_hash": "58ab1ac1b8cfd9f463078106dd59a09b",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/immersive-experiences.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243333,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1157966,
     "ast_hash": "77c2d8e1937e71129bffa278cdb2791c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/inclusion.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.224334,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1157985,
     "ast_hash": "db5fab72799d8af7ebb6e3a2ea9fe2e4",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/index.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.224335,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115801,
     "ast_hash": "c72c35de1c4dab386824e8db15547401",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/layout.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243357,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158028,
     "ast_hash": "78161b72b20384be81914342569416b0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/materials.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243361,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115805,
     "ast_hash": "3159286f6654872bd070873369f9c649",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/motion.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243369,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158073,
     "ast_hash": "e00547fb8dccb1b36c3a2e1f16be019a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/privacy.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243376,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158097,
     "ast_hash": "353f08d65b607175b23638f770e9df99",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/right-to-left.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243385,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158118,
     "ast_hash": "27dc9d31058ce0ec4cfb5952d6d0f597",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/sf-symbols.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243395,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.115814,
     "ast_hash": "7ab5c0ad978b65783a20bb47ecb18bd0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/spatial-layout.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243414,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158164,
     "ast_hash": "a4cca181f20dd10e6ebae1a4260c53ea",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/typography.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.224342,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158185,
     "ast_hash": "13c6e4c6e1396471d25be7142124a11d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/foundations/writing.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243428,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158206,
     "ast_hash": "b25b419b5869133545148be8637af409",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/design-principles.md": {
-    "mtime": 1793888053.8739614,
-    "seen": 1794411003.2243435,
+    "mtime": 1794496815.267183,
+    "seen": 1794566586.1158228,
     "ast_hash": "909be20bb09d6d31f5aa9e3796100a5a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-games.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.224344,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.115825,
     "ast_hash": "c3a4c73de5ec581409d9e0d80f641f58",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-ios.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243447,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158276,
     "ast_hash": "d1c19a00b54eb9fdcbe561e9ddf5d00b",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-ipados.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243457,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158297,
     "ast_hash": "c6890bdf56959c9209a411154303fe2d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-macos.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243464,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158319,
     "ast_hash": "764b62828cd793d9876d728febd39484",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-tvos.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243469,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.115834,
     "ast_hash": "1c7dd6f7d1b76339d2da75730bdaedd6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-visionos.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243476,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158369,
     "ast_hash": "ec69fc03103591c2b82bbf48dadcb4f5",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/designing-for-watchos.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243483,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158395,
     "ast_hash": "c2cd17f629fa8753476ccf8dd550ccf7",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/getting-started/index.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.224349,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158419,
     "ast_hash": "a91805cfeb8a79e94da670a08eca96c3",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/action-button.md": {
-    "mtime": 1793888053.8763614,
-    "seen": 1794411003.2243497,
+    "mtime": 1794496815.269408,
+    "seen": 1794566586.1158438,
     "ast_hash": "e5419c5b9f6d54c49929b0c45a184333",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/apple-pencil-and-scribble.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243502,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.115846,
     "ast_hash": "a79c45d0260dcf4d8220d7f103d504c9",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/camera-control.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.224351,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158473,
     "ast_hash": "eb81659af0af7dfcbc9f65176bbd03a5",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/digital-crown.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243516,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158497,
     "ast_hash": "2fa3377f70114d562000ace9a4f32bb0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/eyes.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243526,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158512,
     "ast_hash": "1436e38eb926ea41d056d7ba3b83ef13",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/focus-and-selection.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243533,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.115853,
     "ast_hash": "6699e7e86a942b2a312e2560fe1d94d7",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/game-controls.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243562,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158547,
     "ast_hash": "f9848f7e9aa9d001fc86d7237a58b0bb",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/gestures.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243567,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158566,
     "ast_hash": "b08306d1ef67f19898b698e1bd2cc8cd",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/gyro-and-accelerometer.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243574,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158583,
     "ast_hash": "2c9d5ffe450bc5b762de2b4a07f10756",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/index.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.224358,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.11586,
     "ast_hash": "82b8c6dd366b9eda571f729538493802",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/keyboards.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243588,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158617,
     "ast_hash": "01fe800279f66e1a591290d2a3133688",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/nearby-interactions.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243598,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158636,
     "ast_hash": "24c4c511faba8e5d9d3d900806bff44b",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/pointing-devices.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243605,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158652,
     "ast_hash": "3fe6f150627e794e7b29d59e781f7279",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/inputs/remotes.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.2243612,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158676,
     "ast_hash": "42204a2d60106b964c036ef22b91ca27",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/charting-data.md": {
-    "mtime": 1793888053.8769896,
-    "seen": 1794411003.224362,
+    "mtime": 1794496815.2699208,
+    "seen": 1794566586.1158698,
     "ast_hash": "932d1fff1eb4dd517b3bd6ae53057fd9",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/collaboration-and-sharing.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243629,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115872,
     "ast_hash": "9c2acca4ccceb274b5472aefa585e414",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/drag-and-drop.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243636,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1158738,
     "ast_hash": "559654be12bc5f52bd5afc89e9cd9a7e",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/entering-data.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243643,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115891,
     "ast_hash": "9af84a79eed78b2782e1ab745f3adb65",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/feedback.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243648,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115893,
     "ast_hash": "e7f3ca020d329b01e53b939c47f7a309",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/file-management.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243655,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1158948,
     "ast_hash": "2965f337d9aa7053e3d0a6bff96c75a4",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/going-full-screen.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243667,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115897,
     "ast_hash": "52990fb4614c5f7b3894b5d53c7bb01a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/index.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243674,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1158993,
     "ast_hash": "deb9767765da95a7e618062c7ebdd476",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/launching.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243679,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1159017,
     "ast_hash": "05b3fdfeeb6bd59e918735fe908f053d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/live-viewing-apps.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243688,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115904,
     "ast_hash": "d03fcf2e3e9177d3d7d42bb3806d44e6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/loading.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243698,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1159065,
     "ast_hash": "d2aa2d10bbad30d76019faeaacb8144a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/managing-accounts.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243702,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1159084,
     "ast_hash": "81999f9a0a811d6184c89d4a55c1861c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/managing-notifications.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.224371,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.11591,
     "ast_hash": "0b61f872ee60ab78bef6ffbb50aed6d1",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/modality.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243717,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115912,
     "ast_hash": "29bdc1c247ee211f0552260db9eebbf6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/multitasking.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243721,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1159136,
     "ast_hash": "4c7ab0e7c4dab54a7f57d85c8e166087",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/offering-help.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.224373,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.115916,
     "ast_hash": "09611139d876f3424f96afa58bc98233",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/onboarding.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243738,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1159184,
     "ast_hash": "932d2b2d26a5de7ef0a8a3add15466b6",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/playing-audio.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243745,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1160157,
     "ast_hash": "ec379aef967dd96d39565b0f8febf164",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/playing-haptics.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.224375,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1160219,
     "ast_hash": "aa4d8fa9dc35b5317d5ae950679c6951",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/playing-video.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243757,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1160247,
     "ast_hash": "aa604ec3cbab5d213c889ad1711e1400",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/printing.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243767,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.116027,
     "ast_hash": "52b069cb05a76ae2f282bd8d4e498920",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/ratings-and-reviews.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243774,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.116029,
     "ast_hash": "dc083e24af4eae18280ad7f179f0d327",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/searching.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243779,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.116031,
     "ast_hash": "672aa2968d4b98ce8d9d5ae1cb1e60be",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/settings.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243786,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.116034,
     "ast_hash": "a5084bc56ba29bb813ff201db6f89488",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/undo-and-redo.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243793,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1160364,
     "ast_hash": "868cf3fe26b926387bf526af256ccb61",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/patterns/workouts.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243803,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.1160386,
     "ast_hash": "db2ae8d0a8780f031360ce8429881b49",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/airplay.md": {
-    "mtime": 1793888053.87872,
-    "seen": 1794411003.2243812,
+    "mtime": 1794496815.2711167,
+    "seen": 1794566586.116041,
     "ast_hash": "3db9bea5c9873345d4470cf96871e7bc",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/always-on.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224382,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160436,
     "ast_hash": "acf59bf8812e4f2d16ecfe7547d9e2b3",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/app-clips.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243826,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160457,
     "ast_hash": "874e98b9014dc2f40b02ccde4457e818",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/apple-pay.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243836,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160483,
     "ast_hash": "b0eeb7274a1dd9e49dd8dcad18b8fbaa",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/augmented-reality.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243843,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160507,
     "ast_hash": "60cfaf3388d492b09055636a12bd17c8",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/carekit.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224385,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160526,
     "ast_hash": "d06fee09ce7b004222fbbf1221213dea",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/carplay.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243857,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160548,
     "ast_hash": "63fcc730b5c79f7e6daa5a5715ca19a8",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/game-center.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243865,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.116057,
     "ast_hash": "de2d0ae657869bf355847218a1224e1b",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/generative-ai.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243872,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.116059,
     "ast_hash": "db564c91e78ddb0c82440259ea43c00c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/healthkit.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224388,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160612,
     "ast_hash": "6a6dd20f1465a0e5aeb99486a07abd35",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/homekit.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243886,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.116063,
     "ast_hash": "63e4fedb354f8417e65db23cb947f038",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/icloud.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243893,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.116065,
     "ast_hash": "0b1cb84c0349f3d812b3303940aed6b4",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/id-verifier.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.22439,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160672,
     "ast_hash": "9d5e06006c6e2f28139697e29f4947d7",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/imessage-apps-and-stickers.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224391,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160705,
     "ast_hash": "47b7b7ddefc861a28cfe1778828b21ff",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/in-app-purchase.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243915,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160731,
     "ast_hash": "0f092457fbbb69e40d49345d8b35362d",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/index.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243922,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160755,
     "ast_hash": "37e576e60a041953a490a758868b3c98",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/live-photos.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243927,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160777,
     "ast_hash": "4774ff3de9c300bdf8d5e99e8576937c",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/mac-catalyst.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243934,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160798,
     "ast_hash": "340605ef207c5dcc0827bc31c609b308",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/machine-learning.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243943,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160817,
     "ast_hash": "c5025c70631fdcd4edd8ea1c538aa02a",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/maps.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224395,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160836,
     "ast_hash": "f3131d0f8b327538238a3889e5943c6e",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/nfc.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243958,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.116086,
     "ast_hash": "0fe8f42046d649cacf79e59798f43e67",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/photo-editing.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243965,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160886,
     "ast_hash": "96eef48fcbe797ab1fe3c975c58488a0",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/researchkit.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224397,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160908,
     "ast_hash": "aa000d327ca70f81e0e95e7df65790af",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/shareplay.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224398,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160934,
     "ast_hash": "11c98022eed7b11941dbae5955ac1984",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/shazamkit.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243986,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160953,
     "ast_hash": "5512f46a798dcd11676e66b6cefdc136",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/sign-in-with-apple.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243993,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160972,
     "ast_hash": "508ab4efdfb29884b9322c6b5fe430b9",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/siri.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2243998,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1160994,
     "ast_hash": "4a46e4929cdd4871aa7eb758c5409a30",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/tap-to-pay-on-iphone.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.224401,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1161013,
     "ast_hash": "29c9ab9a9e84a2403e54b95dee836f67",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/voiceover.md": {
-    "mtime": 1793888053.881158,
-    "seen": 1794411003.2244017,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1161034,
     "ast_hash": "494dad2420a5670a84b91c71c777f5d9",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/technologies/wallet.md": {
-    "mtime": 1793888053.88382,
-    "seen": 1794411003.2244022,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1161056,
     "ast_hash": "adf1030f7cdef7e2b0e8cd50e13dcf63",
     "semantic_hash": ""
   },
   ".claude/skills/apple-design/references/topic-index.md": {
-    "mtime": 1793888053.88382,
-    "seen": 1794411003.224403,
+    "mtime": 1794496815.2728512,
+    "seen": 1794566586.1161077,
     "ast_hash": "72ac535290f64da5e8462bfd1f661dda",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-core/SKILL.md": {
-    "mtime": 1793888053.8877676,
-    "seen": 1794411003.2244036,
+    "mtime": 1794496815.2772837,
+    "seen": 1794566586.1161098,
     "ast_hash": "e14974bb48ddfe9e0da3406562b8f18f",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-frameworks/SKILL.md": {
-    "mtime": 1793888053.8879678,
-    "seen": 1794411003.2244046,
+    "mtime": 1794496815.2774081,
+    "seen": 1794566586.1161122,
     "ast_hash": "8b067a9a32a69b11732678bcf09f5b4a",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-performance/SKILL.md": {
-    "mtime": 1793888053.8883924,
-    "seen": 1794411003.2244053,
+    "mtime": 1794496815.2775042,
+    "seen": 1794566586.1161144,
     "ast_hash": "f6b97aae273b24930d77e634dcf1c62e",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-plugins/SKILL.md": {
-    "mtime": 1793888053.888619,
-    "seen": 1794411003.224406,
+    "mtime": 1794496815.2775693,
+    "seen": 1794566586.1161163,
     "ast_hash": "694d28e8efac50b29b33905ffa62ec4f",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-react/SKILL.md": {
-    "mtime": 1793888053.8889167,
-    "seen": 1794411003.2244065,
+    "mtime": 1794496815.277725,
+    "seen": 1794566586.1161184,
     "ast_hash": "9fc3789feebbe444032cee2ade44f5b4",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-scrolltrigger/SKILL.md": {
-    "mtime": 1793888053.889074,
-    "seen": 1794411003.2244072,
+    "mtime": 1794496815.2778034,
+    "seen": 1794566586.1161208,
     "ast_hash": "4082bbc747d61f4241b2f0c5f2cfbeca",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-timeline/SKILL.md": {
-    "mtime": 1793888053.889257,
-    "seen": 1794411003.2244081,
+    "mtime": 1794496815.2779276,
+    "seen": 1794566586.116123,
     "ast_hash": "3dfefe09dc41a59f2322734a7694b810",
     "semantic_hash": ""
   },
   ".claude/skills/gsap-utils/SKILL.md": {
-    "mtime": 1793888053.8894534,
-    "seen": 1794411003.2244086,
+    "mtime": 1794496815.2779856,
+    "seen": 1794566586.116125,
     "ast_hash": "6a9b883f5a4ce55430fd7463176a2004",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/SKILL.md": {
-    "mtime": 1793888053.8898191,
-    "seen": 1794411003.2244093,
+    "mtime": 1794496815.2781937,
+    "seen": 1794566586.1161275,
     "ast_hash": "b44f67aaa1aad9692fba723fa590e59a",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/adapt.md": {
-    "mtime": 1793888053.8898191,
-    "seen": 1794411003.2244098,
+    "mtime": 1794496815.2781937,
+    "seen": 1794566586.1161296,
     "ast_hash": "ef6ccd681bda53968e1c6b0cc7a3bc94",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/adapt.native.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244105,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161315,
     "ast_hash": "63b8e2f62a50991cf30b0ce7417ab4ff",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/android.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244115,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.116134,
     "ast_hash": "a35783faf7effd696f24bdaafa6b5531",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/animate.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244122,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161366,
     "ast_hash": "03c9f7615f5d3c10bf57c1aef1ec9882",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/audit.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.224413,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161385,
     "ast_hash": "8a1ef236d909c3b38980cead23c1d444",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/audit.native.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244139,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161406,
     "ast_hash": "102a07aa33fc6be7659e30d5770e44a5",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/bolder.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244148,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161425,
     "ast_hash": "4f43781fe23caaadbe46621b84a05fd8",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/clarify.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244153,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161447,
     "ast_hash": "3f9b6ded202ec0b912807451daaf1d5c",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/colorize.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244306,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.116147,
     "ast_hash": "99e051670d4153052b96ee844008d012",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/component-review.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244318,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.116149,
     "ast_hash": "0cf4ac58975593d69d76e5e5ebe70354",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/craft-floor.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244327,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.116151,
     "ast_hash": "867a31bddcd6b757d6d5b8ee46025f4d",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/craft.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244332,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161528,
     "ast_hash": "9075911f45c58c15a720f8188b2738f4",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/critique.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.224434,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.1161547,
     "ast_hash": "ea6e56873bb2e6c5269cfb8fafa7e5fc",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/degraded/asset-producer.md": {
-    "mtime": 1793888053.8900464,
-    "seen": 1794411003.2244346,
+    "mtime": 1794496815.2783859,
+    "seen": 1794566586.116156,
     "ast_hash": "fb453bd0cab9030596a6551d7d872aa5",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/degraded/documenter.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244358,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.116158,
     "ast_hash": "a38215374db267ad2be047a2a58cc816",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/degraded/finish-reviewer.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244365,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161594,
     "ast_hash": "0850d34ddae341e50f594e22a3913bd3",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/degraded/manual-edit-applier.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244372,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161618,
     "ast_hash": "eaa8bb1115e79d52fe5c7298728ebd63",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/delight.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.224438,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161635,
     "ast_hash": "e10166bb38cadd52ee69fb78226e1322",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/distill.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244384,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161656,
     "ast_hash": "6e0b73d818f8d82e23e7f8601075e933",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/doctor.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244396,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161673,
     "ast_hash": "7651e297df164f5d2e5dbb388d739090",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/document.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244403,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161695,
     "ast_hash": "b3dc570b54dc97bbc59d244f4b859ccf",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/extract.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.224441,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161716,
     "ast_hash": "374542f288a8fb2a8d7ff8bdda48270c",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/generate.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244418,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161733,
     "ast_hash": "2df139e06c463aac70c4d6e6b70d9f0c",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/harden.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244425,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161757,
     "ast_hash": "193d7a192ce32912ef265aa7715f73a4",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/hooks.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244432,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161773,
     "ast_hash": "b5680c5bb2f36c083730a4623a7cea5f",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/init.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.224444,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161795,
     "ast_hash": "643ebb06c6b9cb50c833a7ed8cc8ff5b",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/ios.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244585,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161811,
     "ast_hash": "a8f56b5c246ad44e142853ef59a19039",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/layout.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244606,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161835,
     "ast_hash": "47a23724d1b8f043665a4e5612d13481",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/live-setup.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244623,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161857,
     "ast_hash": "4ed7527f994917e276df53171b1d9034",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/live.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244637,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161876,
     "ast_hash": "5c6890479a176a1aa7dcda2ff62d4d43",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/mode-operate.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.224465,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161895,
     "ast_hash": "bf63bc740b342576279715f35922daad",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/mode-persuade.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244658,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161916,
     "ast_hash": "9536e656c3fab5a8d85f1dcde6df45aa",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/mode-read.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244668,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161935,
     "ast_hash": "09353e7df8b71096238a1d18c6fbfe44",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/new-work.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244678,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.116196,
     "ast_hash": "3fda4bb72b467e96a0d81ec7f94ea921",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/onboard.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244687,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1161978,
     "ast_hash": "3d61875f5485b5dd34deb3bd04157cd9",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/operate.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244694,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162,
     "ast_hash": "53a569b985749058f7b178a32e0a157f",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/optimize.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244704,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162019,
     "ast_hash": "48dbe58f2cf191c53377c141218d8f83",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/overdrive.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.224471,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.116204,
     "ast_hash": "8ffa77ea1b5518fbc6e33ee4fd062b09",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/polish.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244718,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162064,
     "ast_hash": "85a66fe58fdf6e1f353d27486ac25c67",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/quieter.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244725,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162086,
     "ast_hash": "d22d2423c47ab6fbc893b57b3e52c923",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/region-map.md": {
-    "mtime": 1793888053.8910935,
-    "seen": 1794411003.2244732,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162105,
     "ast_hash": "196ae3d6b3c878bf6ed8228aee79e9fa",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/routing.md": {
-    "mtime": 1793888053.8918202,
-    "seen": 1794411003.2244744,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162121,
     "ast_hash": "b64946650da7c7136d8932923632ed81",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/shape.md": {
-    "mtime": 1793888053.8918202,
-    "seen": 1794411003.2244751,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.116214,
     "ast_hash": "ecf5345d56452d10cd2c9203a7512704",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/typeset.md": {
-    "mtime": 1793888053.8918202,
-    "seen": 1794411003.2244759,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.1162164,
     "ast_hash": "478345b9c239e5d2a31ce5a36180418e",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/reference/visualize.md": {
-    "mtime": 1793888053.8918202,
-    "seen": 1794411003.2244766,
+    "mtime": 1794496815.2793267,
+    "seen": 1794566586.116218,
     "ast_hash": "9570dbf77ffb2c67a2b4f362c839994b",
     "semantic_hash": ""
   },
   ".claude/skills/impeccable/scripts/engine-checksums.txt": {
-    "mtime": 1793888053.89982,
-    "seen": 1794411003.2244775,
+    "mtime": 1794496815.283917,
+    "seen": 1794566586.1162205,
     "ast_hash": "71cf77934c8cc6ec13163fb601f2d11a",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/SKILL.md": {
-    "mtime": 1793888053.9078202,
-    "seen": 1794411003.2244782,
+    "mtime": 1794496815.287917,
+    "seen": 1794566586.1162224,
     "ast_hash": "a572cb3b1580ad07098fec496c7dc5db",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/examples/README.md": {
-    "mtime": 1793888053.9101598,
-    "seen": 1794411003.224479,
+    "mtime": 1794496815.2920282,
+    "seen": 1794566586.1162248,
     "ast_hash": "5cde208fb7f71f8ef48cc1d5b1fd811e",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/README.md": {
-    "mtime": 1793888053.9101598,
-    "seen": 1794411003.22448,
+    "mtime": 1794496815.2920282,
+    "seen": 1794566586.116227,
     "ast_hash": "5fa88cce352c92c39bb979b68d59c615",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/assets/starter_motion/index.html": {
-    "mtime": 1793888053.9110944,
-    "seen": 1794411003.2244809,
+    "mtime": 1794496815.292396,
+    "seen": 1794566586.1162288,
     "ast_hash": "0275717631a95b50a056a2791153ed64",
     "semantic_hash": ""
   },
   ".claude/skills/motion-framer/references/api_reference.md": {
-    "mtime": 1793888053.9113014,
-    "seen": 1794411003.2244816,
+    "mtime": 1794496815.2925282,
+    "seen": 1794566586.1162312,
     "ast_hash": "4c6fed4800edd95b3c4a1111559bf570",
     "semantic_hash": ""
   },
   ".claude/skills/project-conventions/SKILL.md": {
-    "mtime": 1793888053.9118104,
-    "seen": 1794411003.224482,
+    "mtime": 1794496815.2928061,
+    "seen": 1794566586.116233,
     "ast_hash": "5473ff84b1fb05be61d82b8a11d3fe96",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/SKILL.md": {
-    "mtime": 1793888053.9118104,
-    "seen": 1794411003.224483,
+    "mtime": 1794496815.2928061,
+    "seen": 1794566586.116235,
     "ast_hash": "30c2a54a64d475ab8045c9f3130be408",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/cli.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.2244835,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1162374,
     "ast_hash": "5eeb341a5865c3fd75e2a1717f34c668",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/customization.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.2244844,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1162393,
     "ast_hash": "2104f8be015b581d1d595201fa2d3a64",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/design-system-page.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.2244852,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1162412,
     "ast_hash": "d1030eefce3883f54032d625b53e512a",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/design-system.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.2244859,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1162431,
     "ast_hash": "1314180af02636a01a0db88a3c03d3e6",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/registry.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.2244866,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.116245,
     "ast_hash": "a693ab1e548de5a07cff192b802ddc3c",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/base-vs-radix.md": {
-    "mtime": 1793888053.9123628,
-    "seen": 1794411003.224487,
+    "mtime": 1794496815.2931132,
+    "seen": 1794566586.1162467,
     "ast_hash": "4c692439c8df72ec0e93c997f82935ae",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/chat.md": {
-    "mtime": 1793888053.9134414,
-    "seen": 1794411003.2244883,
+    "mtime": 1794496815.293693,
+    "seen": 1794566586.1162486,
     "ast_hash": "bc04034aa1066a2bac2dc8de9c154aad",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/composition.md": {
-    "mtime": 1793888053.9134414,
-    "seen": 1794411003.224489,
+    "mtime": 1794496815.293693,
+    "seen": 1794566586.1162503,
     "ast_hash": "09c5910294d50e6061377d047379af65",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/forms.md": {
-    "mtime": 1793888053.9134414,
-    "seen": 1794411003.2244895,
+    "mtime": 1794496815.293693,
+    "seen": 1794566586.1162522,
     "ast_hash": "be26c2aade3ec3455ec07d3026e44789",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/icons.md": {
-    "mtime": 1793888053.9134414,
-    "seen": 1794411003.2244902,
+    "mtime": 1794496815.293693,
+    "seen": 1794566586.116254,
     "ast_hash": "b56104107df95ef257fdf308b7ed4491",
     "semantic_hash": ""
   },
   ".claude/skills/shadcn/rules/styling.md": {
-    "mtime": 1793888053.9134414,
-    "seen": 1794411003.2244911,
+    "mtime": 1794496815.293693,
+    "seen": 1794566586.1162562,
     "ast_hash": "b96334a06e8ed397c4dbc3f8a0c7303f",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/SKILL.md": {
-    "mtime": 1793888053.9139867,
-    "seen": 1794411003.2244918,
+    "mtime": 1794496815.2939517,
+    "seen": 1794566586.1162586,
     "ast_hash": "bcfa83db81796ab8ffb208453bea80ef",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/references/pro-rules.md": {
-    "mtime": 1793888053.93982,
-    "seen": 1794411003.2244923,
+    "mtime": 1794496815.3001685,
+    "seen": 1794566586.1162605,
     "ast_hash": "42a2b0964fc17b5bf72078d292ae34db",
     "semantic_hash": ""
   },
   ".claude/skills/ui-ux-pro-max/references/quick-reference.md": {
-    "mtime": 1793888053.9430473,
-    "seen": 1794411003.224493,
+    "mtime": 1794496815.3041508,
+    "seen": 1794566586.1162622,
     "ast_hash": "1bfa0a6429977bdd596a1bc6a32fe4d2",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/AGENTS.md": {
-    "mtime": 1793888053.9478202,
-    "seen": 1794411003.2244937,
+    "mtime": 1794496815.3049715,
+    "seen": 1794566586.1162639,
     "ast_hash": "d64d288377dc2b80160b55423e5fa199",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/README.md": {
-    "mtime": 1793888053.9505851,
-    "seen": 1794411003.2244942,
+    "mtime": 1794496815.3067338,
+    "seen": 1794566586.1162655,
     "ast_hash": "7c684a3925dac6c75fc740954191278f",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/SKILL.md": {
-    "mtime": 1793888053.9505851,
-    "seen": 1794411003.2244956,
+    "mtime": 1794496815.3067338,
+    "seen": 1794566586.1162677,
     "ast_hash": "bdf71be24018b7f091603a93b24e2c02",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/architecture-avoid-boolean-props.md": {
-    "mtime": 1793888053.9505851,
-    "seen": 1794411003.2244961,
+    "mtime": 1794496815.3067338,
+    "seen": 1794566586.11627,
     "ast_hash": "2558f13a654d1175c7ab596e654c60a1",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/architecture-compound-components.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2244968,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162724,
     "ast_hash": "0160f5506c4d32cb4fd9adeae6dc93e2",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/patterns-children-over-render-props.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2244976,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162748,
     "ast_hash": "72322b106f78a8ee8e77829f8e9da3fb",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/patterns-explicit-variants.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2244985,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162772,
     "ast_hash": "bcd9bf42cbd8afa6ecf4a2847482e9b3",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/state-context-interface.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2244992,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162803,
     "ast_hash": "ed7f4ad08be2bdc9b727f7ddce0ead55",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/state-decouple-implementation.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2244997,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162827,
     "ast_hash": "237a1eae3697f07470b800c55b0e4ab0",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-composition-patterns/rules/state-lift-state.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.2245004,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.1162846,
     "ast_hash": "890bbc1d7fde2496a7c47f12153f9856",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/AGENTS.md": {
-    "mtime": 1793888053.9509156,
-    "seen": 1794411003.224501,
+    "mtime": 1794496815.306847,
+    "seen": 1794566586.116287,
     "ast_hash": "fc8f9b0218d2173112a8418bf9d8abe7",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/README.md": {
-    "mtime": 1793888053.952443,
-    "seen": 1794411003.2245018,
+    "mtime": 1794496815.3076253,
+    "seen": 1794566586.1162894,
     "ast_hash": "abb5236c535db0bf7ce6f38c8998bc47",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/SKILL.md": {
-    "mtime": 1793888053.952443,
-    "seen": 1794411003.2245054,
+    "mtime": 1794496815.3076253,
+    "seen": 1794566586.1162913,
     "ast_hash": "995a667ef0b53598f56ff897d9e4b334",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/advanced-effect-event-deps.md": {
-    "mtime": 1793888053.952443,
-    "seen": 1794411003.2245064,
+    "mtime": 1794496815.3076253,
+    "seen": 1794566586.1162946,
     "ast_hash": "3a0e314bb9576bab61f68d5de5afaf3e",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/advanced-event-handler-refs.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224507,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1162977,
     "ast_hash": "f2a0d125f3773bfda91e187fa5bed48a",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/advanced-init-once.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245076,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163,
     "ast_hash": "0100519098b834e69a3515657a39bdc9",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/advanced-use-latest.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245085,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116302,
     "ast_hash": "60309961293388c9b9e9fd4e0db344e3",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-api-routes.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245092,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163046,
     "ast_hash": "344fa543b37e303660404e1ef3a4638b",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-cheap-condition-before-await.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245104,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163073,
     "ast_hash": "96352f626f328e15a6213d485e29e36f",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-defer-await.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245111,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163092,
     "ast_hash": "235a6b5760c2e4843d778167e462cb0e",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-dependencies.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224512,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163118,
     "ast_hash": "9c5622d97b20b9e0cb79455b4322061a",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-parallel.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245128,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163142,
     "ast_hash": "a0e06a8e9985cdff4ece0312d8ee35db",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/async-suspense-boundaries.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245133,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163163,
     "ast_hash": "dbb2fc80721ca1ce32426f43219d314f",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-analyzable-paths.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224514,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163185,
     "ast_hash": "8cfe6e284cafd2be33f09c6a1abc78fd",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-barrel-imports.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245147,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116321,
     "ast_hash": "fcba301df7f11c6847dca5962ac78828",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-conditional.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245157,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116323,
     "ast_hash": "585be2b6fc418c766e5b91cc2141d334",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-defer-third-party.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245164,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163251,
     "ast_hash": "6d4d1d4fac411f724071428dd0bc93ba",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-dynamic-imports.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245169,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163275,
     "ast_hash": "72d89583306887810f67e9f7860f06af",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/bundle-preload.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245176,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163297,
     "ast_hash": "924ec7e7502ca042070326d38e88f8cd",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/client-event-listeners.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245183,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163323,
     "ast_hash": "71062add972f9735348b7ae77e778eb8",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/client-localstorage-schema.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245193,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163354,
     "ast_hash": "982a459b07cbec2f8386e526b924c339",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/client-passive-event-listeners.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.22452,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163373,
     "ast_hash": "3853533fd5f49fa2fc98296f9c34d84f",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/client-swr-dedup.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245207,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.11634,
     "ast_hash": "e565fcba7836d339ca4707aad6fdaa4a",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-batch-dom-css.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245214,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116342,
     "ast_hash": "869dbc06a931ccfb899b739316c348af",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-cache-function-results.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245224,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163447,
     "ast_hash": "5d641ce87ef753d59e3205244e2851a1",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-cache-property-access.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224523,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163468,
     "ast_hash": "5b4ae3cd853b92222a8fd8c8d8202426",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-cache-storage.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245238,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163495,
     "ast_hash": "828f260566ff92df56089321fa41c116",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-combine-iterations.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245245,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163595,
     "ast_hash": "4f241532133637fee75304d40f016713",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-early-exit.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245252,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163623,
     "ast_hash": "d300cb3e57255029e446bdfa49dc4074",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-flatmap-filter.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245262,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163647,
     "ast_hash": "161d9d8b444e5ec9cb58bffb0e1b76cd",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-hoist-regexp.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224527,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163676,
     "ast_hash": "ced4609a5916db47bbaccfcc3f2dcdbb",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-index-maps.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245274,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163702,
     "ast_hash": "db5bcfde02e1ce9f41d6ed1f5aafc8c5",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-length-check-first.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224528,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163728,
     "ast_hash": "2ba208759dd91578f1085c28e6a92ce9",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-min-max-loop.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245288,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163752,
     "ast_hash": "82f654d27529dd80be7ae33d45dcdf8c",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-request-idle-callback.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245297,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163778,
     "ast_hash": "91d7e7fca676efb7cecb4ccff1eaec01",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-set-map-lookups.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245307,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163802,
     "ast_hash": "59a278e21ecd322bff566ba4ad7f5a30",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/js-tosorted-immutable.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245314,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163824,
     "ast_hash": "fd0804905877b6b7b1858e5df1b5f3c4",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-activity.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245321,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163845,
     "ast_hash": "b66bde1377564aa196ba15fc94215cd3",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-animate-svg-wrapper.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224533,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116387,
     "ast_hash": "7301cbe48bf0e1c44934847861384d03",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-conditional-render.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245336,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163888,
     "ast_hash": "7aa6112d7544d55147e183b84add9c31",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-content-visibility.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245345,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116391,
     "ast_hash": "a4ec0125d3a9d79ac2ab5f7a7b5b4d7d",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-hoist-jsx.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245352,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163929,
     "ast_hash": "00519c11155c5c2a6f493d7980211a71",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-hydration-no-flicker.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245357,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163952,
     "ast_hash": "a33ebc96d26525f94c460342d913e47a",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-hydration-suppress-warning.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245367,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163974,
     "ast_hash": "23bc895f5697c19a59712bf19474ec12",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-resource-hints.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245374,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1163995,
     "ast_hash": "a612b2d1d86d1b8205b92ff7dfd81eb8",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-script-defer-async.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245378,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164017,
     "ast_hash": "d62596aed565dd3ad7bddd38bc8f7798",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-svg-precision.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245386,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116404,
     "ast_hash": "1b880754ee449c52ccc725481f8b2e90",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rendering-usetransition-loading.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245393,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116406,
     "ast_hash": "3cea04ec76a76183cebc6571ac6365a2",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-defer-reads.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245402,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164083,
     "ast_hash": "2b754062eb7b203632859f6515ed3561",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-dependencies.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224541,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164112,
     "ast_hash": "ad0e42cd0616237f62f8a5abbc2138bc",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-derived-state-no-effect.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245414,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164136,
     "ast_hash": "c83ba3c8ea58015fd30072790a4959c4",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-derived-state.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245421,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116416,
     "ast_hash": "fadd31941e355786cb0cc7bba3c672fd",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-functional-setstate.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245426,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164184,
     "ast_hash": "188c0b949d23c11885914c573f4a770a",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-lazy-state-init.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245438,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.11642,
     "ast_hash": "6f9fc3d826cea2ca484912256149b077",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-memo-with-default-value.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245443,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164222,
     "ast_hash": "9bfa45660e0a4d4f180e1d12d9ed44ea",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-memo.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224545,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164238,
     "ast_hash": "f0decabf1e4cf032c36f0977c81167b7",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-move-effect-to-event.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245457,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164258,
     "ast_hash": "599463fe624afd8822ba2bfa7c0138d5",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-no-inline-components.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245467,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164286,
     "ast_hash": "713855e0060cfe2ce549d08ea77e1af6",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-simple-expression-in-memo.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245474,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164308,
     "ast_hash": "42c37552160cff86a0fcbd93a27aa74e",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-split-combined-hooks.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224548,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164331,
     "ast_hash": "b7485878ff82ce8468078a31fc1b7f19",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-transitions.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245486,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164353,
     "ast_hash": "3f275bbfb966fcb39c554ad959fdf016",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-use-deferred-value.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245493,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164372,
     "ast_hash": "913dc783397142c25ec997b5dc11245b",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/rerender-use-ref-transient-values.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245502,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164393,
     "ast_hash": "24d2e82617e2da4207afaf049e1314f3",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-after-nonblocking.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245507,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.116441,
     "ast_hash": "c88a79384f87826bf1b20aa3637093a5",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-auth-actions.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245517,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164432,
     "ast_hash": "d8691820d666e5dd9094ccc6996398e3",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-cache-lru.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.2245524,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164463,
     "ast_hash": "723195ea460bfbc4d43b4eb0c47b246b",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-cache-react.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224553,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164489,
     "ast_hash": "bc168ee66c4378854c7aa23cb9ca1369",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-dedup-props.md": {
-    "mtime": 1793888053.95285,
-    "seen": 1794411003.224554,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164508,
     "ast_hash": "86bf6f2d562ca98bca778a5b9d2f0251",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-hoist-static-io.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245545,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164532,
     "ast_hash": "05789c4ba35f68cc0ed6deba3078f7ab",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-no-shared-module-state.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245553,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164558,
     "ast_hash": "7733faf82c146008e8f1c65660bac4bb",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-parallel-fetching.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245562,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164584,
     "ast_hash": "1a36cf0b49a1a498fc1150afbf7a42c2",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-parallel-nested-fetching.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245572,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164608,
     "ast_hash": "eaa7835a15d41842406acc34002f0d6c",
     "semantic_hash": ""
   },
   ".claude/skills/vercel-react-best-practices/rules/server-serialization.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245579,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164637,
     "ast_hash": "e6d34426614852685f43609dd9e3b250",
     "semantic_hash": ""
   },
   ".claude/skills/web-design-guidelines/SKILL.md": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245586,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164658,
     "ast_hash": "98087aedd18375666dbb093c859b2949",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/LICENSE.txt": {
-    "mtime": 1793888053.95582,
-    "seen": 1794411003.2245593,
+    "mtime": 1794496815.3077826,
+    "seen": 1794566586.1164684,
     "ast_hash": "0ee6429f4c66920b6744d818225fb58f",
     "semantic_hash": ""
   },
   ".claude/skills/webapp-testing/SKILL.md": {
-    "mtime": 1793888053.9583006,
-    "seen": 1794411003.22456,
+    "mtime": 1794496815.3098347,
+    "seen": 1794566586.1164706,
     "ast_hash": "6f2a4f33acc240246197a232f9b5ee03",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1793888053.9588428,
-    "seen": 1794411003.2245607,
+    "mtime": 1794496815.3100374,
+    "seen": 1794566586.1164725,
     "ast_hash": "789a207b0d3360131cda1b8a9d08376a",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794399870.2367163,
-    "seen": 1794411003.2245615,
+    "mtime": 1794496815.3100374,
+    "seen": 1794566586.1164749,
     "ast_hash": "8f6a52ee2332dd8bdf84b809ebfa53ae",
     "semantic_hash": ""
   },
   "docs/agents/domain.md": {
-    "mtime": 1793888054.0362048,
-    "seen": 1794411003.2245624,
+    "mtime": 1794496815.352331,
+    "seen": 1794566586.1164773,
     "ast_hash": "00bededcb4486406f018b39e9902c610",
     "semantic_hash": ""
   },
   "docs/agents/issue-tracker.md": {
-    "mtime": 1793888054.036471,
-    "seen": 1794411003.2245631,
+    "mtime": 1794496815.3523824,
+    "seen": 1794566586.1164794,
     "ast_hash": "aaec1d0f81dfdaba25218bff55839463",
     "semantic_hash": ""
   },
   "docs/agents/triage-labels.md": {
-    "mtime": 1793888054.036471,
-    "seen": 1794411003.2245636,
+    "mtime": 1794496815.3523824,
+    "seen": 1794566586.1164815,
     "ast_hash": "9918a4051db590bde5644c39db5194f4",
     "semantic_hash": ""
   },
   "docs/diary/README.md": {
-    "mtime": 1793888054.0367393,
-    "seen": 1794411003.2245648,
+    "mtime": 1794496815.3524904,
+    "seen": 1794566586.1164837,
     "ast_hash": "7d70920077e945af499716d1a3afe9a2",
     "semantic_hash": ""
   },
   "docs/diary/diary.md": {
-    "mtime": 1794399870.2367163,
-    "seen": 1794411003.2245657,
+    "mtime": 1794565929.1343012,
+    "seen": 1794566586.1164856,
     "ast_hash": "2cd21d306edba51765a7c6bb44b45045",
     "semantic_hash": ""
   },
   "docs/diary/web-template.html": {
-    "mtime": 1793888054.0367393,
-    "seen": 1794411003.2245665,
+    "mtime": 1794496815.3524904,
+    "seen": 1794566586.1164875,
     "ast_hash": "e537e2b4d2bf1e938dfc9b82d4d28794",
     "semantic_hash": ""
   },
   "docs/rules/rules.md": {
-    "mtime": 1794399870.2407162,
-    "seen": 1794411003.224567,
+    "mtime": 1794565929.1383011,
+    "seen": 1794566586.1164894,
     "ast_hash": "47ac9d4b615a20e44e57c7efbceb197d",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1794412096.3918042,
-    "seen": 1794412217.9385395,
+    "mtime": 1794565929.1503012,
+    "seen": 1794566586.116492,
     "ast_hash": "cae75ed17e28c56ecedf3862db1d580c",
     "semantic_hash": ""
   },
   "public/fonts/jetbrains-mono/OFL.txt": {
-    "mtime": 1794400204.789959,
-    "seen": 1794411003.2245686,
+    "mtime": 1794565929.1533892,
+    "seen": 1794566586.1164942,
     "ast_hash": "43dc1a748ef82aa746d6a645d52578a9",
     "semantic_hash": ""
   },
   "public/fonts/satoshi/FFL.txt": {
-    "mtime": 1794400204.7885416,
-    "seen": 1794411003.2245693,
+    "mtime": 1794565929.1533892,
+    "seen": 1794566586.1164963,
     "ast_hash": "4f54907e48230de36ebc963f372c0daf",
     "semantic_hash": ""
   },
   "docs/diary/diary.pdf": {
-    "mtime": 1794399870.2407162,
-    "seen": 1794411003.22457,
+    "mtime": 1794565929.1383011,
+    "seen": 1794566586.116499,
     "ast_hash": "f147ee15f6a4460feedff581dfe7863d",
     "semantic_hash": ""
   },
   "docs/rules/preview-grid-example.png": {
-    "mtime": 1793888054.0558202,
-    "seen": 1794411003.224571,
+    "mtime": 1794496815.355917,
+    "seen": 1794566586.116501,
     "ast_hash": "2880b1548634ad866694797bb455291c",
     "semantic_hash": ""
   },
   "public/img/favicon.png": {
-    "mtime": 1793888054.1678202,
-    "seen": 1794411003.2245715,
+    "mtime": 1794496815.427917,
+    "seen": 1794566586.1165032,
     "ast_hash": "9a1047477c4f64ecb1acd10f626568e9",
     "semantic_hash": ""
   },
   "public/img/me.jpg": {
-    "mtime": 1793888054.23582,
-    "seen": 1794411003.2245722,
+    "mtime": 1794496815.4399168,
+    "seen": 1794566586.1165056,
     "ast_hash": "3f35bfe7d464e026168a0a2e6c4ec67d",
     "semantic_hash": ""
   },
   "public/img/project/fortheroot.png": {
-    "mtime": 1793888054.23982,
-    "seen": 1794411003.224573,
+    "mtime": 1794496815.4399168,
+    "seen": 1794566586.1165082,
     "ast_hash": "6b6deae4e2ce28953731557a736faaae",
     "semantic_hash": ""
   },
-  "src/components/Nav.jsx": {
-    "mtime": 1794412161.0030959,
-    "seen": 1794412217.9317608,
-    "ast_hash": "1c708509d3039fa240a4f48558b1e411",
+  "src/components/Header.jsx": {
+    "mtime": 1794566090.9943109,
+    "seen": 1794566586.115604,
+    "ast_hash": "08716f38fbe0ab2564357dce0be0cb1d",
+    "semantic_hash": ""
+  },
+  "src/components/Home.jsx": {
+    "mtime": 1794566091.0583107,
+    "seen": 1794566586.1156068,
+    "ast_hash": "df53e47b9a8e9c873901a47a79fc6952",
+    "semantic_hash": ""
+  },
+  "src/components/Menu.jsx": {
+    "mtime": 1794566091.0343108,
+    "seen": 1794566586.115609,
+    "ast_hash": "feeeda69a3d6fc3484cf19e2efd36b3a",
+    "semantic_hash": ""
+  },
+  "src/lib/site.js": {
+    "mtime": 1794566458.0210657,
+    "seen": 1794566586.1156151,
+    "ast_hash": "c410b28a8e4f0bb4bf489476e3e47f72",
+    "semantic_hash": ""
+  },
+  "public/img/projects/antigravity-d.webp": {
+    "mtime": 1794565929.1536121,
+    "seen": 1794566586.1165113,
+    "ast_hash": "308e68a72b59f5c22e8f2644bc1074f4",
+    "semantic_hash": ""
+  },
+  "public/img/projects/fortheroot-d.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.116514,
+    "ast_hash": "cae9bf78c0687c347e7f9d82e8fdb048",
+    "semantic_hash": ""
+  },
+  "public/img/projects/fortheroot-p.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165159,
+    "ast_hash": "f595420b0a541e325019850835f1389e",
+    "semantic_hash": ""
+  },
+  "public/img/projects/forvalue-d.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165178,
+    "ast_hash": "1ac4a4945dd390b59ecc207eaff74de5",
+    "semantic_hash": ""
+  },
+  "public/img/projects/forvalue-hero.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.11652,
+    "ast_hash": "8c5fff6fca34c379eec55370e2c7007f",
+    "semantic_hash": ""
+  },
+  "public/img/projects/forvalue-login-d.webp": {
+    "mtime": 1794566458.0023327,
+    "seen": 1794566586.116522,
+    "ast_hash": "9dc3b2cb5bdb77c98ee2040cd7a8b805",
+    "semantic_hash": ""
+  },
+  "public/img/projects/forvalue-p.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165237,
+    "ast_hash": "0dedad9ebd20e84a5f30cd6114ddb2d7",
+    "semantic_hash": ""
+  },
+  "public/img/projects/holoservice-d.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165257,
+    "ast_hash": "4535483a5f0ef041cf0044bf5e6e639b",
+    "semantic_hash": ""
+  },
+  "public/img/projects/prettysrilanka-d.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165273,
+    "ast_hash": "b41ff7b9078c2c060413d4259722cf69",
+    "semantic_hash": ""
+  },
+  "public/img/projects/shitosbarber-d.webp": {
+    "mtime": 1794565929.154,
+    "seen": 1794566586.1165295,
+    "ast_hash": "89e1eb74028d7700fd2460f06f2989d6",
     "semantic_hash": ""
   },
   "package-lock.json": {
-    "mtime": 1794409101.1995747,
-    "seen": 1794411003.2245736,
+    "mtime": 1794565929.1503012,
+    "seen": 1794566586.1165328,
     "ast_hash": "18176d9e07ced70e7f27eb3531b59ad1",
     "semantic_hash": ""
   }

@@ -47,7 +47,7 @@ export default function initSite() {
         "ForValue",
         "#2E6B40",
         "malaka-gonawala.github.io/forvalue",
-        IMG + "forvalue-d.webp",
+        IMG + "forvalue-login-d.webp",
         PITCH.forvalue,
       ],
       fortheroot: [
