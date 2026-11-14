@@ -271,3 +271,16 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Changed rules:** new S32, threads look at their own work in Playwright before reporting (PR #47, waiting for merge), lesson that previews are static mocks so the real render must be compared with them
 
 **Open items:** project slides fix, underside panel copy from Malaka, low-priority audit items, prerender (6.24), About, Skills, the scroll-detail card, the S31 code challenges, project pages, contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Friday, 13 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** A reset day for the build. The custom Phase 6 build was scrapped and prototype A at version 27 was ported into React as it is, and the model rules were rewritten by role. No new checklist items were ticked, dropped or added. All work stays on draft pull request #45.
+
+- **Decided:** scrap the custom build and port the approved prototype A (v27) into React as it is, so the 12 November hero, signature, header and Projects work (including the split hero) is replaced, NavLabel is kept but unused, the Offers section still shows [brackets] where copy is missing, checklist items 6.10 and 6.13 stay ticked and now describe the port
+- **Built:** the port of prototype A into React (commits on the rebuild branch), checked against the prototype with Playwright screenshots, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) version 11
+- **Changed rules:** S15 and S16 rewritten by role (planner, executor and page tester threads run Opus 5.5 at medium effort, every other thread runs Sonnet 5.5 at high effort, the coordinator and the code challenger are named exceptions), this thread switched to Sonnet 5.5 high
+- **Tooling:** code challenge editor gained Tailwind CSS support, Malaka asked for Tailwind CSS and TypeScript exercises as well
+
+**Open items:** Home sections after the port (project slides, underside panel copy from Malaka, Offers copy), prerender (6.24), About, Skills, the scroll-detail card, the code challenges (S31), merge PR #47 (rules S32, models, S31) and PR #48 (diary 12 November), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
