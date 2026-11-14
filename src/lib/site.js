@@ -87,6 +87,25 @@ export default function initSite() {
     img = (s) =>
       `<figure style="margin:0" class="stage"><div class="vp" style="inset:0">${shot(X[s][3], P[s] + " screenshot")}</div></figure>`;
 
+  // My path (About): approved labels on a departures board, the approved paragraph under it
+  const PATH =
+      "Done: around the end of 2020, Pretty Sri Lanka, my first website online. Third year: Russian Roulette in Java and the HTML/CSS/JS manual. Fourth year: my first portfolio site, Cavalleria su due ruote, ForTheRoot, Antigravity Bikes. Current, fifth year: ForValue, client websites, this site. Planned: CCNA, UNIMI, full-stack with web security and accessibility, agentic engineering (building with AI agents).",
+    BOARD = [
+      ["done", "Late 2020", "Pretty Sri Lanka"],
+      ["done", "3rd year", "Russian Roulette"],
+      ["done", "4th year", "first portfolio site"],
+      ["now", "5th year", "ForValue, this site"],
+      ["planned", "CCNA"],
+      ["planned", "UNIMI"],
+      ["planned", "full-stack"],
+    ],
+    board = () => {
+      let n = 0;
+      const line = (t) =>
+        `<span class="bl">${[...t.toUpperCase()].map((c) => (c == " " ? "<b></b>" : `<i style="--n:${n++}">${c}</i>`)).join("")}</span>`;
+      return `<h2 class="d">My path</h2><div class="board" role="img" aria-label="${PATH}">${BOARD.map(([k, ...t]) => `<div class="br ${k}" aria-hidden="true">${line(k + " " + t[0])}${t[1] ? line(t[1]) : ""}</div>`).join("")}</div><p>${PATH}</p>`;
+    };
+
   // pages (placeholders until Phase 5)
   const pages = {
     lab: [
@@ -95,7 +114,7 @@ export default function initSite() {
     ],
     about: [
       "About",
-      `<h2 class="d">Where it all started</h2><p>It started around the end of 2020 with <a href="https://prettysrilanka.netlify.app/">Pretty Sri Lanka</a>, a course exercise and the first website I ever put online. (Photos supplied by the course instructor.)</p><h2 class="d">Now</h2><p>Today I'm in my fifth year at Istituto Tecnico e Liceo "Enrico Mattei", studying computer science. Alongside school I've built websites for clients, including a cleaning and reception company and a barber shop in Milan.</p><p>Bad UX irritates me, so I build websites that are easy for everyone to use. That's why I'm focusing on accessibility.</p><h2 class="d">Where I'm heading (plans, not done yet)</h2><ul><li>Study security and AI at UNIMI.</li><li>Earn the Cisco CCNA certification.</li><li>Become a full-stack developer who specialises in web security and accessibility, and an agentic engineer (building with AI agents).</li></ul><figure style="margin:0;overflow:hidden"><img class="ph" src="${PSL}" alt="Pretty Sri Lanka home page"></figure><div class="ph" style="aspect-ratio:4/5;max-width:360px">[portrait]</div>`,
+      `<h2 class="d">Where it all started</h2><p>It started around the end of 2020 with <a href="https://prettysrilanka.netlify.app/">Pretty Sri Lanka</a>, a course exercise and the first website I ever put online. (Photos supplied by the course instructor.)</p><h2 class="d">Now</h2><p>Today I'm in my fifth year at Istituto Tecnico e Liceo "Enrico Mattei", studying computer science. Alongside school I've built websites for clients, including a cleaning and reception company and a barber shop in Milan.</p><p>Bad UX irritates me, so I build websites that are easy for everyone to use. That's why I'm focusing on accessibility.</p>${board()}<h2 class="d">Where I'm heading (plans, not done yet)</h2><ul><li>Study security and AI at UNIMI.</li><li>Earn the Cisco CCNA certification.</li><li>Become a full-stack developer who specialises in web security and accessibility, and an agentic engineer (building with AI agents).</li></ul><figure style="margin:0;overflow:hidden"><img class="ph" src="${PSL}" alt="Pretty Sri Lanka home page"></figure><div class="ph" style="aspect-ratio:4/5;max-width:360px">[portrait]</div>`,
     ],
     resume: [
       "Resume",
@@ -661,8 +680,9 @@ export default function initSite() {
       cx.shadowBlur = 0;
     }
     sp($(".under"), "--ho", io(cl((p - 0.6) / 0.1)));
-    $$("#term span").forEach(
-      (l, i) => (l.style.opacity = +(p > 0.66 + i * 0.04)),
+    // the terminal and the build log print side by side, one line at a time
+    ["#term > span", "#log > span"].forEach((q) =>
+      $$(q).forEach((l, i) => (l.style.opacity = +(p > 0.66 + i * 0.04))),
     );
     return cool;
   };
@@ -914,6 +934,11 @@ export default function initSite() {
   // reveals: one rhythm (same ease, mask from the baseline)
   const reveal = () => {
     if (!live) return;
+    // My path: the departures board flips once when it scrolls in
+    $$(".board").forEach((b) => {
+      b.classList.add("arm");
+      seen(b, () => b.classList.add("go"));
+    });
     $$(".page h1").forEach((h) =>
       seen(h, () =>
         G.fromTo(
@@ -1642,7 +1667,7 @@ export default function initSite() {
     sizeAll();
     live && requestAnimationFrame(tick);
   });
-  if (!live) ((S.of = S.ft = 1), (S.ab = H0));
+  if (!live) ((S.of = S.ft = S.hx = 1), (S.ab = H0));
   show(here);
   reveal();
 }

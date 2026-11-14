@@ -591,6 +591,115 @@ a {
   opacity: var(--ho, 0);
   transform: translateY(calc((1 - var(--ho, 0)) * 40px));
 }
+/* Shutter flip: six slices of the title slide in from alternate sides as --ho reaches 1 */
+.shut {
+  position: relative;
+}
+.shut > span:first-child {
+  visibility: hidden;
+}
+.shut > span + span {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(
+    calc(var(--i) * 100% / 6 - 0.5px) 0 calc((5 - var(--i)) * 100% / 6 - 0.5px)
+      0
+  );
+  translate: calc((1 - var(--ho, 0)) * (var(--i) - 2.5) * 0.08em);
+}
+.shut > span:nth-child(odd) {
+  translate: calc((var(--ho, 0) - 1) * (var(--i) - 2.5) * 0.08em);
+}
+/* Build log: git log --merges beside the terminal (under it on phones, 4 rows) */
+.u2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 4vw;
+  align-items: end;
+}
+#log {
+  font-size: 12px;
+  line-height: 2.1;
+}
+#log > span + span {
+  border-top: 1px solid rgba(244, 241, 234, 0.12);
+}
+#log em {
+  font: 12px var(--b);
+}
+@media (max-width: 700px) {
+  .u2 {
+    grid-template-columns: 1fr;
+  }
+  #log em {
+    display: block;
+    line-height: 1.4;
+    padding-bottom: 6px;
+  }
+  #log > span:nth-child(n + 6) {
+    display: none;
+  }
+}
+/* Departures board (About, My path): every letter is a flap that flips down once */
+.board {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #1b1c1a;
+  color: #f4f1ea;
+  font: clamp(12px, 1.6vw, 20px) / 1 var(--m);
+  perspective: 600px;
+}
+.bl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.br .bl + .bl {
+  margin-top: 4px;
+}
+.bl i,
+.bl b {
+  width: 1.4em;
+  height: 1.6em;
+}
+.bl i {
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  border-radius: 3px;
+  background: linear-gradient(#2a2b28 50%, #232421 50%);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 700px) {
+  .board {
+    padding: 12px;
+  }
+  .bl i,
+  .bl b {
+    width: 1.15em;
+  }
+}
+.br.now .bl:first-child i:nth-child(-n + 3) {
+  color: #d9b45a;
+}
+.br.planned i {
+  color: #b5b9b3;
+}
+.board.arm i {
+  visibility: hidden;
+}
+.board.go i {
+  visibility: visible;
+  animation: flap 0.3s calc(min(var(--n) * 12ms, 0.85s))
+    cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes flap {
+  from {
+    transform: rotateX(90deg);
+  }
+}
 .term {
   font-size: clamp(14px, 1.6vw, 18px);
   line-height: 1.9;

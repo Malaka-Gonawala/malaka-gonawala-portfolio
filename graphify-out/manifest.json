@@ -450,9 +450,9 @@
     "semantic_hash": ""
   },
   "vite.config.js": {
-    "mtime": 1794565929.15496,
-    "seen": 1794566586.1156228,
-    "ast_hash": "3105e79d53a6a322c4a81189eb6fb6bf",
+    "mtime": 1794699222.885838,
+    "seen": 1794699768.7417696,
+    "ast_hash": "f16a6f72ffc2693014792a2e53be38d8",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -2598,9 +2598,9 @@
     "semantic_hash": ""
   },
   "src/components/Home.jsx": {
-    "mtime": 1794566091.0583107,
-    "seen": 1794566586.1156068,
-    "ast_hash": "df53e47b9a8e9c873901a47a79fc6952",
+    "mtime": 1794699194.163639,
+    "seen": 1794699768.741562,
+    "ast_hash": "6ecb915603dd54ff4a03d0ec9f9b6d81",
     "semantic_hash": ""
   },
   "src/components/Menu.jsx": {
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "src/lib/site.js": {
-    "mtime": 1794566458.0210657,
-    "seen": 1794566586.1156151,
-    "ast_hash": "c410b28a8e4f0bb4bf489476e3e47f72",
+    "mtime": 1794699194.1628635,
+    "seen": 1794699768.7416658,
+    "ast_hash": "ee3931d3776aaaca302abeb5c69f1cde",
     "semantic_hash": ""
   },
   "public/img/projects/antigravity-d.webp": {

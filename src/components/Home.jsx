@@ -1,4 +1,5 @@
 import { en } from "@/content/en";
+import log from "virtual:buildlog";
 
 const Term = ({ now }) => (
   <>
@@ -95,10 +96,31 @@ function Underneath() {
       <div className="stick" id="hxs">
         <canvas id="hxc" aria-hidden="true"></canvas>
         <div className="under g">
-          <h2 className="d">Underneath</h2>
-          <p className="term mono" id="term">
-            <Term now={en.now} />
-          </p>
+          <h2 className="d shut" aria-label="Underneath">
+            <span aria-hidden="true">Underneath</span>
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <span key={i} aria-hidden="true" style={{ "--i": i }}>
+                Underneath
+              </span>
+            ))}
+          </h2>
+          <div className="u2">
+            <p className="term mono" id="term">
+              <Term now={en.now} />
+            </p>
+            {log.length > 0 && (
+              <p className="term mono" id="log">
+                <span>
+                  <b>PS C:\Users\Malaka\site&gt;</b> git log --merges
+                </span>
+                {log.map(([sha, date, title]) => (
+                  <span key={sha}>
+                    <b>{sha}</b> {date} <em>{title}</em>
+                  </span>
+                ))}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </section>
