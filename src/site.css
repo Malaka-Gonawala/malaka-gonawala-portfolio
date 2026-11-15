@@ -124,6 +124,85 @@ a {
   cursor: pointer;
   padding: 6px 0;
 }
+.hr {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+/* Calm switch (C11) */
+.calm {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 0;
+  padding: 6px 0;
+  color: var(--fg);
+  font: 500 14px var(--b);
+  cursor: pointer;
+}
+.calm i {
+  width: 30px;
+  height: 18px;
+  border-radius: 99px;
+  border: 1.5px solid currentColor;
+  position: relative;
+}
+.calm i::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: currentColor;
+  transition: translate 0.2s;
+}
+.calm[aria-checked="true"] i::after {
+  translate: 12px;
+  background: var(--gold);
+}
+.calm[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: default;
+}
+/* Two doors (R26): the gold frame sits on [Front end] and moves to the door you point at or tab to */
+.doors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 4px 14px;
+}
+.doors p {
+  flex-basis: 100%;
+  text-align: right;
+  font: 11px var(--m);
+  color: var(--mut);
+}
+.doors a {
+  font: 500 clamp(30px, 3.6vw, 52px) / 1 var(--d);
+  letter-spacing: -0.02em;
+  color: var(--fg);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+  padding: 2px 6px;
+  outline: 1px solid transparent;
+  outline-offset: 0;
+}
+.doors a:first-of-type,
+.doors a:is(:hover, :focus-visible) {
+  outline-color: var(--gold);
+}
+.doors:has(a:last-of-type:is(:hover, :focus-visible)) a:first-of-type {
+  outline-color: transparent;
+}
+@media (hover: none) {
+  .doors a {
+    outline-color: var(--gold);
+  }
+}
 .flip i {
   width: 22px;
   height: 22px;
@@ -1169,7 +1248,14 @@ body.hph #ubp:empty::after {
   background: var(--fg);
   animation: bl 1s steps(1) infinite;
 }
-@media (prefers-reduced-motion: reduce) {
+/* Reduced motion: the OS setting or Calm (class set in index.html) */
+:root.rm *,
+:root.rm *::before,
+:root.rm *::after {
+  animation: none !important;
+  transition: none !important;
+}
+:root.rm {
   body,
   .hd {
     transition: none;
@@ -1187,7 +1273,6 @@ body.hph #ubp:empty::after {
     min-height: 100svh;
   }
   .xr,
-  .name,
   #under canvas,
   #hx,
   .od {
@@ -1198,6 +1283,9 @@ body.hph #ubp:empty::after {
   }
   .under h2 {
     --ho: 1;
+  }
+  .aw {
+    visibility: hidden;
   }
   .stick:has(> .intro) {
     display: flex;

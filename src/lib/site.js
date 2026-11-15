@@ -26,7 +26,7 @@ export default function initSite() {
     $ = (s) => document.querySelector(s),
     $$ = (s) => [...document.querySelectorAll(s)],
     root = document.documentElement,
-    live = G && !matchMedia("(prefers-reduced-motion: reduce)").matches,
+    live = G && !root.classList.contains("rm"),
     wide = () => innerWidth > 700,
     seen = (el, fn, t = 0.2) => {
       const o = new IntersectionObserver(
@@ -383,7 +383,7 @@ export default function initSite() {
   if (!live) {
     $("#work").insertAdjacentHTML(
       "afterend",
-      `<section class="rmw g" aria-label="More work"><a href="#p-fortheroot">${img("fortheroot")}<h2 class="d">ForTheRoot</h2></a><div class="op"><p class="note">~/work/other-projects</p></div></section>`,
+      `<section class="rmw g" aria-label="More work" data-sec="Work">${["forvalue", "fortheroot"].map((k) => `<a href="#p-${k}">${img(k)}<h2 class="d">${P[k]}</h2></a>`).join("")}<div class="op"><p class="note">~/work/other-projects</p></div></section>`,
     );
     $(".rmw .op").append(
       ...OPR.map((a) => {
@@ -1202,7 +1202,7 @@ export default function initSite() {
   };
   // the site is inert while a menu is open, so focus and clicks stay in the menu
   const css = (n) => getComputedStyle(root).getPropertyValue(n).trim(),
-    HT = ".hd .nm,.hd .sec,.flip",
+    HT = ".hd .nm,.hd .sec,.flip,.calm",
     // the header changes colour on the menu's own clock: wide = same duration and ease as the backdrop, phone = the step where the clip line passes it
     hdWide = (tl) =>
       tl
@@ -1559,6 +1559,22 @@ export default function initSite() {
       }),
   );
 
+  // Calm (C11): locked on when the device asks for less motion; otherwise saved and applied by reloading
+  const calm = $("#calm");
+  calm.setAttribute("aria-checked", !live);
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches)
+    calm.setAttribute("aria-disabled", "true");
+  else
+    calm.onclick = () => {
+      try {
+        localStorage.setItem("calm", live ? "1" : "0");
+      } catch {
+        // storage blocked: the switch still applies to this load
+        root.classList.toggle("rm", live);
+      }
+      location.reload();
+    };
+
   // routing: home sections stay in place; every page change goes through the address-bar loader
   let here = location.hash;
   const show = (hash, keep) => {
@@ -1587,10 +1603,12 @@ export default function initSite() {
         });
       reveal();
     } else {
+      // #work: the first project loaded; #under: the underside settled
       const el = h && document.getElementById(h),
-        a = $("#ab");
-      h == "work" && live
-        ? scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * H0)
+        at = live && { work: ["#ab", H0], under: ["#under", 0.8] }[h],
+        a = at && $(at[0]);
+      at
+        ? scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * at[1])
         : el
           ? el.scrollIntoView()
           : scrollTo(0, 0);
@@ -1667,7 +1685,8 @@ export default function initSite() {
     sizeAll();
     live && requestAnimationFrame(tick);
   });
-  if (!live) ((S.of = S.ft = S.hx = 1), (S.ab = H0));
+  // reduced motion keeps the hero (the name and the two doors) and lists the work under it
+  if (!live) ((S.of = S.ft = S.hx = 1), (S.ab = 0));
   show(here);
   reveal();
 }

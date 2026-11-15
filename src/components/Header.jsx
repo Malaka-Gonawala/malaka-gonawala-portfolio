@@ -10,15 +10,26 @@ export default function Header() {
           / Home
         </span>
       </div>
-      <button
-        className="flip"
-        id="flip"
-        aria-expanded="false"
-        aria-controls="menu"
-      >
-        <span id="fl">Flip</span>
-        <i aria-hidden="true"></i>
-      </button>
+      <div className="hr">
+        <button
+          className="calm"
+          id="calm"
+          role="switch"
+          aria-checked="false"
+          aria-label="Calm mode: less motion"
+        >
+          Calm<i aria-hidden="true"></i>
+        </button>
+        <button
+          className="flip"
+          id="flip"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span id="fl">Flip</span>
+          <i aria-hidden="true"></i>
+        </button>
+      </div>
     </header>
   );
 }

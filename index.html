@@ -9,6 +9,12 @@
       try {
         const t = localStorage.getItem("theme");
         if (t) document.documentElement.dataset.theme = t;
+        // Calm (C11): the OS reduced-motion setting, or the visitor's own switch
+        if (
+          matchMedia("(prefers-reduced-motion: reduce)").matches ||
+          localStorage.getItem("calm") == "1"
+        )
+          document.documentElement.classList.add("rm");
       } catch {}
     </script>
   </head>

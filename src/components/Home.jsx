@@ -80,9 +80,11 @@ function AddressBar() {
         </div>
         <div className="intro g" id="intro">
           <p>{en.hero.line}</p>
-          <a className="btn" href="#work">
-            {en.hero.cta}
-          </a>
+          <div className="doors">
+            <p>[Pick a door]</p>
+            <a href="#work">[Front end]</a>
+            <a href="#under">Underneath</a>
+          </div>
         </div>
       </div>
     </section>
