@@ -665,8 +665,21 @@ export default function initSite() {
     C.u0 = [ur, ug, ub];
   };
   let shut = false;
-  const hx = (p) => {
+  // option F: the dump keeps its old pace in the first part of the (now longer) scroll, then one part per beat:
+  // the title, the terminal, the layers, the build log (Calm and reduced motion show them all, stacked)
+  let beat = 0;
+  const hx = (p0) => {
     if (!page) return;
+    const p = cl(p0 * 2.7),
+      b = p0 < 0.3 ? 0 : p0 < 0.5 ? 1 : p0 < 0.72 ? 2 : 3;
+    if (b != beat) {
+      beat = b;
+      const U2 = $$(".u2 > *");
+      U2.forEach((e, i) => e.classList.toggle("on", i + 1 == b));
+      b &&
+        live &&
+        G.fromTo(U2[b - 1], { opacity: 0 }, { opacity: 1, duration: 0.3 });
+    }
     const scan = io(cl(p / 0.32)) * (H + ch),
       cool = io(cl((p - 0.3) / 0.16)),
       lift = io(cl((p - 0.38) / 0.26)),
@@ -712,10 +725,6 @@ export default function initSite() {
         },
       );
     }
-    // the terminal and the build log print side by side, one line at a time
-    ["#term > span", "#a01 > *", "#log > span"].forEach((q) =>
-      $$(q).forEach((l, i) => (l.style.opacity = +(p > 0.66 + i * 0.04))),
-    );
     return cool;
   };
 
@@ -903,7 +912,7 @@ export default function initSite() {
       }),
       s = el ? el.dataset.sec : "Home";
     const ui = s == "Underneath",
-      cool = io(cl((S.hx - 0.3) / 0.16));
+      cool = io(cl((cl(S.hx * 2.7) - 0.3) / 0.16));
     sec.textContent =
       "/ " +
       (s == "Home"

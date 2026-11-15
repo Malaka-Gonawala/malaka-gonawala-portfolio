@@ -719,7 +719,7 @@ a {
 }
 /* underneath: hex dump */
 #under {
-  height: calc(400svh * 0.6);
+  height: 480svh;
   position: relative;
 }
 #under canvas {
@@ -770,6 +770,16 @@ a {
   gap: 20px 4vw;
   align-items: end;
 }
+/* option F beats: the parts share one place and only the current one shows (with motion) */
+:root:not(.rm) .u2 {
+  grid-template-columns: 1fr;
+  > * {
+    grid-area: 1 / 1;
+  }
+  > :not(.on) {
+    visibility: hidden;
+  }
+}
 /* the build log runs under the terminal and the layers, in two columns */
 #log {
   grid-column: 1 / -1;
@@ -790,6 +800,7 @@ a {
   position: relative;
   width: 190px;
   height: 160px;
+  zoom: 1.5;
 }
 .stack button {
   position: absolute;
@@ -814,23 +825,43 @@ a {
 }
 .a01 table {
   border-collapse: collapse;
-  font: 11px/1.4 var(--m);
+  font: 12px/1.4 var(--m);
 }
-.a01 caption {
-  text-align: left;
-  padding-bottom: 4px;
-  opacity: 0.7;
+.a01 :is(caption, thead, td:nth-child(3)) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
 }
-.a01 th {
-  font-weight: 400;
-  text-align: left;
-  opacity: 0.6;
+.a01 td:first-child {
+  color: var(--sig);
 }
 .a01 :is(th, td) {
   padding: 3px 10px 3px 0;
   border-bottom: 1px solid rgba(244, 241, 234, 0.12);
 }
 .a01 .on td {
+  color: var(--sig);
+}
+/* GitLog command line: a button that looks like the prompt, with a return key */
+#log button {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#log button kbd {
+  margin-left: 8px;
+  padding: 0 4px;
+  border: 1px solid var(--sig);
+  border-radius: 3px;
+  font: 10px var(--m);
   color: var(--sig);
 }
 #log > span + span {
@@ -847,13 +878,16 @@ a {
     grid-template-rows: none;
     grid-auto-flow: row;
   }
-  .a01 :is(th, td):nth-child(3) {
-    display: none;
+  .a01 {
+    grid-template-columns: 1fr;
   }
   .stack {
     width: 150px;
-    height: 120px;
-    zoom: 0.7;
+    height: 150px;
+    zoom: 0.9;
+  }
+  .under {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
   }
   #log em {
     display: block;
@@ -1701,6 +1735,10 @@ body.hph #ubp:empty::after {
   }
   .under h2 {
     --ho: 1;
+  }
+  /* everything stacked: the scene grows with its content, so the title is never pushed under the header */
+  .under {
+    position: relative;
   }
   .aw {
     visibility: hidden;

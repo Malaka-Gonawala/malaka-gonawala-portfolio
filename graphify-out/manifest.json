@@ -2598,9 +2598,9 @@
     "semantic_hash": ""
   },
   "src/components/Home.jsx": {
-    "mtime": 1794749832.694051,
-    "seen": 1794749972.8697448,
-    "ast_hash": "0bfd47705309acfb943d34bb98351e70",
+    "mtime": 1794763467.8680058,
+    "seen": 1794763730.3400297,
+    "ast_hash": "824489cf864e116ac361899ab2dfa3ba",
     "semantic_hash": ""
   },
   "src/components/Menu.jsx": {
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "src/lib/site.js": {
-    "mtime": 1794756912.3645902,
-    "seen": 1794757832.798515,
-    "ast_hash": "204238ad387e337b1058fd01d974ac0a",
+    "mtime": 1794763572.2669404,
+    "seen": 1794763730.3401687,
+    "ast_hash": "774b0ccc4dfd353ded79c985ba02e5a4",
     "semantic_hash": ""
   },
   "public/img/projects/antigravity-d.webp": {

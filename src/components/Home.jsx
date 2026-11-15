@@ -161,6 +161,7 @@ function Underneath() {
               <Term now={en.now} />
             </p>
             <Layers />
+            {/* placeholder until GitLog (code challenge 3): a `git log --merges` button that folds these rows */}
             {log.length > 0 && (
               <p className="term mono" id="log">
                 <span>
