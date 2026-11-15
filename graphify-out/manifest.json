@@ -420,9 +420,9 @@
     "semantic_hash": ""
   },
   "src/App.jsx": {
-    "mtime": 1794747907.956092,
-    "seen": 1794748403.0697901,
-    "ast_hash": "2c79f655d216119c0d07e4c92527dbca",
+    "mtime": 1794756911.4217243,
+    "seen": 1794757832.798383,
+    "ast_hash": "4e233b789ec1b15c589473190090a633",
     "semantic_hash": ""
   },
   "src/components/NavLabel.jsx": {
@@ -2592,9 +2592,9 @@
     "semantic_hash": ""
   },
   "src/components/Header.jsx": {
-    "mtime": 1794747552.5552154,
-    "seen": 1794748403.0697932,
-    "ast_hash": "ce3aeee059767ad1ecec75468d359cb1",
+    "mtime": 1794756911.8605902,
+    "seen": 1794757832.7983878,
+    "ast_hash": "8204a0d87cf8e58e0c5bde610e239ee5",
     "semantic_hash": ""
   },
   "src/components/Home.jsx": {
@@ -2604,15 +2604,15 @@
     "semantic_hash": ""
   },
   "src/components/Menu.jsx": {
-    "mtime": 1794747668.6904902,
-    "seen": 1794748403.069799,
-    "ast_hash": "3c93157e6ab755415e468ed4136d6b28",
+    "mtime": 1794756911.4168694,
+    "seen": 1794757832.798423,
+    "ast_hash": "7dc9b2ff468043232a78ca40135785d5",
     "semantic_hash": ""
   },
   "src/lib/site.js": {
-    "mtime": 1794751021.659852,
-    "seen": 1794751126.3637404,
-    "ast_hash": "7d4661cec14c1953f0bd281bb412d0f4",
+    "mtime": 1794756912.3645902,
+    "seen": 1794757832.798515,
+    "ast_hash": "204238ad387e337b1058fd01d974ac0a",
     "semantic_hash": ""
   },
   "public/img/projects/antigravity-d.webp": {

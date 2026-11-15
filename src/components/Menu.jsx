@@ -48,6 +48,8 @@ export default function Menu() {
       <span className="here" id="here" aria-hidden="true">
         you are here
       </span>
+      <span className="bx" id="bx" aria-hidden="true"></span>
+      <i className="hl" id="hl" aria-hidden="true"></i>
     </>
   );
 }

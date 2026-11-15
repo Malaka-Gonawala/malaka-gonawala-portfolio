@@ -1,17 +1,17 @@
 # Graph Report - malaka-gonawala-portfolio  (2026-11-15)
 
 ## Corpus Check
-- 426 files · ~687,177 words
+- 426 files · ~687,883 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 86 file(s) not represented in the graph (top: .csv 37, (none) 16, .woff2 9)
 
 ## Summary
-- 5014 nodes · 7041 edges · 426 communities (319 shown, 107 thin omitted)
+- 5014 nodes · 7040 edges · 426 communities (319 shown, 107 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 150 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d93237d`
+- Built from commit: `9b3d7d0b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -443,8 +443,8 @@
 3. `search_stack()` - 36 edges
 4. `connectSSE()` - 34 edges
 5. `setLiveState()` - 33 edges
-6. `resumeSession()` - 33 edges
-7. `showToast()` - 33 edges
+6. `showToast()` - 33 edges
+7. `resumeSession()` - 33 edges
 8. `initGlobalBar()` - 30 edges
 9. `el()` - 29 edges
 10. `handleKeyDown()` - 28 edges
@@ -1191,7 +1191,7 @@ Cohesion: 0.18
 Nodes (10): Acknowledgments, Contributing, Creating a New Rule, File Naming Convention, Getting Started, Impact Levels, React Best Practices, Rule File Structure (+2 more)
 
 ### Community 186 - "src/App.jsx"
-Cohesion: 0.16
+Cohesion: 0.15
 Nodes (17): App(), Header(), AddressBar(), Contact(), Hire(), Home(), LAYERS, Layers() (+9 more)
 
 ### Community 187 - "Text views"
@@ -1751,7 +1751,7 @@ Nodes (4): Icons, Icons in Button use data-icon attribute, No sizing classes on 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `initGlobalBar` to `doctor.md`, `live-browser.js`, `connectSSE`, `live.md`, `resumeSession`, `initPageChat`, `Init flow`, `Commands`, `impeccable/SKILL.md`, `Design Systems from DESIGN.md`, `handleGo`, `updatePendingCounter`?**
-  _High betweenness centrality (0.091) - this node is a cross-community bridge._
+  _High betweenness centrality (0.087) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `DesignSystemGenerator` (e.g. with `TestReasoningMatch` and `TestReasoningContract`) actually correct?**
   _`DesignSystemGenerator` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `API_KEY`, `CONTEXT7_API_KEY`, `@21st-dev/magic` to the rest of the system?**

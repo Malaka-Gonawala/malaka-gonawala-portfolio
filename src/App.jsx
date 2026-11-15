@@ -30,6 +30,10 @@ export default function App() {
         <p role="status" id="tst"></p>
         <span id="tn" aria-hidden="true"></span>
         <button id="undo">Undo</button>
+        <ol className="stg" aria-hidden="true">
+          <li>Waiting</li>
+          <li>Sending</li>
+        </ol>
         <i aria-hidden="true"></i>
       </div>
       <div id="cur" aria-hidden="true">

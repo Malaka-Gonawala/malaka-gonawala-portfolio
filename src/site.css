@@ -90,6 +90,7 @@ a {
 }
 /* U05: text links keep a thin underline; a thicker one draws in on hover and focus */
 :is(.page p, .page li, #fc) a {
+  width: fit-content;
   text-decoration: none;
   background:
     linear-gradient(currentColor 0 0) 0 100% / 0 3px no-repeat,
@@ -165,6 +166,71 @@ a {
     flex-direction: column-reverse;
     align-items: flex-end;
     gap: 0;
+  }
+}
+/* N04 + N09: on phones the menu button is a gold pill in thumb reach; its two lines turn into a cross */
+.mp {
+  display: none;
+}
+@media (max-width: 700px) {
+  .flip {
+    display: none;
+  }
+  .mp {
+    position: fixed;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    translate: -50%;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 99px;
+    background: var(--gold);
+    color: var(--ongold);
+    font: 700 16px var(--b);
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .mp i {
+    position: relative;
+    width: 16px;
+    height: 10px;
+  }
+  .mp i::before,
+  .mp i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition:
+      translate 0.25s,
+      rotate 0.25s;
+  }
+  .mp i::after {
+    bottom: 0;
+  }
+  .mp[aria-expanded="true"] i::before {
+    translate: 0 4px;
+    rotate: 45deg;
+  }
+  .mp[aria-expanded="true"] i::after {
+    translate: 0 -4px;
+    rotate: -45deg;
+  }
+  /* room for the pill under the open list and the last line of every page */
+  #menu {
+    --mb: 88px;
+  }
+  main {
+    padding-bottom: 72px;
+  }
+  #intro {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
 }
 /* Calm switch (C11) */
@@ -1131,10 +1197,41 @@ a {
     transform: scaleX(0);
   }
 }
+/* P03: the send stages; the current one is full strength with a signal dot */
+.stg {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 16px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  font: 11px var(--m);
+}
+.stg li {
+  opacity: 0.75;
+}
+.stg li::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+}
+.toast:not([data-s="1"]) li:first-child,
+.toast[data-s="1"] li:last-child {
+  opacity: 1;
+  font-weight: 700;
+}
+.toast:not([data-s="1"]) li:first-child::before,
+.toast[data-s="1"] li:last-child::before {
+  background: var(--sig);
+  border-color: var(--sig);
+}
 @media (max-width: 700px) {
   .toast {
-    top: calc(var(--hh) + 8px);
-    bottom: auto;
+    bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   }
 }
 /* footer: decoded from hex */
@@ -1238,7 +1335,7 @@ h1:focus {
 }
 #menu {
   padding-block: calc(var(--hh) + 12px)
-    calc(24px + env(safe-area-inset-bottom, 0px));
+    calc(var(--mb, 24px) + env(safe-area-inset-bottom, 0px));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1381,6 +1478,23 @@ h1:focus {
 .tab:hover,
 .tab:focus-visible {
   outline: 3px solid var(--gold);
+}
+.bx,
+.hl {
+  position: fixed;
+  z-index: 17;
+  opacity: 0;
+  pointer-events: none;
+}
+.bx {
+  margin: -5px;
+  border: 1px solid var(--ufg);
+  border-radius: 18px;
+  box-sizing: content-box;
+}
+.hl {
+  height: 2px;
+  background: var(--gold);
 }
 .here {
   position: fixed;

@@ -140,8 +140,24 @@ export default function initSite() {
     menu = $("#menu"),
     tabs = $("#tabs"),
     here_ = $("#here"),
+    bx = $("#bx"),
+    hl = $("#hl"),
+    // N07: the gold hairline sits under the tile Enter will open
+    hair = (el) => {
+      const r = el.getBoundingClientRect();
+      G.to(hl, {
+        left: r.left,
+        top: r.bottom + 8,
+        width: r.width,
+        duration: live ? 0.3 : 0,
+        ease: "out",
+      });
+    },
     hd = $(".hd"),
     flip = $("#flip"),
+    mp = $("#mp"),
+    // the menu button you can see: Flip on wide screens, the bottom Menu pill on phones (N04)
+    btn = () => (wide() ? flip : mp),
     menuOpen = () => !menu.hidden || !tabs.hidden,
     cl = (v) => Math.min(1, Math.max(0, v)),
     mix = (a, b, t) => a + (b - a) * t,
@@ -1278,6 +1294,8 @@ export default function initSite() {
   const label = (o) => {
     flip.setAttribute("aria-expanded", o);
     $$(".flip span").forEach((x) => (x.textContent = o ? "Flip back" : "Flip"));
+    mp.setAttribute("aria-expanded", o);
+    mp.lastChild.textContent = o ? "Close" : "Menu";
     hd.classList.toggle("mo", o);
     $$("#homeView,#pageView").forEach((e) => (e.inert = o));
   };
@@ -1291,6 +1309,7 @@ export default function initSite() {
           return hit;
         });
       $("#ckn").hidden = !q || m.length > 0;
+      wideMenu && !tabs.hidden && hair(m[0] && !m[0].hidden ? m[0] : bx);
       return m;
     };
   let ckWant = false;
@@ -1319,6 +1338,8 @@ export default function initSite() {
         menu,
         tabs,
         here_,
+        bx,
+        hl,
         ".bk",
         "#ls>*",
         "#ls .mo",
@@ -1377,6 +1398,8 @@ export default function initSite() {
     const clip = (r) =>
       `inset(${o}px 0 ${el.offsetHeight - o - innerHeight}px 0 round ${r}px)`;
     G.set(here_, { left: C[0].x + 10, top: C[0].y + C[0].h - 34 });
+    G.set(bx, { left: C[0].x, top: C[0].y, width: C[0].w, height: C[0].h });
+    G.set(hl, { left: C[0].x, top: C[0].y + C[0].h + 8, width: C[0].w });
     mtl = G.timeline({ defaults: { ease: "io" } })
       .fromTo(
         ".bk",
@@ -1399,7 +1422,7 @@ export default function initSite() {
       // the tabs drop out of the header as small chips, then open into their tiles
       .add(tilesIn(V, C), 0.1)
       .fromTo(
-        here_,
+        [here_, bx, hl],
         { opacity: 0, y: -6 },
         { opacity: 1, y: 0, duration: 0.3 },
         0.85,
@@ -1612,11 +1635,11 @@ export default function initSite() {
     });
     G.from(ub, { opacity: 0, duration: 0.25 });
   };
-  flip.onclick = () =>
-    setMenu(!menuOpen()).then(() => menuOpen() || flip.focus());
+  flip.onclick = mp.onclick = () =>
+    setMenu(!menuOpen()).then(() => menuOpen() || btn().focus());
   addEventListener("keydown", (e) => {
     if (e.key == "Escape" && menuOpen()) {
-      setMenu(false).then(() => flip.focus());
+      setMenu(false).then(() => btn().focus());
     }
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() == "k") {
       e.preventDefault();
@@ -1661,8 +1684,7 @@ export default function initSite() {
       pg = pages[h];
     onPage = !!pg;
     keep || reset();
-    flip.setAttribute("aria-expanded", false);
-    $$(".flip span").forEach((x) => (x.textContent = "Flip"));
+    label(false);
     $("#homeView").hidden = onPage;
     live && G.set("main", { clearProps: "opacity,visibility" });
     $("#pageView").hidden = !onPage;
@@ -1674,7 +1696,14 @@ export default function initSite() {
       scrollTo(0, 0);
       const f = $("#f");
       // R12: a real 5 s wait before the send, cancelled by Undo (the send itself is a placeholder until Web3Forms)
+      // P03: Waiting (undo still works), then Sending for as long as the request takes; "Delivered" joins once the
+      // form posts to Web3Forms and can read a real answer
       const t = $("#toast"),
+        stage = (s, msg) => {
+          t.dataset.s = s;
+          $("#tst").textContent = msg;
+          $("#undo").hidden = s > 0;
+        },
         end = (msg) => {
           clearInterval(sendT);
           t.classList.remove("on");
@@ -1685,13 +1714,17 @@ export default function initSite() {
         (f.onsubmit = (e) => {
           e.preventDefault();
           let n = 5;
-          const tick = () =>
-            n
-              ? ($("#tn").textContent = `Undo for ${n--} more seconds`)
-              : end("[Sent through Web3Forms here]");
+          const tick = () => {
+            if (n)
+              return ($("#tn").textContent = `Undo for ${n--} more seconds`);
+            clearInterval(sendT);
+            stage(1, "Sending");
+            $("#tn").textContent = "";
+            Promise.resolve("[Sent through Web3Forms here]").then(end);
+          };
           clearInterval(sendT);
           $("#fo").textContent = "";
-          $("#tst").textContent = "Sending your letter.";
+          stage(0, "Waiting");
           t.classList.remove("on");
           void t.offsetWidth; // restart the bar
           t.classList.add("on");
