@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { en } from "@/content/en";
 import log from "virtual:buildlog";
 
@@ -129,8 +130,24 @@ function Underneath() {
   );
 }
 
-// Work with me: an odometer rolls 1, 2, 3 over the offers (copy still to come, S9).
+// Work with me: an odometer rolls 1, 2, 3 over the offers, printed as tear-off tickets (R19); "Pick this offer"
+// opens a three-step questionnaire (S03) in a modal dialog (Escape closes, focus stays inside). Copy still to come (S9);
+// the answers are not sent anywhere yet.
+const OPTS = ["[Option A]", "[Option B]", "[Option C]", "[Not sure yet]"];
 function Hire() {
+  const dlg = useRef(null),
+    [offer, setOffer] = useState(1),
+    [step, setStep] = useState(0),
+    pick = (n) => {
+      setOffer(n);
+      setStep(0);
+      dlg.current.showModal();
+    },
+    next = () => {
+      if (step < 2) return setStep(step + 1);
+      dlg.current.close();
+      document.getElementById("q4").click();
+    };
   return (
     <section id="hire" data-sec="Work with me" aria-label="Work with me">
       <div className="stick g">
@@ -147,13 +164,64 @@ function Hire() {
           </div>
           <div>
             <h2 className="lbl">Work with me</h2>
-            <ul id="rows6"></ul>
+            <ul id="rows6">
+              {[1, 2, 3].map((n) => (
+                <li className="r2" key={n}>
+                  <span className="n">No. 0{n}</span>
+                  <span className="big">[Offer {n}]</span>
+                  <span className="more">
+                    <span>
+                      [What you get, how long it takes, from what price: Phase
+                      5]
+                    </span>
+                  </span>
+                  <button className="pick" onClick={() => pick(n)}>
+                    Pick this offer
+                  </button>
+                  <span className="stub" aria-hidden="true">
+                    TEAR HERE
+                  </span>
+                </li>
+              ))}
+            </ul>
             <a className="btn" id="q4" href="#contact">
               Ask for a quote
             </a>
           </div>
         </div>
       </div>
+      <dialog className="quiz" ref={dlg} aria-label={`[Offer ${offer}]`}>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            next();
+          }}
+        >
+          <p className="qp">
+            Offer: <b>[Offer {offer}]</b> · Question {step + 1} of 3 · every
+            step can be skipped
+          </p>
+          <span className="qbar" style={{ "--s": step + 1 }}></span>
+          {[0, 1, 2].map((q) => (
+            <fieldset key={q} hidden={q != step}>
+              <legend className="d">
+                [Question {q + 1}, Malaka writes it]
+              </legend>
+              {OPTS.map((t) => (
+                <label key={t}>
+                  <input type="radio" name={"q" + q} value={t} /> {t}
+                </label>
+              ))}
+            </fieldset>
+          ))}
+          <p className="qa">
+            <button type="button" className="skip" onClick={next}>
+              Skip
+            </button>
+            <button className="btn">Next ↵</button>
+          </p>
+        </form>
+      </dialog>
     </section>
   );
 }

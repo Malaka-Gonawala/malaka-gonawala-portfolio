@@ -692,15 +692,7 @@ export default function initSite() {
  open, earlier ones stay open but dimmer; at the end every offer is lit and the quote button fades in. Offer copy is
  placeholder until Phase 5. */
   const sg6 = (i) => 0.1 + i * 0.26,
-    out = (t) => 1 - (1 - t) ** 3,
-    OF = [1, 2, 3].map((n) => [
-      `[Offer ${n}]`,
-      "[What you get, how long it takes, from what price: Phase 5]",
-    ]);
-  $("#rows6").innerHTML = OF.map(
-    ([a, b], i) =>
-      `<li class="r2"><span class="n">${i + 1}/3</span><span class="big">${a}</span><span class="more"><span>${b}</span></span></li>`,
-  ).join("");
+    out = (t) => 1 - (1 - t) ** 3;
   const R2 = $$("#rows6 .r2"),
     R2M = $$("#rows6 .more");
   const odo = (p) => {
@@ -711,6 +703,7 @@ export default function initSite() {
     $("#strip").style.transform = `translateY(${-pos}em)`;
     R2.forEach((r, i) => {
       r.style.opacity = mix(i <= a ? (i == a ? 1 : 0.35) : 0.15, 1, fin);
+      r.classList.toggle("on", i == a);
       const t = out(cl((p - sg6(i) + 0.1) / 0.08));
       R2M[i].style.maxHeight = t * 5 + "em";
       R2M[i].style.opacity = t;
