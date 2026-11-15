@@ -848,7 +848,7 @@ export default function initSite() {
     fcx.fillText(tx, W - 16, hy - 12);
   };
   // keyboard: tabbing into the footer before it has decoded jumps to the end, so focus never lands under the hex
-  fc.addEventListener("focusin", () => {
+  fts.addEventListener("focusin", () => {
     if (live && S.ft < 1) {
       const e = $("#ft");
       scrollTo(0, e.offsetTop + e.offsetHeight - innerHeight);
@@ -1600,7 +1600,8 @@ export default function initSite() {
     };
 
   // routing: home sections stay in place; every page change goes through the address-bar loader
-  let here = location.hash;
+  let here = location.hash,
+    sendT;
   const show = (hash, keep) => {
     here = hash;
     const h = hash.slice(1),
@@ -1619,11 +1620,32 @@ export default function initSite() {
       sec.textContent = "/ " + (pg[2] || pg[0]);
       scrollTo(0, 0);
       const f = $("#f");
+      // R12: a real 5 s wait before the send, cancelled by Undo (the send itself is a placeholder until Web3Forms)
+      const t = $("#toast"),
+        end = (msg) => {
+          clearInterval(sendT);
+          t.classList.remove("on");
+          $("#tst").textContent = "";
+          $("#fo").textContent = msg;
+        };
       f &&
         (f.onsubmit = (e) => {
           e.preventDefault();
-          $("#fo").textContent =
-            "Prototype: nothing is sent. The real form uses Web3Forms.";
+          let n = 5;
+          const tick = () =>
+            n
+              ? ($("#tn").textContent = `Undo for ${n--} more seconds`)
+              : end("[Sent through Web3Forms here]");
+          clearInterval(sendT);
+          $("#fo").textContent = "";
+          $("#tst").textContent = "Sending your letter.";
+          t.classList.remove("on");
+          void t.offsetWidth; // restart the bar
+          t.classList.add("on");
+          tick();
+          sendT = setInterval(tick, 1000);
+          $("#undo").onclick = () =>
+            end("Not sent. Your letter is still here.");
         });
       reveal();
     } else {

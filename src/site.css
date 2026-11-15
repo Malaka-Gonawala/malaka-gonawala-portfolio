@@ -861,6 +861,9 @@ a {
 }
 .pick {
   grid-area: 1 / 3;
+}
+.pick,
+.peel {
   padding: 6px 14px;
   border: 1px solid var(--fg);
   border-radius: 99px;
@@ -1004,6 +1007,125 @@ a {
   font: inherit;
   text-decoration: underline;
   cursor: pointer;
+}
+/* R12 undo toast */
+.toast {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right, 0px), 4vw);
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 25;
+  display: none;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 24px;
+  min-width: min(340px, calc(100vw - 32px));
+  padding: 12px 14px 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--ubg);
+  color: var(--ufg);
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.6);
+}
+.toast.on {
+  display: grid;
+}
+.toast p {
+  margin: 0;
+  font: 700 15px var(--b);
+}
+.toast span {
+  grid-row: 2;
+  font: 11px var(--m);
+  opacity: 0.8;
+}
+.toast button {
+  grid-area: 1 / 2 / span 2;
+  padding: 6px 16px;
+  border: 0;
+  border-radius: 99px;
+  background: var(--gold);
+  color: var(--ongold);
+  font: 700 13px var(--b);
+  cursor: pointer;
+}
+.toast i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--sig);
+  transform-origin: 0 50%;
+  animation: drain 5s linear both;
+}
+@keyframes drain {
+  to {
+    transform: scaleX(0);
+  }
+}
+@media (max-width: 700px) {
+  .toast {
+    top: calc(var(--hh) + 8px);
+    bottom: auto;
+  }
+}
+/* R10 sticker */
+.stk {
+  position: absolute;
+  right: var(--g);
+  bottom: 110px;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  font: 11px var(--m);
+  color: var(--mut);
+}
+.stk p {
+  margin: 0;
+}
+.stk-pad {
+  position: relative;
+  display: grid;
+  place-items: start end;
+  width: 104px;
+  height: 104px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--ubg);
+}
+.stk-pad a {
+  color: var(--sig);
+  font: 11px var(--m);
+}
+.stk-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--ongold);
+  font: 500 18px var(--d);
+  box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.5);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition:
+    clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.5s,
+    color 0.2s;
+}
+.peeled .stk-face {
+  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
+  background: color-mix(in srgb, var(--gold) 70%, #000);
+  color: transparent;
+}
+@media (max-width: 700px) {
+  .stk {
+    top: calc(var(--hh) + 16px);
+    bottom: auto;
+    left: var(--g);
+    right: auto;
+    justify-items: start;
+  }
 }
 /* footer: decoded from hex */
 #ft {

@@ -25,6 +25,13 @@ export default function App() {
         <kbd id="ent">↵</kbd>
         <span id="ubl"></span>
       </div>
+      {/* R12: the letter waits 5 s before it is sent; Undo cancels it */}
+      <div className="toast" id="toast">
+        <p role="status" id="tst"></p>
+        <span id="tn" aria-hidden="true"></span>
+        <button id="undo">Undo</button>
+        <i aria-hidden="true"></i>
+      </div>
       <div id="cur" aria-hidden="true">
         Open
       </div>
