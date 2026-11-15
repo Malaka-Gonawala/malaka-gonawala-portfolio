@@ -1751,6 +1751,89 @@ export default function initSite() {
       live && G.to(xr, { "--r": r + "px", duration: 0.5, ease: "out" });
     };
   live && G.set(xr, { "--r": "0px" });
+  // K01 (mouse only): a low-res WebGL trail wipes the front away so the underside shows, and heals in about 1.5 s;
+  // it is fed only while the hero is on screen and its loop stops once the trail has healed
+  const fluid = (() => {
+    const c = document.createElement("canvas"),
+      gl = live && c.getContext("webgl", { preserveDrawingBuffer: true });
+    if (!gl) return;
+    const pg = gl.createProgram(),
+      sh = (t, s) => {
+        const o = gl.createShader(t);
+        gl.shaderSource(o, s);
+        gl.compileShader(o);
+        gl.attachShader(pg, o);
+      },
+      U = (n) => gl.getUniformLocation(pg, n);
+    sh(
+      gl.VERTEX_SHADER,
+      "attribute vec2 p;varying vec2 v;void main(){v=p*.5+.5;gl_Position=vec4(p,0,1);}",
+    );
+    // a = last point and aspect, b = this point and strength; the old trail drifts like smoke and fades
+    sh(
+      gl.FRAGMENT_SHADER,
+      `precision mediump float;uniform sampler2D u;uniform vec3 a,b;uniform float k;varying vec2 v;
+void main(){vec2 d=b.xy-a.xy,q=v-a.xy-d*clamp(dot(v-a.xy,d)/max(dot(d,d),1e-6),0.,1.);
+float o=texture2D(u,v+.002*vec2(sin(v.y*20.+k),cos(v.x*20.+k))).a*.985-.004;
+gl_FragColor=vec4(max(o,b.z*smoothstep(.15,.04,length(q*vec2(a.z,1.)))));}`,
+    );
+    gl.linkProgram(pg);
+    gl.useProgram(pg);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(
+      gl.ARRAY_BUFFER,
+      new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]),
+      gl.STATIC_DRAW,
+    );
+    gl.enableVertexAttribArray(0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    gl.bindTexture(gl.TEXTURE_2D, gl.createTexture());
+    [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T].forEach((w) =>
+      gl.texParameteri(gl.TEXTURE_2D, w, gl.CLAMP_TO_EDGE),
+    );
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    let m, p, idle;
+    const frame = () => {
+      const r = xr.getBoundingClientRect(),
+        w = Math.min(320, Math.ceil(r.width / 6)),
+        h = Math.ceil((w * r.height) / r.width),
+        q = m && [(m[0] - r.left) / r.width, 1 - (m[1] - r.top) / r.height];
+      if (c.width != w || c.height != h) {
+        c.width = w;
+        c.height = h;
+        gl.viewport(0, 0, w, h);
+        gl.texImage2D(
+          gl.TEXTURE_2D,
+          0,
+          gl.RGBA,
+          w,
+          h,
+          0,
+          gl.RGBA,
+          gl.UNSIGNED_BYTE,
+          null,
+        );
+      }
+      gl.uniform3f(U("a"), ...(p || q || [0, 0]), r.width / r.height);
+      gl.uniform3f(U("b"), ...(q || [0, 0]), q ? 1 : 0);
+      gl.uniform1f(U("k"), performance.now() / 300);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      gl.copyTexImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 0, 0, w, h, 0);
+      xr.style.maskImage = xr.style.webkitMaskImage = `url(${c.toDataURL()})`;
+      p = q;
+      m = null;
+      if (++idle > 130) {
+        G.ticker.remove(frame);
+        xr.classList.remove("fl");
+      }
+    };
+    return (e) => {
+      m = [e.clientX, e.clientY];
+      idle > 130 || idle == null ? G.ticker.add(frame) : 0;
+      idle = 0;
+      xr.classList.add("fl");
+    };
+  })();
   ["pointermove", "pointerdown"].forEach((t) =>
     document.addEventListener(t, (e) => {
       const r = $("#ab").getBoundingClientRect();
@@ -1762,6 +1845,7 @@ export default function initSite() {
         e.clientY < r.top
       )
         return lensR && lensTo(0);
+      if (fluid && e.pointerType == "mouse") return fluid(e);
       xr.style.setProperty("--x", e.clientX + "px");
       xr.style.setProperty("--y", e.clientY + "px");
       lensR || lensTo(wide() ? 150 : 100);

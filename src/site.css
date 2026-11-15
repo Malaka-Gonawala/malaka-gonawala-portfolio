@@ -69,11 +69,41 @@ a {
   color: var(--ongold);
   font-weight: 700;
   padding: 14px 26px;
-  border-radius: 999px;
+  border-radius: 12px;
   text-decoration: none;
   border: 0;
   font-size: 16px;
   cursor: pointer;
+  /* U04: a key with a 3 px edge; with a mouse it goes down when pressed */
+  box-shadow: 0 3px 0 color-mix(in oklab, var(--gold), #000 35%);
+}
+@media (hover: hover) {
+  .btn {
+    transition:
+      translate 0.08s,
+      box-shadow 0.08s;
+  }
+  .btn:active {
+    translate: 0 3px;
+    box-shadow: 0 0 0 color-mix(in oklab, var(--gold), #000 35%);
+  }
+}
+/* U05: text links keep a thin underline; a thicker one draws in on hover and focus */
+:is(.page p, .page li, #fc) a {
+  text-decoration: none;
+  background:
+    linear-gradient(currentColor 0 0) 0 100% / 0 3px no-repeat,
+    linear-gradient(currentColor 0 0) 0 100% / 100% 1px no-repeat;
+}
+:is(.page p, .page li, #fc) a:is(:hover, :focus-visible) {
+  background-size:
+    100% 3px,
+    100% 1px;
+}
+@media (hover: hover) {
+  :is(.page p, .page li, #fc) a {
+    transition: background-size 0.25s;
+  }
 }
 .ph {
   background: var(--sf);
@@ -496,6 +526,12 @@ a {
   text-align: center;
   pointer-events: none;
   clip-path: circle(var(--r, 0px) at var(--x, 50%) var(--y, 50%));
+}
+/* K01: the mouse trail is a low-res mask, scaled up so its edge is soft */
+.xr.fl {
+  clip-path: none;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
 }
 .xr p {
   margin: 0;
