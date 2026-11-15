@@ -128,6 +128,14 @@ a {
   display: flex;
   align-items: center;
   gap: 18px;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .hr {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 0;
+  }
 }
 /* Calm switch (C11) */
 .calm {
@@ -1247,6 +1255,60 @@ body.hph #ubp:empty::after {
   vertical-align: -0.18em;
   background: var(--fg);
   animation: bl 1s steps(1) infinite;
+}
+/* S10 prompt */
+.ck {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 8px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--ufg);
+  font: 13px var(--m);
+}
+.ck:focus-within {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.ck input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: inherit;
+  font: inherit;
+}
+.ck kbd {
+  font: 11px var(--m);
+  opacity: 0.6;
+}
+.ckw #ckn {
+  margin: 6px 0 0;
+  color: var(--ufg);
+  padding: 4px 8px;
+  background: var(--ubg);
+  font: 12px var(--m);
+  white-space: normal;
+}
+#ckn span {
+  color: var(--sig);
+}
+#menu .ckw {
+  margin-bottom: 14px;
+}
+.hd .ckw {
+  position: absolute;
+  right: max(16px, env(safe-area-inset-right, 0px), 4vw);
+  bottom: 14px;
+  width: min(400px, 40vw);
+  z-index: 10;
+}
+#ls a.dim,
+.tab.dim {
+  filter: opacity(0.35);
 }
 /* Reduced motion: the OS setting or Calm (class set in index.html) */
 :root.rm *,

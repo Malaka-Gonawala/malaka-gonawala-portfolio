@@ -14,6 +14,20 @@ export default function Menu() {
     <>
       <div id="menu" className="g" hidden>
         <div>
+          {/* S10: a prompt that filters the page list; Enter opens the first match. Moved into the tab overview on wide screens. */}
+          <div className="ckw" id="ckw">
+            <form className="ck" id="ck" role="search">
+              <label htmlFor="cki" className="ps">
+                C:\malaka&gt;
+              </label>
+              <input id="cki" autoComplete="off" spellCheck="false" />
+              <kbd>Ctrl K</kbd>
+            </form>
+            <p id="ckn" hidden>
+              [Not a page? The assistant answers.]{" "}
+              <span>PLANNED · Release 2</span>
+            </p>
+          </div>
           <p>
             <span className="ps">PS C:\Users\Malaka&gt; </span>
             <span id="cmd"></span>

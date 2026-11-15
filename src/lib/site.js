@@ -1235,8 +1235,30 @@ export default function initSite() {
     hd.classList.toggle("mo", o);
     $$("#homeView,#pageView").forEach((e) => (e.inert = o));
   };
+  // S10 prompt: dims the pages that do not match (all stay visible and clickable); no match shows the Release 2 note
+  const cki = $("#cki"),
+    ckMatch = () => {
+      const q = cki.value.trim().toLowerCase(),
+        m = (wideMenu ? TB : LS).filter((a) => {
+          const hit = a.hash.slice(1).includes(q);
+          a.classList.toggle("dim", !!q && !hit);
+          return hit;
+        });
+      $("#ckn").hidden = !q || m.length > 0;
+      return m;
+    };
+  let ckWant = false;
+  cki.oninput = ckMatch;
+  $("#ck").onsubmit = (e) => {
+    e.preventDefault();
+    ckMatch()[0]?.click();
+  };
   const reset = () => {
     mtl && mtl.kill();
+    ckWant = false;
+    cki.value = "";
+    menu.firstElementChild.prepend($("#ckw"));
+    ckMatch();
     menu.hidden = tabs.hidden = true;
     tabs.classList.remove("on");
     label(false);
@@ -1338,7 +1360,7 @@ export default function initSite() {
       );
     hdWide(mtl);
     if (!live) mtl.progress(1);
-    V[0] && V[0].focus({ preventScroll: true });
+    (ckWant ? cki : V[0])?.focus({ preventScroll: true });
   };
   // LastWriteTime is the visitor's own date and time, read when the listing is printed
   const stamp = () => {
@@ -1372,7 +1394,11 @@ export default function initSite() {
       .add(type($("#cmd"), "cd site", 0.3))
       .from("#ls>*", { opacity: 0, duration: 0.01, stagger: 0.05 })
       .addLabel("printed", "+=.1")
-      .call(() => LS[0].focus({ preventScroll: true }), null, "printed");
+      .call(
+        () => (ckWant ? cki : LS[0]).focus({ preventScroll: true }),
+        null,
+        "printed",
+      );
     hdStep(
       mtl,
       (0.5 * Math.ceil((rows * hd.offsetHeight) / innerHeight)) / rows,
@@ -1430,6 +1456,7 @@ export default function initSite() {
           a.hash == cur || (a.hash == "#work" && cur.startsWith("#p-"));
       LS.forEach((a) => a.toggleAttribute("aria-current", cu(a)));
       TB.forEach((t) => (t.hidden = cu(t)));
+      (wideMenu ? hd : menu.firstElementChild).prepend($("#ckw"));
       return wideMenu ? openTabs() : openPS();
     }
     const fin = () => {
@@ -1544,6 +1571,10 @@ export default function initSite() {
   addEventListener("keydown", (e) => {
     if (e.key == "Escape" && menuOpen()) {
       setMenu(false).then(() => flip.focus());
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() == "k") {
+      e.preventDefault();
+      menuOpen() ? cki.focus() : ((ckWant = true), setMenu(true));
     }
     if (e.key == "u" && !/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))
       setMenu(!menuOpen());
