@@ -1,17 +1,17 @@
-# Graph Report - malaka-gonawala-portfolio  (2026-11-14)
+# Graph Report - malaka-gonawala-portfolio  (2026-11-15)
 
 ## Corpus Check
-- 425 files · ~686,222 words
+- 425 files · ~687,128 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 86 file(s) not represented in the graph (top: .csv 37, (none) 16, .woff2 9)
 
 ## Summary
-- 5009 nodes · 7035 edges · 421 communities (318 shown, 103 thin omitted)
+- 5013 nodes · 7042 edges · 427 communities (321 shown, 106 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 150 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0ff07d57`
+- Built from commit: `222664c8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -104,7 +104,6 @@
 - Components (`references/components/`)
 - animate.md
 - Handle `generate`
-- shadcn/SKILL.md
 - 5. Re-render Optimization
 - Lists and tables
 - Platform considerations
@@ -262,11 +261,11 @@
 - Resources
 - Live Photos
 - Apple Design (Human Interface Guidelines)
-- _style_is_dark_primary
+- test_design_system_mode.py
 - Android platform
 - Persona-Based Design Testing
-- Responsive Design
-- _normalize
+- DesignSystemGenerator
+- VariantBuilder
 - Forms & Inputs
 - Web Application Testing
 - Project rules
@@ -296,7 +295,7 @@
 - L
 - Performance Optimization
 - Portfolio project conventions
-- _filter_anti_patterns_for_mode
+- Home.jsx
 - 1. Eliminating Waterfalls
 - 2. Bundle Size Optimization
 - Issue tracker: GitHub
@@ -318,7 +317,7 @@
 - AnimatePresence
 - 8. Advanced Patterns
 - Web Interface Guidelines
-- _row_identities
+- quieter.md
 - compilerOptions
 - Heuristics Scoring Guide
 - Persuade and Experience
@@ -353,7 +352,7 @@
 - inputs/index.md
 - patterns/index.md
 - technologies/index.md
-- test_skill_script_paths.py
+- _domain_keywords
 - architecture-avoid-boolean-props.md
 - architecture-compound-components.md
 - patterns-children-over-render-props.md
@@ -428,12 +427,17 @@
 - triage-labels.md
 - build-pdf.sh
 - diary/README.md
+- adapt.native.md
 - Visualize: Direction Comps & Asset Production
-- bolder.md
+- doctor.md
 - Impeccable Documenter
+- Extract Flow
+- Step 4: Map Tokens to the Theme
 - TestStackFlagWithDesignSystem
-- Read
+- /impeccable hooks
+- Plan and asset review
 - TestTextLayoutRetrieval
+- Icons
 
 ## God Nodes (most connected - your core abstractions)
 1. `search()` - 44 edges
@@ -441,8 +445,8 @@
 3. `search_stack()` - 36 edges
 4. `connectSSE()` - 34 edges
 5. `setLiveState()` - 33 edges
-6. `showToast()` - 33 edges
-7. `resumeSession()` - 33 edges
+6. `resumeSession()` - 33 edges
+7. `showToast()` - 33 edges
 8. `initGlobalBar()` - 30 edges
 9. `el()` - 29 edges
 10. `handleKeyDown()` - 28 edges
@@ -450,10 +454,10 @@
 ## Surprising Connections (you probably didn't know these)
 - `Type scale` --references--> `cn()`  [INFERRED]
   .claude/skills/shadcn/design-system.md → src/lib/utils.js
-- `Use cn() for conditional classes` --references--> `cn()`  [INFERRED]
-  .claude/skills/shadcn/rules/styling.md → src/lib/utils.js
 - `Styling & Tailwind → [styling.md](./rules/styling.md)` --references--> `cn()`  [INFERRED]
   .claude/skills/shadcn/SKILL.md → src/lib/utils.js
+- `Use cn() for conditional classes` --references--> `cn()`  [INFERRED]
+  .claude/skills/shadcn/rules/styling.md → src/lib/utils.js
 - `Step 2: Act by severity` --references--> `init()`  [INFERRED]
   .claude/skills/impeccable/reference/doctor.md → .claude/skills/impeccable/scripts/live-browser.js
 - `What this owns, and what it does not` --references--> `init()`  [INFERRED]
@@ -462,7 +466,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (421 total, 103 thin omitted)
+## Communities (427 total, 106 thin omitted)
 
 ### Community 0 - "live-browser.js"
 Cohesion: 0.03
@@ -477,16 +481,16 @@ Cohesion: 0.07
 Nodes (42): read_rows(), TestAccessibilityGuidance, TestChartsTypographyAndIcons, TestCurrentReactGuidance, TestSemanticColors, _catalog_date(), _check_app_interface_contract(), _check_catalog_contract() (+34 more)
 
 ### Community 3 - "core.py"
-Cohesion: 0.13
-Nodes (14): _contains_phrase(), _domain_keywords(), _file_signature(), _get_bm25(), _load_csv(), _load_csv_snapshot(), _load_product_keywords(), _load_rows_or_empty() (+6 more)
+Cohesion: 0.10
+Nodes (16): _contains_phrase(), _exact_match_diagnostic(), _exact_row_identity(), _legacy_successor_guidance(), _normalize(), _passes_threshold(), _project_row(), _query_coverage() (+8 more)
 
 ### Community 4 - "connectSSE"
 Cohesion: 0.05
 Nodes (102): abandonForeignSession(), abandonSupersededGo(), applyPlaceholderDimensions(), applySavedSessionMeta(), buildCyclingRow(), captureAndEmit(), checkpointPayload(), clampVariantIndex() (+94 more)
 
 ### Community 5 - "design_system.py"
-Cohesion: 0.05
-Nodes (18): ansi_ljust(), _detect_page_type(), format_ascii_box(), add_wrapped(), wrap_text(), format_markdown(), format_page_override_md(), generate_design_system() (+10 more)
+Cohesion: 0.09
+Nodes (10): _detect_page_type(), format_page_override_md(), generate_design_system(), _generate_intelligent_overrides(), persist_design_system(), _resolve_dial(), safe_slug(), _write_persisted_file() (+2 more)
 
 ### Community 6 - "el"
 Cohesion: 0.09
@@ -497,16 +501,16 @@ Cohesion: 0.09
 Nodes (45): armPageChatForTyping(), attachSteerFocusDebug(), attachSteerFocusGuard(), clearSteerAwaitTimer(), clearSteerFocusRecoverTimer(), collapsePageChat(), expandPageChat(), finishVoiceSession() (+37 more)
 
 ### Community 8 - "DesignSystemGenerator"
-Cohesion: 0.07
-Nodes (13): _button_outline_text_color(), _contrast_ratio(), _derive_dark_palette(), DesignSystemGenerator, format_master_md(), _palette_is_dark(), _relative_luminance(), _select_palette_for_mode() (+5 more)
+Cohesion: 0.09
+Nodes (10): _button_outline_text_color(), _contrast_ratio(), _derive_dark_palette(), format_master_md(), _palette_is_dark(), _relative_luminance(), _select_palette_for_mode(), TestEndToEndCoherence (+2 more)
 
 ### Community 9 - "DesignSystemGenerator"
-Cohesion: 0.06
-Nodes (12): apply_decision_rules(), _object_without_duplicates(), parse_decision_rules(), _validate_action(), read_rows(), split_values(), style_identities(), TestGeneratedCatalogContract (+4 more)
+Cohesion: 0.08
+Nodes (10): apply_decision_rules(), _object_without_duplicates(), parse_decision_rules(), _validate_action(), split_values(), style_identities(), TestGeneratedCatalogContract, TestLandingAndStackContract (+2 more)
 
 ### Community 10 - "search_stack"
-Cohesion: 0.08
-Nodes (9): _exact_stack_identifier(), _project_row(), search_stack(), _valid_max_results(), TestDiagnosticsContracts, _rows(), TestNativeDesktopStackFreshness, _rows() (+1 more)
+Cohesion: 0.10
+Nodes (7): _exact_stack_identifier(), search_stack(), _valid_max_results(), _rows(), TestNativeDesktopStackFreshness, _rows(), TestWebStackFreshness
 
 ### Community 11 - "initGlobalBar"
 Cohesion: 0.07
@@ -525,8 +529,8 @@ Cohesion: 0.04
 Nodes (44): 1. Forgetting AnimatePresence for Exit Animations, 1. Hover Animations, 1. Motion Components, 1. Use Transform Properties, 2. Animate Prop, 2. Individual Transform Properties, 2. Missing key Prop in Lists, 2. Tap/Press Animations (+36 more)
 
 ### Community 15 - "new-work.md"
-Cohesion: 0.07
-Nodes (25): Recommended Actions, Craft (deprecated alias), Monorepo notes, Opting out of the boot check, Step 1: Run the pass, Step 2: Act by severity, Step 3: Deprecated fields are binding, Step 4: Do not overclaim on truth drift (+17 more)
+Cohesion: 0.08
+Nodes (21): Recommended Actions, Craft (deprecated alias), Apply, Live-mode signature params, Set the spatial thesis, Two isolated assessments, Verify, Visitor mode (+13 more)
 
 ### Community 16 - "pathlib"
 Cohesion: 0.08
@@ -551,10 +555,6 @@ Nodes (33): Adding transitions and animating content updates, Anatomy, Best prac
 ### Community 21 - "Wallet"
 Cohesion: 0.06
 Nodes (31): Background, Boarding passes, Change log, Coupons, Designing passes, Developer documentation, Displaying order and fulfillment details, Event tickets (+23 more)
-
-### Community 22 - "MotionAnimationGenerator"
-Cohesion: 0.05
-Nodes (4): main(), MotionAnimationGenerator, main(), VariantBuilder
 
 ### Community 23 - "Typography"
 Cohesion: 0.07
@@ -582,23 +582,23 @@ Nodes (18): actOnAgentTarget(), agentTargetBusyReason(), agentTargetOverlayGone(
 
 ### Community 29 - "Responsive Design"
 Cohesion: 0.08
-Nodes (22): Assess Adaptation Challenge, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Techniques, Mobile Adaptation (Desktop → Mobile), Adaptation Strategies (+14 more)
+Nodes (25): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+17 more)
 
 ### Community 30 - "updatePendingCounter"
 Cohesion: 0.17
 Nodes (26): clearStoredManualApplyState(), dismissToast(), fetchPendingCount(), handleManualEditActivity(), hidePendingApplyDock(), manualApplyLoadingText(), manualApplyStateKey(), manualEditEventForCurrentPage() (+18 more)
 
 ### Community 31 - "search"
-Cohesion: 0.12
-Nodes (4): search(), _style_search_destination(), TestSearchDomains, TestStyleTaxonomy
+Cohesion: 0.10
+Nodes (5): search(), _style_search_destination(), TestDiagnosticsContracts, TestSearchDomains, TestStyleTaxonomy
 
 ### Community 32 - "mountSvelteComponentVariant"
 Cohesion: 0.08
 Nodes (42): acceptedDomAlreadyClean(), applyOriginalAttrsToSvelteAnchor(), buildSvelteExpressionTextMap(), buildSveltePropValuesFromLiveElement(), buildSveltePropValuesV2(), clearHandledWrapperReloadStamp(), cloneWithoutElements(), collectTextNodes() (+34 more)
 
 ### Community 33 - "BM25"
-Cohesion: 0.14
-Nodes (4): BM25, _suggest_identities(), TestBm25CoreBehavior, TestTokenizer
+Cohesion: 0.13
+Nodes (5): BM25, _get_bm25(), _suggest_identities(), TestBm25CoreBehavior, TestTokenizer
 
 ### Community 34 - "Machine learning"
 Cohesion: 0.08
@@ -649,8 +649,8 @@ Cohesion: 0.10
 Nodes (20): Agency, Agency, Change log, Craft, Craft, Delight, Delight, Design principles (+12 more)
 
 ### Community 46 - "impeccable/SKILL.md"
-Cohesion: 0.07
-Nodes (23): Craft floor, Refuse, Verify, Extract Flow, Step 1: Discover the Design System, Step 2: Identify Patterns, Step 3: Plan Extraction, Step 4: Extract & Enrich (+15 more)
+Cohesion: 0.10
+Nodes (15): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat, Craft floor, Refuse, Verify (+7 more)
 
 ### Community 47 - "The Toolkit"
 Cohesion: 0.10
@@ -677,8 +677,8 @@ Cohesion: 0.19
 Nodes (17): createLiveBrowserSessionState(), clearHandled(), clearScrollY(), clearSession(), isHandled(), loadSession(), markHandled(), nextCheckpointRevision() (+9 more)
 
 ### Community 53 - "Design Systems from DESIGN.md"
-Cohesion: 0.10
-Nodes (20): Contents, Coverage check, Dark mode, Design Systems from DESIGN.md, Elevation, Focus, Fonts, Inputs to Confirm (+12 more)
+Cohesion: 0.15
+Nodes (13): Contents, Coverage check, Design Systems from DESIGN.md, Inputs to Confirm, Known traps, Picking a style, Report Back, Step 1: Scaffold (+5 more)
 
 ### Community 54 - "Project Overview {.front}"
 Cohesion: 0.10
@@ -722,7 +722,7 @@ Nodes (17): Augmented reality, Best practices, Communicating with people, Design
 
 ### Community 65 - "shadcn/ui"
 Cohesion: 0.11
-Nodes (18): Chat & Messaging → [chat.md](./rules/chat.md), CLI, Component Docs, Examples, and Usage, Component Structure → [composition.md](./rules/composition.md), Critical Rules, Current Project Context, Design Systems from DESIGN.md, Detailed References (+10 more)
+Nodes (19): Chat & Messaging → [chat.md](./rules/chat.md), CLI, Component Docs, Examples, and Usage, Component Structure → [composition.md](./rules/composition.md), Critical Rules, Current Project Context, Design Systems from DESIGN.md, Detailed References (+11 more)
 
 ### Community 66 - "UI/UX Pro Max - Design Intelligence"
 Cohesion: 0.11
@@ -753,12 +753,12 @@ Cohesion: 0.12
 Nodes (14): Basic Trigger, Do Not, GSAP ScrollTrigger, Horizontal scroll (containerAnimation), Key config options, Learn More, Markers (Development), Official GSAP best practices (+6 more)
 
 ### Community 73 - "starter_motion/src/App.jsx"
-Cohesion: 0.16
+Cohesion: 0.21
 Nodes (11): App(), DraggableBox(), HoverCard(), container, item, StaggerList(), Assistant activity uses Trace, Choosing between overlay components (+3 more)
 
 ### Community 74 - "cn"
-Cohesion: 0.20
-Nodes (14): ColorPair(), contrast(), luminance(), toHex(), toRgb(), defaultStates, previewState(), StateMatrix() (+6 more)
+Cohesion: 0.24
+Nodes (12): ColorPair(), contrast(), luminance(), toHex(), toRgb(), defaultStates, previewState(), StateMatrix() (+4 more)
 
 ### Community 75 - "Commands"
 Cohesion: 0.12
@@ -769,8 +769,8 @@ Cohesion: 0.12
 Nodes (16): 1.1 Avoid Boolean Prop Proliferation, 1.2 Use Compound Components, 1. Component Architecture, 2.1 Decouple State Management from UI, 2.2 Define Generic Context Interfaces for Dependency Injection, 2.3 Lift State into Provider Components, 2. State Management, 3.1 Create Explicit Component Variants (+8 more)
 
 ### Community 77 - "sys"
-Cohesion: 0.10
-Nodes (5): read_rows(), read_rows(), TestTextLayoutDataContracts, is_server_ready(), main()
+Cohesion: 0.08
+Nodes (9): main(), resolve(), shipped_invocations(), SkillScriptPathsTest, read_rows(), read_rows(), TestTextLayoutDataContracts, is_server_ready() (+1 more)
 
 ### Community 78 - "Charts"
 Cohesion: 0.12
@@ -811,10 +811,6 @@ Nodes (14): Accessibility and control, Choose material by meaning, Find the job,
 ### Community 87 - "Handle `generate`"
 Cohesion: 0.12
 Nodes (16): 1. Read the screenshot (if present), 2. Wrap the element, 3. Load the action's reference, 4. Plan three variants: identity first, then mode, then axes, 5. Apply the freeform prompt (if present), 6. Deliver variants, 7. Parameters (composition-sized, 0-4 per variant), 8. Signal done (+8 more)
-
-### Community 88 - "shadcn/SKILL.md"
-Cohesion: 0.20
-Nodes (4): Icons, Icons in Button use data-icon attribute, No sizing classes on icons inside components, Pass icons as component objects, not string keys
 
 ### Community 89 - "5. Re-render Optimization"
 Cohesion: 0.12
@@ -929,8 +925,8 @@ Cohesion: 0.14
 Nodes (13): Adding place cards outside of a map, Best practices, Change log, Custom information, Developer documentation, Displaying place cards in a map, Indoor maps, Maps (+5 more)
 
 ### Community 118 - "Impeccable Asset Producer"
-Cohesion: 0.14
-Nodes (12): Act on the receipt, Assemble and review, Plan and asset review, Plan, capture, serve, Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract (+4 more)
+Cohesion: 0.22
+Nodes (7): Core Rule, Decision Comps, Impeccable Asset Producer, Input Contract, Output Contract, Review handoff, The job
 
 ### Community 119 - "New visual work"
 Cohesion: 0.14
@@ -1093,8 +1089,8 @@ Cohesion: 0.17
 Nodes (11): Assess Current State, Code Simplification, Content Simplification, Document Removed Complexity, Information Architecture, Interaction Simplification, Layout Simplification, Plan Simplification (+3 more)
 
 ### Community 159 - "Hardening Dimensions"
-Cohesion: 0.08
-Nodes (21): Accessibility Resilience, Assess Hardening Needs, Edge Cases & Boundary Conditions, Error Handling, Hardening Dimensions, Input Validation & Sanitization, Internationalization (i18n), Performance Resilience (+13 more)
+Cohesion: 0.17
+Nodes (11): Accessibility Resilience, Assess Hardening Needs, Edge Cases & Boundary Conditions, Error Handling, Hardening Dimensions, Input Validation & Sanitization, Internationalization (i18n), Performance Resilience (+3 more)
 
 ### Community 160 - "Component Composition"
 Cohesion: 0.17
@@ -1198,7 +1194,7 @@ Nodes (10): Acknowledgments, Contributing, Creating a New Rule, File Naming Conv
 
 ### Community 186 - "src/App.jsx"
 Cohesion: 0.19
-Nodes (14): App(), Header(), AddressBar(), Contact(), Hire(), Home(), Term(), Underneath() (+6 more)
+Nodes (8): App(), Header(), Menu(), Row(), en, work, initSite(), PITCH
 
 ### Community 187 - "Text views"
 Cohesion: 0.20
@@ -1440,9 +1436,9 @@ Nodes (7): Best practices, Developer documentation, Live Photos, Platform consid
 Cohesion: 0.25
 Nodes (7): Answering, Apple Design (Human Interface Guidelines), Coverage, Designing a new component, Designing a screen, Finding the right article, Gotchas
 
-### Community 247 - "_style_is_dark_primary"
-Cohesion: 0.21
-Nodes (4): _query_wants_dark(), _resolve_color_mode(), _style_is_dark_primary(), TestModeResolution
+### Community 247 - "test_design_system_mode.py"
+Cohesion: 0.07
+Nodes (15): ansi_ljust(), _filter_anti_patterns_for_mode(), format_ascii_box(), add_wrapped(), wrap_text(), format_markdown(), hex_to_ansi(), _mode_support_labels() (+7 more)
 
 ### Community 248 - "Android platform"
 Cohesion: 0.25
@@ -1452,13 +1448,9 @@ Nodes (8): Android platform, Color & theming, Components & motion, Layout & stru
 Cohesion: 0.25
 Nodes (8): 1. Impatient Power User: "Alex", 2. Confused First-Timer: "Jordan", 3. Accessibility-Dependent User: "Sam", 4. Deliberate Stress Tester: "Riley", 5. Distracted Mobile User: "Casey", Persona-Based Design Testing, Project-Specific Personas, Selecting Personas
 
-### Community 250 - "Responsive Design"
-Cohesion: 0.20
-Nodes (10): Breakpoints: Content-Driven, Detect Input Method, Not Just Screen Size, Layout Adaptation Patterns, Mobile-First: Write It Right, Picture Element for Art Direction, Responsive Design, Responsive Images: Get It Right, Safe Areas: Handle the Notch (+2 more)
-
-### Community 251 - "_normalize"
-Cohesion: 0.22
-Nodes (5): _exact_match_diagnostic(), _legacy_successor_guidance(), _normalize(), _stack_query_requests_legacy(), _stack_row_filter()
+### Community 250 - "DesignSystemGenerator"
+Cohesion: 0.12
+Nodes (4): DesignSystemGenerator, TestReasoningMatch, read_rows(), TestReasoningContract
 
 ### Community 252 - "Forms & Inputs"
 Cohesion: 0.25
@@ -1576,6 +1568,10 @@ Nodes (7): Exit Before Enter (Reduce Simultaneous Animations), Lazy Motion Compo
 Cohesion: 0.29
 Nodes (6): Before coding, Content, Look, Portfolio project conventions, Quality bar, Repo
 
+### Community 281 - "Home.jsx"
+Cohesion: 0.29
+Nodes (10): AddressBar(), Contact(), Hire(), Home(), LAYERS, Layers(), OPTS, Sticker() (+2 more)
+
 ### Community 282 - "1. Eliminating Waterfalls"
 Cohesion: 0.29
 Nodes (7): 1.1 Check Cheap Conditions Before Async Flags, 1.2 Defer Await Until Needed, 1.3 Dependency-Based Parallelization, 1.4 Prevent Waterfall Chains in API Routes, 1.5 Promise.all() for Independent Operations, 1.6 Strategic Suspense Boundaries, 1. Eliminating Waterfalls
@@ -1660,9 +1656,9 @@ Nodes (5): 8.1 Do Not Put Effect Events in Dependency Arrays, 8.2 Initialize App
 Cohesion: 0.40
 Nodes (4): Guidelines Source, How It Works, Usage, Web Interface Guidelines
 
-### Community 303 - "_row_identities"
-Cohesion: 0.33
-Nodes (3): _exact_row_identity(), _row_identities(), _style_identity()
+### Community 303 - "quieter.md"
+Cohesion: 0.18
+Nodes (10): Assess Current State, Color Refinement, Composition Refinement, Motion Reduction, Plan Refinement, Refine the Design, Simplification, Verify Quality (+2 more)
 
 ### Community 304 - "compilerOptions"
 Cohesion: 0.40
@@ -1716,44 +1712,64 @@ Nodes (4): layout, Layout Props, layoutDependency, layoutId
 Cohesion: 0.50
 Nodes (3): File-System Paths, Import Paths, Prefer Statically Analyzable Paths
 
-### Community 338 - "test_skill_script_paths.py"
-Cohesion: 0.38
-Nodes (3): resolve(), shipped_invocations(), SkillScriptPathsTest
+### Community 338 - "_domain_keywords"
+Cohesion: 0.22
+Nodes (6): _domain_keywords(), _file_signature(), _load_csv(), _load_csv_snapshot(), _load_product_keywords(), _load_rows_or_empty()
+
+### Community 414 - "adapt.native.md"
+Cohesion: 0.25
+Nodes (7): Adaptation Strategies, Assess Adaptation Challenge, Implement & Verify, Orientation & foldables, Phone → Tablet (iPad / large screens), Platform → platform (iOS ↔ Android), Web → native (porting a website or web app)
 
 ### Community 415 - "Visualize: Direction Comps & Asset Production"
 Cohesion: 0.33
 Nodes (5): After approval: the comp becomes a spec, Generate three compositional options, One approval point, Plates and provenance, Visualize: Direction Comps & Asset Production
 
-### Community 416 - "bolder.md"
-Cohesion: 0.33
-Nodes (5): Before you finish, Scope is sovereign, The amplification, The skeleton test, Why it reads flat
+### Community 416 - "doctor.md"
+Cohesion: 0.25
+Nodes (7): Monorepo notes, Opting out of the boot check, Step 1: Run the pass, Step 2: Act by severity, Step 3: Deprecated fields are binding, Step 4: Do not overclaim on truth drift, What this owns, and what it does not
 
 ### Community 417 - "Impeccable Documenter"
 Cohesion: 0.40
 Nodes (4): Impeccable Documenter, Input Contract, Output Contract, Workflow
 
-### Community 422 - "Read"
+### Community 418 - "Extract Flow"
+Cohesion: 0.25
+Nodes (7): Extract Flow, Step 1: Discover the Design System, Step 2: Identify Patterns, Step 3: Plan Extraction, Step 4: Extract & Enrich, Step 5: Migrate, Step 6: Document
+
+### Community 419 - "Step 4: Map Tokens to the Theme"
+Cohesion: 0.25
+Nodes (8): Dark mode, Elevation, Focus, Fonts, Radius, Role mapping, Step 4: Map Tokens to the Theme, Type scale
+
+### Community 421 - "/impeccable hooks"
+Cohesion: 0.33
+Nodes (6): Constraints, Failure modes, Flow, /impeccable hooks, Routing, Triage findings
+
+### Community 422 - "Plan and asset review"
 Cohesion: 0.50
-Nodes (3): Comps, Directions, Read
+Nodes (5): Act on the receipt, Assemble and review, Plan and asset review, Plan, capture, serve, capture()
+
+### Community 424 - "Icons"
+Cohesion: 0.40
+Nodes (4): Icons, Icons in Button use data-icon attribute, No sizing classes on icons inside components, Pass icons as component objects, not string keys
 
 ## Knowledge Gaps
 - **4 isolated node(s):** `API_KEY`, `CONTEXT7_API_KEY`, `@21st-dev/magic`, `@upstash/context7-mcp`
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 3025 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **103 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 3027 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **106 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `init()` connect `initGlobalBar` to `live-browser.js`, `setLiveState`, `connectSSE`, `initPageChat`, `Init flow`, `Commands`, `impeccable/SKILL.md`, `new-work.md`, `generate.md`, `createLiveBrowserDomHelpers`, `Design Systems from DESIGN.md`, `handleGo`, `updatePendingCounter`?**
-  _High betweenness centrality (0.103) - this node is a cross-community bridge._
+- **Why does `init()` connect `initGlobalBar` to `doctor.md`, `live-browser.js`, `setLiveState`, `connectSSE`, `initPageChat`, `Init flow`, `Commands`, `impeccable/SKILL.md`, `generate.md`, `createLiveBrowserDomHelpers`, `Design Systems from DESIGN.md`, `handleGo`, `updatePendingCounter`?**
+  _High betweenness centrality (0.105) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `DesignSystemGenerator` (e.g. with `TestReasoningMatch` and `TestReasoningContract`) actually correct?**
   _`DesignSystemGenerator` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `API_KEY`, `CONTEXT7_API_KEY`, `@21st-dev/magic` to the rest of the system?**
   _4 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `live-browser.js` be split into smaller, more focused modules?**
   _Cohesion score 0.025136154168412233 - nodes in this community are weakly interconnected._
-- **Why does `search()` connect `search` to `BM25`, `validate_data.py`, `core.py`, `design_system.py`, `TestTextLayoutRetrieval`, `DesignSystemGenerator`, `search_stack`, `Commands`, `sys`, `_row_identities`, `_normalize`, `test_core.py`?**
-  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+- **Why does `search()` connect `search` to `BM25`, `validate_data.py`, `core.py`, `design_system.py`, `TestTextLayoutRetrieval`, `search_stack`, `Commands`, `sys`, `_domain_keywords`, `DesignSystemGenerator`, `test_core.py`?**
+  _High betweenness centrality (0.070) - this node is a cross-community bridge._
 - **Should `setLiveState` be split into smaller, more focused modules?**
   _Cohesion score 0.08763693270735524 - nodes in this community are weakly interconnected._
 - **Should `validate_data.py` be split into smaller, more focused modules?**

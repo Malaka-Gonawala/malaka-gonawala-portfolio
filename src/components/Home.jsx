@@ -242,7 +242,22 @@ function Hire() {
           </div>
         </div>
       </div>
-      <dialog className="quiz" ref={dlg} aria-label={`[Offer ${offer}]`}>
+      <dialog
+        className="quiz"
+        ref={dlg}
+        aria-label={`[Offer ${offer}]`}
+        onKeyDown={(e) => {
+          // keep Tab inside the dialog: wrap from the last control to the first and back
+          const f = [...dlg.current.querySelectorAll("input, button")].filter(
+              (el) => el.offsetParent,
+            ),
+            [a, z] = e.shiftKey ? [f[0], f.at(-1)] : [f.at(-1), f[0]];
+          if (e.key == "Tab" && document.activeElement == a) {
+            e.preventDefault();
+            z.focus();
+          }
+        }}
+      >
         <form
           onSubmit={(e) => {
             e.preventDefault();

@@ -420,9 +420,9 @@
     "semantic_hash": ""
   },
   "src/App.jsx": {
-    "mtime": 1794566100.4063113,
-    "seen": 1794566586.115601,
-    "ast_hash": "c32a2b129d1252057a717bbc2c04face",
+    "mtime": 1794747907.956092,
+    "seen": 1794748403.0697901,
+    "ast_hash": "2c79f655d216119c0d07e4c92527dbca",
     "semantic_hash": ""
   },
   "src/components/NavLabel.jsx": {
@@ -432,9 +432,9 @@
     "semantic_hash": ""
   },
   "src/content/en.js": {
-    "mtime": 1794566100.4206777,
-    "seen": 1794566586.115613,
-    "ast_hash": "04b1a65206dbac315df5b80ca803ae58",
+    "mtime": 1794747550.8353138,
+    "seen": 1794748403.0698292,
+    "ast_hash": "39559b94db41bb08d96e06a117c2d0c4",
     "semantic_hash": ""
   },
   "src/lib/utils.js": {
@@ -2544,9 +2544,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1794565929.1503012,
-    "seen": 1794566586.116492,
-    "ast_hash": "cae75ed17e28c56ecedf3862db1d580c",
+    "mtime": 1794747550.8272152,
+    "seen": 1794748403.0862472,
+    "ast_hash": "6871bc03c5207bbe792e4c63d4de17df",
     "semantic_hash": ""
   },
   "public/fonts/jetbrains-mono/OFL.txt": {
@@ -2592,27 +2592,27 @@
     "semantic_hash": ""
   },
   "src/components/Header.jsx": {
-    "mtime": 1794566090.9943109,
-    "seen": 1794566586.115604,
-    "ast_hash": "08716f38fbe0ab2564357dce0be0cb1d",
+    "mtime": 1794747552.5552154,
+    "seen": 1794748403.0697932,
+    "ast_hash": "ce3aeee059767ad1ecec75468d359cb1",
     "semantic_hash": ""
   },
   "src/components/Home.jsx": {
-    "mtime": 1794699194.163639,
-    "seen": 1794699768.741562,
-    "ast_hash": "6ecb915603dd54ff4a03d0ec9f9b6d81",
+    "mtime": 1794748354.765533,
+    "seen": 1794748403.0697966,
+    "ast_hash": "0f24d5ba3fe70278dc5a60cf2a8dddef",
     "semantic_hash": ""
   },
   "src/components/Menu.jsx": {
-    "mtime": 1794566091.0343108,
-    "seen": 1794566586.115609,
-    "ast_hash": "feeeda69a3d6fc3484cf19e2efd36b3a",
+    "mtime": 1794747668.6904902,
+    "seen": 1794748403.069799,
+    "ast_hash": "3c93157e6ab755415e468ed4136d6b28",
     "semantic_hash": ""
   },
   "src/lib/site.js": {
-    "mtime": 1794699194.1628635,
-    "seen": 1794699768.7416658,
-    "ast_hash": "ee3931d3776aaaca302abeb5c69f1cde",
+    "mtime": 1794747979.0120804,
+    "seen": 1794748403.0698318,
+    "ast_hash": "1d6ce3cf94a3cbc1cbd6abd8f94f62e2",
     "semantic_hash": ""
   },
   "public/img/projects/antigravity-d.webp": {
