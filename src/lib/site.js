@@ -681,7 +681,7 @@ export default function initSite() {
     }
     sp($(".under"), "--ho", io(cl((p - 0.6) / 0.1)));
     // the terminal and the build log print side by side, one line at a time
-    ["#term > span", "#log > span"].forEach((q) =>
+    ["#term > span", "#a01 > *", "#log > span"].forEach((q) =>
       $$(q).forEach((l, i) => (l.style.opacity = +(p > 0.66 + i * 0.04))),
     );
     return cool;

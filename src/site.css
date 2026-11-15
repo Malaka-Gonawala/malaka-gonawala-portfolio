@@ -704,9 +704,68 @@ a {
   gap: 20px 4vw;
   align-items: end;
 }
+/* the build log runs under the terminal and the layers, in two columns */
 #log {
+  grid-column: 1 / -1;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 0 4vw;
   font-size: 12px;
   line-height: 2.1;
+}
+/* A01 five layers */
+.a01 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: end;
+}
+.stack {
+  position: relative;
+  width: 190px;
+  height: 160px;
+}
+.stack button {
+  position: absolute;
+  left: 20px;
+  top: calc(var(--i) * 22px);
+  z-index: calc(5 - var(--i));
+  width: 150px;
+  height: 80px;
+  padding: 0 8px;
+  border: 1px solid rgba(244, 241, 234, 0.5);
+  background: rgba(244, 241, 234, 0.06);
+  color: var(--ufg);
+  font: 10px var(--m);
+  text-align: left;
+  transform: perspective(600px) rotateX(58deg) rotateZ(-38deg);
+  pointer-events: auto;
+  cursor: default;
+}
+.stack .on {
+  background: var(--sig);
+  color: var(--ubg);
+}
+.a01 table {
+  border-collapse: collapse;
+  font: 11px/1.4 var(--m);
+}
+.a01 caption {
+  text-align: left;
+  padding-bottom: 4px;
+  opacity: 0.7;
+}
+.a01 th {
+  font-weight: 400;
+  text-align: left;
+  opacity: 0.6;
+}
+.a01 :is(th, td) {
+  padding: 3px 10px 3px 0;
+  border-bottom: 1px solid rgba(244, 241, 234, 0.12);
+}
+.a01 .on td {
+  color: var(--sig);
 }
 #log > span + span {
   border-top: 1px solid rgba(244, 241, 234, 0.12);
@@ -718,12 +777,24 @@ a {
   .u2 {
     grid-template-columns: 1fr;
   }
+  #log {
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+  .a01 :is(th, td):nth-child(3) {
+    display: none;
+  }
+  .stack {
+    width: 150px;
+    height: 120px;
+    zoom: 0.7;
+  }
   #log em {
     display: block;
     line-height: 1.4;
     padding-bottom: 6px;
   }
-  #log > span:nth-child(n + 6) {
+  #log > span:nth-child(n + 4) {
     display: none;
   }
 }

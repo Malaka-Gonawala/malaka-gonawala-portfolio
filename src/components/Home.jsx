@@ -92,6 +92,57 @@ function AddressBar() {
   );
 }
 
+// A01: the site as five layers; every layer names a real file or tag, with the same facts as a table.
+const LAYERS = [
+  ["content", "src/content/en.js"],
+  ["styles", "src/site.css, Tailwind v4"],
+  ["scripts", "src/lib/site.js, GSAP"],
+  ["meta tags", "index.html: charset, viewport, lang"],
+  ["host", "CNAME: malakagonawala.dev"],
+];
+function Layers() {
+  const [on, setOn] = useState(-1),
+    lit = (i) => (i == on ? "on" : undefined);
+  return (
+    <div className="a01" id="a01">
+      <div className="stack" onMouseLeave={() => setOn(-1)}>
+        {LAYERS.map(([n, f], i) => (
+          <button
+            key={n}
+            className={lit(i)}
+            style={{ "--i": i }}
+            aria-label={`${n}: ${f}`}
+            onFocus={() => setOn(i)}
+            onBlur={() => setOn(-1)}
+            onMouseEnter={() => setOn(i)}
+          >
+            <span>{n}</span>
+          </button>
+        ))}
+      </div>
+      <table>
+        <caption>The same thing as text</caption>
+        <thead>
+          <tr>
+            <th>What you see</th>
+            <th>Real file or tag</th>
+            <th>What protects it</th>
+          </tr>
+        </thead>
+        <tbody>
+          {LAYERS.map(([n, f], i) => (
+            <tr key={n} className={lit(i)}>
+              <td>{n}</td>
+              <td>{f}</td>
+              <td>[Malaka to word]</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 // Underneath: the page turns into its own hex dump and cools into the underside.
 function Underneath() {
   return (
@@ -111,6 +162,7 @@ function Underneath() {
             <p className="term mono" id="term">
               <Term now={en.now} />
             </p>
+            <Layers />
             {log.length > 0 && (
               <p className="term mono" id="log">
                 <span>
