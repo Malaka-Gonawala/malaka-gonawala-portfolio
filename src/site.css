@@ -808,7 +808,7 @@ a {
   height: 160px;
   zoom: 1.5;
 }
-.stack button {
+.stack i {
   position: absolute;
   left: 20px;
   top: calc(var(--i) * 22px);
@@ -820,10 +820,11 @@ a {
   background: rgba(244, 241, 234, 0.06);
   color: var(--ufg);
   font: 10px var(--m);
-  text-align: left;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  translate: 0 calc(var(--lift, 0) * -1px);
   transform: perspective(600px) rotateX(58deg) rotateZ(-38deg);
-  pointer-events: auto;
-  cursor: default;
 }
 .stack .on {
   background: var(--sig);
@@ -847,8 +848,15 @@ a {
   padding: 3px 10px 3px 0;
   border-bottom: 1px solid rgba(244, 241, 234, 0.12);
 }
+.a01 tr {
+  pointer-events: auto;
+  outline-color: var(--ufg);
+  outline-offset: 1px;
+}
+/* the lit row: the plate's colours, signal with the underside's ink (5:1 and up in both themes) */
 .a01 .on td {
-  color: var(--sig);
+  background: var(--sig);
+  color: var(--ubg);
 }
 /* GitLog command line: a button that looks like the prompt, with a return key */
 #log button {

@@ -675,7 +675,12 @@ export default function initSite() {
     if (b != beat) {
       beat = b;
       const U2 = $$(".u2 > *");
-      U2.forEach((e, i) => e.classList.toggle("on", i + 1 == b));
+      U2.forEach((e, i) => {
+        const was = e.classList.contains("on");
+        e.classList.toggle("on", i + 1 == b);
+        was != (i + 1 == b) &&
+          e.dispatchEvent(new CustomEvent("beat", { detail: i + 1 == b }));
+      });
       b &&
         live &&
         G.fromTo(U2[b - 1], { opacity: 0 }, { opacity: 1, duration: 0.3 });

@@ -76,7 +76,7 @@
   "74": "cn",
   "75": "Commands",
   "76": "React Composition Patterns",
-  "77": "sys",
+  "77": "test_text_layout_resilience.py",
   "78": "Charts",
   "79": "Windows",
   "80": "Images",
@@ -250,7 +250,7 @@
   "248": "Android platform",
   "249": "Persona-Based Design Testing",
   "250": "DesignSystemGenerator",
-  "251": "Visualize: Direction Comps & Asset Production",
+  "251": "test_core_data_quality.py",
   "252": "Forms & Inputs",
   "253": "Web Application Testing",
   "254": "Project rules",
@@ -420,6 +420,12 @@
   "418": "Extract Flow",
   "419": "Read",
   "420": "ProjectCard.jsx",
+  "421": "dependencies",
+  "422": "vite.config.js",
   "423": "TestTextLayoutRetrieval",
-  "425": "NavLabel.jsx"
+  "424": "Registry Authoring and Addresses",
+  "425": "NavLabel.jsx",
+  "426": "test_skill_script_paths.py",
+  "427": "TestStackFlagWithDesignSystem",
+  "428": "scripts"
 }

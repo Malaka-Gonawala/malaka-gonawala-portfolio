@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 import { en } from "@/content/en";
 import log from "virtual:buildlog";
 
@@ -98,24 +99,51 @@ const LAYERS = [
   ["meta tags", "index.html: charset, viewport, lang"],
   ["host", "CNAME: malakagonawala.dev"],
 ];
+// Option F: when the stack's beat arrives the layers lift one by one with their rows lit (B); afterwards hovering or
+// focusing a row lifts its layer (D). Lifts need a fine pointer and motion; under Calm, reduced motion and touch the
+// stack rests and a focused row is only lit.
+const moving = () =>
+  !document.documentElement.classList.contains("rm") &&
+  matchMedia("(hover: hover) and (pointer: fine)").matches;
 function Layers() {
-  const [on, setOn] = useState(-1),
+  const ref = useRef(null),
+    [on, setOn] = useState(-1),
     lit = (i) => (i == on ? "on" : undefined);
+  // the plate of the lit row lifts, the others go back down (time-based, so it never rests part-way)
+  useEffect(() => {
+    moving() &&
+      gsap.to(ref.current.querySelectorAll(".stack i"), {
+        "--lift": (k) => (k == on ? 28 : 0),
+        duration: 0.3,
+        ease: "power2.out",
+        overwrite: true,
+      });
+  }, [on]);
+  // the beat starts (and stops) the one-by-one lift; leaving the beat resets it
+  useEffect(() => {
+    const el = ref.current;
+    let tl;
+    const beat = (e) => {
+      tl?.kill();
+      setOn(-1);
+      if (!e.detail || !moving()) return;
+      tl = gsap.timeline();
+      LAYERS.forEach((_, i) => tl.call(setOn, [i], 0.15 + i * 0.35));
+      tl.call(setOn, [-1], 0.15 + LAYERS.length * 0.35);
+    };
+    el.addEventListener("beat", beat);
+    return () => {
+      tl?.kill();
+      el.removeEventListener("beat", beat);
+    };
+  }, []);
   return (
-    <div className="a01" id="a01">
-      <div className="stack" onMouseLeave={() => setOn(-1)}>
-        {LAYERS.map(([n, f], i) => (
-          <button
-            key={n}
-            className={lit(i)}
-            style={{ "--i": i }}
-            aria-label={`${n}: ${f}`}
-            onFocus={() => setOn(i)}
-            onBlur={() => setOn(-1)}
-            onMouseEnter={() => setOn(i)}
-          >
-            <span>{n}</span>
-          </button>
+    <div className="a01" id="a01" ref={ref}>
+      <div className="stack" aria-hidden="true">
+        {LAYERS.map(([n], i) => (
+          <i key={n} className={lit(i)} style={{ "--i": i }}>
+            {n}
+          </i>
         ))}
       </div>
       <table>
@@ -127,9 +155,16 @@ function Layers() {
             <th>What protects it</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody onMouseLeave={() => setOn(-1)}>
           {LAYERS.map(([n, f], i) => (
-            <tr key={n} className={lit(i)}>
+            <tr
+              key={n}
+              className={lit(i)}
+              tabIndex="0"
+              onFocus={() => setOn(i)}
+              onBlur={() => setOn(-1)}
+              onMouseEnter={() => setOn(i)}
+            >
               <td>{n}</td>
               <td>{f}</td>
               <td>[Malaka to word]</td>
