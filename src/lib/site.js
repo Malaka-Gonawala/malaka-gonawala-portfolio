@@ -848,7 +848,7 @@ export default function initSite() {
     fcx.fillText(tx, W - 16, hy - 12);
   };
   // keyboard: tabbing into the footer before it has decoded jumps to the end, so focus never lands under the hex
-  fts.addEventListener("focusin", () => {
+  fc.addEventListener("focusin", () => {
     if (live && S.ft < 1) {
       const e = $("#ft");
       scrollTo(0, e.offsetTop + e.offsetHeight - innerHeight);
@@ -1649,12 +1649,10 @@ export default function initSite() {
         });
       reveal();
     } else {
-      // #work: the first project loaded; #under: the underside settled
       const el = h && document.getElementById(h),
-        at = live && { work: ["#ab", H0], under: ["#under", 0.8] }[h],
-        a = at && $(at[0]);
-      at
-        ? scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * at[1])
+        a = $("#ab");
+      h == "work" && live
+        ? scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * H0)
         : el
           ? el.scrollIntoView()
           : scrollTo(0, 0);
@@ -1731,7 +1729,7 @@ export default function initSite() {
     sizeAll();
     live && requestAnimationFrame(tick);
   });
-  // reduced motion keeps the hero (the name and the two doors) and lists the work under it
+  // reduced motion keeps the hero (the name and its button) and lists the work under it
   if (!live) ((S.of = S.ft = S.hx = 1), (S.ab = 0));
   show(here);
   reveal();

@@ -175,42 +175,6 @@ a {
   opacity: 0.6;
   cursor: default;
 }
-/* Two doors (R26): the gold frame sits on [Front end] and moves to the door you point at or tab to */
-.doors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: baseline;
-  gap: 4px 14px;
-}
-.doors p {
-  flex-basis: 100%;
-  text-align: right;
-  font: 11px var(--m);
-  color: var(--mut);
-}
-.doors a {
-  font: 500 clamp(30px, 3.6vw, 52px) / 1 var(--d);
-  letter-spacing: -0.02em;
-  color: var(--fg);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.12em;
-  padding: 2px 6px;
-  outline: 1px solid transparent;
-  outline-offset: 0;
-}
-.doors a:first-of-type,
-.doors a:is(:hover, :focus-visible) {
-  outline-color: var(--gold);
-}
-.doors:has(a:last-of-type:is(:hover, :focus-visible)) a:first-of-type {
-  outline-color: transparent;
-}
-@media (hover: none) {
-  .doors a {
-    outline-color: var(--gold);
-  }
-}
 .flip i {
   width: 22px;
   height: 22px;
@@ -932,9 +896,6 @@ a {
 }
 .pick {
   grid-area: 1 / 3;
-}
-.pick,
-.peel {
   padding: 6px 14px;
   border: 1px solid var(--fg);
   border-radius: 99px;
@@ -1138,64 +1099,6 @@ a {
   .toast {
     top: calc(var(--hh) + 8px);
     bottom: auto;
-  }
-}
-/* R10 sticker */
-.stk {
-  position: absolute;
-  right: var(--g);
-  bottom: 110px;
-  display: grid;
-  justify-items: center;
-  gap: 6px;
-  font: 11px var(--m);
-  color: var(--mut);
-}
-.stk p {
-  margin: 0;
-}
-.stk-pad {
-  position: relative;
-  display: grid;
-  place-items: start end;
-  width: 104px;
-  height: 104px;
-  padding: 8px;
-  border-radius: 8px;
-  background: var(--ubg);
-}
-.stk-pad a {
-  color: var(--sig);
-  font: 11px var(--m);
-}
-.stk-face {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: var(--gold);
-  color: var(--ongold);
-  font: 500 18px var(--d);
-  box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.5);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transition:
-    clip-path 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-    background-color 0.5s,
-    color 0.2s;
-}
-.peeled .stk-face {
-  clip-path: polygon(0 0, 0 0, 100% 100%, 0 100%);
-  background: color-mix(in srgb, var(--gold) 70%, #000);
-  color: transparent;
-}
-@media (max-width: 700px) {
-  .stk {
-    top: calc(var(--hh) + 16px);
-    bottom: auto;
-    left: var(--g);
-    right: auto;
-    justify-items: start;
   }
 }
 /* footer: decoded from hex */

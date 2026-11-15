@@ -81,11 +81,9 @@ function AddressBar() {
         </div>
         <div className="intro g" id="intro">
           <p>{en.hero.line}</p>
-          <div className="doors">
-            <p>[Pick a door]</p>
-            <a href="#work">[Front end]</a>
-            <a href="#under">Underneath</a>
-          </div>
+          <a className="btn" href="#work">
+            {en.hero.cta}
+          </a>
         </div>
       </div>
     </section>
@@ -293,31 +291,6 @@ function Hire() {
   );
 }
 
-// R10: a sticker in the footer corner peels (by its button only) to show the way Underneath. [MG mark] until Malaka's mark exists.
-function Sticker() {
-  const [peeled, setPeeled] = useState(false);
-  return (
-    <div className={"stk" + (peeled ? " peeled" : "")}>
-      <div className="stk-pad">
-        <a href="#under" inert={!peeled}>
-          Underneath →
-        </a>
-        <span className="stk-face" aria-hidden="true">
-          [MG mark]
-        </span>
-      </div>
-      <p>[Peel the corner]</p>
-      <button
-        className="peel"
-        aria-pressed={peeled}
-        onClick={() => setPeeled(!peeled)}
-      >
-        Peel the sticker
-      </button>
-    </div>
-  );
-}
-
 // Contact: the footer decodes from hex as a read head climbs.
 function Contact() {
   return (
@@ -338,7 +311,6 @@ function Contact() {
             <span>© 2026</span>
           </div>
         </footer>
-        <Sticker />
         <canvas id="hx" aria-hidden="true"></canvas>
       </div>
     </section>
