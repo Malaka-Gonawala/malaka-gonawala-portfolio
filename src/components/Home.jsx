@@ -141,6 +141,28 @@ function Layers() {
   );
 }
 
+// The build log as one command line: Enter or a click runs `git log --merges` and folds it away again (challenge 3, Malaka).
+function GitLog({ rows }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="term mono" id="log">
+      <button onClick={() => setOpen(!open)} aria-expanded={open}>
+        <b>PS C:\Users\Malaka\site&gt;</b> git log --merges
+        <kbd aria-hidden="true">↵</kbd>
+      </button>
+      {open && (
+        <ul>
+          {rows.map(([sha, date, title]) => (
+            <li key={sha}>
+              <b>{sha}</b> {date} <em>{title}</em>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 // Underneath: the page turns into its own hex dump and cools into the underside.
 function Underneath() {
   return (
@@ -161,19 +183,7 @@ function Underneath() {
               <Term now={en.now} />
             </p>
             <Layers />
-            {/* placeholder until GitLog (code challenge 3): a `git log --merges` button that folds these rows */}
-            {log.length > 0 && (
-              <p className="term mono" id="log">
-                <span>
-                  <b>PS C:\Users\Malaka\site&gt;</b> git log --merges
-                </span>
-                {log.map(([sha, date, title]) => (
-                  <span key={sha}>
-                    <b>{sha}</b> {date} <em>{title}</em>
-                  </span>
-                ))}
-              </p>
-            )}
+            {log.length > 0 && <GitLog rows={log} />}
           </div>
         </div>
       </div>
