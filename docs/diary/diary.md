@@ -284,3 +284,31 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Tooling:** code challenge editor gained Tailwind CSS support, Malaka asked for Tailwind CSS and TypeScript exercises as well
 
 **Open items:** Home sections after the port (project slides, underside panel copy from Malaka, Offers copy), prerender (6.24), About, Skills, the scroll-detail card, the code challenges (S31), merge PR #47 (rules S32, models, S31) and PR #48 (diary 12 November), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Saturday, 14 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Inspiration day for the rebuilt site. Malaka asked for niche component inspirations, three were built into the site, and more picks from React Bits and shadcn were approved and previewed in place. The number of code challenges grew from 20 to 30. All work stays on draft pull request #45.
+
+- **Found inspirations:** a thread searched 21st.dev without spending Magic calls and found 10 picks that passed a critic, then a React Bits and shadcn round found 9 and 9 more
+- **Decided:** Malaka approved the 3 recommended 21st.dev picks (01 shutter flip, 03 departures board, 04 build log) placed all three with labels from his approved path text, approved the 6 recommended picks of the second round plus R10, R11, R12, S03 and S05, and in round 2 D01, A01, D09, A04, C07 and C11, code challenges grew to 30 (the 20 React ones plus 5 Tailwind CSS and 5 TypeScript, S31 changed)
+- **Built:** the shutter flip on the Underneath title, a `git log --merges` build log beside the terminal (shows tooling pull requests until site pull requests merge), a "My path" split-flap board on the About page, and a reduced-motion fix (the Underneath terminal lines were invisible), [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) version 12
+- **Previewed:** 7 picks with slots on Home (R26, S10, R19 with S03, R12, R10, A01, C11) shown in the real site, the rest (R11, R17, S05, S26, S01, D01, D09, A04, C07) wait for their pages
+
+**Open items:** Malaka's pick on the 7 in-place previews, Offers copy, underside panel copy, the dates on the path board, prerender (6.24), About and Skills pages, the code challenges, merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Sunday, 15 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Motion and layout day for the rebuilt site. Malaka asked for cursor effects and other motion, picked eight, and the Underneath section was reorganised into scroll beats with a layer stack that moves. Two more code challenges passed and the old Phase 4 files were cleaned up. All work stays on draft pull request #45.
+
+- **Changed taste:** cursor-following effects are now wanted (the earlier "no cursor-following motion" is replaced), a motion round of 35 candidates was critic-checked and 11 passed (6.28)
+- **Decided:** approved the fluid reveal on the Home hero (K01, the only cursor effect), keycap buttons, link underline, ruler scrubber (L03), bottom pill menu on phone (N04), gold hairline nav marker on desktop (N07), scrub field for the Lab (L02) and send stages (P03), not approved: measure crosshair, target brackets on project cards, morph loader, Underneath layout F (title, terminal, labelled layer stack and build log each come in as their own scroll beat, the build log opens from a `git log` line), stack motion F (layers lift one by one with their rows on scroll, hovering or tabbing to a row lifts its layer on desktop)
+- **Built:** the Underneath scroll beats (title no longer cut off with Calm on or on phone) and the moving layer stack (off with touch, Calm and reduced motion, settles after fast scrolling), checked in Playwright, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) version 18
+- **Code challenges:** challenge 2 (ProjectCard) and challenge 3 (GitLog) passed, 3 of 30 passed and 1 skipped so far, challenge checks now happen once per build task
+- **Cleaned up:** old Phase 4 files deleted (32 MB), the 16 old artifacts were not deleted because the prompt was denied
+- **Merged pull requests:** #48 diary (12 and 13 November)
+
+**Open items:** small label overlap on the layer stack while a lower layer is lifted (Malaka to say if it bothers), build of the approved motion picks, the 7 in-place previews of the inspiration picks, Offers copy, underside panel copy, the dates on the path board, prerender (6.24), About and Skills pages, the remaining 27 code challenges, deleting the 16 old artifacts (needs Malaka's approval), merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
