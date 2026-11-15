@@ -939,6 +939,32 @@ export default function initSite() {
   const frame = where;
   addEventListener("scroll", frame, { passive: true });
   addEventListener("resize", sizeAll);
+  // a late font changes the letters' widths: measure again
+  document.fonts.addEventListener("loadingdone", sizeAll);
+  // never rest mid-fold: if scrolling stops while the letters are in flight, glide to the nearest rest
+  // (the whole name, or the typed address)
+  let rest;
+  addEventListener(
+    "scroll",
+    () => {
+      clearTimeout(rest);
+      rest = setTimeout(() => {
+        const a = $("#ab"),
+          q = prog(a) / H0;
+        live &&
+          !onPage &&
+          q > 0.002 &&
+          q < 0.4 &&
+          scrollTo({
+            top:
+              a.offsetTop +
+              (a.offsetHeight - innerHeight) * H0 * (q < 0.15 ? 0 : 0.48),
+            behavior: "smooth",
+          });
+      }, 250);
+    },
+    { passive: true },
+  );
 
   // reveals: one rhythm (same ease, mask from the baseline)
   const reveal = () => {
