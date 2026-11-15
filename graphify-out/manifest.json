@@ -432,9 +432,9 @@
     "semantic_hash": ""
   },
   "src/content/en.js": {
-    "mtime": 1794747550.8353138,
-    "seen": 1794748403.0698292,
-    "ast_hash": "39559b94db41bb08d96e06a117c2d0c4",
+    "mtime": 1794749832.6904082,
+    "seen": 1794749972.869827,
+    "ast_hash": "04b1a65206dbac315df5b80ca803ae58",
     "semantic_hash": ""
   },
   "src/lib/utils.js": {
@@ -2598,9 +2598,9 @@
     "semantic_hash": ""
   },
   "src/components/Home.jsx": {
-    "mtime": 1794748354.765533,
-    "seen": 1794748403.0697966,
-    "ast_hash": "0f24d5ba3fe70278dc5a60cf2a8dddef",
+    "mtime": 1794749832.694051,
+    "seen": 1794749972.8697448,
+    "ast_hash": "0bfd47705309acfb943d34bb98351e70",
     "semantic_hash": ""
   },
   "src/components/Menu.jsx": {
@@ -2610,9 +2610,9 @@
     "semantic_hash": ""
   },
   "src/lib/site.js": {
-    "mtime": 1794747979.0120804,
-    "seen": 1794748403.0698318,
-    "ast_hash": "1d6ce3cf94a3cbc1cbd6abd8f94f62e2",
+    "mtime": 1794749877.1087074,
+    "seen": 1794749972.8698304,
+    "ast_hash": "df10bdd2f3be466bee4fed27d4af77c7",
     "semantic_hash": ""
   },
   "public/img/projects/antigravity-d.webp": {
@@ -2673,6 +2673,12 @@
     "mtime": 1794565929.154,
     "seen": 1794566586.1165295,
     "ast_hash": "89e1eb74028d7700fd2460f06f2989d6",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectCard.jsx": {
+    "mtime": 1794749262.2113729,
+    "seen": 1794749972.869823,
+    "ast_hash": "bdecf6783584a62d9f2b720d7932ebf1",
     "semantic_hash": ""
   },
   "package-lock.json": {

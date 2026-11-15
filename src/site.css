@@ -642,7 +642,7 @@ a {
   opacity: var(--ho, 0);
   transform: translateY(calc((1 - var(--ho, 0)) * 40px));
 }
-/* Shutter flip: six slices of the title slide in from alternate sides as --ho reaches 1 */
+/* Shutter flip: six slices of the title slide in from alternate sides while --sh (set by GSAP) runs from 1 to 0 */
 .shut {
   position: relative;
 }
@@ -656,10 +656,10 @@ a {
     calc(var(--i) * 100% / 6 - 0.5px) 0 calc((5 - var(--i)) * 100% / 6 - 0.5px)
       0
   );
-  translate: calc((1 - var(--ho, 0)) * (var(--i) - 2.5) * 0.08em);
+  translate: calc(var(--sh, 0) * (var(--i) - 2.5) * 0.08em);
 }
 .shut > span:nth-child(odd) {
-  translate: calc((var(--ho, 0) - 1) * (var(--i) - 2.5) * 0.08em);
+  translate: calc(var(--sh, 0) * (2.5 - var(--i)) * 0.08em);
 }
 /* Build log: git log --merges beside the terminal (under it on phones, 4 rows) */
 .u2 {

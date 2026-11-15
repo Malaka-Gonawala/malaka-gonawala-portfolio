@@ -648,6 +648,7 @@ export default function initSite() {
     C.b0 = [br, bg_, bb];
     C.u0 = [ur, ug, ub];
   };
+  let shut = false;
   const hx = (p) => {
     if (!page) return;
     const scan = io(cl(p / 0.32)) * (H + ch),
@@ -680,6 +681,21 @@ export default function initSite() {
       cx.shadowBlur = 0;
     }
     sp($(".under"), "--ho", io(cl((p - 0.6) / 0.1)));
+    // shutter (01): plays once on time as the title arrives, never scrubbed, so the title never rests sliced
+    const on = p > 0.6;
+    if (on != shut) {
+      shut = on;
+      G.fromTo(
+        ".shut",
+        { "--sh": on && live ? 1 : 0 },
+        {
+          "--sh": 0,
+          duration: on && live ? 0.6 : 0,
+          ease: "out",
+          overwrite: true,
+        },
+      );
+    }
     // the terminal and the build log print side by side, one line at a time
     ["#term > span", "#a01 > *", "#log > span"].forEach((q) =>
       $$(q).forEach((l, i) => (l.style.opacity = +(p > 0.66 + i * 0.04))),
