@@ -941,27 +941,38 @@ export default function initSite() {
   addEventListener("resize", sizeAll);
   // a late font changes the letters' widths: measure again
   document.fonts.addEventListener("loadingdone", sizeAll);
-  // never rest mid-fold: if scrolling stops while the letters are in flight, glide to the nearest rest
-  // (the whole name, or the typed address)
-  let rest;
+  // never rest mid-fold: when a wheel or touch scroll stops while the letters are in flight, finish the move in the
+  // direction it was going (down: on to the typed address, up: back to the whole name). Keys and links never snap.
+  let rest,
+    dir = 0,
+    lastY = scrollY;
+  const hand = () => (dir = 1);
+  addEventListener("wheel", hand, { passive: true });
+  addEventListener("touchmove", hand, { passive: true });
+  addEventListener("keydown", () => (dir = 0));
   addEventListener(
     "scroll",
     () => {
+      const d = scrollY - lastY;
+      lastY = scrollY;
+      if (dir && d) dir = Math.sign(d);
       clearTimeout(rest);
       rest = setTimeout(() => {
         const a = $("#ab"),
           q = prog(a) / H0;
         live &&
+          dir &&
           !onPage &&
           q > 0.002 &&
           q < 0.4 &&
           scrollTo({
             top:
               a.offsetTop +
-              (a.offsetHeight - innerHeight) * H0 * (q < 0.15 ? 0 : 0.48),
+              (a.offsetHeight - innerHeight) * H0 * (dir > 0 ? 0.48 : 0),
             behavior: "smooth",
           });
-      }, 250);
+        dir = 0;
+      }, 150);
     },
     { passive: true },
   );
