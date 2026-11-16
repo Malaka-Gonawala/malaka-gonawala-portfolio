@@ -313,3 +313,17 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #48 diary (12 and 13 November)
 
 **Open items:** small label overlap on the layer stack while a lower layer is lifted (Malaka to say if it bothers), the held motion picks and the inspiration picks that wait for their pages, copy for Offers, the questions, "What protects it" and the MG mark, underside panel copy, the dates on the path board, Web3Forms wiring, prerender (6.24), About and Skills pages, the remaining 27 code challenges, deleting the 16 old artifacts (needs Malaka's approval), merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Monday, 16 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Fill-in and fix day for the rebuilt site. Every page now carries the approved Phase 5 copy, a second audit found 16 problems and its fixes passed a separate tester, and Malaka reshaped the Underneath section. All work stays on draft pull request #45.
+
+- **Built:** every page filled with the approved Phase 5 copy (5 project pages with galleries and links, 8 Lab entries, the web resume, the About portrait, the AI section last on About), the Underneath overlap fixed, Antigravity and Cavalleria code links added, the Cavalleria Lab screenshot with a "photos belong to their owners" note under the S20 exception, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) versions 19 and 20
+- **Audited:** a second audit found 16 problems, the fixes passed the S29 tester
+- **Decided:** Malaka dropped the git log and the layer stack, and picked animated whoami commands (A1) with the scan cooling and the offers rising out of it (B2), so Underneath merges into the Offers section, to be built tomorrow
+- **Researched:** a button round found 10 critic-passed niche buttons with a four-state preview grid, waiting on Malaka's picks (6.28)
+- **Merged pull requests:** #50 diary (14 and 15 November)
+
+**Open items:** the phone header is two lines tall, offer cards too narrow in Calm and reduced motion at 1280 wide, build of the whoami scan and Offers merge, Malaka's button picks, held motion picks and inspiration picks that wait for their pages, copy for Offers, the questions, "What protects it" and the MG mark, Web3Forms wiring, prerender (6.24), the remaining code challenges, merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume PDF (6.25), deleting the 16 old artifacts (needs Malaka's approval), Namecheap email forwarding (around 24 November).
