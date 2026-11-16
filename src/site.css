@@ -1474,6 +1474,11 @@ h1:focus {
   content: "  ← you are here";
   font: 14px var(--m);
 }
+@media (max-width: 420px) {
+  #ls a[aria-current] .bg::after {
+    font-size: 11px;
+  }
+}
 #menu .row,
 #tabs .row {
   color: var(--ufg);

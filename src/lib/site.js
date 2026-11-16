@@ -681,7 +681,7 @@ export default function initSite() {
       const U2 = $$(".u2 > *");
       U2.forEach((e, i) => {
         const was = e.classList.contains("on");
-        live && (e.style.opacity = +(i + 1 == b));
+        live && G.set(e, { opacity: +(i + 1 == b), overwrite: true });
         e.classList.toggle("on", i + 1 == b);
         was != (i + 1 == b) &&
           e.dispatchEvent(new CustomEvent("beat", { detail: i + 1 == b }));
@@ -1364,6 +1364,7 @@ export default function initSite() {
         "#ls>*",
         "#ls .mo",
         "#ls .bg",
+        "#ls .cr",
         ...TB,
       ],
       { clearProps: "all" },
@@ -1785,6 +1786,34 @@ export default function initSite() {
     await load(hash, false);
   };
   addEventListener("popstate", () => route(location.hash));
+  // keyboard: Tab past "Open project" moves on to the next slide and Shift+Tab on the shot goes back, so every
+  // slide is reachable (slide n has settled at H0 + (n - 0.05) * STEP)
+  $("#win").addEventListener("keydown", (e) => {
+    const a = $("#ab"),
+      P0 = prog(a),
+      k =
+        P0 < H0
+          ? 0
+          : Math.min(PR.length - 1, Math.floor((P0 - H0) / STEP + 0.38)),
+      n = k + (e.shiftKey ? -1 : 1);
+    if (
+      !live ||
+      e.key != "Tab" ||
+      e.target.id != (e.shiftKey ? "abody" : "go") ||
+      n < 0 ||
+      n >= PR.length
+    )
+      return;
+    e.preventDefault();
+    scrollTo(
+      0,
+      a.offsetTop +
+        (a.offsetHeight - innerHeight) *
+          (n ? H0 + (n - 0.05) * STEP : H0 * 0.9),
+    );
+    // the next slide starts at its shot (then its project list, if any, then its link); going back lands on its link
+    $(e.shiftKey ? "#go" : "#abody").focus({ preventScroll: true });
+  });
   // keyboard: when focus moves into a pinned scene's hidden part, scroll the scene to where that part shows
   document.addEventListener("focusin", (e) => {
     const t = e.target,
@@ -1793,7 +1822,7 @@ export default function initSite() {
     const a = s.closest("section"),
       q =
         s.id == "win"
-          ? prog(a) < H0 - 0.01 && H0
+          ? prog(a) < H0 * 0.85 && H0 * 0.9
           : s.id == "hire"
             ? prog(a) < 0.95 && 0.96
             : !s.classList.contains("on") &&
