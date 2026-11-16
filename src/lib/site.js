@@ -122,7 +122,7 @@ export default function initSite() {
     ],
     contact: [
       "Contact",
-      `<form id="f"><label for="t">Dear Malaka,</label><textarea id="t" rows="5" placeholder="Tell me about your project"></textarea><label for="n">Yours,</label><input id="n" placeholder="Your name"><input id="e" type="email" placeholder="Your email" aria-label="Your email"><select id="k" aria-label="Project type"><option>Project type</option><option>Website</option><option>Something else</option></select><p><button class="btn">Send the letter</button></p><p class="note" id="fo" aria-live="polite"></p></form><p>Or write to <span class="mono">malaka@malakagonawala.dev</span></p>`,
+      `<form id="f"><label for="t">Dear Malaka,</label><textarea id="t" rows="5" placeholder="Tell me about your project" required></textarea><label for="n">Yours,</label><input id="n" placeholder="Your name" autocomplete="name" required><input id="e" type="email" placeholder="Your email" aria-label="Your email" autocomplete="email" required><select id="k" aria-label="Project type"><option>Project type</option><option>Website</option><option>Something else</option></select><p><button class="btn">Send the letter</button></p><p class="note" id="fo" aria-live="polite"></p></form><p>Or write to <span class="mono">malaka@malakagonawala.dev</span></p>`,
     ],
   };
   Object.keys(P).forEach(
@@ -211,7 +211,9 @@ export default function initSite() {
       h = abs.clientHeight,
       hh = $(".hd").offsetHeight,
       bhF = w < 700 ? 40 : 48,
-      FW = Math.min(1000, w - 32, (h - hh - bhF - 90) * 1.6),
+      // room under the window for the title and its link, plus a margin, so the slide always fits the screen
+      mh = $("#meta").offsetHeight + 32,
+      FW = Math.min(1000, w - 32, (h - hh - bhF - mh) * 1.6),
       Wc = Math.min(860, w - 32),
       fuF = Math.min(17, (FW - 80) / (URL.length * 0.62)),
       fuC = Math.min(36, (Wc - 80) / (URL.length * 0.62)),
@@ -222,7 +224,7 @@ export default function initSite() {
       Wc,
       FW,
       fx: (w - FW) / 2,
-      fy: hh + Math.max(0, (h - hh - bhF - FW / 1.6 - 70) / 2),
+      fy: hh + Math.max(0, (h - hh - bhF - FW / 1.6 - mh) / 2),
       fuC,
       fuF,
       bhC: Math.max(bhF, fuC * 2.2),
@@ -679,6 +681,7 @@ export default function initSite() {
       const U2 = $$(".u2 > *");
       U2.forEach((e, i) => {
         const was = e.classList.contains("on");
+        live && (e.style.opacity = +(i + 1 == b));
         e.classList.toggle("on", i + 1 == b);
         was != (i + 1 == b) &&
           e.dispatchEvent(new CustomEvent("beat", { detail: i + 1 == b }));
@@ -1414,7 +1417,11 @@ export default function initSite() {
     });
     const clip = (r) =>
       `inset(${o}px 0 ${el.offsetHeight - o - innerHeight}px 0 round ${r}px)`;
-    G.set(here_, { left: C[0].x + 10, top: C[0].y + C[0].h - 34 });
+    G.set(here_, {
+      left: C[0].x + C[0].w - 10,
+      top: C[0].y + 10,
+      xPercent: -100,
+    });
     G.set(bx, { left: C[0].x, top: C[0].y, width: C[0].w, height: C[0].h });
     G.set(hl, { left: C[0].x, top: C[0].y + C[0].h + 8, width: C[0].w });
     mtl = G.timeline({ defaults: { ease: "io" } })
@@ -1736,7 +1743,10 @@ export default function initSite() {
             clearInterval(sendT);
             stage(1, "Sending");
             $("#tn").textContent = "";
-            Promise.resolve("[Sent through Web3Forms here]").then(end);
+            Promise.resolve("[Sent through Web3Forms here]").then((m) => {
+              f.reset();
+              end(m);
+            });
           };
           clearInterval(sendT);
           $("#fo").textContent = "";
@@ -1775,6 +1785,21 @@ export default function initSite() {
     await load(hash, false);
   };
   addEventListener("popstate", () => route(location.hash));
+  // keyboard: when focus moves into a pinned scene's hidden part, scroll the scene to where that part shows
+  document.addEventListener("focusin", (e) => {
+    const t = e.target,
+      s = live && !onPage && t.closest("#win, .u2 > *, #hire");
+    if (!s) return;
+    const a = s.closest("section"),
+      q =
+        s.id == "win"
+          ? prog(a) < H0 - 0.01 && H0
+          : s.id == "hire"
+            ? prog(a) < 0.95 && 0.96
+            : !s.classList.contains("on") &&
+              [0.4, 0.6, 0.85][$$(".u2 > *").indexOf(s)];
+    q && scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * q);
+  });
   document.addEventListener("click", (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (live && a && menuOpen() && !wideMenu && a.closest("#ls")) {
@@ -1877,7 +1902,13 @@ gl_FragColor=vec4(max(o,b.z*smoothstep(.15,.04,length(q*vec2(a.z,1.)))));}`,
         xr.classList.remove("fl");
       }
     };
+    // no event: the pointer left the hero, so the trail goes at once (the Open disc may be next)
     return (e) => {
+      if (!e)
+        return (
+          idle <= 130 &&
+          ((idle = 131), G.ticker.remove(frame), xr.classList.remove("fl"))
+        );
       m = [e.clientX, e.clientY];
       idle > 130 || idle == null ? G.ticker.add(frame) : 0;
       idle = 0;
@@ -1887,6 +1918,7 @@ gl_FragColor=vec4(max(o,b.z*smoothstep(.15,.04,length(q*vec2(a.z,1.)))));}`,
   ["pointermove", "pointerdown"].forEach((t) =>
     document.addEventListener(t, (e) => {
       const r = $("#ab").getBoundingClientRect();
+      if (e.pointerType != "mouse") return;
       if (
         onPage ||
         S.ab > 0.01 ||
@@ -1894,7 +1926,7 @@ gl_FragColor=vec4(max(o,b.z*smoothstep(.15,.04,length(q*vec2(a.z,1.)))));}`,
         e.clientY > r.bottom ||
         e.clientY < r.top
       )
-        return lensR && lensTo(0);
+        return (void (fluid && fluid()), lensR && lensTo(0));
       if (fluid && e.pointerType == "mouse") return fluid(e);
       xr.style.setProperty("--x", e.clientX + "px");
       xr.style.setProperty("--y", e.clientY + "px");

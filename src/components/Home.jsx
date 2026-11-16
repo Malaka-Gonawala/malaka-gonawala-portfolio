@@ -32,6 +32,13 @@ function AddressBar() {
         <h1 className="sr" tabIndex="-1">
           Malaka Gonawala
         </h1>
+        {/* first in the Tab order: the hero line and its button show before the window does */}
+        <div className="intro g" id="intro">
+          <p>{en.hero.line}</p>
+          <a className="btn" href="#work">
+            {en.hero.cta}
+          </a>
+        </div>
         <div className="aw" id="win">
           <div className="abar">
             <div className="pill">
@@ -79,12 +86,6 @@ function AddressBar() {
           <p className="term mono">
             <Term />
           </p>
-        </div>
-        <div className="intro g" id="intro">
-          <p>{en.hero.line}</p>
-          <a className="btn" href="#work">
-            {en.hero.cta}
-          </a>
         </div>
       </div>
     </section>
