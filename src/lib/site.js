@@ -200,9 +200,11 @@ export default function initSite() {
     sp(win, "--fu", mix(fuC, fuF, e) + "px");
     const r = $("#rr"),
       pr = $(".pill").getBoundingClientRect();
-    r.setAttribute("width", pr.width - 1.2);
-    r.setAttribute("height", pr.height - 1.2);
-    r.setAttribute("rx", (pr.height - 1.2) / 2);
+    const pw = Math.max(0, pr.width - 1.2),
+      ph = Math.max(0, pr.height - 1.2);
+    r.setAttribute("width", pw);
+    r.setAttribute("height", ph);
+    r.setAttribute("rx", ph / 2);
   };
   const abSize = () => {
     const w = abs.clientWidth,
@@ -933,6 +935,7 @@ export default function initSite() {
     root.classList.toggle("scene", s == "Home" && S.ab < 0.3);
   };
   const sizeAll = () => {
+    if (onPage) return;
     abSize();
     hxSize();
     ftBuild();
@@ -1666,10 +1669,7 @@ export default function initSite() {
     (b) =>
       (b.onclick = () => {
         root.dataset.theme = dark() ? "light" : "dark";
-        hxSize();
-        hx(S.hx);
-        ftBuild();
-        ftDraw(S.ft);
+        sizeAll();
       }),
   );
 
@@ -1694,6 +1694,8 @@ export default function initSite() {
     sendT;
   const show = (hash, keep) => {
     here = hash;
+    location.hash != hash &&
+      history.pushState(null, "", hash || location.pathname + location.search);
     const h = hash.slice(1),
       pg = pages[h];
     onPage = !!pg;
@@ -1772,6 +1774,7 @@ export default function initSite() {
     if (!pages[hash.slice(1)] && !onPage) return show(hash);
     await load(hash, false);
   };
+  addEventListener("popstate", () => route(location.hash));
   document.addEventListener("click", (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (live && a && menuOpen() && !wideMenu && a.closest("#ls")) {
