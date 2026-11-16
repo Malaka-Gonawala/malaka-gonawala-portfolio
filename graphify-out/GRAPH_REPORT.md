@@ -1,7 +1,7 @@
-# Graph Report - malaka-gonawala-portfolio  (2026-11-15)
+# Graph Report - malaka-gonawala-portfolio  (2026-11-16)
 
 ## Corpus Check
-- 426 files · ~688,223 words
+- 426 files · ~688,440 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 86 file(s) not represented in the graph (top: .csv 37, (none) 16, .woff2 9)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1afe2716`
+- Built from commit: `b2f443db`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1763,7 +1763,7 @@ Nodes (5): scripts, build, dev, lint, preview
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `initGlobalBar` to `live-browser.js`, `connectSSE`, `live.md`, `resumeSession`, `initPageChat`, `Init flow`, `Commands`, `impeccable/SKILL.md`, `Design Systems from DESIGN.md`, `handleGo`, `updatePendingCounter`?**
-  _High betweenness centrality (0.082) - this node is a cross-community bridge._
+  _High betweenness centrality (0.099) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `DesignSystemGenerator` (e.g. with `TestReasoningMatch` and `TestReasoningContract`) actually correct?**
   _`DesignSystemGenerator` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `API_KEY`, `CONTEXT7_API_KEY`, `@21st-dev/magic` to the rest of the system?**
@@ -1771,7 +1771,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `live-browser.js` be split into smaller, more focused modules?**
   _Cohesion score 0.032703488372093026 - nodes in this community are weakly interconnected._
 - **Why does `search()` connect `search` to `BM25`, `validate_data.py`, `core.py`, `design_system.py`, `TestTextLayoutRetrieval`, `search_stack`, `Commands`, `test_text_layout_resilience.py`, `_domain_keywords`, `DesignSystemGenerator`, `test_core_data_quality.py`, `test_core.py`?**
-  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+  _High betweenness centrality (0.052) - this node is a cross-community bridge._
 - **Should `connectSSE` be split into smaller, more focused modules?**
   _Cohesion score 0.07137129109863673 - nodes in this community are weakly interconnected._
 - **Should `validate_data.py` be split into smaller, more focused modules?**
