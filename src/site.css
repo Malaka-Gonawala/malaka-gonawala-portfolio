@@ -1812,3 +1812,90 @@ body.hph #ubp:empty::after {
     font-size: clamp(24px, 3vw, 40px);
   }
 }
+
+/* Phase 5 content: project galleries (the phone shot over the desktop shot, both fixed-ratio frames from the top),
+   facts, links, Lab entries that open in place, the portrait and the AI section */
+.gal {
+  display: grid;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.duo {
+  position: relative;
+  margin: 0;
+}
+.duo:has(.pk) {
+  padding-bottom: 8%;
+}
+.duo img {
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  background: var(--sf);
+}
+.dk {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+}
+.pk {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 22%;
+  aspect-ratio: 9 / 19.5;
+  border: 3px solid var(--fg);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.5);
+}
+.lead {
+  font-size: 1.15em;
+}
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 10px 24px;
+}
+.facts dt {
+  font: 12px/2 var(--m);
+  color: var(--mut);
+}
+.facts dd {
+  margin: 0;
+}
+.lab {
+  border-top: 1px solid color-mix(in oklab, var(--fg), transparent 80%);
+  padding: 14px 0;
+}
+.lab summary {
+  display: grid;
+  gap: 4px;
+  cursor: pointer;
+}
+.lab summary .d {
+  font-size: clamp(28px, 4vw, 44px);
+}
+.lab .duo {
+  margin-top: 16px;
+}
+.portrait {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .facts dd {
+    margin-bottom: 12px;
+  }
+  .pk {
+    width: 26%;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+}

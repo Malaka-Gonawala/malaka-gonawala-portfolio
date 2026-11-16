@@ -2,7 +2,7 @@
 // React renders the markup (src/components); this wires the scroll scenes, Flip menu, loader and routing to it.
 import gsap from "gsap";
 import { CustomEase } from "gsap/CustomEase";
-import { work } from "@/content/en";
+import { work, projects, shots, lab, resume, ai } from "@/content/en";
 
 const IMG = import.meta.env.BASE_URL + "img/projects/";
 const PITCH = Object.fromEntries(
@@ -106,19 +106,39 @@ export default function initSite() {
       return `<h2 class="d">My path</h2><div class="board" role="img" aria-label="${PATH}">${BOARD.map(([k, ...t]) => `<div class="br ${k}" aria-hidden="true">${line(k + " " + t[0])}${t[1] ? line(t[1]) : ""}</div>`).join("")}</div><p>${PATH}</p>`;
     };
 
-  // pages (placeholders until Phase 5)
+  // a screenshot frame (fixed ratio, the top of the shot), and a pair with the phone over the desktop
+  const SH = import.meta.env.BASE_URL + "img/shots/",
+    pic = (f, alt, c) =>
+      `<img class="${c}" src="${SH + f}.webp" alt="${alt}" loading="lazy" decoding="async">`,
+    gallery = (s) =>
+      `<div class="gal">${shots[s].map(([d, da, p, pa]) => `<figure class="duo">${pic(d, da, "dk")}${p ? pic(p, pa, "pk") : ""}</figure>`).join("")}</div>`,
+    a2 = ([t, u]) => (u ? `<a href="${u}">${t}</a>` : t),
+    // project page: the shots, then context, role and stack, the page's own sections and its links
+    projectPage = (s) => {
+      const c = projects[s];
+      return `${gallery(s)}<p class="lead">${X[s][4]}</p><dl class="facts">${[["Context", c.context], ["Role", c.role], ["Stack", c.stack], ...c.more].map(([t, d]) => `<dt>${t}</dt><dd>${d}</dd>`).join("")}</dl><p class="links">${a2(["Live site", c.live])}${c.code ? ` · ${a2(["View code", c.code])} (${c.codeNote})` : c.codePending ? ` · ${c.codePending}` : ""}</p>`;
+    },
+    portrait = `<picture><source type="image/webp" srcset="${import.meta.env.BASE_URL}img/portrait-480.webp 480w, ${import.meta.env.BASE_URL}img/portrait-720.webp 720w" sizes="(max-width: 420px) 100vw, 360px"><img class="portrait" src="${import.meta.env.BASE_URL}img/portrait-480.jpg" srcset="${import.meta.env.BASE_URL}img/portrait-720.jpg 720w, ${import.meta.env.BASE_URL}img/portrait-480.jpg 480w" sizes="(max-width: 420px) 100vw, 360px" width="480" height="480" alt="Portrait of Malaka Gonawala"></picture>`;
+
+  // pages: Phase 5 approved copy (content/en.js)
   const pages = {
     lab: [
       "Lab",
-      `<p>Experiments that open in place: ${["Cavalleria su due ruote", "russian_roulette", "LeetSpeak", "Manuale_html", "traduttore_morse", "Random-Color", "Random_Massage_Generator", "v1, hand-coded"].join(" · ")}.</p><p class="note">[summary + images per experiment, Phase 5]</p>`,
+      // every entry opens in place
+      lab
+        .map(
+          ([t, line, text, stack, links, sh]) =>
+            `<details class="lab"><summary><span class="d">${t}</span>${line ? `<span>${line}</span>` : ""}</summary>${sh ? (Array.isArray(sh) ? `<figure class="duo">${pic(sh[0], sh[1], "dk")}</figure>` : `<p class="note">${sh}</p>`) : ""}<p>${text}</p>${stack ? `<p>Stack: ${stack}</p>` : ""}<p class="links">${links.map(a2).join(" · ")}</p></details>`,
+        )
+        .join(""),
     ],
     about: [
       "About",
-      `<h2 class="d">Where it all started</h2><p>It started around the end of 2020 with <a href="https://prettysrilanka.netlify.app/">Pretty Sri Lanka</a>, a course exercise and the first website I ever put online. (Photos supplied by the course instructor.)</p><h2 class="d">Now</h2><p>Today I'm in my fifth year at Istituto Tecnico e Liceo "Enrico Mattei", studying computer science. Alongside school I've built websites for clients, including a cleaning and reception company and a barber shop in Milan.</p><p>Bad UX irritates me, so I build websites that are easy for everyone to use. That's why I'm focusing on accessibility.</p>${board()}<h2 class="d">Where I'm heading (plans, not done yet)</h2><ul><li>Study security and AI at UNIMI.</li><li>Earn the Cisco CCNA certification.</li><li>Become a full-stack developer who specialises in web security and accessibility, and an agentic engineer (building with AI agents).</li></ul><figure style="margin:0;overflow:hidden"><img class="ph" src="${PSL}" alt="Pretty Sri Lanka home page"></figure><div class="ph" style="aspect-ratio:4/5;max-width:360px">[portrait]</div>`,
+      `<h2 class="d">Where it all started</h2><p>It started around the end of 2020 with <a href="https://prettysrilanka.netlify.app/">Pretty Sri Lanka</a>, a course exercise and the first website I ever put online. (Photos supplied by the course instructor.)</p><figure style="margin:0;overflow:hidden"><img class="ph" src="${PSL}" alt="Pretty Sri Lanka home page"></figure><h2 class="d">Now</h2>${portrait}<p>Today I'm in my fifth year at Istituto Tecnico e Liceo "Enrico Mattei", studying computer science. Alongside school I've built websites for clients, including a cleaning and reception company and a barber shop in Milan.</p><p>Bad UX irritates me, so I build websites that are easy for everyone to use. That's why I'm focusing on accessibility.</p><h2 class="d">Where I'm heading (plans, not done yet)</h2><ul><li>Study security and AI at UNIMI.</li><li>Earn the Cisco CCNA certification.</li><li>Become a full-stack developer who specialises in web security and accessibility, and an agentic engineer (building with AI agents).</li></ul>${board()}<section class="ai" aria-labelledby="ai"><h2 class="d" id="ai">${ai[0]}</h2>${ai[1].map(([b, t]) => `<p><b>${b}</b> ${t}</p>`).join("")}</section>`,
     ],
     resume: [
       "Resume",
-      `<p class="note">[Web version of the resume, matching the PDF. PDF in EN + IT.]</p>`,
+      resume.map(([h, b]) => (h ? `<h2 class="d">${h}</h2>` : "") + b).join(""),
     ],
     contact: [
       "Contact",
@@ -129,7 +149,7 @@ export default function initSite() {
     (s, i, a) =>
       (pages["p-" + s] = [
         P[s],
-        `${img(s)}<p>${X[s][4]}</p><p class="note">[Role · stack · problem and solution · accessibility note · gallery · phone + desktop shots · live + code links: Phase 5]</p><p><a href="#p-${a[(i + 1) % a.length]}">Next project: ${P[a[(i + 1) % a.length]]} →</a></p>`,
+        `${projectPage(s)}<p><a href="#p-${a[(i + 1) % a.length]}">Next project: ${P[a[(i + 1) % a.length]]} →</a></p>`,
         "Work",
       ]),
   );
