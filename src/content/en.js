@@ -179,7 +179,8 @@ export const projects = {
       ["Note", "Concept project. Bike photos belong to their owners."],
     ],
     live: "https://malaka-gonawala.github.io/Antigravity-bike-web/",
-    codePending: "[View code: waiting for Malaka's OK]",
+    code: "https://github.com/Malaka-Gonawala/Antigravity-bike-web",
+    codeNote: VIEW,
   },
 };
 
@@ -270,9 +271,17 @@ export const lab = [
     "HTML, CSS, JavaScript, Bootstrap, Ionicons.",
     [
       ["Live", "https://malaka-gonawala.github.io/Cavalleria_su_due_ruote/"],
-      ["[View code: after Malaka's README check]"],
+      [
+        "View code",
+        "https://github.com/Malaka-Gonawala/Cavalleria_su_due_ruote",
+      ],
     ],
-    "[screenshot: S20 decision pending]",
+    // IT note, for later: "Le foto appartengono ai rispettivi proprietari."
+    [
+      "cavalleria-d1",
+      "Home: slogan and bike carousel",
+      "Photos belong to their owners.",
+    ],
   ],
   [
     "Russian Roulette",

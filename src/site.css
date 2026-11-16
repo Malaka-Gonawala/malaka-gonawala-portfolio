@@ -791,6 +791,10 @@ a {
   > :not(.on) * {
     pointer-events: none;
   }
+  /* hidden until their beat (GSAP's inline opacity takes over from the first beat on) */
+  > :not(.on) {
+    opacity: 0;
+  }
 }
 /* the build log: one command line; run, its rows sit in two columns */
 #log {

@@ -116,7 +116,7 @@ export default function initSite() {
     // project page: the shots, then context, role and stack, the page's own sections and its links
     projectPage = (s) => {
       const c = projects[s];
-      return `${gallery(s)}<p class="lead">${X[s][4]}</p><dl class="facts">${[["Context", c.context], ["Role", c.role], ["Stack", c.stack], ...c.more].map(([t, d]) => `<dt>${t}</dt><dd>${d}</dd>`).join("")}</dl><p class="links">${a2(["Live site", c.live])}${c.code ? ` · ${a2(["View code", c.code])} (${c.codeNote})` : c.codePending ? ` · ${c.codePending}` : ""}</p>`;
+      return `${gallery(s)}<p class="lead">${X[s][4]}</p><dl class="facts">${[["Context", c.context], ["Role", c.role], ["Stack", c.stack], ...c.more].map(([t, d]) => `<dt>${t}</dt><dd>${d}</dd>`).join("")}</dl><p class="links">${a2(["Live site", c.live])}${c.code ? ` · ${a2(["View code", c.code])} (${c.codeNote})` : ""}</p>`;
     },
     portrait = `<picture><source type="image/webp" srcset="${import.meta.env.BASE_URL}img/portrait-480.webp 480w, ${import.meta.env.BASE_URL}img/portrait-720.webp 720w" sizes="(max-width: 420px) 100vw, 360px"><img class="portrait" src="${import.meta.env.BASE_URL}img/portrait-480.jpg" srcset="${import.meta.env.BASE_URL}img/portrait-720.jpg 720w, ${import.meta.env.BASE_URL}img/portrait-480.jpg 480w" sizes="(max-width: 420px) 100vw, 360px" width="480" height="480" alt="Portrait of Malaka Gonawala"></picture>`;
 
@@ -128,7 +128,7 @@ export default function initSite() {
       lab
         .map(
           ([t, line, text, stack, links, sh]) =>
-            `<details class="lab"><summary><span class="d">${t}</span>${line ? `<span>${line}</span>` : ""}</summary>${sh ? (Array.isArray(sh) ? `<figure class="duo">${pic(sh[0], sh[1], "dk")}</figure>` : `<p class="note">${sh}</p>`) : ""}<p>${text}</p>${stack ? `<p>Stack: ${stack}</p>` : ""}<p class="links">${links.map(a2).join(" · ")}</p></details>`,
+            `<details class="lab"><summary><span class="d">${t}</span>${line ? `<span>${line}</span>` : ""}</summary>${sh ? `<figure class="duo">${pic(sh[0], sh[1], "dk")}</figure>${sh[2] ? `<p class="note">${sh[2]}</p>` : ""}` : ""}<p>${text}</p>${stack ? `<p>Stack: ${stack}</p>` : ""}<p class="links">${links.map(a2).join(" · ")}</p></details>`,
         )
         .join(""),
     ],

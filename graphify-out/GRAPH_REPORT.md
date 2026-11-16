@@ -1,7 +1,7 @@
 # Graph Report - malaka-gonawala-portfolio  (2026-11-16)
 
 ## Corpus Check
-- 426 files · ~690,880 words
+- 426 files · ~690,890 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 86 file(s) not represented in the graph (top: .csv 37, (none) 16, .woff2 9)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4faa8080`
+- Built from commit: `04a1fb87`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -1764,16 +1764,16 @@ Nodes (3): Comps, Directions, Persuade and Experience
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `init()` connect `initGlobalBar` to `live-browser.js`, `connectSSE`, `resumeSession`, `initPageChat`, `Init flow`, `Commands`, `impeccable/SKILL.md`, `new-work.md`, `generate.md`, `Design Systems from DESIGN.md`, `handleGo`, `updatePendingCounter`?**
-  _High betweenness centrality (0.097) - this node is a cross-community bridge._
+  _High betweenness centrality (0.088) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `DesignSystemGenerator` (e.g. with `TestReasoningMatch` and `TestReasoningContract`) actually correct?**
   _`DesignSystemGenerator` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `API_KEY`, `CONTEXT7_API_KEY`, `@21st-dev/magic` to the rest of the system?**
   _4 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `live-browser.js` be split into smaller, more focused modules?**
   _Cohesion score 0.032703488372093026 - nodes in this community are weakly interconnected._
-- **Why does `Commands` connect `Commands` to `Registry Authoring and Addresses`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+- **Why does `search()` connect `search` to `BM25`, `validate_data.py`, `core.py`, `design_system.py`, `TestTextLayoutRetrieval`, `search_stack`, `Commands`, `sys`, `_domain_keywords`, `DesignSystemGenerator`, `test_core.py`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **Should `connectSSE` be split into smaller, more focused modules?**
   _Cohesion score 0.07137129109863673 - nodes in this community are weakly interconnected._
-- **Why does `search()` connect `search` to `BM25`, `validate_data.py`, `core.py`, `design_system.py`, `TestTextLayoutRetrieval`, `search_stack`, `Commands`, `sys`, `_domain_keywords`, `DesignSystemGenerator`, `test_core.py`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
+- **Why does `Commands` connect `Commands` to `Registry Authoring and Addresses`?**
+  _High betweenness centrality (0.051) - this node is a cross-community bridge._
