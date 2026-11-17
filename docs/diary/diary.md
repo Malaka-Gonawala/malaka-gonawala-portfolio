@@ -327,3 +327,16 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #50 diary (14 and 15 November)
 
 **Open items:** the phone header is two lines tall, offer cards too narrow in Calm and reduced motion at 1280 wide, build of the whoami scan and Offers merge, Malaka's button picks, held motion picks and inspiration picks that wait for their pages, copy for Offers, the questions, "What protects it" and the MG mark, Web3Forms wiring, prerender (6.24), the remaining code challenges, merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume PDF (6.25), deleting the 16 old artifacts (needs Malaka's approval), Namecheap email forwarding (around 24 November).
+
+## Tuesday, 17 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** The Underneath and Offers rework was built, the second round of button designs was prepared, and the owner of officialbendata approved showing the site. No code was written for the bendata page, only the checklist was updated. All work stays on draft pull request #45.
+
+- **Approved:** the owner of officialbendata gave Malaka the OK to put his site on the portfolio (5.10 ticked, which lifts "bendata stays off the site for now"), bendata-theme may now become a lead project with forvalue (Malaka to confirm)
+- **Decided:** the bendata page carries a note on behalf of the owner's request and the work done, only the mobile version was graphically optimized, the desktop version got minor functionality and small graphical updates so it may show offset elements or broken layouts (new item 6.29, wording approved by Malaka first, no code until Malaka says so), Malaka rejected the first round of buttons except Q10 (dither gold stays the front primary)
+- **Built:** the whoami and scan version of Underneath (A1 with B2): the git log, its build-time fetch and the layers were removed, the terminal types each command behind a gold caret, then the hex scan runs on, cools, and the offers rise out of it (light mode uses a wipe so it never goes grey-green), offer cards now full width in Calm and reduced motion at 1280 wide (the text used to spill out), checked in Playwright in light and dark, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) version 21
+- **Researched:** a second round of 10 original, critic-passed button designs with four states each, recommended D01 scan flip, D03 letterpress and D09 scanline key, waiting on Malaka's pick (6.28)
+
+**Open items:** Malaka's button pick, the two-line phone header, the bendata page note and build (ask Malaka before building), the v1 links at launch, resume PDF (6.25), copy for Offers, the questions and "What protects it", Web3Forms wiring, prerender (6.24), held motion and inspiration picks, the remaining code challenges, merge PR #47 (rules) and PR #51 (diary 16 November), contact email setup (5.8), deleting the 16 old artifacts (needs Malaka's approval), Namecheap email forwarding (around 24 November).
