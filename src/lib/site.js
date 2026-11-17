@@ -688,27 +688,53 @@ export default function initSite() {
     C.b0 = [br, bg_, bb];
     C.u0 = [ur, ug, ub];
   };
-  let shut = false;
-  // option F: the dump keeps its old pace in the first part of the (now longer) scroll, then one part per beat:
-  // the title, the terminal, the layers, the build log (Calm and reduced motion show them all, stacked)
-  let beat = 0;
+  // the first scan's pace (Underneath is 400svh; the offers slide in over its last 100svh)
+  const PH = 2.13;
+  // the scan line (the read head)
+  const line = (y) => {
+    if (y > 0 && y < H) {
+      cx.fillStyle = C.sig;
+      cx.shadowColor = C.sig;
+      cx.shadowBlur = 14;
+      cx.fillRect(0, y - 1, W, 2);
+      cx.shadowBlur = 0;
+    }
+  };
+  // A1: each command types behind a gold caret, its answer shows after Enter (replays on every entry)
+  const T = $$("#term > span");
+  let shut = false,
+    beat = false,
+    tt,
+    wp = 0;
+  const typeT = () => {
+    tt?.kill();
+    G.set(T, { opacity: 0, className: "" });
+    G.set("#term i", { clearProps: "width" });
+    tt = G.timeline();
+    T.forEach((e) => {
+      const c = e.querySelector("i"),
+        n = c?.textContent.length;
+      c
+        ? tt
+            .set(e, { opacity: 1, className: "c" }, "+=0.3")
+            .from(c, {
+              width: 0,
+              duration: n * 0.06,
+              ease: `steps(${n})`,
+              clearProps: "width",
+            })
+            .set(e, { className: "" }, "+=0.2")
+        : tt.to(e, { opacity: 1, duration: 0.2 });
+    });
+  };
   const hx = (p0) => {
     if (!page) return;
-    const p = cl(p0 * 2.7),
-      b = p0 < 0.3 ? 0 : p0 < 0.5 ? 1 : p0 < 0.72 ? 2 : 3;
+    const p = cl(p0 * PH),
+      b = p0 > 0.38;
     if (b != beat) {
       beat = b;
-      const U2 = $$(".u2 > *");
-      U2.forEach((e, i) => {
-        const was = e.classList.contains("on");
-        live && G.set(e, { opacity: +(i + 1 == b), overwrite: true });
-        e.classList.toggle("on", i + 1 == b);
-        was != (i + 1 == b) &&
-          e.dispatchEvent(new CustomEvent("beat", { detail: i + 1 == b }));
-      });
-      b &&
-        live &&
-        G.fromTo(U2[b - 1], { opacity: 0 }, { opacity: 1, duration: 0.3 });
+      $("#term").classList.toggle("on", b);
+      live && (b ? typeT() : (tt?.kill(), G.set(T, { opacity: 0 })));
     }
     const scan = io(cl(p / 0.32)) * (H + ch),
       cool = io(cl((p - 0.3) / 0.16)),
@@ -732,14 +758,28 @@ export default function initSite() {
       cx.restore();
       cx.globalAlpha = 1;
     }
-    if (scan > 0 && scan < H) {
-      cx.fillStyle = C.sig;
-      cx.shadowColor = C.sig;
-      cx.shadowBlur = 14;
-      cx.fillRect(0, scan - 1, W, 2);
-      cx.shadowBlur = 0;
+    // B2: the read head passes again and Underneath becomes the hex field, the field cools to plain, then the front
+    // colour wipes down (a wipe, never a mix, so light mode skips the grey-green) and the offers rise
+    const s2 = io(cl((p0 - 0.57) / 0.13)) * (H + ch),
+      w2 = io(cl((p0 - 0.75) / 0.08)) * (H + ch);
+    wp = live ? w2 / H : 0;
+    if (s2 > 0) {
+      cx.save();
+      cx.beginPath();
+      cx.rect(0, 0, W, s2);
+      cx.clip();
+      cx.fillStyle = C.ubg;
+      cx.fillRect(0, 0, W, H);
+      cx.globalAlpha = 1 - io(cl((p0 - 0.68) / 0.07));
+      cx.drawImage(cold, 0, -H, W, H * 2);
+      cx.restore();
+      cx.globalAlpha = 1;
+      cx.fillStyle = C.bg;
+      cx.fillRect(0, 0, W, w2);
     }
+    [scan, s2, w2].forEach(line);
     sp($(".under"), "--ho", io(cl((p - 0.6) / 0.1)));
+    sp($(".under"), "--s2", s2 + "px");
     // shutter (01): plays once on time as the title arrives, never scrubbed, so the title never rests sliced
     const on = p > 0.6;
     if (on != shut) {
@@ -755,7 +795,6 @@ export default function initSite() {
         },
       );
     }
-    return cool;
   };
 
   /* ---------- Work with me: odometer ----------
@@ -772,6 +811,13 @@ export default function initSite() {
     const a = Math.round(pos),
       fin = io(cl((p - 0.86) / 0.08));
     $("#strip").style.transform = `translateY(${-pos}em)`;
+    // the offers rise 36px out of the field once their section has arrived (still reachable by Tab)
+    const up = io(cl(p / 0.06));
+    Object.assign($(".o4").style, {
+      opacity: up,
+      pointerEvents: up < 1 ? "none" : "",
+      transform: `translateY(${(1 - up) * 36}px)`,
+    });
     R2.forEach((r, i) => {
       r.style.opacity = mix(i <= a ? (i == a ? 1 : 0.35) : 0.15, 1, fin);
       r.classList.toggle("on", i == a);
@@ -941,8 +987,8 @@ export default function initSite() {
         return r.top <= innerHeight / 2 && r.bottom > innerHeight / 2;
       }),
       s = el ? el.dataset.sec : "Home";
-    const ui = s == "Underneath",
-      cool = io(cl((cl(S.hx * 2.7) - 0.3) / 0.16));
+    const ui = s == "Underneath" && wp < 0.2,
+      cool = io(cl((cl(S.hx * PH) - 0.3) / 0.16));
     sec.textContent =
       "/ " +
       (s == "Home"
@@ -953,7 +999,9 @@ export default function initSite() {
           ? cool > 0.5
             ? "Underneath"
             : "Front end"
-          : s);
+          : s == "Underneath"
+            ? "Work with me"
+            : s);
     root.classList.toggle("u", ui && cool > 0.5);
     root.classList.toggle("scene", s == "Home" && S.ab < 0.3);
   };
@@ -1837,7 +1885,7 @@ export default function initSite() {
   // keyboard: when focus moves into a pinned scene's hidden part, scroll the scene to where that part shows
   document.addEventListener("focusin", (e) => {
     const t = e.target,
-      s = live && !onPage && t.closest("#win, .u2 > *, #hire");
+      s = live && !onPage && t.closest("#win, #hire");
     if (!s) return;
     const a = s.closest("section"),
       q =
@@ -1845,8 +1893,7 @@ export default function initSite() {
           ? prog(a) < H0 * 0.85 && H0 * 0.9
           : s.id == "hire"
             ? prog(a) < 0.95 && 0.96
-            : !s.classList.contains("on") &&
-              [0.4, 0.6, 0.85][$$(".u2 > *").indexOf(s)];
+            : 0;
     q && scrollTo(0, a.offsetTop + (a.offsetHeight - innerHeight) * q);
   });
   document.addEventListener("click", (e) => {

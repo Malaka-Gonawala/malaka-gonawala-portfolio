@@ -1,22 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
+import { useRef, useState } from "react";
 import { en } from "@/content/en";
-import log from "virtual:buildlog";
 
 const Term = ({ now }) => (
   <>
     <span>
-      <b>PS C:\Users\Malaka&gt;</b> whoami
+      <b>PS C:\Users\Malaka&gt;</b> <i>whoami</i>
     </span>
     <span>front-end developer</span>
     <span>
-      <b>PS C:\Users\Malaka&gt;</b> dir .\next
+      <b>PS C:\Users\Malaka&gt;</b> <i>dir .\next</i>
     </span>
     <span>ccna unimi-security-ai (planned)</span>
     {now && (
       <>
         <span>
-          <b>PS C:\Users\Malaka&gt;</b> type .\now.txt
+          <b>PS C:\Users\Malaka&gt;</b> <i>type .\now.txt</i>
         </span>
         <span>{now}</span>
       </>
@@ -92,113 +90,6 @@ function AddressBar() {
   );
 }
 
-// A01: the site as five layers; every layer names a real file or tag, with the same facts as a table.
-const LAYERS = [
-  ["content", "src/content/en.js"],
-  ["styles", "src/site.css, Tailwind v4"],
-  ["scripts", "src/lib/site.js, GSAP"],
-  ["meta tags", "index.html: charset, viewport, lang"],
-  ["host", "CNAME: malakagonawala.dev"],
-];
-// Option F: when the stack's beat arrives the layers lift one by one with their rows lit (B); afterwards hovering or
-// focusing a row lifts its layer (D). Lifts need a fine pointer and motion; under Calm, reduced motion and touch the
-// stack rests and a focused row is only lit.
-const moving = () =>
-  !document.documentElement.classList.contains("rm") &&
-  matchMedia("(hover: hover) and (pointer: fine)").matches;
-function Layers() {
-  const ref = useRef(null),
-    [on, setOn] = useState(-1),
-    lit = (i) => (i == on ? "on" : undefined);
-  // the plate of the lit row lifts, the others go back down (time-based, so it never rests part-way)
-  useEffect(() => {
-    moving() &&
-      gsap.to(ref.current.querySelectorAll(".stack i"), {
-        "--lift": (k) => (k == on ? 28 : 0),
-        duration: 0.3,
-        ease: "power2.out",
-        overwrite: true,
-      });
-  }, [on]);
-  // the beat starts (and stops) the one-by-one lift; leaving the beat resets it
-  useEffect(() => {
-    const el = ref.current;
-    let tl;
-    const beat = (e) => {
-      tl?.kill();
-      setOn(-1);
-      if (!e.detail || !moving()) return;
-      tl = gsap.timeline();
-      LAYERS.forEach((_, i) => tl.call(setOn, [i], 0.15 + i * 0.35));
-      tl.call(setOn, [-1], 0.15 + LAYERS.length * 0.35);
-    };
-    el.addEventListener("beat", beat);
-    return () => {
-      tl?.kill();
-      el.removeEventListener("beat", beat);
-    };
-  }, []);
-  return (
-    <div className="a01" id="a01" ref={ref}>
-      <div className="stack" aria-hidden="true">
-        {LAYERS.map(([n], i) => (
-          <i key={n} className={lit(i)} style={{ "--i": i }}>
-            {n}
-          </i>
-        ))}
-      </div>
-      <table>
-        <caption>The same thing as text</caption>
-        <thead>
-          <tr>
-            <th>What you see</th>
-            <th>Real file or tag</th>
-            <th>What protects it</th>
-          </tr>
-        </thead>
-        <tbody onMouseLeave={() => setOn(-1)}>
-          {LAYERS.map(([n, f], i) => (
-            <tr
-              key={n}
-              className={lit(i)}
-              tabIndex="0"
-              onFocus={() => setOn(i)}
-              onBlur={() => setOn(-1)}
-              onMouseEnter={() => setOn(i)}
-            >
-              <td>{n}</td>
-              <td>{f}</td>
-              <td>[Malaka to word]</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
-// The build log as one command line: Enter or a click runs `git log --merges` and folds it away again (challenge 3, Malaka).
-function GitLog({ rows }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="term mono" id="log">
-      <button onClick={() => setOpen(!open)} aria-expanded={open}>
-        <b>PS C:\Users\Malaka\site&gt;</b> git log --merges
-        <kbd aria-hidden="true">↵</kbd>
-      </button>
-      {open && (
-        <ul>
-          {rows.map(([sha, date, title]) => (
-            <li key={sha}>
-              <b>{sha}</b> {date} <em>{title}</em>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 // Underneath: the page turns into its own hex dump and cools into the underside.
 function Underneath() {
   return (
@@ -214,13 +105,9 @@ function Underneath() {
               </span>
             ))}
           </h2>
-          <div className="u2">
-            <p className="term mono" id="term">
-              <Term now={en.now} />
-            </p>
-            <Layers />
-            {log.length > 0 && <GitLog rows={log} />}
-          </div>
+          <p className="term mono" id="term">
+            <Term now={en.now} />
+          </p>
         </div>
       </div>
     </section>

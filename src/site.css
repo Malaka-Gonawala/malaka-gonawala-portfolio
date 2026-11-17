@@ -730,7 +730,7 @@ a {
 }
 /* underneath: hex dump */
 #under {
-  height: 480svh;
+  height: 400svh;
   position: relative;
 }
 #under canvas {
@@ -774,158 +774,44 @@ a {
 .shut > span:nth-child(odd) {
   translate: calc(var(--sh, 0) * (2.5 - var(--i)) * 0.08em);
 }
-/* Build log: git log --merges beside the terminal (under it on phones, 4 rows) */
-.u2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 4vw;
-  align-items: end;
+/* A1: the commands type behind a gold caret; hidden until their beat (with motion) */
+.term i {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  white-space: nowrap;
+  font-style: normal;
 }
-/* option F beats: the parts share one place and only the current one shows (with motion) */
-:root:not(.rm) .u2 {
-  grid-template-columns: 1fr;
-  > * {
-    grid-area: 1 / 1;
-  }
-  > :not(.on),
-  > :not(.on) * {
-    pointer-events: none;
-  }
-  /* hidden until their beat (GSAP's inline opacity takes over from the first beat on) */
-  > :not(.on) {
+#term .c::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: middle;
+  background: var(--gold);
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
     opacity: 0;
   }
 }
-/* the build log: one command line; run, its rows sit in two columns */
-#log {
-  grid-column: 1 / -1;
-  font-size: 12px;
-}
-#log ul {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: column;
-  gap: 0 4vw;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  line-height: 2.1;
-}
-/* A01 five layers */
-.a01 {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  align-items: end;
-}
-.stack {
-  position: relative;
-  width: 190px;
-  height: 160px;
-  zoom: 1.5;
-}
-.stack i {
-  position: absolute;
-  left: 20px;
-  top: calc(var(--i) * 22px);
-  z-index: calc(5 - var(--i));
-  width: 150px;
-  height: 80px;
-  padding: 0 8px;
-  border: 1px solid rgba(244, 241, 234, 0.5);
-  background: rgba(244, 241, 234, 0.06);
-  color: var(--ufg);
-  font: 10px var(--m);
-  font-style: normal;
-  display: flex;
-  align-items: center;
-  translate: 0 calc(var(--lift, 0) * -1px);
-  transform: perspective(600px) rotateX(58deg) rotateZ(-38deg);
-}
-.stack .on {
-  background: var(--sig);
-  color: var(--ubg);
-}
-.a01 table {
-  border-collapse: collapse;
-  font: 12px/1.4 var(--m);
-}
-.a01 :is(caption, thead, td:nth-child(3)) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-}
-.a01 td:first-child {
-  color: var(--sig);
-}
-.a01 :is(th, td) {
-  padding: 3px 10px 3px 0;
-  border-bottom: 1px solid rgba(244, 241, 234, 0.12);
-}
-.a01 tr {
-  pointer-events: auto;
-  outline-color: var(--ufg);
-  outline-offset: 1px;
-}
-/* the lit row: the plate's colours, signal with the underside's ink (5:1 and up in both themes) */
-.a01 .on td {
-  background: var(--sig);
-  color: var(--ubg);
-}
-/* GitLog command line: a button that looks like the prompt, with a return key */
-#log button {
-  justify-self: start;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  pointer-events: auto;
-  cursor: pointer;
-}
-#log button kbd {
-  margin-left: 8px;
-  padding: 0 4px;
-  border: 1px solid var(--sig);
-  border-radius: 3px;
-  font: 10px var(--m);
-  color: var(--sig);
-}
-#log li + li {
-  border-top: 1px solid rgba(244, 241, 234, 0.12);
-}
-#log em {
-  font: 12px var(--b);
-}
-@media (max-width: 700px) {
-  .u2 {
-    grid-template-columns: 1fr;
-  }
-  #log ul {
-    grid-template-rows: none;
-    grid-auto-flow: row;
-  }
-  .a01 {
-    grid-template-columns: 1fr;
-  }
-  .stack {
-    width: 150px;
-    height: 150px;
-    zoom: 0.9;
+/* B2: the second read head takes Underneath away from the top */
+:root:not(.rm) {
+  #term:not(.on) {
+    opacity: 0;
   }
   .under {
+    clip-path: inset(var(--s2, 0px) 0 0 0);
+  }
+  #hire {
+    margin-top: -100svh;
+  }
+}
+@media (max-width: 700px) {
+  .under {
     padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
-  }
-  #log em {
-    display: block;
-    line-height: 1.4;
-    padding-bottom: 6px;
-  }
-  #log li:nth-child(n + 3) {
-    display: none;
   }
 }
 /* Departures board (About, My path): every letter is a flap that flips down once */
@@ -1773,6 +1659,9 @@ body.hph #ubp:empty::after {
   }
   #under .stick {
     background: var(--ubg);
+  }
+  .o4 {
+    grid-template-columns: 1fr;
   }
   .under h2 {
     --ho: 1;
