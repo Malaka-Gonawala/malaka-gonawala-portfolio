@@ -313,3 +313,56 @@ Key strict rules: no site code until Malaka says go, never commit secrets, only 
 - **Merged pull requests:** #48 diary (12 and 13 November)
 
 **Open items:** small label overlap on the layer stack while a lower layer is lifted (Malaka to say if it bothers), the held motion picks and the inspiration picks that wait for their pages, copy for Offers, the questions, "What protects it" and the MG mark, underside panel copy, the dates on the path board, Web3Forms wiring, prerender (6.24), About and Skills pages, the remaining 27 code challenges, deleting the 16 old artifacts (needs Malaka's approval), merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume page and PDF (6.25), Namecheap email forwarding (around 24 November).
+
+## Monday, 16 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Fill-in and fix day for the rebuilt site. Every page now carries the approved Phase 5 copy, a second audit found 16 problems and its fixes passed a separate tester, and Malaka reshaped the Underneath section. All work stays on draft pull request #45.
+
+- **Built:** every page filled with the approved Phase 5 copy (5 project pages with galleries and links, 8 Lab entries, the web resume, the About portrait, the AI section last on About), the Underneath overlap fixed, Antigravity and Cavalleria code links added, the Cavalleria Lab screenshot with a "photos belong to their owners" note under the S20 exception, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) versions 19 and 20
+- **Audited:** a second audit found 16 problems, the fixes passed the S29 tester
+- **Decided:** Malaka dropped the git log and the layer stack, and picked animated whoami commands (A1) with the scan cooling and the offers rising out of it (B2), so Underneath merges into the Offers section, to be built tomorrow
+- **Researched:** a button round found 10 critic-passed niche buttons with a four-state preview grid, waiting on Malaka's picks (6.28)
+- **Merged pull requests:** #50 diary (14 and 15 November)
+
+**Open items:** the phone header is two lines tall, offer cards too narrow in Calm and reduced motion at 1280 wide, build of the whoami scan and Offers merge, Malaka's button picks, held motion picks and inspiration picks that wait for their pages, copy for Offers, the questions, "What protects it" and the MG mark, Web3Forms wiring, prerender (6.24), the remaining code challenges, merge PR #47 (rules), contact email setup (5.8), bendata permission (5.10), resume PDF (6.25), deleting the 16 old artifacts (needs Malaka's approval), Namecheap email forwarding (around 24 November).
+
+## Tuesday, 17 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** The Underneath and Offers rework was built, the second round of button designs was prepared, and the owner of officialbendata approved showing the site. No code was written for the bendata page, only the checklist was updated. All work stays on draft pull request #45.
+
+- **Approved:** the owner of officialbendata gave Malaka the OK to put his site on the portfolio (5.10 ticked, which lifts "bendata stays off the site for now"), bendata-theme may now become a lead project with forvalue (Malaka to confirm)
+- **Decided:** the bendata page carries a note on behalf of the owner's request and the work done, only the mobile version was graphically optimized, the desktop version got minor functionality and small graphical updates so it may show offset elements or broken layouts (new item 6.29, wording approved by Malaka first, no code until Malaka says so), Malaka rejected the first round of buttons except Q10 (dither gold stays the front primary)
+- **Built:** the whoami and scan version of Underneath (A1 with B2): the git log, its build-time fetch and the layers were removed, the terminal types each command behind a gold caret, then the hex scan runs on, cools, and the offers rise out of it (light mode uses a wipe so it never goes grey-green), offer cards now full width in Calm and reduced motion at 1280 wide (the text used to spill out), checked in Playwright in light and dark, [live build preview](https://claude.ai/artifact/2C1Q8P4suNCV8znWjSzwgH) version 21
+- **Researched:** a second round of 10 original, critic-passed button designs with four states each, recommended D01 scan flip, D03 letterpress and D09 scanline key, waiting on Malaka's pick (6.28)
+
+**Open items:** Malaka's button pick, the two-line phone header, the bendata page note and build (ask Malaka before building), the v1 links at launch, resume PDF (6.25), copy for Offers, the questions and "What protects it", Web3Forms wiring, prerender (6.24), held motion and inspiration picks, the remaining code challenges, merge PR #47 (rules) and PR #51 (diary 16 November), contact email setup (5.8), deleting the 16 old artifacts (needs Malaka's approval), Namecheap email forwarding (around 24 November).
+
+## Wednesday, 18 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** Malaka scrapped the whole design, including Prototype A v27, the rebuild and the green palette, and sent the site back to Phase 4 in a new thread, "Redesign the whole site". Phase 3 plan, grill answers and Phase 5 content are kept. No build work happened, only design direction.
+
+- **Decided:** all visuals restart at Phase 4, the Phase 3 plan, grill answers and Phase 5 content stay, the site must be SEO and CRO optimized in the end, all important content goes on the home page with details on separate pages
+- **Rejected:** too much movement and scroll animation, the green palette (it looks environmentalist), the current navigation
+- **Researched:** reference sites Malaka likes for structure and colour, webdevs.co.za (dark, orange-red, bold headings, pill buttons) and White Cat Studios (dark, gold, serif), used for inspiration only, not copied, first candidate sheet saved
+- **Working rules:** one question at a time, previews of every option before Malaka chooses
+
+**Open items:** new palette, navigation, fonts, hero and home layout, SEO and CRO plan, restarting the build on the new design, merge PR #51 (diary 16 and 17 November), contact email setup (5.8), Namecheap email forwarding (around 24 November).
+
+## Thursday, 19 November 2026
+
+**Project:** My Portfolio Website
+
+**Summary:** The redesign was locked piece by piece in one day: palette, navigation, fonts, hero, home order, and the layouts for work, about, skills, resume and contact. Italian became the main language of the site. The SEO and CRO plan was drafted and old files were cleaned up. No build code was written, only previews and locks.
+
+- **Decided:** palette Pitch Black #0A0000, Butter Cream #EBE0C7, brand red #B30000, accents Citrine #E8E03A on dark and Klein #2338C9 on light, footer dark in both modes, theme follows the system with a toggle, navigation R1 cell rail (left rail with numbered cells, language pill, theme toggle and a Hire me button, on phone a top bar plus bottom cells), fonts Bricolage Grotesque ExtraBold Condensed for headings, DM Sans for body and JetBrains Mono for numerals, hero L1 "big bleed" (large portrait circle bleeding off the right edge with a red crescent), home order hero, selected work, about, skills, resume summary, contact, work section P1 (device pair in panels that open on scroll, the one scroll animation left), About layout C, Skills S3 type wall, Resume R3 red split panel, Contact K2b (big email and an aligned form grid), Italian as the main language (Italian at /, English at /en/, Italian x-default)
+- **Approved:** resume additions from LinkedIn, the InfiniteWorld (CAF) internship (June to August 2023), ENAC Canossa (2021 to 2023), Codecademy HTML and JavaScript certificates, a C, C++ and OOP skills line, Lyceum Wattala (Cambridge curriculum)
+- **Researched:** SEO and CRO plan as a [Claude Doc](https://claude.ai/artifact/Dsvz1shCs2e35qKqPm56Qp) with four open decisions: a reply-time promise (recommended "I reply within 2 working days"), a Google Business Profile after the partita IVA, same or Italian slugs, title and description drafts
+- **Cleaned up:** a second cleanup deleted about 85 MB of old files and 5 artifacts, the 16 earlier old artifacts were already gone, the idle thread "Review the build against the prototype" was resolved, dead artifact links were noted on checklist items 1.22, 4.10, 4.12, 4.14 and 4.16 (items stay ticked), old Phase 6 build folders deleted
+
+**Open items:** the four SEO and CRO decisions, home page assembly with Italian first, Codecademy certificate links, copy for headings and buttons, restarting the build on the new design, merge PR #51 (diary 16 to 19 November), contact email setup (5.8), Namecheap email forwarding (around 24 November).
